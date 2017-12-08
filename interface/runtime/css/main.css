@@ -1,0 +1,16 @@
+body {
+	padding-top: 5px;
+}
+
+#controller {
+	background-image: url('../img/black-plastic.png');
+	background-repeat: repeat;	
+	padding: 5px;
+	border-radius: 10px;
+	box-shadow: 4px 3px darkgrey;
+}
+
+#screen {
+	background-image: url('../img/screen-bg.png');
+	border-radius: 8px;
+}

@@ -1,0 +1,110 @@
+.btnx {
+	cursor: pointer;
+}
+
+.btn-25 {
+	font-size: 25px;
+	text-align: center;
+	border: 1px solid black;
+	margin-top: 45px;
+}
+
+.btn-40 {
+	font-size: 40px;
+	text-align: center;
+}
+
+.btn-50:hover, .btn-25:hover, .btn-50 i:hover, .btn25 i:hover {
+	background-color: grey;
+}
+
+#btn-set:hover {
+	background-color: grey;
+}
+
+.btn-100:hover {
+	color: grey;
+}
+
+.btn-50 {
+	font-size: 50px;
+	text-align: center;
+	border: 1px solid black;
+	margin-top: 43px;
+  margin-left: -55px;
+}
+
+.btn-100 {
+	font-size: 100px;
+	text-align: center;
+}
+
+#btn-set {
+	border: 1px solid black;
+  padding: 5px;
+}
+
+#btn-arrowright {
+	margin-left: 30px;
+}
+
+#btn-arrowleft {
+	margin-right: 30px;
+}
+
+#btn-arrowup {
+	margin-bottom: -6px;
+}
+
+#btn-arrowdown {
+	margin-top: -15px;
+}
+
+#btn-help {
+	width: 92px;
+	margin-left: 78px;
+	height: 70px;
+	padding-top: 10px;
+}
+
+#btn-enabledisable {
+	width: 170px;
+	height: 70px;
+	line-height: 30px;
+	padding-top: 5px;
+}
+
+#btn-home {
+	height: 70px;
+	padding-top: 10px;
+	width: 92px;
+}
+
+#btn-undo {
+	height: 70px;
+	padding-top: 10px;
+	width: 92px;
+	margin-top: 44px;
+}
+
+#keypad {
+	margin-left: 60px;
+	margin-top: 40px;
+	border: 1px solid black;
+	text-align: center;
+	max-width: 165px;
+}
+
+#keypad td {
+	font-size: 50px;
+	cursor: pointer;
+	line-height: 0;
+	width: 55px;
+	height: 53px;
+	text-align: center;
+	border: 1px solid;
+}
+
+#keypad td:hover {
+	background-color: grey;
+}
