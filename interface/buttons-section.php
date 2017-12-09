@@ -9,7 +9,7 @@
 			</tr>
 			<tr>
 				<td class="btn-100"><i class="fa fa-caret-left btnx" id="btn-arrowleft"></i></td>
-				<td class="btn-40"><div id="btn-set" class="btnx">Set</div></td>
+				<td class="btn-40"><div id="btn-set" class="btnx"><span>Set</span></div></td>
 				<td class="btn-100"><i class="fa fa-caret-right btnx" id="btn-arrowright"></i></td>
 			</tr>
 			<tr>
@@ -29,14 +29,14 @@
 		<div><br/></div>
 		<div id="btn-enabledisable" class="btn-25 btnx">Enable/<br/>Disable</div>
 	</div>
-	<div class="col-md-1"></div>
+	<div class="col-md-1" style="z-index:-10;"></div>
 	<div class="col-md-4">
 		<div id="keypad">
 			<table>
-				<tr><td>1</td><td>2</td><td>3</td></tr>
-				<tr><td>4</td><td>5</td><td>6</td></tr>
-				<tr><td>7</td><td>8</td><td>9</td></tr>
-				<tr><td>*</td><td>0</td><td>#</td></tr>
+				<tr><td><span>1</span></td><td><span>2</span></td><td><span>3</span></td></tr>
+				<tr><td><span>4</span></td><td><span>5</span></td><td><span>6</span></td></tr>
+				<tr><td><span>7</span></td><td><span>8</span></td><td><span>9</span></td></tr>
+				<tr><td><span>*</span></td><td><span>0</span></td><td><span>#</span></td></tr>
 			</table>
 		</div>
 	</div>
