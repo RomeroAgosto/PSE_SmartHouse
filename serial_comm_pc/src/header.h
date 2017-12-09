@@ -17,6 +17,9 @@
 	#include <stddef.h>
 
 	#include "serial/serial.h"
+	#include "telnet/socketserver.h" 
+	#include "main/socket_reception_handler.h"
+	#include "msgqueue/msgqueue.h"
 
 	using namespace std;
 
@@ -33,5 +36,12 @@
 	extern void reset_recv1_buffer();
 
 	void MessageReceived(char*);
+
+	extern bool telnet_server_running;
+  void received(const unsigned char*, unsigned int);
+  void telnet_sendToAll(string);
+
+	extern bool msgbuffer_thread_running;
+	std::shared_ptr<std::vector<char>> processInputLine(string);
 
 #endif
