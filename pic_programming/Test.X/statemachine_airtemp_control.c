@@ -30,8 +30,8 @@ void Statemachine_AirControl(int room, char*to_send, int desired_temp) {
     int air_temperature=GetAirTemperature();
     int air_quality=GetAirQualityState();
 
-    lower_threshold_air=desired_temp-1;/*one degree failure is ok*/
-    upper_threshold_air=desired_temp+1;
+    lower_threshold_air=desired_temp-1;/*one degree as a band around the desired temperature*/
+    upper_threshold_air=desired_temp+1; /* this is also a hysterisis*/
     printf("i'm going into state: %d\n",air_temp_state[room]);
     /* states are stored in the states variables. so higher function can easily access the current states*/
     switch (air_temp_state[room]) {

@@ -45,6 +45,14 @@
  * ==============================================
  */
 
+int read_input(char *input){
+    char check_input[2];
+    do{
+        GetChar(check_input);
+    } while (check_input[0]!='#');
+    char output[]="i've received a message";
+}
+
 int main(int argc, char** argv) {
     // Variable declarations;
     int i=0, j;
@@ -64,6 +72,9 @@ int main(int argc, char** argv) {
     
     while(i<1){ /*endless loop in the end*/
         /*start the message*/
+        
+        char *input=malloc(500);
+        read_input(input);
         char *to_send=malloc(500);
         strcpy(to_send,"#{\n");
         
