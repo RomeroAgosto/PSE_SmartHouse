@@ -15,12 +15,6 @@ int main(int argc, char* argv[]) {
   signal(SIGINT, sigint_handler);  
 
 	try {
-    cout << "[...] Socket Server: Launching (listen: " << 30123 << ")...";
-    cout.flush();
-    boost::thread telnet_server(socketserver_launch, 30123, &mutex1);  
-    while( !telnet_server_running );
-    cout << "\r[OK] Socket Server: Launching (listen: " << 30123 << ")...          "<<endl;
-
     cout << "[...] Websocket Server: Launching (listen: " << 8080 << ")...";
     cout.flush();
     boost::thread websocket_server(launch_websocket_server, 8080, &mutex1);  
@@ -69,7 +63,6 @@ int main(int argc, char* argv[]) {
 
 void MessageReceived(char* message) {
 	printf("Sending to all socket clients: %s\n", message);
-	telnet_sendToAll(message);	
 	websocket_sendToAll(message);
 }
 
