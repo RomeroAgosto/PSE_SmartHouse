@@ -5,7 +5,6 @@ g++ -Wall -I/usr/local/include -Llib/ \
 src/main/somestuff.cpp \
 src/main/serial_reception_handler.cpp \
 src/serial/serial.cpp \
-src/telnet/socketserver.cpp \
 src/main/websocket_reception_handler.cpp \
 src/msgqueue/msgqueue.cpp \
 src/main/websocket_write.cpp \

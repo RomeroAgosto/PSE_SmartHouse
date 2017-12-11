@@ -17,7 +17,7 @@
 	#include <stddef.h>
 
 	#include "serial/serial.h"
-	#include "telnet/socketserver.h" 
+	//#include "telnet/socketserver.h" 
 	#include "websocket/launch_server.h" 
 	#include "main/websocket_reception_handler.h"
 	#include "msgqueue/msgqueue.h"

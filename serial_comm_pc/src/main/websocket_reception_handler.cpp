@@ -1,4 +1,4 @@
-#include "socket_reception_handler.h"
+#include "websocket_reception_handler.h"
 
 void websocket_reception_handler(boost::mutex *cl_mutex, string message) {
 	cl_mutex->lock();

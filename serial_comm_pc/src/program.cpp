@@ -1,10 +1,9 @@
-/* SOCKETSERVER TCP PORT: 30123 */
-
 #include "header.h"
 
 bool telnet_server_running = false;
 bool msgbuffer_thread_running = false;
 boost::mutex mutex1;
+CallbackSerial* serial_w = NULL;
 
 int main(int argc, char* argv[]) {
   if(argc!=3) {
