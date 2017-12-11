@@ -21,6 +21,12 @@ int main(int argc, char* argv[]) {
     while( !telnet_server_running );
     cout << "\r[OK] Socket Server: Launching (listen: " << 30123 << ")...          "<<endl;
 
+    cout << "[...] Websocket Server: Launching (listen: " << 8080 << ")...";
+    cout.flush();
+    boost::thread websocket_server(launch_websocket_server, 8080, &mutex1);  
+    while( !websocket_server_running );
+    cout << "\r[OK] Websocket Server: Launching (listen: " << 8080 << ")...          "<<endl;
+
  		cout << "[...] Serial1: Launching...";
 		cout.flush();
     CallbackSerial serial1(argv[1], boost::lexical_cast<unsigned int>(argv[2]));
@@ -49,20 +55,21 @@ int main(int argc, char* argv[]) {
 			cout.flush();
 			serial1.doClose();
 
-		} catch (std::exception& e) {
-			cout<<"\nException: "<<e.what()<<endl;
-			cout.flush();
-			exit(1);
-		}
-
+	} catch (std::exception& e) {
+		cout<<"\nException: "<<e.what()<<endl;
 		cout.flush();
-		exit(0);
-		return 0;	
+		exit(1);
+	}
+
+	cout.flush();
+	exit(0);
+	return 0;	
 }
 
 
 void MessageReceived(char* message) {
 	printf("Sending to all socket clients: %s\n", message);
 	telnet_sendToAll(message);	
+	websocket_sendToAll(message);
 }
 
