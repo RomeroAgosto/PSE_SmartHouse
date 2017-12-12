@@ -30,7 +30,13 @@
 #define SYSCLK  80000000L // System clock frequency, in Hz
 #define PBCLOCK 40000000L // Peripheral Bus Clock frequency, in Hz
 
+#define SEND_NO_MESSAGE 0
+#define SEND_NEW_STATUS 1
+#define SEND_SCHEDULES 2
+#define RECEIVE_SCHEDULES 3
+#define SEND_DATALOG 4
 
+static int send_flag=SEND_NO_MESSAGE;
 /*
  * 
  */
@@ -47,10 +53,20 @@
 
 int read_input(char *input){
     char check_input[2];
+    char waiting[]="waiting\n";
     do{
+      
         GetChar(check_input);
+        send_messages(waiting);
     } while (check_input[0]!='#');
-    char output[]="i've received a message";
+    char char_bit[1];
+    int i=0;
+    do{
+        GetChar(char_bit);
+        if (char_bit[0]!=input[i]){strcat(input,char_bit);}/* PIC reads to fast!*/
+        i++;
+    }while(char_bit[0]!='*');
+    send_messages(input);
 }
 
 int main(int argc, char** argv) {
@@ -69,13 +85,31 @@ int main(int argc, char** argv) {
             PORTAbits.RA3 = 1;
             while(1);
     }
+
+    /*read message*/
+    char input[1];
+    //read_input(input);
+    
     
     while(i<1){ /*endless loop in the end*/
         /*start the message*/
+        /*checking the input in the beginning and setting flags*/
+        if (GetChar(input) != 0){
+            if (input[0]=='?'){  
+                send_flag=SEND_NEW_STATUS;
+            }
+            else if(input[0]=='!'){
+                send_flag=SEND_SCHEDULES;
+            }
+            else if(input[0]=='+'){
+                send_flag=RECEIVE_SCHEDULES;
+            }
+            else if(input[0]=='%'){
+                send_flag=SEND_DATALOG;
+            }                
+        }            
         
-        char *input=malloc(500);
-        read_input(input);
-        char *to_send=malloc(500);
+        char *to_send=malloc(500); 
         strcpy(to_send,"#{\n");
         
         /*water temperature control*/

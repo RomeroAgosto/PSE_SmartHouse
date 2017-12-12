@@ -108,7 +108,7 @@ void UartClose(void)
 int GetChar(UINT8 *byte)
 {
 	char dummy;
-
+    
 	if(U1STAbits.OERR ||U1STAbits.FERR || U1STAbits.PERR) // receive errors?
 	{
 		dummy = U1RXREG; 			// dummy read to clear FERR/PERR
