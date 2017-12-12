@@ -1,3 +1,6 @@
+<div id="buttons-dontclick-overlay">
+	<div id="connect_button"><span>Connect</span></div>
+</div>
 <div><br/><br/><br/><br/></div>
 <div class="row">
 	<div id="buttons-arrows" class="col-md-4">
