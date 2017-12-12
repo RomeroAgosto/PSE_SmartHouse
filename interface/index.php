@@ -4,6 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="runtime/plugins/font-awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="runtime/css/main.css">
 		<link rel="stylesheet" type="text/css" href="runtime/css/buttons.css">
+		<link rel="stylesheet" type="text/css" href="runtime/css/screen.css">
 		<script src="runtime/plugins/jquery/jquery-3.2.1.min.js"></script>
 	</head>
 	<body>
@@ -30,5 +31,7 @@
 			</div>
 			<div class="col-md-1"></div>
 		</div>
+		<script type="text/javascript" src="runtime/js/a_environment.js"></script>
+		<script type="text/javascript" src="runtime/js/c_connect.js"></script>
 	</body>
 </html>

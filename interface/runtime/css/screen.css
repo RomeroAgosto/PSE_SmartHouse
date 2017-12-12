@@ -1,0 +1,53 @@
+#screen {
+	height: 340px;
+	/*background: red; /* For browsers that do not support gradients */
+  /*background: -webkit-linear-gradient(red, yellow); /* For Safari 5.1 to 6.0 */
+  /*background: -o-linear-gradient(red, yellow); /* For Opera 11.1 to 12.0 */
+  /*background: -moz-linear-gradient(red, yellow); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#d6dbe0, #9fabb7); /* Standard syntax */ 
+}
+
+#light-bar-top {
+	position: absolute;	
+	width:100%;
+	left: 0;
+	top: 0;
+	background: linear-gradient(to right, blue,  #3f3f7f 50%, blue);
+	background: linear-gradient(to top, #d6dbe0,  blue 50%);
+	opacity: 0.12;
+	height: 10px;
+	z-index: 99
+}
+
+#light-bar-bottom {
+	position: absolute;	
+	width:100%;
+	left: 0;
+	bottom: 0;
+	background: linear-gradient(to right, blue,  #3f3f7f 50%, blue);
+	background: linear-gradient(to bottom, #d6dbe0,  blue 50%);
+	opacity: 0.14;
+	height: 10px;
+	z-index: 99
+}
+
+#retro-overlay {
+	background-repeat: repeat;
+	background: url('../img/retro-overlay.png');
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	left: 0;
+	opacity: 0.14;
+}
+
+#screen-index {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:100%;
+}
