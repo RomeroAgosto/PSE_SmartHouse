@@ -1,0 +1,184 @@
+\section{Timer\+\_\+libs.\+h File Reference}
+\label{_timer__libs_8h}\index{Timer\+\_\+libs.\+h@{Timer\+\_\+libs.\+h}}
+
+
+This library include some functions that handle the P\+I\+C32 timer in a \char`\"{}user-\/friendly\char`\"{} way. Allow some other programmer, less knowledgeable of the P\+I\+C32 intricacies.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ t\+\_\+on}~1
+\item 
+\#define \textbf{ t\+\_\+off}~0
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ tmr\+\_\+config} (int timerx, double frequency)
+\begin{DoxyCompactList}\small\item\em This functions configs the timer\textquotesingle{}s. \end{DoxyCompactList}\item 
+void \textbf{ tmr\+\_\+wait} (int timerx)
+\begin{DoxyCompactList}\small\item\em This functions wait the ativation of the flag. \end{DoxyCompactList}\item 
+void \textbf{ tmr\+\_\+intrpt\+\_\+config} (int timerx, int priority, void($\ast$tmr\+\_\+function)(void))
+\begin{DoxyCompactList}\small\item\em This functions configs the timer\textquotesingle{}s interrups. \end{DoxyCompactList}\item 
+void \textbf{ tmr\+\_\+reset\+\_\+flag} (int timerx)
+\begin{DoxyCompactList}\small\item\em This functions reset the interrupt flag. \end{DoxyCompactList}\item 
+void \textbf{ tmr\+\_\+\+On\+Off} (int timerx, int signal)
+\begin{DoxyCompactList}\small\item\em This functions activates or disable the timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This library include some functions that handle the P\+I\+C32 timer in a \char`\"{}user-\/friendly\char`\"{} way. Allow some other programmer, less knowledgeable of the P\+I\+C32 intricacies. 
+
+\begin{DoxyAuthor}{Author}
+Rafael Almeida \& Samuel Simoes
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03-\/11-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\label{_timer__libs_8h_ad65c41583d626847ad8f09241e0c8b34}} 
+\index{Timer\+\_\+libs.\+h@{Timer\+\_\+libs.\+h}!t\+\_\+off@{t\+\_\+off}}
+\index{t\+\_\+off@{t\+\_\+off}!Timer\+\_\+libs.\+h@{Timer\+\_\+libs.\+h}}
+\subsubsection{t\+\_\+off}
+{\footnotesize\ttfamily \#define t\+\_\+off~0}
+
+default value to turn off the timer \mbox{\label{_timer__libs_8h_a7926fbf79225fd0d715515b5756c9f3d}} 
+\index{Timer\+\_\+libs.\+h@{Timer\+\_\+libs.\+h}!t\+\_\+on@{t\+\_\+on}}
+\index{t\+\_\+on@{t\+\_\+on}!Timer\+\_\+libs.\+h@{Timer\+\_\+libs.\+h}}
+\subsubsection{t\+\_\+on}
+{\footnotesize\ttfamily \#define t\+\_\+on~1}
+
+default value to turn on the timer 
+
+\subsection{Function Documentation}
+\mbox{\label{_timer__libs_8h_ac95fce70764ad4bfdd4f0e66d23ed791}} 
+\index{Timer\+\_\+libs.\+h@{Timer\+\_\+libs.\+h}!tmr\+\_\+config@{tmr\+\_\+config}}
+\index{tmr\+\_\+config@{tmr\+\_\+config}!Timer\+\_\+libs.\+h@{Timer\+\_\+libs.\+h}}
+\subsubsection{tmr\+\_\+config()}
+{\footnotesize\ttfamily void tmr\+\_\+config (\begin{DoxyParamCaption}\item[{int}]{timerx,  }\item[{double}]{frequency }\end{DoxyParamCaption})}
+
+
+
+This functions configs the timer\textquotesingle{}s. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timerx} & a value form 1 to 5, select the timer from 1 to 5 \\
+\hline
+{\em frequency} & the frequency disired, the frequency need to be bigger than 1.\+2\+Hz\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE in case of the argument\textquotesingle{}s conditions are not respected 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Rafael Almeida \& Samuel Simoes 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03-\/11-\/2017 
+\end{DoxyDate}
+\mbox{\label{_timer__libs_8h_acf42c44ac046a888c4a5c615adfd32c8}} 
+\index{Timer\+\_\+libs.\+h@{Timer\+\_\+libs.\+h}!tmr\+\_\+intrpt\+\_\+config@{tmr\+\_\+intrpt\+\_\+config}}
+\index{tmr\+\_\+intrpt\+\_\+config@{tmr\+\_\+intrpt\+\_\+config}!Timer\+\_\+libs.\+h@{Timer\+\_\+libs.\+h}}
+\subsubsection{tmr\+\_\+intrpt\+\_\+config()}
+{\footnotesize\ttfamily void tmr\+\_\+intrpt\+\_\+config (\begin{DoxyParamCaption}\item[{int}]{timerx,  }\item[{int}]{priority,  }\item[{void($\ast$)(void)}]{tmr\+\_\+function }\end{DoxyParamCaption})}
+
+
+
+This functions configs the timer\textquotesingle{}s interrups. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timerx} & a value form 1 to 5, select the timer from 1 to 5 \\
+\hline
+{\em priority} & define the priority of the interrupt, should chose a value between 1 and 6, be 1 the lower priority and 6 the higher \\
+\hline
+{\em $\ast$tmr\+\_\+function} & the function that will execute when the interrupt handler is called \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE in case of the argument\textquotesingle{}s conditions are not respected 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Rafael Almeida \& Samuel Simoes 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03-\/11-\/2017 
+\end{DoxyDate}
+\mbox{\label{_timer__libs_8h_a5d6090b94222fed0599c44200d141a9f}} 
+\index{Timer\+\_\+libs.\+h@{Timer\+\_\+libs.\+h}!tmr\+\_\+\+On\+Off@{tmr\+\_\+\+On\+Off}}
+\index{tmr\+\_\+\+On\+Off@{tmr\+\_\+\+On\+Off}!Timer\+\_\+libs.\+h@{Timer\+\_\+libs.\+h}}
+\subsubsection{tmr\+\_\+\+On\+Off()}
+{\footnotesize\ttfamily void tmr\+\_\+\+On\+Off (\begin{DoxyParamCaption}\item[{int}]{timerx,  }\item[{int}]{signal }\end{DoxyParamCaption})}
+
+
+
+This functions activates or disable the timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timerx} & a value form 1 to 5, to select the timer from 1 to 5 \\
+\hline
+{\em signal} & should be t\+\_\+on or t\+\_\+off, respectively turn on/off the timer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE in case of the argument\textquotesingle{}s conditions are not respected 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Rafael Almeida \& Samuel Simoes 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03-\/11-\/2017 
+\end{DoxyDate}
+\mbox{\label{_timer__libs_8h_aba8fbc7ba2284c6aa129f79864535e69}} 
+\index{Timer\+\_\+libs.\+h@{Timer\+\_\+libs.\+h}!tmr\+\_\+reset\+\_\+flag@{tmr\+\_\+reset\+\_\+flag}}
+\index{tmr\+\_\+reset\+\_\+flag@{tmr\+\_\+reset\+\_\+flag}!Timer\+\_\+libs.\+h@{Timer\+\_\+libs.\+h}}
+\subsubsection{tmr\+\_\+reset\+\_\+flag()}
+{\footnotesize\ttfamily void tmr\+\_\+reset\+\_\+flag (\begin{DoxyParamCaption}\item[{int}]{timerx }\end{DoxyParamCaption})}
+
+
+
+This functions reset the interrupt flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timerx} & a value form 1 to 5, select the timer from 1 to 5 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE in case of the argument\textquotesingle{}s conditions are not respected 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Rafael Almeida \& Samuel Simoes 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03-\/11-\/2017 
+\end{DoxyDate}
+\mbox{\label{_timer__libs_8h_a303cd7354e05d6a9cb43021b28a37fc5}} 
+\index{Timer\+\_\+libs.\+h@{Timer\+\_\+libs.\+h}!tmr\+\_\+wait@{tmr\+\_\+wait}}
+\index{tmr\+\_\+wait@{tmr\+\_\+wait}!Timer\+\_\+libs.\+h@{Timer\+\_\+libs.\+h}}
+\subsubsection{tmr\+\_\+wait()}
+{\footnotesize\ttfamily void tmr\+\_\+wait (\begin{DoxyParamCaption}\item[{int}]{timerx }\end{DoxyParamCaption})}
+
+
+
+This functions wait the ativation of the flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timerx} & a value form 1 to 5, select the timer from 1 to 5\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE in case of the argument\textquotesingle{}s conditions are not respected 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Rafael Almeida \& Samuel Simoes 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03-\/11-\/2017 
+\end{DoxyDate}

@@ -21,11 +21,14 @@
 #include <xc.h>
 #define _SUPPRESS_PLIB_WARNING 1
 #include <plib.h>
+#include <p32xxxx.h>
 #include "../CKCommon/UART/uart.h"
 #include "statemachine_light_control.h"
 #include "statemachine_airquality_control.h" 
 #include <string.h>
 #include <stdio.h>
+#include "timer_libs.h"
+#include <time.h>
 
 #define SYSCLK  80000000L // System clock frequency, in Hz
 #define PBCLOCK 40000000L // Peripheral Bus Clock frequency, in Hz
@@ -69,6 +72,18 @@ int read_input(char *input){
     send_messages(input);
 }
 
+void *tmr2isr(void){
+    
+        static int count=0;
+        char send[]="+1s";
+        if (count>=3){
+                 send_messages(send); 
+                 counter=0;
+        }
+        PORTAbits.RA3!= PORTAbits.RA3;
+        tmr_reset_flag(2);
+}
+
 int main(int argc, char** argv) {
     // Variable declarations;
     int i=0, j;
@@ -79,12 +94,30 @@ int main(int argc, char** argv) {
 
     // Set RA3 as outpout
     TRISAbits.TRISA3 = 0;
-    PORTAbits.RA3=0;
-            // Init UART
+
+    
+    
+    
+                // Init UART
     if(UartInit(PBCLOCK,115200) != UART_SUCCESS) {
             PORTAbits.RA3 = 1;
             while(1);
     }
+/*timer initialization*/    
+  
+    tmr_config(2,3);
+    tmr_intrpt_config(2,2,tmr2isr());
+    tmr_OnOff(2,1);
+        
+    PORTAbits.RA3=0;
+    char send[]="123\n";
+    while(1){
+       // if (IFS0bits.T2IF == 1){send_messages(send);};
+    };
+    
+    
+    
+   
 
     /*read message*/
     char input[1];

@@ -164,6 +164,7 @@ int send_messages(char *message){
 
 
 // Function replacements to redirect stdin/stdout to USART1
+
 // These functions are called by printf(), scanf(), ...
 void _mon_putc(char c) {
     while (U1STAbits.UTXBF); // Wait till buffer available (TX Buffer Full)

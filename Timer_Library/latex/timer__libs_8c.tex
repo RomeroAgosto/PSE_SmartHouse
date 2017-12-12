@@ -1,0 +1,326 @@
+\section{timer\+\_\+libs.\+c File Reference}
+\label{timer__libs_8c}\index{timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}}
+
+
+This library include some functions that handle the P\+I\+C32 timer in a \char`\"{}user-\/friendly\char`\"{} way. Allow some other programmer, less knowledgeable of the P\+I\+C32 intricacies.  
+
+
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+{\ttfamily \#include $<$plib.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ S\+Y\+S\+C\+LK}~80000000L
+\item 
+\#define \textbf{ P\+B\+U\+S\+C\+LK}~40000000L
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ tmr\+\_\+config} (int timerx, double freq)
+\begin{DoxyCompactList}\small\item\em This functions configs the timer\textquotesingle{}s. \end{DoxyCompactList}\item 
+void \textbf{ tmr\+\_\+wait} (int timerx)
+\begin{DoxyCompactList}\small\item\em This functions wait the ativation of the flag. \end{DoxyCompactList}\item 
+void \textbf{ tmr\+\_\+intrpt\+\_\+config} (int timerx, int priority, void($\ast$tmr\+\_\+function)(void))
+\begin{DoxyCompactList}\small\item\em This functions configs the timer\textquotesingle{}s interrups. \end{DoxyCompactList}\item 
+void \textbf{ tmr1\+\_\+isr} (void)
+\begin{DoxyCompactList}\small\item\em $\ast$tmr1\+\_\+isr the function that will execute when the interrupt handler 1 is called the function reset the flag \end{DoxyCompactList}\item 
+void \textbf{ tmr2\+\_\+isr} (void)
+\begin{DoxyCompactList}\small\item\em $\ast$tmr2\+\_\+isr the function that will execute when the interrupt handler 2 is called. The function reset the flag \end{DoxyCompactList}\item 
+void \textbf{ tmr3\+\_\+isr} (void)
+\begin{DoxyCompactList}\small\item\em $\ast$tmr3\+\_\+isr the function that will execute when the interrupt handler 3 is called. The function reset the flag \end{DoxyCompactList}\item 
+void \textbf{ tmr4\+\_\+isr} (void)
+\begin{DoxyCompactList}\small\item\em $\ast$tmr4\+\_\+isr the function that will execute when the interrupt handler 4 is called the function reset the flag \end{DoxyCompactList}\item 
+void \textbf{ tmr5\+\_\+isr} (void)
+\begin{DoxyCompactList}\small\item\em tmr5\+\_\+isr the function that will execute when the interrupt handler 5 is called the function reset the flag \end{DoxyCompactList}\item 
+void \textbf{ tmr\+\_\+reset\+\_\+flag} (int timerx)
+\begin{DoxyCompactList}\small\item\em This functions reset the interrupt flag. \end{DoxyCompactList}\item 
+void \textbf{ tmr\+\_\+\+On\+Off} (int timerx, int signal)
+\begin{DoxyCompactList}\small\item\em This functions activates or disable the timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+void($\ast$ \textbf{ tmr1\+\_\+func} )() =N\+U\+LL
+\item 
+void($\ast$ \textbf{ tmr2\+\_\+func} )() =N\+U\+LL
+\item 
+void($\ast$ \textbf{ tmr3\+\_\+func} )() =N\+U\+LL
+\item 
+void($\ast$ \textbf{ tmr4\+\_\+func} )() =N\+U\+LL
+\item 
+void($\ast$ \textbf{ tmr5\+\_\+func} )() =N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This library include some functions that handle the P\+I\+C32 timer in a \char`\"{}user-\/friendly\char`\"{} way. Allow some other programmer, less knowledgeable of the P\+I\+C32 intricacies. 
+
+\begin{DoxyAuthor}{Author}
+Rafael Almeida \& Samuel Simoes
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03-\/11-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\label{timer__libs_8c_afea81b612c0d335d1bd49be68c1a89d3}} 
+\index{timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}!P\+B\+U\+S\+C\+LK@{P\+B\+U\+S\+C\+LK}}
+\index{P\+B\+U\+S\+C\+LK@{P\+B\+U\+S\+C\+LK}!timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}}
+\subsubsection{P\+B\+U\+S\+C\+LK}
+{\footnotesize\ttfamily \#define P\+B\+U\+S\+C\+LK~40000000L}
+
+Peripheral bus clock \mbox{\label{timer__libs_8c_a97ee8be60ff9ae1cfface03bc50f1d94}} 
+\index{timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}!S\+Y\+S\+C\+LK@{S\+Y\+S\+C\+LK}}
+\index{S\+Y\+S\+C\+LK@{S\+Y\+S\+C\+LK}!timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}}
+\subsubsection{S\+Y\+S\+C\+LK}
+{\footnotesize\ttfamily \#define S\+Y\+S\+C\+LK~80000000L}
+
+System clock frequency, in Hz 
+
+\subsection{Function Documentation}
+\mbox{\label{timer__libs_8c_af03ffc6eb9d4dfc742513301eb656ba5}} 
+\index{timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}!tmr1\+\_\+isr@{tmr1\+\_\+isr}}
+\index{tmr1\+\_\+isr@{tmr1\+\_\+isr}!timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}}
+\subsubsection{tmr1\+\_\+isr()}
+{\footnotesize\ttfamily void tmr1\+\_\+isr (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+$\ast$tmr1\+\_\+isr the function that will execute when the interrupt handler 1 is called the function reset the flag 
+
+\begin{DoxyAuthor}{Author}
+Rafael Almeida \& Samuel Simoes 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03-\/11-\/2017 
+\end{DoxyDate}
+\mbox{\label{timer__libs_8c_a8de6a5e8a74fe35d5e749ef46af8e7ea}} 
+\index{timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}!tmr2\+\_\+isr@{tmr2\+\_\+isr}}
+\index{tmr2\+\_\+isr@{tmr2\+\_\+isr}!timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}}
+\subsubsection{tmr2\+\_\+isr()}
+{\footnotesize\ttfamily void tmr2\+\_\+isr (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+$\ast$tmr2\+\_\+isr the function that will execute when the interrupt handler 2 is called. The function reset the flag 
+
+\begin{DoxyReturn}{Returns}
+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE in case of the argument\textquotesingle{}s conditions are not respected 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Rafael Almeida \& Samuel Simoes 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03-\/11-\/2017 
+\end{DoxyDate}
+\mbox{\label{timer__libs_8c_adaa8fed7e9977936c99b1989d3aac195}} 
+\index{timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}!tmr3\+\_\+isr@{tmr3\+\_\+isr}}
+\index{tmr3\+\_\+isr@{tmr3\+\_\+isr}!timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}}
+\subsubsection{tmr3\+\_\+isr()}
+{\footnotesize\ttfamily void tmr3\+\_\+isr (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+$\ast$tmr3\+\_\+isr the function that will execute when the interrupt handler 3 is called. The function reset the flag 
+
+\begin{DoxyAuthor}{Author}
+Rafael Almeida \& Samuel Simoes 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03-\/11-\/2017 
+\end{DoxyDate}
+\mbox{\label{timer__libs_8c_aeb91f903b0c92b3f81dc57f7e63f45aa}} 
+\index{timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}!tmr4\+\_\+isr@{tmr4\+\_\+isr}}
+\index{tmr4\+\_\+isr@{tmr4\+\_\+isr}!timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}}
+\subsubsection{tmr4\+\_\+isr()}
+{\footnotesize\ttfamily void tmr4\+\_\+isr (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+$\ast$tmr4\+\_\+isr the function that will execute when the interrupt handler 4 is called the function reset the flag 
+
+\begin{DoxyAuthor}{Author}
+Rafael Almeida \& Samuel Simoes 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03-\/11-\/2017 
+\end{DoxyDate}
+\mbox{\label{timer__libs_8c_ae868a352a2c5a724c8ac9cf5054ad78c}} 
+\index{timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}!tmr5\+\_\+isr@{tmr5\+\_\+isr}}
+\index{tmr5\+\_\+isr@{tmr5\+\_\+isr}!timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}}
+\subsubsection{tmr5\+\_\+isr()}
+{\footnotesize\ttfamily void tmr5\+\_\+isr (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+tmr5\+\_\+isr the function that will execute when the interrupt handler 5 is called the function reset the flag 
+
+\begin{DoxyAuthor}{Author}
+Rafael Almeida \& Samuel Simoes 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03-\/11-\/2017 
+\end{DoxyDate}
+\mbox{\label{timer__libs_8c_a024ce1fdffe7ce7f215ed2aea77c01c6}} 
+\index{timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}!tmr\+\_\+config@{tmr\+\_\+config}}
+\index{tmr\+\_\+config@{tmr\+\_\+config}!timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}}
+\subsubsection{tmr\+\_\+config()}
+{\footnotesize\ttfamily void tmr\+\_\+config (\begin{DoxyParamCaption}\item[{int}]{timerx,  }\item[{double}]{frequency }\end{DoxyParamCaption})}
+
+
+
+This functions configs the timer\textquotesingle{}s. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timerx} & a value form 1 to 5, select the timer from 1 to 5 \\
+\hline
+{\em frequency} & the frequency disired, the frequency need to be bigger than 1.\+2\+Hz\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE in case of the argument\textquotesingle{}s conditions are not respected 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Rafael Almeida \& Samuel Simoes 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03-\/11-\/2017 
+\end{DoxyDate}
+\mbox{\label{timer__libs_8c_acf42c44ac046a888c4a5c615adfd32c8}} 
+\index{timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}!tmr\+\_\+intrpt\+\_\+config@{tmr\+\_\+intrpt\+\_\+config}}
+\index{tmr\+\_\+intrpt\+\_\+config@{tmr\+\_\+intrpt\+\_\+config}!timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}}
+\subsubsection{tmr\+\_\+intrpt\+\_\+config()}
+{\footnotesize\ttfamily void tmr\+\_\+intrpt\+\_\+config (\begin{DoxyParamCaption}\item[{int}]{timerx,  }\item[{int}]{priority,  }\item[{void($\ast$)(void)}]{tmr\+\_\+function }\end{DoxyParamCaption})}
+
+
+
+This functions configs the timer\textquotesingle{}s interrups. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timerx} & a value form 1 to 5, select the timer from 1 to 5 \\
+\hline
+{\em priority} & define the priority of the interrupt, should chose a value between 1 and 6, be 1 the lower priority and 6 the higher \\
+\hline
+{\em $\ast$tmr\+\_\+function} & the function that will execute when the interrupt handler is called \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE in case of the argument\textquotesingle{}s conditions are not respected 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Rafael Almeida \& Samuel Simoes 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03-\/11-\/2017 
+\end{DoxyDate}
+\mbox{\label{timer__libs_8c_a5d6090b94222fed0599c44200d141a9f}} 
+\index{timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}!tmr\+\_\+\+On\+Off@{tmr\+\_\+\+On\+Off}}
+\index{tmr\+\_\+\+On\+Off@{tmr\+\_\+\+On\+Off}!timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}}
+\subsubsection{tmr\+\_\+\+On\+Off()}
+{\footnotesize\ttfamily void tmr\+\_\+\+On\+Off (\begin{DoxyParamCaption}\item[{int}]{timerx,  }\item[{int}]{signal }\end{DoxyParamCaption})}
+
+
+
+This functions activates or disable the timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timerx} & a value form 1 to 5, to select the timer from 1 to 5 \\
+\hline
+{\em signal} & should be t\+\_\+on or t\+\_\+off, respectively turn on/off the timer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE in case of the argument\textquotesingle{}s conditions are not respected 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Rafael Almeida \& Samuel Simoes 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03-\/11-\/2017 
+\end{DoxyDate}
+\mbox{\label{timer__libs_8c_aba8fbc7ba2284c6aa129f79864535e69}} 
+\index{timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}!tmr\+\_\+reset\+\_\+flag@{tmr\+\_\+reset\+\_\+flag}}
+\index{tmr\+\_\+reset\+\_\+flag@{tmr\+\_\+reset\+\_\+flag}!timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}}
+\subsubsection{tmr\+\_\+reset\+\_\+flag()}
+{\footnotesize\ttfamily void tmr\+\_\+reset\+\_\+flag (\begin{DoxyParamCaption}\item[{int}]{timerx }\end{DoxyParamCaption})}
+
+
+
+This functions reset the interrupt flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timerx} & a value form 1 to 5, select the timer from 1 to 5 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE in case of the argument\textquotesingle{}s conditions are not respected 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Rafael Almeida \& Samuel Simoes 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03-\/11-\/2017 
+\end{DoxyDate}
+\mbox{\label{timer__libs_8c_a303cd7354e05d6a9cb43021b28a37fc5}} 
+\index{timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}!tmr\+\_\+wait@{tmr\+\_\+wait}}
+\index{tmr\+\_\+wait@{tmr\+\_\+wait}!timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}}
+\subsubsection{tmr\+\_\+wait()}
+{\footnotesize\ttfamily void tmr\+\_\+wait (\begin{DoxyParamCaption}\item[{int}]{timerx }\end{DoxyParamCaption})}
+
+
+
+This functions wait the ativation of the flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timerx} & a value form 1 to 5, select the timer from 1 to 5\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE in case of the argument\textquotesingle{}s conditions are not respected 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Rafael Almeida \& Samuel Simoes 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03-\/11-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Variable Documentation}
+\mbox{\label{timer__libs_8c_a20150e614e0db063b5a978ffa74ec1f3}} 
+\index{timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}!tmr1\+\_\+func@{tmr1\+\_\+func}}
+\index{tmr1\+\_\+func@{tmr1\+\_\+func}!timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}}
+\subsubsection{tmr1\+\_\+func}
+{\footnotesize\ttfamily void($\ast$ tmr1\+\_\+func) () =N\+U\+LL}
+
+it\textquotesingle{}s a callback variable to a function that will execute when the interrupt handler 1 is called \mbox{\label{timer__libs_8c_a32d642fb3357fd7c99dafad4f17885e8}} 
+\index{timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}!tmr2\+\_\+func@{tmr2\+\_\+func}}
+\index{tmr2\+\_\+func@{tmr2\+\_\+func}!timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}}
+\subsubsection{tmr2\+\_\+func}
+{\footnotesize\ttfamily void($\ast$ tmr2\+\_\+func) () =N\+U\+LL}
+
+it\textquotesingle{}s a callback variable to a function that will execute when the interrupt handler 2 is called \mbox{\label{timer__libs_8c_a68d6c55fc25c77cde3f602c4a34c4869}} 
+\index{timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}!tmr3\+\_\+func@{tmr3\+\_\+func}}
+\index{tmr3\+\_\+func@{tmr3\+\_\+func}!timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}}
+\subsubsection{tmr3\+\_\+func}
+{\footnotesize\ttfamily void($\ast$ tmr3\+\_\+func) () =N\+U\+LL}
+
+it\textquotesingle{}s a callback variable to a function that will execute when the interrupt handler 3 is called \mbox{\label{timer__libs_8c_a42b8c19ef88770d60bcb3cf34d2f0acd}} 
+\index{timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}!tmr4\+\_\+func@{tmr4\+\_\+func}}
+\index{tmr4\+\_\+func@{tmr4\+\_\+func}!timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}}
+\subsubsection{tmr4\+\_\+func}
+{\footnotesize\ttfamily void($\ast$ tmr4\+\_\+func) () =N\+U\+LL}
+
+it\textquotesingle{}s a callback variable to a function that will execute when the interrupt handler 4 is called \mbox{\label{timer__libs_8c_a8620a4d79b6af2e082b58843b1a7c677}} 
+\index{timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}!tmr5\+\_\+func@{tmr5\+\_\+func}}
+\index{tmr5\+\_\+func@{tmr5\+\_\+func}!timer\+\_\+libs.\+c@{timer\+\_\+libs.\+c}}
+\subsubsection{tmr5\+\_\+func}
+{\footnotesize\ttfamily void($\ast$ tmr5\+\_\+func) () =N\+U\+LL}
+
+it\textquotesingle{}s a callback variable to a function that will execute when the interrupt handler 5 is called 
