@@ -10,14 +10,19 @@
 #include <stdlib.h>
 #define _SUPPRESS_PLIB_WARNING 1
 #include <plib.h>
+#include <string.h>
+
+
 #define DESIRED_TEMPERATURE 0
 #define INCREASE_WATER_TEMPERATURE 1
 #define FALSE 0
 #define TRUE 1
 
-static int upper_threshold=60; /*e.g. when the desired temperature is 60 */
-
 static int water_temp_state=0;
+
+static int upper_threshold=65; /*just to provide initial values*/
+static int lower_threshold=55;
+
 
 int GetWaterTemperature(void);
 int SetHeatingWater(int Command);

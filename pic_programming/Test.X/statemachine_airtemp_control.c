@@ -1,7 +1,5 @@
-
 #include "statemachine_airtemp_control.h"
-#include "statemachine_airquality_control.h" /* to obtain the current state*/
-#include <string.h>
+
 int SetVentilation(int on){
     if (on==TRUE){printf("Ventilation on\n");}
     else {printf("Ventilation turned off \n");}
@@ -28,52 +26,35 @@ int GetAirTemperature(){
  */
 void Statemachine_AirControl(int room, char*to_send, int desired_temp) {
     int air_temperature=GetAirTemperature();
-    int air_quality=GetAirQualityState();
 
-    lower_threshold_air=desired_temp-1;/*one degree as a band around the desired temperature*/
-    upper_threshold_air=desired_temp+1; /* this is also a hysterisis*/
+    lower_threshold_air=desired_temp-1;/*two degree trigger-band*/
+    upper_threshold_air=desired_temp+1;
     printf("i'm going into state: %d\n",air_temp_state[room]);
     /* states are stored in the states variables. so higher function can easily access the current states*/
     switch (air_temp_state[room]) {
 
         case DESIRED_TEMPERATURE:
             SetHeatingAir(FALSE);
-            if(air_quality==0){SetVentilation(FALSE);}/* it is just possible to turn off the ventilation when the Air quality is good!*/
-
             /*set next state*/
-            if (air_temperature<lower_threshold_air){air_temp_state[room]=INCREASE_AIR_TEMPERATURE;} /*Implementation of Schmitt -Trigger misses here*/
-            else if(air_temperature>upper_threshold_air){air_temp_state[room]=DECREASE_AIR_TEMPERATURE;}
+            if (air_temperature<lower_threshold_air){air_temp_state[room]=INCREASE_AIR_TEMPERATURE;} /*If the values drops below the lower threshold increase! -> Avoid shutter*/
             break;
 
         case INCREASE_AIR_TEMPERATURE:
             SetHeatingAir(TRUE);
-            if(air_quality==0){SetVentilation(FALSE);}/*it is just possible to turn off the ventilation when the Air quality is good!*/
-
             /*set next state*/
-            if (air_temperature>upper_threshold_air){air_temp_state[room]=DECREASE_AIR_TEMPERATURE;} /*if this happened to often, call the technician to adjust the control parameter*/
-            else if(air_temperature>lower_threshold_air){air_temp_state[room]=DESIRED_TEMPERATURE;}
-            break;
-
-        case DECREASE_AIR_TEMPERATURE:
-            SetHeatingAir(FALSE);
-            SetVentilation(TRUE);
-
-            /*set next state*/
-            if (air_temperature<upper_threshold_air){air_temp_state[room]=DESIRED_TEMPERATURE;}
-            else if(air_temperature<lower_threshold_air){air_temp_state[room]=INCREASE_AIR_TEMPERATURE;}/*if this happened to often, call the technician to adjust the control parameter*/
+            if(air_temperature>lower_threshold_air){air_temp_state[room]=DESIRED_TEMPERATURE;} /* If the value exceeds the threshold, turn off -> avoid shutter*/
             break;
 
         default:
             SetHeatingAir(FALSE);
-            SetVentilation(FALSE);
             /*SetWarning();something that declares that something went wrong*/
             break;
     }
     char add_to_message[150];
-    sprintf(add_to_message,""
-            "     \"Room_%dTemperature\":%d,\n"
-            "     \"Room_%dState\":%d,\n"
-            "     \"Room_%dLower_threshold\":%d,\n"
-            "     \"Room_%dUpper_threshold\":%d,\n",room,air_temperature,room,air_temp_state[room],room,lower_threshold_air,room,upper_threshold_air);
+    sprintf(add_to_message,"\"Room_%d_Temperature\":%d,\n" /*generate a string for the message*/
+            "\"Room_%d_state\":%d,\n"
+            "\"Room_%d_lower_threshold\":%d,\n"
+            "\"Room_%d_upper_threshold\":%d,\n",room,air_temperature,room,air_temp_state[room],room,lower_threshold_air,room,upper_threshold_air);
     strcat(to_send,add_to_message); /*append the string*/
+    printf("the state machine for air control room[%d] switches to state: %d\n",room, air_temp_state[room]);
 }

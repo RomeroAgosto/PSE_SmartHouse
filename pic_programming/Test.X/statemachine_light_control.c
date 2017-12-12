@@ -1,5 +1,3 @@
-
-
 /* the statevariables structure is defined in the internal_state.h, some IDEs can say the include is unused but it isn't!*/
 #include "statemachine_light_control.h"
 #include <string.h>

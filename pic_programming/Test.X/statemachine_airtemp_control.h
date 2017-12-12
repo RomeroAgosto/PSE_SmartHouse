@@ -8,6 +8,7 @@
 
 #include "stdio.h"
 #include <stdlib.h>
+#include <string.h>
 
 #define DESIRED_TEMPERATURE 0
 #define INCREASE_AIR_TEMPERATURE 1
