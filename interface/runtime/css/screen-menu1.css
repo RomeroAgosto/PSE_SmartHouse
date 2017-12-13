@@ -1,0 +1,9 @@
+#screen-menu1 {
+	height: 100%;	
+}
+
+#screen-menu1 .row {
+	max-width:100%;
+	height: 100%;
+	margin-left: inherit;
+}

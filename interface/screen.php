@@ -43,5 +43,9 @@
 </div>
 
 <div id="screen-menu1" class="screens">
-	MENU1
+	<div class="row">
+		<div class="col-md-4 col1 col"> 1 </div>
+		<div class="col-md-4 col2 col"> 2 </div>
+		<div class="col-md-4 col3 col"> 3 </div>
+	</div>
 </div>
