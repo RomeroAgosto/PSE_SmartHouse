@@ -1,4 +1,5 @@
 function loadScreen(screen_name, parameters) {
+	previous_screen=current_screen.name;
 	switch(screen_name) {
 		case 'index':
 			$('.screens').hide();
@@ -11,6 +12,7 @@ function loadScreen(screen_name, parameters) {
 			$('#screen-home').show();
 			current_screen.name="home";
 			current_screen.has_unsaved_data=0;
+			previous_screen = 'home';
 			break;
 		case 'menu1':
 			$('.screens').hide();
