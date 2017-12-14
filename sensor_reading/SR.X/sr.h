@@ -11,7 +11,7 @@
 double temp_analog(int a_temp_sens_numb);
 char air_quality_level(int air_sens_numb);
 double temp_digital(int d_temp_sens_numb);
-double humidity(int h_sens_numb);
+//int humidity_temperature(int h_sens_numb, double *p);
 char motion_detection(int motion_sens_numb);
 #endif	/* SR_H */
 

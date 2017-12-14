@@ -49,47 +49,29 @@ int main(int argc, char** argv) {
     }
     __XC_UART = 1; /* Redirect stdin/stdout/stderr to UART1*/
     
-    double temp_room[6],humi_room[2],*p;
-    char air_quality_room[4],motion_detected[2];
-    int i,j=0;
+    double temp_room[6];//humi_room[2];
+    char air_quality_room[4];//motion_detected[2];
+    int i=0,j=0;
     while (1) {
-        
         for (i=0; i<4; i++){
             temp_room[i]=temp_analog(i+1);
-            //air_quality_room[i]=air_quality_level(i);
+            air_quality_room[i]=air_quality_level(i+1);
         }
         for (i=4; i<6; i++){
-            temp_room[i]=temp_digital(i);
-            //motion_detected[i-4]=motion_detection(i-4);
+            temp_room[i]=temp_digital(i+1);
         }
-        /*for (i=6; i<8; i++){
-            p=humidity_temperature(i);
-            humi_room[i-6]=*(p+j);
-            j++;
-            temp_room[i]=*(p+j);
-            j=0;
-        }*/
-
-        // __XC_UART = 1; /* Redirect stdin/stdout/stderr to UART1*/
         for (i=0; i<6; i++){
             printf("%s", "Room ");
-            printf("%d\n p",i+1);
+            printf("%d\n",i+1);
             printf("%s","Temperature (C):");
             printf("%f\n\r",temp_room[i]);
-            
             delay(500);
         }
-        /*for (i=0; i<2; i++){
-            printf("Room %d : /n", i);
-            printf("    Humidity: %d (%)",humi_room[i]);
-            //printf("    Presence: %c ",motion_detected[i]);
+        for (i=0; i<4; i++){
+            printf("Room %d : \n", i+1);
+            printf("    Air quality: %c\n ",air_quality_room[i]);
             delay(500);
-        }*/
-        /*for (i=0; i<4; i++){
-            printf("Room %d : /n", i);
-            printf("    Air quality: %c ",air_quality_room[i]);
-            delay(500);
-        }*/
+        }
     }
     return (EXIT_SUCCESS);
 }
