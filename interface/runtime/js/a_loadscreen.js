@@ -1,5 +1,7 @@
 function loadScreen(screen_name, parameters) {
-	previous_screen=current_screen.name;
+	if(screen_name!=current_screen.name)
+		previous_screen=current_screen.name;
+
 	switch(screen_name) {
 		case 'index':
 			$('.screens').hide();
@@ -19,6 +21,29 @@ function loadScreen(screen_name, parameters) {
 			$('#screen-menu1').show();
 			current_screen.name="menu1";
 			current_screen.has_unsaved_data=0;
+
+			//reset col1
+			$('#screen-menu1 .row .col1 .option').removeClass('option-selected');
+			$('#screen-menu1 .row .col1 .option').removeClass('option-focused');
+			$($('#screen-menu1 .row .col1 .option').get(0)).addClass('option-selected');
+			$($('#screen-menu1 .row .col1 .option').get(0)).addClass('option-focused');
+
+			//reset col2 
+			$('#screen-menu1 .row .col2 .option').removeClass('option-selected');
+			$('#screen-menu1 .row .col2 .option').removeClass('option-focused');
+			$('#screen-menu1 .row .col2 .option').hide();
+			$('#screen-menu1 .row .col2 .option-airquality').show();
+			$($('#screen-menu1 .row .col2 .option-airquality').get(0)).addClass('option-selected');
+			$($('#screen-menu1 .row .col2 .option-heating').get(0)).addClass('option-selected');
+			$($('#screen-menu1 .row .col2 .option-lightcontrol').get(0)).addClass('option-selected');
+			$($('#screen-menu1 .row .col2 .option-watertemperature').get(0)).addClass('option-selected');
+
+			//todo: reset col3,4,etc
+			$('#screen-menu1 .row .col3 .col3-up').hide();
+			$('#screen-menu1 .row .col3 .col3-up-airquality-1').show();
+			$('#screen-menu1 .row .col3 .col3-weekdays').hide();
+			$('#screen-menu1 .row .col3 .col3-weekdays-airquality-1').show();
+	
 			break;
 		case 'help':
 			$('.screens').hide();
@@ -33,4 +58,6 @@ function loadScreen(screen_name, parameters) {
 
 $(document).ready(function() {
 	loadScreen('index');
+	$('#screen-menu1 .col2 .option').hide();
+	$('#screen-menu1 .col2 .option-airquality').show();
 });
