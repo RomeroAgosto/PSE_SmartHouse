@@ -6,7 +6,9 @@
 #include <string.h>
 #include "log_functions.h"
 
-
+static sensorvalues sensor_values;
+static log msd;
+static time_t read_time;
 int log_data_saving()
 {
     struct tm *prt_ts;
