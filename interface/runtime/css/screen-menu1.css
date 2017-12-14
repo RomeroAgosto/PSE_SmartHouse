@@ -7,3 +7,59 @@
 	height: 100%;
 	margin-left: inherit;
 }
+
+#screen-menu1 .row .col {
+	border-right: 1px solid #344;
+	font-size:20px;
+	padding-top: 10px;
+}
+
+#screen-menu1 .row .col:last-child {
+	border-right: 1px solid #344;
+}
+
+#screen-menu1 .row .col .option-selected {
+	background-color: #344;
+	color: #eee;
+}
+
+#screen-menu1 .row .col .option-focused {
+	background-color: #3f51b5;
+	color: #eee;
+}
+
+#screen-menu1 .row .col .option-disabled {
+	color: #888;
+	text-decoration: line-through;
+}
+
+#screen-menu1 .row .col3 .status {
+	font-size: 35px;
+}
+
+#screen-menu1 .row .col3 .col3-weekdays {
+	padding-top: 10px;
+}
+
+#screen-menu1 .row .col3 .col3-weekdays .weekday {
+	display: inline-block;
+  width: 30px;
+  border-right: 1px solid #344;
+	margin:0;
+	padding: 0;
+	margin-left: -6px;
+}
+
+#screen-menu1 .row .col3 .col3-weekdays .weekday:first-child {
+	border-left: 1px solid #344;
+}
+
+#screen-menu1 .row .col3 .col3-weekdays .weekday-selected {
+	background-color: #344;
+	color: #eee;
+}
+
+#screen-menu1 .row .col3 .col3-weekdays .weekday-focused {
+	background-color: #3f51b5;
+	color: #eee;
+}
