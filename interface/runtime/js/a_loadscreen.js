@@ -9,6 +9,7 @@ function loadScreen(screen_name, parameters) {
 			current_screen.name="index";
 			current_screen.has_unsaved_data=0;
 			menu1_lockflag1 = false;
+			$('#unlocked-icon').hide();
 			break;
 		case 'home':
 			$('.screens').hide();
@@ -16,6 +17,19 @@ function loadScreen(screen_name, parameters) {
 			current_screen.name="home";
 			current_screen.has_unsaved_data=0;
 			previous_screen = 'home';
+			break;
+		case 'pin_request':
+			if(access_granted) {
+				loadScreen('menu1');
+				return;
+			}
+			$('.screens').hide();
+			$('#screen-pin-request .code_input').html("_ _ _ _");
+			$('#screen-pin-request').show();
+			current_screen.name="pin_request";
+			current_screen.has_unsaved_data=0;
+			previous_screen = 'home';
+			menu1_waitingforkeyboardinput=4;
 			break;
 		case 'menu1':
 			$('.screens').hide();

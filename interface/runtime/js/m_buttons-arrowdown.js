@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	$('#btn-arrowdown').click(function() {
+			access_granted_counter=60;	
 			switch(current_screen.name) {
 				case 'menu1':
 					if(menu1_lockflag1) return;

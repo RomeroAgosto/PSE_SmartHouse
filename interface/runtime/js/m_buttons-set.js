@@ -1,8 +1,9 @@
 $(document).ready(function() {
 	$('#btn-set').click(function() {
+			access_granted_counter=60;	
 			switch(current_screen.name) {
 				case 'home':
-					loadScreen('menu1');
+					loadScreen('pin_request');
 					break;
 				case 'menu1':
 					var colnumber=$($('#screen-menu1 .row .col .option-focused').parent()).data('col');

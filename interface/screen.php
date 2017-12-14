@@ -33,13 +33,20 @@
 	</div>
 	<div class="row row-2">
 		<div class="col-md-4 col1">Air temp</div>
-		<div class="col-md-4 col2"></div>
+		<div class="col-md-4 col2">
+			<span id="unlocked-icon">unlocked icon here</span>
+		</div>
 		<div class="col-md-4 col3">Water</div>
 	</div>
 </div>
 
 <div id="screen-help" class="screens">
 	HELP
+</div>
+
+<div id="screen-pin-request" class="screens">
+	<div class="title">CODE:</div>
+	<div class="code_input">_ _ _ _</div>
 </div>
 
 <div id="screen-menu1" class="screens">
