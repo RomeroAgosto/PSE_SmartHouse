@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	$('#btn-enabledisable').click(function() {
+			access_granted_counter=60;	
 			switch(current_screen.name) {
 				case 'menu1':
 					var colnumber=$($('#screen-menu1 .row .col .option-focused').parent()).data('col');

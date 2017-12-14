@@ -1,6 +1,42 @@
 $(document).ready(function() {
 	$('#keypad td').click(function(e) {
+			access_granted_counter=60;	
 			switch(current_screen.name) {
+				case 'pin_request':					
+					var _input = $('#screen-pin-request .code_input').html();
+					var i; var current_position=-1;
+					for(i=0; i<_input.length; i++) {
+						if(_input.charAt(i)=='_') {
+							current_position = i;
+							break;
+						}
+					}
+					if(current_position==-1) {
+						menu1_waitingforkeyboardinput=0;
+						return;
+					}
+					
+					if(current_position==0) access_pin_input = "";
+
+					var new_html = _input.replace('_','*');
+					access_pin_input = access_pin_input + $(e.target).html();
+
+					$('#screen-pin-request .code_input').html(new_html);
+					menu1_waitingforkeyboardinput--;
+					if(menu1_waitingforkeyboardinput==0) {
+						if(access_pin_input==access_pin) {
+							access_granted=true;
+							access_granted_counter=60;	
+							$('#unlocked-icon').show();
+							loadScreen('menu1');
+						} else {
+							access_pin_input="";
+							loadScreen('home');
+							return;
+						}
+					}
+		
+					break;
 				case 'menu1':
 
 					var colnumber=$($('#screen-menu1 .row .col .option-focused').parent()).data('col');

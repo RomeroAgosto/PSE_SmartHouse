@@ -1,6 +1,10 @@
 $(document).ready(function() {
 	$('#btn-undo').click(function() {
+			access_granted_counter=60;	
 			switch(current_screen.name) {
+				case 'pin_request':
+					loadScreen('home');
+					break;
 				case 'menu1':
 					var colnumber=$($('#screen-menu1 .row .col .option-focused').parent()).data('col');
 					var fieldname=$($('#screen-menu1 .row .col .option-focused').get(0)).data('field');
