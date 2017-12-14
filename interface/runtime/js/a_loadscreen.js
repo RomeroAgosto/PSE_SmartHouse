@@ -43,7 +43,10 @@ function loadScreen(screen_name, parameters) {
 			$('#screen-menu1 .row .col3 .col3-up-airquality-1').show();
 			$('#screen-menu1 .row .col3 .col3-weekdays').hide();
 			$('#screen-menu1 .row .col3 .col3-weekdays-airquality-1').show();
+			$('#screen-menu1 .row .col3 .col3-schedules').hide();
 	
+			
+
 			break;
 		case 'help':
 			$('.screens').hide();

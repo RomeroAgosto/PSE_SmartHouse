@@ -35,6 +35,8 @@ $(document).ready(function() {
 						$('#screen-menu1 .row .col3 .col3-up-' + field2 + "-" + (current_selection2+1)).show();
 						$('#screen-menu1 .row .col3 .col3-weekdays').hide();
 						$('#screen-menu1 .row .col3 .col3-weekdays-' + field2 + "-" + (current_selection2+1)).show();
+						$('#screen-menu1 .row .col3 .col3-weekdays .weekday').removeClass('weekday-selected');
+						$('#screen-menu1 .row .col3 .col3-weekdays .weekday').removeClass('weekday-focused');
 					}
 
 					if(colnumber == 2) {
@@ -57,6 +59,8 @@ $(document).ready(function() {
 						$('#screen-menu1 .row .col3 .col3-up-' + field2 + "-" + (current_selection+1)).show();
 						$('#screen-menu1 .row .col3 .col3-weekdays').hide();
 						$('#screen-menu1 .row .col3 .col3-weekdays-' + field2 + "-" + (current_selection+1)).show();
+						$('#screen-menu1 .row .col3 .col3-weekdays .weekday').removeClass('weekday-selected');
+						$('#screen-menu1 .row .col3 .col3-weekdays .weekday').removeClass('weekday-focused');
 							
 					}
 					break;

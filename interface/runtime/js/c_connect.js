@@ -25,7 +25,7 @@ $(document).ready( function() {
 
 		socket.onmessage = function(e) {
 			var server_message = e.data;
-			console.log(server_message);
+	$('.col3-up-heating-1 .status').html(server_message);	
 		}
 
 	});
