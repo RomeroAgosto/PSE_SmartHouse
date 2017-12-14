@@ -2,6 +2,7 @@ $(document).ready(function() {
 	$('#btn-arrowleft').click(function() {
 			switch(current_screen.name) {
 				case 'menu1':
+					if(menu1_lockflag1) return;
 					var colnumber=$($('#screen-menu1 .row .col .option-focused').parent()).data('col');
 					var fieldname=$($('#screen-menu1 .row .col .option-focused').get(0)).data('field');
 					if(colnumber==1) {

@@ -8,6 +8,7 @@ function loadScreen(screen_name, parameters) {
 			$('#screen-index').show();
 			current_screen.name="index";
 			current_screen.has_unsaved_data=0;
+			menu1_lockflag1 = false;
 			break;
 		case 'home':
 			$('.screens').hide();
@@ -21,6 +22,8 @@ function loadScreen(screen_name, parameters) {
 			$('#screen-menu1').show();
 			current_screen.name="menu1";
 			current_screen.has_unsaved_data=0;
+			menu1_lockflag1 = false;
+			menu1_scheduleset_step=0;
 
 			//reset col1
 			$('#screen-menu1 .row .col1 .option').removeClass('option-selected');
