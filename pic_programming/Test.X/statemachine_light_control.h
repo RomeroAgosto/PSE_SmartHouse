@@ -11,6 +11,9 @@
 
 #include "stdio.h"
 #include <stdlib.h>
+#include <string.h>
+#define _SUPPRESS_PLIB_WARNING 1
+#include <plib.h>
 
 
 #define TURNED_OFF 0
@@ -18,12 +21,10 @@
 #define TRUE 1
 #define FALSE 0
 
-#define CYCLES 3 /*after CYCLES the light is turned off again */
+#define CYCLES 20 /*after CYCLES the light is turned off again */
 
-static int counter[4]={0}; /* Counter for all timer/lights */
-static int light_state[4]={0};
 
-int *update_sensorvalues(int *sensor_values);
+int update_sensorvalues(int light, int *sensor_values);
 void Statemachine_LightControl(int light,char* to_send);
 int create_message(char *existing_string, char *new_input);
 int SetTimer(int number);

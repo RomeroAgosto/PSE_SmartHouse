@@ -1,13 +1,13 @@
 #include "statemachine_airtemp_control.h"
 
 int SetVentilation(int on){
-    if (on==TRUE){printf("Ventilation on\n");}
-    else {printf("Ventilation turned off \n");}
+    if (on==TRUE);//{printf("Ventilation on\n");}
+    else;// {printf("Ventilation turned off \n");}
     return 1;
 }
 int SetHeatingAir(int on){
-    if (on==TRUE){printf("air heating turned on\n");}
-    else {printf("air heating turned off \n");}
+    if (on==TRUE);//{printf("air heating turned on\n");}
+    else; //{printf("air heating turned off \n");}
     return 1; /*we should introduce a check, if this procedure was successful */
 }
 
@@ -29,7 +29,7 @@ void Statemachine_AirControl(int room, char*to_send, int desired_temp) {
 
     lower_threshold_air=desired_temp-1;/*two degree trigger-band*/
     upper_threshold_air=desired_temp+1;
-    printf("i'm going into state: %d\n",air_temp_state[room]);
+    //printf("i'm going into state: %d\n",air_temp_state[room]);
     /* states are stored in the states variables. so higher function can easily access the current states*/
     switch (air_temp_state[room]) {
 
@@ -56,5 +56,5 @@ void Statemachine_AirControl(int room, char*to_send, int desired_temp) {
             "\"Room_%d_lower_threshold\":%d,\n"
             "\"Room_%d_upper_threshold\":%d,\n",room,air_temperature,room,air_temp_state[room],room,lower_threshold_air,room,upper_threshold_air);
     strcat(to_send,add_to_message); /*append the string*/
-    printf("the state machine for air control room[%d] switches to state: %d\n",room, air_temp_state[room]);
+    //printf("the state machine for air control room[%d] switches to state: %d\n",room, air_temp_state[room]);
 }

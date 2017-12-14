@@ -23,7 +23,6 @@
 #define t_on 1  /*!<  default value to turn on the timer*/
 #define t_off 0  /*!< default value to turn off the timer */
 
-
 /** 
 * \brief This functions configs the timer's 
 * \param  timerx  a value form 1 to 5, select the timer from 1 to 5

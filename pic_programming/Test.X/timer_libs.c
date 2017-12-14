@@ -16,6 +16,7 @@
 #define SYSCLK 80000000L /*!< System clock frequency, in Hz*/
 #define PBUSCLK 40000000L /*!< Peripheral bus clock */
 
+
 void (*tmr1_func)()=NULL;/*!<  it's a callback variable to a function that will execute when the interrupt handler 1 is called*/
 void (*tmr2_func)()=NULL;/*!<  it's a callback variable to a function that will execute when the interrupt handler 2 is called*/
 void (*tmr3_func)()=NULL;/*!<  it's a callback variable to a function that will execute when the interrupt handler 3 is called*/

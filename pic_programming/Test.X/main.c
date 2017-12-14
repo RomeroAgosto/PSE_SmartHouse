@@ -18,7 +18,7 @@
  */
 
 #include "../CKCommon/ConfigBits/config_bits.h" // NOTE!! Must precede project file includes
-#include <xc.h>
+//#include <xc.h>
 #define _SUPPRESS_PLIB_WARNING 1
 #include <plib.h>
 #include <p32xxxx.h>
@@ -27,7 +27,7 @@
 #include "statemachine_airquality_control.h" 
 #include <string.h>
 #include <stdio.h>
-#include "timer_libs.h"
+//#include "timer_libs.h"
 #include <time.h>
 
 #define SYSCLK  80000000L // System clock frequency, in Hz
@@ -40,6 +40,7 @@
 #define SEND_DATALOG 4
 
 static int send_flag=SEND_NO_MESSAGE;
+static int count_interrupt;
 /*
  * 
  */
@@ -72,21 +73,32 @@ int read_input(char *input){
     send_messages(input);
 }
 
-void *tmr2isr(void){
-    
-        static int count=0;
-        char send[]="+1s";
-        if (count>=3){
-                 send_messages(send); 
-                 counter=0;
+
+void tmr2_isr(void){
+        //static int count_interrupt=0;
+       // printf("count_interrupt is: %d ",count_interrupt);
+        count_interrupt++;
+        char send[]="interrupt\n";
+        send_messages(send);
+        if (count_interrupt==3){
+         //       printf("+1s");
+                char send[]="+1s\n";
+                send_messages(send);
+                count_interrupt=0;
+                SetTimer(0);
+                SetTimer(1);
+                SetTimer(2);
+                SetTimer(3);
         }
-        PORTAbits.RA3!= PORTAbits.RA3;
-        tmr_reset_flag(2);
+        IFS0bits.T2IF=0;
+      //  printf("interrupt, count is %d\n",count_interrupt);
+        
+        //tmr_reset_flag(2);
 }
 
 int main(int argc, char** argv) {
     // Variable declarations;
-    int i=0, j;
+    int i=0;
 
     // Performance optimization (flash access time, enable instruct and data cache,... and PBClock setup
     SYSTEMConfigPerformance(SYSCLK);
@@ -105,29 +117,37 @@ int main(int argc, char** argv) {
     }
 /*timer initialization*/    
   
-    tmr_config(2,3);
-    tmr_intrpt_config(2,2,tmr2isr());
-    tmr_OnOff(2,1);
-        
+    //tmr_config(2,3);
+    //tmr_intrpt_config(2,2,tmr2isr());
+    //tmr_OnOff(2,1);
+#if TIMER 1
+    INTEnableSystemMultiVectoredInt();
+    void __attribute__( (interrupt(IPL2AUTO), vector(_TIMER_2_VECTOR))) tmr2_isr(void);
+    T2CONbits.ON = 0; // Stop timer
+//---------- interrupt
+    IFS0bits.T2IF=0; // Reset interrupt flag    
+    IPC2bits.T2IP=2;// Timer has higher priority -> 
+    IEC0bits.T2IE=1; // Enable Interrupt
+//--------------
+    T2CONbits.TCKPS = 7; //Select pre-scaler
+    T2CONbits.T32 = 0; // 16 bit timer operation
+    PR2=PBCLOCK/256/3 - 1; // Compute PR value
+    TMR2=0;
+    T2CONbits.TON=1; // Start the timer
     PORTAbits.RA3=0;
-    char send[]="123\n";
-    while(1){
-       // if (IFS0bits.T2IF == 1){send_messages(send);};
-    };
-    
-    
-    
-   
-
+#endif
+    printf("timer init\n");
+    //char send[]="initialized\n";
+    //send_messages(send);
     /*read message*/
-    char input[1];
+    //char input[1];
     //read_input(input);
     
-    
-    while(i<1){ /*endless loop in the end*/
+    char to_send[500]; 
+    while(1){ /*endless loop in the end*/
         /*start the message*/
         /*checking the input in the beginning and setting flags*/
-        if (GetChar(input) != 0){
+      /*  if (GetChar(input) != 0){
             if (input[0]=='?'){  
                 send_flag=SEND_NEW_STATUS;
             }
@@ -141,48 +161,45 @@ int main(int argc, char** argv) {
                 send_flag=SEND_DATALOG;
             }                
         }            
-        
-        char *to_send=malloc(500); 
+        /*
         strcpy(to_send,"#{\n");
         
         /*water temperature control*/
-        char add_temperature[]="  \"WaterTemperature\":[\n";
-        strcat(to_send,add_temperature); /*append the string*/
-        Statemachine_WaterControl(60,to_send);
+       // char add_temperature[]="  \"WaterTemperature\":[\n";
+        //strcat(to_send,add_temperature); /*append the string*/
+      //  Statemachine_WaterControl(60,to_send);
         
         /*light control*/
-        char add_light[]=""
-        "\"Light\":[\n"
-        "   {\n";
-        strcat(to_send,add_light); /*append the string*/
+      //  char add_light[]=""
+      //  "\"Light\":[\n"
+       // "   {\n";
+      //  strcat(to_send,add_light); /*append the string*/
         Statemachine_LightControl(0,to_send);
         Statemachine_LightControl(1,to_send);
         Statemachine_LightControl(2,to_send);
         Statemachine_LightControl(3,to_send);
-        char stop_light[]=""
-        "   }]\n";
-        strcat(to_send,add_light); /*append the string*/
+       // char stop_light[]=""
+        //"   }]\n";
+        //strcat(to_send,add_light); /*append the string*/
         
         /*Air Quality*/
-        char add_airquality[]="\"AirQuality\":[\n";
-        strcat(to_send,add_airquality); /*append the string*/
-        Statemachine_AirQuality(to_send);
+     //   char add_airquality[]="\"AirQuality\":[\n";
+      //  strcat(to_send,add_airquality); /*append the string*/
+      //  Statemachine_AirQuality(to_send);
         
         /*Airtemperature Control*/
-        strcat(to_send,"{\"AirTemperature\":[\n{\n");
+      //  strcat(to_send,"{\"AirTemperature\":[\n{\n");
         int k;
         for(k=0;k<4;k++) {
-            Statemachine_AirControl(k, to_send,25);
+            //Statemachine_AirControl(k, to_send,25);
         }
         /*add the delimiter and send the message*/
-        char add_end_delimiter[5];
-        sprintf(add_end_delimiter,"}*"); /*EndDelimiter*/
-        strcat(to_send,add_end_delimiter); /*append the string*/
+    //    char add_end_delimiter[5];
+    //    sprintf(add_end_delimiter,"}*"); /*EndDelimiter*/
+    //    strcat(to_send,add_end_delimiter); /*append the string*/
         
         /* send the message*/
-        send_messages(to_send);
-        i++;
-        free(to_send);
+       // send_messages(to_send);
     }
     
     
