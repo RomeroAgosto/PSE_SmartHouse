@@ -1,9 +1,9 @@
+#include "hallClock.h"
+#include <stdio.h>
+#include <string.h>
 
 
-#include <time.h>
-
-static struct tm time_hall;
-static int dayMonMax[12]={31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+static int dayMonMax[12]={31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; 
 
 // copy the time_hall to time
 void get_timeHall(struct tm *time)
@@ -27,7 +27,7 @@ int update_time(struct tm time_temp)
 }
 
 // will runs every second
-void incremente_time(void)
+void increment_time(void)
 {
     
     time_hall.tm_sec=(time_hall.tm_sec+1)%60;   // increment sec
@@ -73,10 +73,27 @@ void incremente_time(void)
             }
         }
     }
+    printf("day:%d hours:%d, minutes:%d, seconds:%d\n",time_hall.tm_mday,time_hall.tm_hour,time_hall.tm_min,time_hall.tm_sec);
 }
 
+/**@brief wait brings the pic to wait for a number of seconds
+/* @param input in seconds
+ * @author Sascha Marquardt
+ * @date 03-11-2017  
+ */
+void wait(double seconds){
+    /* save start time */
+  /*  const time_t start = mktime(&time_hall);
 
+    time_t current;
+    do{
+        /* get current time */
+      /*  current=mktime(&time_hall);
+        printf("%f",difftime(current,start));
 
+        /* break loop when the requested number of seconds have elapsed */
+   /* }while(difftime(current, start) < seconds);*/
+}
 /* *****************************************************************************
  End of File
  */

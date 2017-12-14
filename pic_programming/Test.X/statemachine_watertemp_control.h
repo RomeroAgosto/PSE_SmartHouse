@@ -20,8 +20,8 @@
 
 static int water_temp_state=0;
 
-static int upper_threshold=65; /*just to provide initial values*/
-static int lower_threshold=55;
+static int upper_threshold_water=65; /*just to provide initial values*/
+static int lower_threshold_water=55;
 
 
 int GetWaterTemperature(void);

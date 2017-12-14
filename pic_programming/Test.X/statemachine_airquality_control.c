@@ -68,11 +68,4 @@ void Statemachine_AirQuality(char* to_send) {
             /*SetWarning();something that declares that something went wrong*/
             break;
     }
-    char add_to_message[250];
-    sprintf(add_to_message,"   {\n"
-            "       \"AirQualityValue\":%d,\n"
-            "       \"AirQualityUpperThreshold\":%d,\n"
-            "       \"AirQualityLowerThreshold\":%d,\n"
-            "     }]\n",air_quality,UPPER_TRHESHOLD_AIR_QUALITY,LOWER_THRESHOLD_AIR_QUALITY);
-    strcat(to_send,add_to_message); /*append the string*/
 }

@@ -11,6 +11,8 @@
       <itemPath>../CKCommon/ConfigBits/config_bits.h</itemPath>
       <itemPath>../CKCommon/UART/uart.h</itemPath>
       <itemPath>timer_libs.h</itemPath>
+      <itemPath>../sensor_struct/struct_lib.h</itemPath>
+      <itemPath>../clock_hall/hallClock.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -26,6 +28,8 @@
       <itemPath>statemachine_watertemp_control.c</itemPath>
       <itemPath>../CKCommon/UART/uart.c</itemPath>
       <itemPath>timer_libs.c</itemPath>
+      <itemPath>../CKCommon/ConfigBits/struct_lib.c</itemPath>
+      <itemPath>../clock_hall/hallClock.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -36,6 +40,8 @@
   <sourceRootList>
     <Elem>../CKCommon/ConfigBits</Elem>
     <Elem>../CKCommon/UART</Elem>
+    <Elem>../sensor_struct</Elem>
+    <Elem>../clock_hall</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

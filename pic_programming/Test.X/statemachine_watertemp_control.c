@@ -1,4 +1,5 @@
 #include "statemachine_watertemp_control.h"
+#include "../clock_hall/hallClock.h"
 #define DEVELOP 0
 
 #if DEVELOP == 1 //structure just as a dummy for the registers
@@ -19,37 +20,28 @@ int SetHeatingWater(int Command){
 }
 
 int GetWaterTemperature(){
-    return 55; /* dummy which returns a temperature to check the behaviour of the state machine*/
+    return 50; /* dummy which returns a temperature to check the behaviour of the state machine*/
 }
 
 void Statemachine_WaterControl(int desired_temperature,char *to_send) {
     int water_temperature=GetWaterTemperature();
-    PORTAbits.RA3=0; // remove that later again!
-    upper_threshold=desired_temperature+5; /*trigger band is 10 degrees!*/
-    lower_threshold=desired_temperature-5;
+    upper_threshold_water=desired_temperature+5; /*trigger band is 10 degrees!*/
+    lower_threshold_water=desired_temperature-5;
     /* states are stored in the states variables. so higher function can easily access the current states*/
     switch (water_temp_state) {
 
         case DESIRED_TEMPERATURE:
             SetHeatingWater(FALSE);
-            if (water_temperature<desired_temperature){water_temp_state=INCREASE_WATER_TEMPERATURE;} /*Implementation of Schmitt -Trigger misses here*/
+            if (water_temperature<lower_threshold_water){water_temp_state=INCREASE_WATER_TEMPERATURE;} /*Implementation of Schmitt -Trigger misses here*/
             break;
 
         case INCREASE_WATER_TEMPERATURE:
             SetHeatingWater(TRUE);
-            PORTAbits.RA3=!PORTAbits.RA3;
-            if (water_temperature>desired_temperature){water_temp_state=DESIRED_TEMPERATURE;}
+            PORTAbits.RA3=1;
+            if (water_temperature>upper_threshold_water){water_temp_state=DESIRED_TEMPERATURE;}
             break;
         default:
             SetHeatingWater(FALSE);
             break;
     }
-    char add_to_message[80];/*take care that enough storage is available*/
-    sprintf(add_to_message,""
-            "   {\n"
-            "     \"DesiredWaterTemp\":%d,\n"
-            "     \"WaterTemp\":%d,\n"
-            "     \"WaterState\":%d,\n"
-            "   }]\n",desired_temperature,water_temperature,water_temp_state); /*make a string*/
-    strcat(to_send,add_to_message); /*append the string*/
 }
