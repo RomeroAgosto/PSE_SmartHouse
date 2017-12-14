@@ -26,7 +26,7 @@ double i2c1_s5();
 double i2c2_s6();
 
 //function that returns (analog) temperature value from a room
-double temp_analog(int a_temp_sens_numb){
+int temp_analog(int *p){
     double t1, t2, t3, t4, tm, temperature;
     double calibration_value;
     AD1CON1bits.SSRC = 7; // Internal counter ends sampling and starts conversion
@@ -36,50 +36,53 @@ double temp_analog(int a_temp_sens_numb){
     AD1CON2bits.SMPI = 3; // Number (+1) of consecutive conversions, stored in ADC1BUF0...ADCBUF{SMPI}
     AD1CON3bits.ADRC = 1; // ADC uses internal RC clock
     AD1CON3bits.SAMC = 16; // Sample time is 16TAD ( TAD = 100ns)
-    switch(a_temp_sens_numb){
-        case(1):
-            AD1CHSbits.CH0SA = 4; // Select AN4 as input for A/D converter
-            TRISBbits.TRISB4 = 1; // AN4 in input mode
-            AD1PCFGbits.PCFG4 = 0; // AN4 as analog input
-            calibration_value=2.67;
-            break;
-        case(2):
-            AD1CHSbits.CH0SA = 5; // Select AN5 as input for A/D converter
-            TRISBbits.TRISB5 = 1; // AN5 in input mode
-            AD1PCFGbits.PCFG5 = 0; // AN5 as analog input
-            calibration_value=2.67;
-            break;
-        case(3):
-            AD1CHSbits.CH0SA = 6; // Select AN6 as input for A/D converter
-            TRISBbits.TRISB6 = 1; // AN6 in input mode
-            AD1PCFGbits.PCFG6 = 0; // AN6 as analog input
-            calibration_value=2.56;
-            break;
-        case(4):
-            AD1CHSbits.CH0SA = 7; // Select AN7 as input for A/D converter
-            TRISBbits.TRISB7 = 1; // AN7 in input mode
-            AD1PCFGbits.PCFG7 = 0; // AN7 as analog input
-            calibration_value=2.55;
-            break;
-        default:
-            return -1;
-            break;
+    int i;
+    for(i=0;i<4;i++) {
+        switch(i){
+            case(0):
+                AD1CHSbits.CH0SA = 4; // Select AN4 as input for A/D converter
+                TRISBbits.TRISB4 = 1; // AN4 in input mode
+                AD1PCFGbits.PCFG4 = 0; // AN4 as analog input
+                calibration_value=2.67;
+                break;
+            case(1):
+                AD1CHSbits.CH0SA = 5; // Select AN5 as input for A/D converter
+                TRISBbits.TRISB5 = 1; // AN5 in input mode
+                AD1PCFGbits.PCFG5 = 0; // AN5 as analog input
+                calibration_value=2.67;
+                break;
+            case(2):
+                AD1CHSbits.CH0SA = 6; // Select AN6 as input for A/D converter
+                TRISBbits.TRISB6 = 1; // AN6 in input mode
+                AD1PCFGbits.PCFG6 = 0; // AN6 as analog input
+                calibration_value=2.56;
+                break;
+            case(3):
+                AD1CHSbits.CH0SA = 7; // Select AN7 as input for A/D converter
+                TRISBbits.TRISB7 = 1; // AN7 in input mode
+                AD1PCFGbits.PCFG7 = 0; // AN7 as analog input
+                calibration_value=2.55;
+                break;
+            default:
+                return -1;
+                break;
+        }
+        AD1CON1bits.ON = 1;
+        IFS1bits.AD1IF = 0; // Reset interrupt flag
+        AD1CON1bits.ASAM = 1; // Start conversion
+        while (IFS1bits.AD1IF == 0); // Wait fo EOC
+
+        t1 = (ADC1BUF0 * 3.3) / 1023;
+        t2 = (ADC1BUF1 * 3.3) / 1023;
+        t3 = (ADC1BUF2 * 3.3) / 1023;
+        t4 = (ADC1BUF3 * 3.3) / 1023;
+
+        tm= (t1+t2+t3+t4)/4;
+
+        p[i]= (int)(21+(tm-calibration_value)*100);
+
     }
-    AD1CON1bits.ON = 1;
-    IFS1bits.AD1IF = 0; // Reset interrupt flag
-    AD1CON1bits.ASAM = 1; // Start conversion
-    while (IFS1bits.AD1IF == 0); // Wait fo EOC
-
-    t1 = (ADC1BUF0 * 3.3) / 1023;
-    t2 = (ADC1BUF1 * 3.3) / 1023;
-    t3 = (ADC1BUF2 * 3.3) / 1023;
-    t4 = (ADC1BUF3 * 3.3) / 1023;
-    
-    tm= (t1+t2+t3+t4)/4;
-
-    temperature= 21+(tm-calibration_value)*100;
-        
-    return temperature;
+    return 0;
 }
 //function that returns air quality level from a room
 char air_quality_level(int air_sens_numb){
