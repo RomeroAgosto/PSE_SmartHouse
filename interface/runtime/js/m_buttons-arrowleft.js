@@ -39,6 +39,8 @@ $(document).ready(function() {
 						}
 
 						$('#screen-menu1 .row .col3-schedules').hide();
+						$('#screen-menu1 .row .col3-schedules .schedule').removeClass('schedule-selected');
+						$('#screen-menu1 .row .col3-schedules .schedule').removeClass('schedule-focused');
 						if(current_selection3==0) {
 							$('#screen-menu1 .row .col2 .option-selected[data-field=' + fieldname3 + ']').addClass('option-focused');
 							$('#screen-menu1 .row .col3-weekdays .weekday').removeClass('weekday-focused');

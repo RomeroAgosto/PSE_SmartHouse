@@ -59,6 +59,8 @@ $(document).ready(function() {
 						if(current_selection3 < (alldays.length-1)) {
 
 							$('#screen-menu1 .row .col3-schedules').hide();
+						$('#screen-menu1 .row .col3-schedules .schedule').removeClass('schedule-selected');
+						$('#screen-menu1 .row .col3-schedules .schedule').removeClass('schedule-focused');
 
 							$(alldays[current_selection3]).removeClass('weekday-selected');
 							$(alldays[current_selection3]).removeClass('weekday-focused');
