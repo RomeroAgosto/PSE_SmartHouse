@@ -1,8 +1,8 @@
 /* 
- * File:   i2c1.h
+ * File:   i2c.h
  * Author: Ganzas
  *
- * Created on 12 de Dezembro de 2017, 14:57
+ * Created on 14 de Dezembro de 2017, 16:53
  */
 
 #ifndef I2C_H
@@ -22,4 +22,6 @@ int i2c2_send(unsigned char value);
 char i2c2_receive(char ack_bit);
 
 #endif	/* I2C_H */
+
+
 

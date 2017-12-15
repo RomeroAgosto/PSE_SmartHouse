@@ -1,22 +1,14 @@
 #include <stdio.h>
 
 typedef union{
-    struct {
-        int id;
-        int enable_flag;
-        int monday;
-        int tuesday;
-        int wednesday;
-        int thursday;
-        int friday;
-        int saturday;
-        int sunday;
-        int start_time;
-        int stop_time;
-        int target_value;
-    };
-    int option[12];
-
+	struct{
+		int id;
+		int value;
+		int start_time;
+		int stop_time;
+	}
+	int options[4];
+	
 }schedule;
 
 typedef union{
@@ -26,7 +18,21 @@ typedef union{
         schedule schedule3;
         schedule schedule4;
     };
-    schedule array_schedule[4];
+    schedule schedules[4];
+
+}day;
+
+typedef union{
+    struct {
+        day monday;
+        day tuesday;
+        day wednesday;
+        day thursday;
+        day friday;
+        day saturday;
+        day sunday;
+    };
+    day array_schedule[7];
 
 }room;
 

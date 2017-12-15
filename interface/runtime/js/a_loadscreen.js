@@ -8,6 +8,8 @@ function loadScreen(screen_name, parameters) {
 			$('#screen-index').show();
 			current_screen.name="index";
 			current_screen.has_unsaved_data=0;
+			menu1_lockflag1 = false;
+			$('#unlocked-icon').hide();
 			break;
 		case 'home':
 			$('.screens').hide();
@@ -16,11 +18,26 @@ function loadScreen(screen_name, parameters) {
 			current_screen.has_unsaved_data=0;
 			previous_screen = 'home';
 			break;
+		case 'pin_request':
+			if(access_granted) {
+				loadScreen('menu1');
+				return;
+			}
+			$('.screens').hide();
+			$('#screen-pin-request .code_input').html("_ _ _ _");
+			$('#screen-pin-request').show();
+			current_screen.name="pin_request";
+			current_screen.has_unsaved_data=0;
+			previous_screen = 'home';
+			menu1_waitingforkeyboardinput=4;
+			break;
 		case 'menu1':
 			$('.screens').hide();
 			$('#screen-menu1').show();
 			current_screen.name="menu1";
 			current_screen.has_unsaved_data=0;
+			menu1_lockflag1 = false;
+			menu1_scheduleset_step=0;
 
 			//reset col1
 			$('#screen-menu1 .row .col1 .option').removeClass('option-selected');
@@ -43,7 +60,10 @@ function loadScreen(screen_name, parameters) {
 			$('#screen-menu1 .row .col3 .col3-up-airquality-1').show();
 			$('#screen-menu1 .row .col3 .col3-weekdays').hide();
 			$('#screen-menu1 .row .col3 .col3-weekdays-airquality-1').show();
+			$('#screen-menu1 .row .col3 .col3-schedules').hide();
 	
+			
+
 			break;
 		case 'help':
 			$('.screens').hide();

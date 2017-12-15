@@ -19,7 +19,7 @@
 
 struct water_data
 {
-    double temp;
+    int temp;
     int water_heater; /*its turned on/off*/
 };
 
@@ -36,17 +36,17 @@ struct air_quality_data
     double co2;
     double o3;
     double humity;
-    int state;
+    char state;
 };
 
 struct air_temperature_data
 {
-    double temp;
+    int temp;
     int state;
 };
 
 typedef struct water_data water;
-typedef struct light_data lights[8];
+typedef struct light_data lights[4];
 typedef struct air_quality_data air_quality[4];
 typedef struct air_temperature_data air_temperature[8];
 

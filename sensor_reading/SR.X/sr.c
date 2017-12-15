@@ -2,7 +2,7 @@
 #include <xc.h>
 #define _SUPPRESS_PLIB_WARNING 1
 #include <plib.h>
-#include "i2c1.h"
+#include "i2c.h"
 
 // Generic defines
 #define READ 1
@@ -22,8 +22,11 @@
 #define HIH8120_CLK_FREQ 100000    // 100 KHz
 #define ADDR_RD_HIH8120 ((SENS_ADDRESS_HIH8120 << 1) | READ)
 
+double i2c1_s5();
+double i2c2_s6();
+
 //function that returns (analog) temperature value from a room
-double temp_analog(int a_temp_sens_numb){
+int temp_analog(int *p){
     double t1, t2, t3, t4, tm, temperature;
     double calibration_value;
     AD1CON1bits.SSRC = 7; // Internal counter ends sampling and starts conversion
@@ -33,55 +36,57 @@ double temp_analog(int a_temp_sens_numb){
     AD1CON2bits.SMPI = 3; // Number (+1) of consecutive conversions, stored in ADC1BUF0...ADCBUF{SMPI}
     AD1CON3bits.ADRC = 1; // ADC uses internal RC clock
     AD1CON3bits.SAMC = 16; // Sample time is 16TAD ( TAD = 100ns)
-    switch(a_temp_sens_numb){
-        case(1):
-            AD1CHSbits.CH0SA = 4; // Select AN4 as input for A/D converter
-            TRISBbits.TRISB4 = 1; // AN4 in input mode
-            AD1PCFGbits.PCFG4 = 0; // AN4 as analog input
-            calibration_value=2.67;
-            break;
-        case(2):
-            AD1CHSbits.CH0SA = 5; // Select AN5 as input for A/D converter
-            TRISBbits.TRISB5 = 1; // AN5 in input mode
-            AD1PCFGbits.PCFG5 = 0; // AN5 as analog input
-            calibration_value=2.67;
-            break;
-        case(3):
-            AD1CHSbits.CH0SA = 6; // Select AN6 as input for A/D converter
-            TRISBbits.TRISB6 = 1; // AN6 in input mode
-            AD1PCFGbits.PCFG6 = 0; // AN6 as analog input
-            calibration_value=2.55;
-            break;
-        case(4):
-            AD1CHSbits.CH0SA = 7; // Select AN7 as input for A/D converter
-            TRISBbits.TRISB7 = 1; // AN7 in input mode
-            AD1PCFGbits.PCFG7 = 0; // AN7 as analog input
-            calibration_value=2.57;
-            break;
-        default:
-            return -1;
-            break;
+    int i;
+    for(i=0;i<4;i++) {
+        switch(i){
+            case(0):
+                AD1CHSbits.CH0SA = 4; // Select AN4 as input for A/D converter
+                TRISBbits.TRISB4 = 1; // AN4 in input mode
+                AD1PCFGbits.PCFG4 = 0; // AN4 as analog input
+                calibration_value=2.67;
+                break;
+            case(1):
+                AD1CHSbits.CH0SA = 5; // Select AN5 as input for A/D converter
+                TRISBbits.TRISB5 = 1; // AN5 in input mode
+                AD1PCFGbits.PCFG5 = 0; // AN5 as analog input
+                calibration_value=2.67;
+                break;
+            case(2):
+                AD1CHSbits.CH0SA = 6; // Select AN6 as input for A/D converter
+                TRISBbits.TRISB6 = 1; // AN6 in input mode
+                AD1PCFGbits.PCFG6 = 0; // AN6 as analog input
+                calibration_value=2.56;
+                break;
+            case(3):
+                AD1CHSbits.CH0SA = 7; // Select AN7 as input for A/D converter
+                TRISBbits.TRISB7 = 1; // AN7 in input mode
+                AD1PCFGbits.PCFG7 = 0; // AN7 as analog input
+                calibration_value=2.55;
+                break;
+            default:
+                return -1;
+                break;
+        }
+        AD1CON1bits.ON = 1;
+        IFS1bits.AD1IF = 0; // Reset interrupt flag
+        AD1CON1bits.ASAM = 1; // Start conversion
+        while (IFS1bits.AD1IF == 0); // Wait fo EOC
+
+        t1 = (ADC1BUF0 * 3.3) / 1023;
+        t2 = (ADC1BUF1 * 3.3) / 1023;
+        t3 = (ADC1BUF2 * 3.3) / 1023;
+        t4 = (ADC1BUF3 * 3.3) / 1023;
+
+        tm= (t1+t2+t3+t4)/4;
+
+        p[i]= (int)(21+(tm-calibration_value)*100);
+
     }
-    AD1CON1bits.ON = 1;
-    IFS1bits.AD1IF = 0; // Reset interrupt flag
-    AD1CON1bits.ASAM = 1; // Start conversion
-    while (IFS1bits.AD1IF == 0); // Wait fo EOC
-
-    t1 = (ADC1BUF0 * 3.3) / 1023;
-    t2 = (ADC1BUF1 * 3.3) / 1023;
-    t3 = (ADC1BUF2 * 3.3) / 1023;
-    t4 = (ADC1BUF3 * 3.3) / 1023;
-    
-    tm= (t1+t2+t3+t4)/4;
-
-    temperature= 22+(tm-calibration_value)*100;
-        
-    return temperature;
+    return 0;
 }
 //function that returns air quality level from a room
 char air_quality_level(int air_sens_numb){
     double a1, a2, a3, a4, am;
-    int level;
     AD1CON1bits.SSRC = 7; // Internal counter ends sampling and starts conversion
     AD1CON1bits.CLRASAM = 1; //Stop conversion when 1st A/D converter interrupt is generated and clears ASAM bit automatically
     AD1CON1bits.FORM = 0; // Integer 16 bit output format
@@ -141,103 +146,33 @@ char air_quality_level(int air_sens_numb){
 //function that returns (digital) temperature value from a room
 double temp_digital(int d_temp_sens_numb){
     
-    int ack;
     double temp_digital;
-    TRISBbits.TRISB8=0;
-    TRISBbits.TRISB9=0;
-    TRISBbits.TRISB10=0;
-    TRISBbits.TRISB11=0;
-    LATBbits.LATB8=1;
-    LATBbits.LATB9=1;
-    LATBbits.LATB10=1;
-    LATBbits.LATB11=1;
     switch(d_temp_sens_numb){
         case(5):
-            LATBbits.LATB8=0;
+            temp_digital=i2c1_s5();
+            return temp_digital;
+            break;
         case(6):
-            LATBbits.LATB9=0;
+            temp_digital=i2c2_s6();
+            return temp_digital;
+            break;
         default:
             return -1;
             break;
     }
-    setbuf(stdin, NULL); //no input buffer (for scanf)
-    setbuf(stdout, NULL); //no output buffer (for printf)
-    i2c1_init();
-    if(i2c1_setClock(TC74_CLK_FREQ)) {
-        printf("Error in i2c1_setClock()\n\r");
-        while(1);
-    }
-    i2c1_start(); // Send Start event
-    ack=i2c1_send(ADDR_WR_TC74); // Send Address + WR (ADDR_WR); copy return value to "ack" variable
-    ack+=i2c1_send(RTR); // Send Command (RTR); add return value to "ack" variable
-    i2c1_start(); // Send Start event (again)
-    ack+=i2c1_send(ADDR_RD_TC74);    // Send Address + RD (ADDR_RD); add return value to "ack" variable
-    // Test "ack" variable; if "ack" != 0 then an error has occurred
-    if(ack) {
-        printf("Error during temperature reading\n\r");            
-    }
-    // Receive a value from slave ? send NACK; copy received value to
-    // "temperature" variable
-    temp_digital=i2c1_receive(NACK); 
-    i2c1_stop();    // Send Stop event
-    return temp_digital;
 }
 //function that returns (digital) temperature and humidity value from a room
-double* humidity_temperature(int h_dt_sens_numb){
-    
-    int ack;
-    int th=0x00;
-    int t=0x0000;
-    int h=0x0000;
-    int status=0x0;
-    
-    static double humi_temp [2];
-    
-    // define ports connected to mosfet 1,2,3,4 as deactivated
+/*int humidity_temperature(int h_dt_sens_numb){
+     
     switch(h_dt_sens_numb){
         case(7):
-            //port connected to mosfet 3 activated
-        case(8):
-            //port connected to mosfet 4 activated
+            return 0;
+            break;
         default:
-            exit(-1);
+            return -1;
             break;
     }
-    setbuf(stdin, NULL); //no input buffer (for scanf)
-    setbuf(stdout, NULL); //no output buffer (for printf)
-    i2c1_init();
-    if(i2c1_setClock(HIH8120_CLK_FREQ)) {
-        printf("Error in i2c1_setClock()\n\r");
-        while(1);
-    }
-    
-    i2c1_start(); // Send Start event (again)
-    ack=i2c1_send(ADDR_RD_HIH8120);    // Send Address + RD (ADDR_RD); add return value to "ack" variable
-    // Test "ack" variable; if "ack" != 0 then an error has occurred
-    if(ack) {
-        printf("Error during temperature and humidity reading\n\r");            
-    }
-    // Receive a value from slave ? send NACK; copy received value to
-    // "temperature" variable
-    th=i2c1_receive(ACK); 
-    status=th>>6;
-    if (status == 0x0){
-        h=(th | 0x0000)<<8;
-        th=i2c1_receive(ACK); 
-        h=(th | 0x0000);
-        
-        th=i2c1_receive(ACK);
-        t=(th | 0x0000)<<8;
-        th=i2c1_receive(NACK);
-        t=(th | 0x0000)>>2;
-    }
-    i2c1_stop();    // Send Stop event
-    humi_temp[0]=h/16382.0*100.0;
-    humi_temp[1]=t/16382.0*165.0-40.0;
-    return humi_temp;
-    if (status != 0x0)
-        return humidity_temperature(h_dt_sens_numb);
-}
+}*/
 //function that determine if motion was detected or not from a room
 char motion_detection(int motion_sens_numb){
     double m1,m2,mm;
@@ -282,4 +217,54 @@ char motion_detection(int motion_sens_numb){
     if(mm>=1.65){
         return 'N';
     }
+}
+double i2c1_s5(){
+    int ack;
+    double td;
+    setbuf(stdin, NULL); //no input buffer (for scanf)
+    setbuf(stdout, NULL); //no output buffer (for printf)
+    i2c1_init();
+    if(i2c1_setClock(TC74_CLK_FREQ)) {
+        printf("Error in i2c1_setClock()\n\r");
+        while(1);
+    }
+    i2c1_start(); // Send Start event
+    ack=i2c1_send(ADDR_WR_TC74); // Send Address + WR (ADDR_WR); copy return value to "ack" variable
+    ack+=i2c1_send(RTR); // Send Command (RTR); add return value to "ack" variable
+    i2c1_start(); // Send Start event (again)
+    ack+=i2c1_send(ADDR_RD_TC74);    // Send Address + RD (ADDR_RD); add return value to "ack" variable
+    // Test "ack" variable; if "ack" != 0 then an error has occurred
+    if(ack) {
+        printf("Error during temperature reading\n\r");            
+    }
+    // Receive a value from slave ? send NACK; copy received value to
+    // "temperature" variable
+    td=i2c1_receive(NACK); 
+    i2c1_stop();    // Send Stop event
+    return td;
+}
+double i2c2_s6(){
+    int ack;
+    double td;
+    setbuf(stdin, NULL); //no input buffer (for scanf)
+    setbuf(stdout, NULL); //no output buffer (for printf)
+    i2c2_init();
+    if(i2c2_setClock(TC74_CLK_FREQ)) {
+        printf("Error in i2c1_setClock()\n\r");
+        while(1);
+    }
+    i2c2_start(); // Send Start event
+    ack=i2c2_send(ADDR_WR_TC74); // Send Address + WR (ADDR_WR); copy return value to "ack" variable
+    ack+=i2c2_send(RTR); // Send Command (RTR); add return value to "ack" variable
+    i2c2_start(); // Send Start event (again)
+    ack+=i2c2_send(ADDR_RD_TC74);    // Send Address + RD (ADDR_RD); add return value to "ack" variable
+    // Test "ack" variable; if "ack" != 0 then an error has occurred
+    if(ack) {
+        printf("Error during temperature reading\n\r");            
+    }
+    // Receive a value from slave ? send NACK; copy received value to
+    // "temperature" variable
+    td=i2c2_receive(NACK); 
+    i2c2_stop();    // Send Stop event
+    return td;
 }

@@ -39,6 +39,7 @@
 
 #screen-menu1 .row .col3 .col3-weekdays {
 	padding-top: 10px;
+	margin-bottom: 7px;
 }
 
 #screen-menu1 .row .col3 .col3-weekdays .weekday {
@@ -62,4 +63,48 @@
 #screen-menu1 .row .col3 .col3-weekdays .weekday-focused {
 	background-color: #3f51b5;
 	color: #eee;
+}
+
+#screen-menu1 .row .col3 .col3-schedules .schedule {
+	width: 100%;
+	line-height: 18px;
+	border-top: 1px solid #344;
+	padding-top: 9px;
+	height: 55px;
+}
+
+#screen-menu1 .row .col3 .col3-schedules .schedule-focused {
+	background-color: #3f51b5;
+	color: #eee;
+}
+
+#screen-menu1 .row .col3 .col3-schedules .schedule-disabled {
+	color: #888;
+	text-decoration: line-through;
+}
+
+#screen-menu1 .row .col3 .col3-schedules .schedule div {
+	position: absolute;
+}
+
+#screen-menu1 .row .col3 .col3-schedules .schedule div.start_time {
+	font-size: 18px;
+	width: 59px;
+}
+
+#screen-menu1 .row .col3 .col3-schedules .schedule div.end_time {
+	font-size: 18px;
+	width: 59px;
+}
+
+#screen-menu1 .row .col3 .col3-schedules .schedule div.title {
+	width: 120px;
+	margin-left: 60px;
+	margin-top: 8px;
+}
+
+#screen-menu1 .row .col3 .col3-schedules .schedule div.desired_value {
+	width: 59px;
+	margin-left: 180px;
+	margin-top: 8px;
 }
