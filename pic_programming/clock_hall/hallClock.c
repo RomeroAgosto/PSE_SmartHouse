@@ -11,7 +11,7 @@
 #include "hallClock.h"
 #include <stdio.h>
 #include <string.h>
-#include "timer_libs.h"
+#include "../timer_lib/timer_libs.h"
 
 static int dayMonMax[12]={31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; /*!<Array with last day of each month */
 static struct tm time_hall; /*!<Clock all variable*/
