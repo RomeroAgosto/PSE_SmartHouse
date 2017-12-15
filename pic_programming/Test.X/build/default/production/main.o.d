@@ -5,4 +5,5 @@ main.c  \
  statemachine_light_control.h  \
 statemachine_airquality_control.h  \
  statemachine_airtemp_control.h  \
-../clock_hall/hallClock.h 
+../clock_hall/hallClock.h  \
+ ../sensor_struct/struct_lib.h 

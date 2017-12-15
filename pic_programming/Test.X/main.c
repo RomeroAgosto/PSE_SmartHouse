@@ -44,6 +44,9 @@
 static int send_flag=SEND_NO_MESSAGE;
 static int count_interrupt;
 extern struct tm time_hall;
+
+#include "../sensor_struct/struct_lib.h"
+sensorvalues ola;
 /*
  * 
  */
@@ -81,20 +84,20 @@ int read_input(char *input){
 int Send_Message(){
     return 1;
 }
-void tmr2_isr(void){
-        count_interrupt++;
-        if (count_interrupt==3){
-                count_interrupt=0;
-                SetTimer(0);
-                SetTimer(1);
-                SetTimer(2);
-                SetTimer(3);
-                increment_time();
-        }
-        IFS0bits.T2IF=0;
-      //  printf("interrupt, count is %d\n",count_interrupt);
-        
-        //tmr_reset_flag(2);
+/**
+ *      @brief  This function will run alongside the clock hall
+ *     @author  Samuel Simoes, samuelmsimoes@ua.pt
+ *     Created  20-Set-2017
+ *     Company  University of Aveiro
+ *   Copyright  Copyright (c) 2017, Sascha Marquardt
+ *
+ * ==============================================
+ */
+void run_alonsideWClock(void){
+    SetTimer(0);
+    SetTimer(1);
+    SetTimer(2);
+    SetTimer(3);
 }
 int main(int argc, char** argv) {
     // Variable declarations;
@@ -117,27 +120,9 @@ int main(int argc, char** argv) {
     }
 /*timer initialization*/    
 
-#if TIMER == 0
-    //tmr_config(2,3);
-    //tmr_intrpt_config(2,2,tmr2isr());
-    //tmr_OnOff(2,1);
-#endif
-#if TIMER == 1
-    INTEnableSystemMultiVectoredInt();
-    void __attribute__( (interrupt(IPL2AUTO), vector(_TIMER_2_VECTOR))) tmr2_isr(void);
-    T2CONbits.ON = 0; // Stop timer
-//---------- interrupt
-    IFS0bits.T2IF=0; // Reset interrupt flag    
-    IPC2bits.T2IP=2;// Timer has higher priority -> 
-    IEC0bits.T2IE=1; // Enable Interrupt
-//--------------
-    T2CONbits.TCKPS = 7; //Select pre-scaler
-    T2CONbits.T32 = 0; // 16 bit timer operation
-    PR2=PBCLOCK/256/3 - 1; // Compute PR value
-    TMR2=0;
-    T2CONbits.TON=1; // Start the timer
+    setup_clockHall(&run_alonsideWClock);
     PORTAbits.RA3=0;
-#endif
+
     printf("timer init\n");
 #if 1
     

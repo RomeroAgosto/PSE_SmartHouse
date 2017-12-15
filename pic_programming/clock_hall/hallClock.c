@@ -1,9 +1,30 @@
+/** \file hallClock.c
+* \brief This library include The Clock All of the System
+*  
+*
+* 
+*
+* \author Samuel Simoes
+*
+* \date 03-11-2017
+*/
 #include "hallClock.h"
 #include <stdio.h>
 #include <string.h>
+#include "timer_libs.h"
 
+static int dayMonMax[12]={31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; /*!<Array with last day of each month */
+static struct tm time_hall; /*!<Clock all variable*/
 
-static int dayMonMax[12]={31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; 
+static void (*longside_func)()=NULL; /*!<Buffur for function that will work alongside with clock all*/
+// Stetup Hall clock and can put a func run alonside clock
+void setup_clockHall(void (*func)(void))
+{
+    longside_func=func;
+    tmr_config(2,2);
+    tmr_intrpt_config(2,2,&inc_clock);
+    tmr_OnOff(2,1);
+}
 
 // copy the time_hall to time
 void get_timeHall(struct tm *time)
@@ -24,6 +45,17 @@ int update_time(struct tm time_temp)
         dayMonMax[1]=28;
     }
     return 0;
+}
+
+// will put clock runs every secnd
+void inc_clock(void)
+{
+    static int count=0;
+    if(count++%2)
+    {
+        increment_time();
+        longside_func();
+    }
 }
 
 // will runs every second
@@ -76,24 +108,8 @@ void increment_time(void)
     printf("day:%d hours:%d, minutes:%d, seconds:%d\n",time_hall.tm_mday,time_hall.tm_hour,time_hall.tm_min,time_hall.tm_sec);
 }
 
-/**@brief wait brings the pic to wait for a number of seconds
-/* @param input in seconds
- * @author Sascha Marquardt
- * @date 03-11-2017  
- */
-void wait(double seconds){
-    /* save start time */
-  /*  const time_t start = mktime(&time_hall);
 
-    time_t current;
-    do{
-        /* get current time */
-      /*  current=mktime(&time_hall);
-        printf("%f",difftime(current,start));
 
-        /* break loop when the requested number of seconds have elapsed */
-   /* }while(difftime(current, start) < seconds);*/
-}
 /* *****************************************************************************
  End of File
  */
