@@ -58,7 +58,7 @@ int ds_DesiredAirTemp(int n_air)
     {
         if(house.air_temperature.array_room[n_air].array_schedule[tclock.tm_wday].schedules[i].enable==1)
         {
-            if(compareHour(house.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].start_time,house.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].stop_time))
+            if(compareHour(house.air_temperature.array_room[n_air].array_schedule[tclock.tm_wday].schedules[i].start_time,house.air_temperature.array_room[n_air].array_schedule[tclock.tm_wday].schedules[i].stop_time))
             {    
                 desired_AirTemp[n_air][i]=house.air_temperature.array_room[n_air].array_schedule[tclock.tm_wday].schedules[i].value;
             }
@@ -85,7 +85,7 @@ int ds_DesiredLigth(int n_ligth)
     {
         if(house.light.array_room[n_ligth].array_schedule[tclock.tm_wday].schedules[i].enable==1)
         {
-            if(compareHour(house.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].start_time,house.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].stop_time))
+            if(compareHour(house.light.array_room[n_ligth].array_schedule[tclock.tm_wday].schedules[i].start_time,house.light.array_room[n_ligth].array_schedule[tclock.tm_wday].schedules[i].stop_time))
             {    
                 desired_ligth[n_ligth][i]=house.light.array_room[n_ligth].array_schedule[tclock.tm_wday].schedules[i].value;
             }
