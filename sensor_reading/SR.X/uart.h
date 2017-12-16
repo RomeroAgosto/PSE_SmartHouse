@@ -24,7 +24,6 @@
 #define UART_BR_NOT_SUP -1
 #define UART_PBCLOCK_NOT_SUP -2
 
-// Define prototypes (public interface)
 int UartInit(UINT64 pbclock, UINT32 br);
 void UartClose(void);
 int GetChar(UINT8 *byte);

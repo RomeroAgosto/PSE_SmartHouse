@@ -1,2 +1,3 @@
 build/default/production/air_quality_level.o:  \
-air_quality_level.c 
+air_quality_level.c  \
+i2c1.h 

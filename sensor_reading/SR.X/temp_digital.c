@@ -10,23 +10,23 @@
 #include <xc.h>
 #define _SUPPRESS_PLIB_WARNING 1
 #include <plib.h>
+#include "i2c1.h"
 
 //next two lines are two functions used to calculate temperatures from the 2 I2C 
 //modules, that are connected to their respective digital sensor
 
-int i2c1_s5();      
-int i2c2_s6();
-
-int temp_digital(int *t[6]){
+int temp_digital(int *t[2]){
     int i; //variable to control selection of the sensors
     int temp_d;  //variable to save value from one of the digital sensors
-    for(i=4;i<6;i++){
-        switch(i-4){    //select one of the 2 digital sensors
+    int humi_temp[2];
+    for(i=5;i<7;i++){
+        switch(i-5){    //select one of the 2 digital sensors
             case(0):
-                temp_d=i2c1_s5();  //get and save value from I2C1 module
+                temp_d=i2c1_s7();  //get and save value from I2C1 module
                 break;
             case(1):
-                temp_d=i2c2_s6(); //get and save value from I2C2 module
+                i2c1_s8(humi_temp); //get and save value from I2C2 module
+                temp_d=(int)(humi_temp[1]);
                 break;
             default:
                 return -1;
