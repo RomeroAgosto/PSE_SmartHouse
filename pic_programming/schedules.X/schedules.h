@@ -65,6 +65,9 @@ typedef union {
     function array_function[3];
 
 }house;
-house home; /*in the end, this definition should be in get_schedules.c*/
+
+static house home; 
+
+/*in the end, this definition should be in get_schedules.c*/
 
 #endif //COMMUNICATION_SCHEDULES_H

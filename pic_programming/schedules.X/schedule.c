@@ -9,6 +9,7 @@ static int desired_AirTemp[8][4]={-100};
 static int desired_water[4]={-100};
 static int desired_ligth[8][4]={0};
 
+
 int ds_initDSchedules()
 {
     
@@ -25,15 +26,15 @@ int ds_DesiredWaterTemp()
 {
     int i, maximum;
     maximum=disable;
-    for(i=0;i<4;i++)
+    for(i=0;i<4;i++)        /* Used 4 because theres's 4 schedule per day of the week */
     {
         if(house.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].enable==1)
         {
-            if(compareHour(house.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].start_time))
+            if(compareHour(house.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].start_time,house.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].stop_time))
             {    
                 desired_water[i]=house.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].value;
             }
-            else if(compareHour(house.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].start_time))
+            else
             {
                 desired_water[i]=disable;
             }
@@ -53,15 +54,15 @@ int ds_DesiredAirTemp(int n_air)
 {
     int i, maximum;
     maximum=disable;
-    for(i=0;i<4;i++)
+    for(i=0;i<4;i++)        /* Used 4 because theres's 4 schedule per day of the week */
     {
         if(house.air_temperature.array_room[n_air].array_schedule[tclock.tm_wday].schedules[i].enable==1)
         {
-            if(compareHour(house.air_temperature.array_room[n_air].array_schedule[tclock.tm_wday].schedules[i].start_time))
+            if(compareHour(house.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].start_time,house.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].stop_time))
             {    
                 desired_AirTemp[n_air][i]=house.air_temperature.array_room[n_air].array_schedule[tclock.tm_wday].schedules[i].value;
             }
-            else if(compareHour(house.air_temperature.array_room[n_air].array_schedule[tclock.tm_wday].schedules[i].start_time))
+            else
             {
                 desired_AirTemp[n_air][i]=disable;
             }
@@ -80,15 +81,15 @@ int ds_DesiredAirTemp(int n_air)
 int ds_DesiredLigth(int n_ligth)
 {
     int i;
-    for(i=0;i<4;i++)
+    for(i=0;i<4;i++)        /* Used 4 because theres's 4 schedule per day of the week */
     {
         if(house.light.array_room[n_ligth].array_schedule[tclock.tm_wday].schedules[i].enable==1)
         {
-            if(compareHour(house.light.array_room[n_ligth].array_schedule[tclock.tm_wday].schedules[i].start_time))
+            if(compareHour(house.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].start_time,house.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].stop_time))
             {    
                 desired_ligth[n_ligth][i]=house.light.array_room[n_ligth].array_schedule[tclock.tm_wday].schedules[i].value;
             }
-            else if(compareHour(house.light.array_room[n_ligth].array_schedule[tclock.tm_wday].schedules[i].start_time))
+            else 
             {
                 desired_ligth[n_ligth][i]=disable;
             }
