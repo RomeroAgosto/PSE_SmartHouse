@@ -4,22 +4,9 @@
 #include <plib.h>
 #include "i2c.h"
 
-// Generic defines
-#define READ 1
-#define WRITE 0
-#define ACK 0
-#define NACK 1
-
-// TC74 temp sensor specific defines
-#define SENS_ADDRESS_TC74 0x4D      // device dependent
-#define TC74_CLK_FREQ 100000    // 100 KHz
-#define RTR 0
-#define ADDR_WR_TC74 ((SENS_ADDRESS_TC74 << 1) | WRITE)
-#define ADDR_RD_TC74 ((SENS_ADDRESS_TC74 << 1) | READ)
-
-int i2c1_s5(){
+int i2c1_s7(){
     int ack;
-    int td1;
+    int temp_d1;
     setbuf(stdin, NULL); //no input buffer (for scanf)
     setbuf(stdout, NULL); //no output buffer (for printf)
     i2c1_init();
@@ -38,7 +25,7 @@ int i2c1_s5(){
     }
     // Receive a value from slave ? send NACK; copy received value to
     // "temperature" variable
-    td1=i2c1_receive(NACK); 
+    temp_d1=i2c1_receive(NACK); 
     i2c1_stop();    // Send Stop event
-    return td1;
+    return temp_d1;
 }

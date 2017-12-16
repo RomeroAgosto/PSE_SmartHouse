@@ -22,10 +22,6 @@
 #define SYSCLK  80000000L // System clock frequency, in Hz
 #define PBCLOCK 40000000L // Peripheral Bus Clock frequency, in Hz
 
-/*
- * 
- */
-
 void delay(unsigned int dms){
     unsigned int t;
     t=ReadCoreTimer()+40000*dms;
@@ -39,8 +35,6 @@ int main(int argc, char** argv) {
 
     // Set RA3 and D5 ports
     TRISAbits.TRISA3 = 0;  // A3 as output
-    TRISDbits.TRISD5 = 0; // D5 a output
-    ODCDbits.ODCD5 = 1; // D5 as open-drain
 
     // Init UART and redirect tdin/stdot/stderr to UART
     if(UartInit(PBCLOCK, 115200) != UART_SUCCESS) {
@@ -49,46 +43,71 @@ int main(int argc, char** argv) {
     }
     __XC_UART = 1; /* Redirect stdin/stdout/stderr to UART1*/
     
-    int t[6];
-    int a[4];
-    int motion_detected[2];
+    /*int temperature[8];
+    int air_quality[5];
+    int motion[4];*/
+    adc_init();
     //int temp_room[6];//humi_room[2];
     // air_quality_room[4];//motion_detected[2];
     int i=0,j=0;
-    while (1) {
+     
+    while(1){
+        static int p[9];
+        static int air_quality[20];
+        air_temp_analog(p);
         for (i=0; i<6; i++){
-            temp(t);
-            if(i<4){
-                air_quality_level(a);
-                if(i<2)
-                    motion_detected[i]=motion_detection(i);
-            }
+                printf("%s", "Room ");
+                printf("%d\n",i+1);
+                printf("%s","   Air Temperature (C):");
+                printf("%d\n\r",p[i]);
+                delay(500);
         }
-        /*for (i=4; i<6; i++){
-            temp_room[temp_digital(i+1);
-        }*/
-        for (i=0; i<6; i++){
+
+        water_temp_analog(p);
+
+        printf("%s","   Water Temperature (C):");
+        printf("%i\n\r",p[6]);
+        delay(500);
+
+        temp_digital(p);
+        
+        for (i=7; i<9; i++){
+                printf("%s", "Room ");
+                printf("%d\n",i+1);
+                printf("%s","  Digital air Temperature (C):");
+                printf("%i\n\r",p[i]);
+                delay(500);
+        }
+
+        air_quality_level(air_quality);
+
+        for(j=0;j<5;j++){
+            
             printf("%s", "Room ");
-            printf("%d\n",i+1);
-            printf("%s","   Temperature (C):");
-            printf("%i\n\r",t[i]);
-            delay(500);
+            printf("%d\n", j+1);
+            
+            printf("%s","   PM10 concentration (ug/m3):");
+            printf("%d\n\r",air_quality[0+4*j]);
+           
+            printf("%s","   C02 concentration (ppm):");
+            printf("%d\n\r",air_quality[1+4*j]);
+
+            printf("%s","   CO concentration (ppm):");
+            printf("%d\n\r",air_quality[2+4*j]);
+
+            printf("%s","   O3 concentration (ppm):");
+            printf("%d\n\r",air_quality[3+4*j]);
+
+            printf("%s","   Humidity (%):");
+            printf("%d\n\r",air_quality[4+4*j]);
+            delay(2000);
         }
-        printf("%s","   PM10 concentration:");
-        printf("%i\n\r",a[0]);
-        delay(500);
-        printf("%s","   C02 concentration:");
-        printf("%i\n\r",a[1]);
-        delay(500);
-        printf("%s","   CO concentration:");
-        printf("%i\n\r",a[2]);
-        delay(500);
-        printf("%s","   O3 concentration:");
-        printf("%i\n\r",a[3]);
-        delay(500);
-        for(i=0; i<2;i++){
+
+        motion_detection(p);
+
+        for(i=0; i<4;i++){
             printf("%s","   Motion:");
-            printf("%i\n\r ",motion_detected[i]);
+            printf("%i\n\r ",p[i]);
             delay(500);
         }
     }
