@@ -10,6 +10,7 @@
       <itemPath>send_messages.h</itemPath>
       <itemPath>../clock_hall/hallClock.h</itemPath>
       <itemPath>../clock_hall/timer_libs.h</itemPath>
+      <itemPath>schedule.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
