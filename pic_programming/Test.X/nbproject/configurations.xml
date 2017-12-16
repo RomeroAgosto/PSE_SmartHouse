@@ -13,7 +13,11 @@
       <itemPath>../clock_hall/hallClock.h</itemPath>
       <itemPath>../sensor_struct/struct_lib.h</itemPath>
       <itemPath>../timer_lib/timer_libs.h</itemPath>
+<<<<<<< HEAD
       <itemPath>message.h</itemPath>
+=======
+      <itemPath>update.h</itemPath>
+>>>>>>> b181bf012ed1ea2ba113df33c9b343079075625c
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -30,7 +34,11 @@
       <itemPath>../CKCommon/UART/uart.c</itemPath>
       <itemPath>../clock_hall/hallClock.c</itemPath>
       <itemPath>../timer_lib/timer_libs.c</itemPath>
+<<<<<<< HEAD
       <itemPath>message.c</itemPath>
+=======
+      <itemPath>update.c</itemPath>
+>>>>>>> b181bf012ed1ea2ba113df33c9b343079075625c
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
