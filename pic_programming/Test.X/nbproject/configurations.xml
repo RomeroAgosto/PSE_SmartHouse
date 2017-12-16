@@ -13,6 +13,7 @@
       <itemPath>../clock_hall/hallClock.h</itemPath>
       <itemPath>../sensor_struct/struct_lib.h</itemPath>
       <itemPath>../timer_lib/timer_libs.h</itemPath>
+      <itemPath>update.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -29,6 +30,7 @@
       <itemPath>../CKCommon/UART/uart.c</itemPath>
       <itemPath>../clock_hall/hallClock.c</itemPath>
       <itemPath>../timer_lib/timer_libs.c</itemPath>
+      <itemPath>update.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -41,8 +43,13 @@
     <Elem>../CKCommon/UART</Elem>
     <Elem>../CKCommon/ConfigBits</Elem>
     <Elem>../clock_hall</Elem>
+<<<<<<< Updated upstream
     <Elem>../sensor_struct</Elem>
     <Elem>../timer_lib</Elem>
+=======
+    <Elem>.</Elem>
+    <Elem>../../sensor_reading/SR.X</Elem>
+>>>>>>> Stashed changes
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
