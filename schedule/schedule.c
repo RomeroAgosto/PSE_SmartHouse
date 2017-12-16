@@ -6,8 +6,9 @@ typedef union{
 		int value;
 		int start_time;
 		int stop_time;
+		int enable;
 	}
-	int options[4];
+	int options[5];
 	
 }schedule;
 

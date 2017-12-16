@@ -62,4 +62,6 @@ typedef struct {
  End of File
  */
 
+//static sensorvalues sensor_values;
+
 #endif //SENSOR_STRUCT_STRUCT_LIB_H
