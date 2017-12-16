@@ -23,7 +23,7 @@ int GetWaterTemperature(){
     return 50; /* dummy which returns a temperature to check the behaviour of the state machine*/
 }
 
-void Statemachine_WaterControl(int desired_temperature,char *to_send) {
+void Statemachine_WaterControl(int desired_temperature) {
     int water_temperature=GetWaterTemperature();
     upper_threshold_water=desired_temperature+5; /*trigger band is 10 degrees!*/
     lower_threshold_water=desired_temperature-5;
