@@ -4,35 +4,37 @@
 #include "../clock_hall/hallClock.h"
 
 static struct tm tclock;
+int conv_clock=0;
 
 static int desired_AirTemp[8][4]={-100};
 static int desired_water[4]={-100};
 static int desired_ligth[8][4]={0};
 
-
-int ds_initDSchedules()
+int compareHour(int time1, int time2)
 {
-    
-    return 0;
+    if(conv_clock>time1 && conv_clock<time2)
+        return 1;
+    else
+        return 0;
 }
 
 int  ds_updateDSchedules_time()
 {
     get_timeHall(&tclock);
+    conv_clock=tclock.tm_hour*100+tclock.tm_min;
     return 0;
 }
-
 int ds_DesiredWaterTemp()
 {
     int i, maximum;
     maximum=disable;
     for(i=0;i<4;i++)        /* Used 4 because theres's 4 schedule per day of the week */
     {
-        if(house.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].enable==1)
+        if(home.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].enable==1)
         {
-            if(compareHour(house.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].start_time,house.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].stop_time))
+            if(compareHour(home.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].start_time,home.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].stop_time))
             {    
-                desired_water[i]=house.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].value;
+                desired_water[i]=home.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].value;
             }
             else
             {
@@ -56,11 +58,11 @@ int ds_DesiredAirTemp(int n_air)
     maximum=disable;
     for(i=0;i<4;i++)        /* Used 4 because theres's 4 schedule per day of the week */
     {
-        if(house.air_temperature.array_room[n_air].array_schedule[tclock.tm_wday].schedules[i].enable==1)
+        if(home.air_temperature.array_room[n_air].array_schedule[tclock.tm_wday].schedules[i].enable==1)
         {
-            if(compareHour(house.air_temperature.array_room[n_air].array_schedule[tclock.tm_wday].schedules[i].start_time,house.air_temperature.array_room[n_air].array_schedule[tclock.tm_wday].schedules[i].stop_time))
+            if(compareHour(home.air_temperature.array_room[n_air].array_schedule[tclock.tm_wday].schedules[i].start_time,home.air_temperature.array_room[n_air].array_schedule[tclock.tm_wday].schedules[i].stop_time))
             {    
-                desired_AirTemp[n_air][i]=house.air_temperature.array_room[n_air].array_schedule[tclock.tm_wday].schedules[i].value;
+                desired_AirTemp[n_air][i]=home.air_temperature.array_room[n_air].array_schedule[tclock.tm_wday].schedules[i].value;
             }
             else
             {
@@ -83,11 +85,11 @@ int ds_DesiredLigth(int n_ligth)
     int i;
     for(i=0;i<4;i++)        /* Used 4 because theres's 4 schedule per day of the week */
     {
-        if(house.light.array_room[n_ligth].array_schedule[tclock.tm_wday].schedules[i].enable==1)
+        if(home.light.array_room[n_ligth].array_schedule[tclock.tm_wday].schedules[i].enable==1)
         {
-            if(compareHour(house.light.array_room[n_ligth].array_schedule[tclock.tm_wday].schedules[i].start_time,house.light.array_room[n_ligth].array_schedule[tclock.tm_wday].schedules[i].stop_time))
+            if(compareHour(home.light.array_room[n_ligth].array_schedule[tclock.tm_wday].schedules[i].start_time,home.light.array_room[n_ligth].array_schedule[tclock.tm_wday].schedules[i].stop_time))
             {    
-                desired_ligth[n_ligth][i]=house.light.array_room[n_ligth].array_schedule[tclock.tm_wday].schedules[i].value;
+                desired_ligth[n_ligth][i]=home.light.array_room[n_ligth].array_schedule[tclock.tm_wday].schedules[i].value;
             }
             else 
             {
