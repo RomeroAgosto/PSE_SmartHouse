@@ -18,6 +18,7 @@
 #include <plib.h>
 #include "uart.h" 
 #include "sr.h"
+#include "struct_lib.h"
 
 #define SYSCLK  80000000L // System clock frequency, in Hz
 #define PBCLOCK 40000000L // Peripheral Bus Clock frequency, in Hz

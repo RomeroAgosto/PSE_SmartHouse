@@ -1,0 +1,4 @@
+build/default/production/struct_lib.o:  \
+struct_lib.c  \
+struct_lib.h  \
+sr.h 

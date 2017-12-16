@@ -43,8 +43,13 @@
     <Elem>../CKCommon/UART</Elem>
     <Elem>../CKCommon/ConfigBits</Elem>
     <Elem>../clock_hall</Elem>
+<<<<<<< Updated upstream
     <Elem>../sensor_struct</Elem>
     <Elem>../timer_lib</Elem>
+=======
+    <Elem>.</Elem>
+    <Elem>../../sensor_reading/SR.X</Elem>
+>>>>>>> Stashed changes
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

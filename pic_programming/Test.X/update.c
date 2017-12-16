@@ -2,35 +2,8 @@
 #include "update.h"
 static sensorvalues current_values;
 
-ss_getAirTemperature(air_temperature *i)
-{
-    air_temperature ola;
-    memcpy(i,ola,sizeof(ola));
-    return 0;
-}
-/*air_quality get_air_quality()
-{
-   // return NULL;
-}
-lights get_ligthsensors()
-{
-  //  return NULL;
-}
-water get_water_temperature()
-{
-  //  return NULL;
-}
-*/
-int update_data(void)
-{
-    ss_getAirTemperature(&current_values.air_temperature_sensor);
-    //ss_getAirQuality(&actual_values.air_quality_sensor);
-    //ss_getLigth(&actual_values.light_sensors);
-    //ss_getWaterTemperature(&actual_values.water_temperature);
-    
-    //ss_getLigthSwitch(&current_values.light_sensors);
-    return 0;
-}
+
+
 
 
 /** 
@@ -52,6 +25,56 @@ int update_data(void)
       <li>0   Indicates an error did not occur
     </ul>
  */
+
+int updateSensors() {
+    static int p[20];
+    static int i, j;
+    air_temp_analog(p);
+    
+    for(i=0;i<6) {
+        p[i]=current_values.air_temperature_sensor[i].temp;
+    }
+
+    water_temp_analog(p);
+    
+    p[0]=current_values.water_temperature.temp;
+
+    temp_digital(p);
+    
+    for(i=0;i<2;i++) {
+        p[i]=current_values.air_temperature_sensor[i+6].temp;
+    }
+
+    air_quality_level(p);
+    
+    for (i=0;i<4;i++) {
+        for(j=0;j<5;j++)
+            if(j==0){
+                p[i*5+j]=current_values.air_quality_sensor[i].p10;
+            }
+            if(j==1) {
+                p[i*5+j]=current_values.air_quality_sensor[i].co;
+            }
+            if(j==2) {
+                p[i*5+j]=current_values.air_quality_sensor[i].co2;
+            }
+            if(j==3) {
+                p[i*5+j]=current_values.air_quality_sensor[i].o3;
+            }
+            if(j==4) {
+                p[i*5+j]=current_values.air_quality_sensor[i].humity;
+            }
+    }
+
+    motion_detection(p);
+    
+    for(i==0;i<4;) {
+        p[i]=current_values.light_sensors[i].movement_sensor;
+    }
+
+    return 0;
+    
+}
 
 /*## AIR QUALITY ##*/
 int GetAirQuality(int n_air,struct air_quality_data *air_quality){
@@ -102,6 +125,7 @@ int SetWaterHeaterSate(int state)
     current_values.water_temperature.water_heater=state;
     return 0; /*we should introduce a check, if this procedure was successful */
 }
+
 /* *****************************************************************************
  End of File
  */
