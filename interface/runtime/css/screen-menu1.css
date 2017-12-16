@@ -83,6 +83,10 @@
 	text-decoration: line-through;
 }
 
+#screen-menu1 .row .col3 .col3-schedules .schedule-disabled div {
+	text-decoration: line-through;
+}
+
 #screen-menu1 .row .col3 .col3-schedules .schedule div {
 	position: absolute;
 }

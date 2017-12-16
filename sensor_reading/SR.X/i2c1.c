@@ -1,6 +1,5 @@
 #include <xc.h>
 
-
 void i2c1_init(void){
     // Enable I2C1 module
     I2C1CONbits.ON=1;

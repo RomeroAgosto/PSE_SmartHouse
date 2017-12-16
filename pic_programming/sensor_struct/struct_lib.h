@@ -20,13 +20,14 @@
 struct water_data
 {
     int temp;
-    int water_heater; /*its turned on/off*/
+    int water_heater; /*state ON or OFF */
 };
 
 struct light_data
 {
-    int movement_sensor;
-    int mechanical_switch;
+    int movement_sensor; /*state ON or OFF */
+    int mechanical_switch; /*state ON or OFF */
+    int ligth_state; /*state ON or OFF */
 };
 
 struct air_quality_data
@@ -36,13 +37,13 @@ struct air_quality_data
     double co2;
     double o3;
     double humity;
-    char state;
+    int ventilator; /*state ON or OFF */
 };
 
 struct air_temperature_data
 {
     int temp;
-    int state;
+    int heater; /*state ON or OFF */
 };
 
 typedef struct water_data water;
@@ -60,5 +61,7 @@ typedef struct {
 /* *****************************************************************************
  End of File
  */
+
+//static sensorvalues sensor_values;
 
 #endif //SENSOR_STRUCT_STRUCT_LIB_H
