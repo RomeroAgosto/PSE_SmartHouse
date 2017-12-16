@@ -36,7 +36,7 @@ struct air_quality_data
     double co2;
     double o3;
     double humity;
-    char state;
+    char state_ventilation;
 };
 
 struct air_temperature_data
