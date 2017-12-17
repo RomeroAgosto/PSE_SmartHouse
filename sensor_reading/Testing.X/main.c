@@ -17,11 +17,20 @@
 
 #include <p32xxxx.h>
 #include "update.h"
-#include "uart.h"
+
+#include "../../pic_programming/CKCommon/ConfigBits/config_bits.h"
+#include "../../pic_programming/CKCommon/UART/uart.h" 
 #include "adc_init.h"
 /*
  * 
  */
+
+void delay(unsigned int dms){
+    unsigned int t;
+    t=ReadCoreTimer()+40000*dms;
+    while(ReadCoreTimer() < t);
+}
+
 int main() {
     // Performance optimization (flash access time, enable instruct and data cache,... and PBClock setup
     SYSTEMConfigPerformance(SYSCLK);
@@ -40,13 +49,11 @@ int main() {
     }
 /*timer initialization*/    
 
-    setup_clockHall(&run_alonsideWClock);
+    //setup_clockHall(NULL);
     PORTAbits.RA3=0;
 
-    printf("timer init\n");
-        while(1);
-    }
-    __XC_UART = 1; /* Redirect stdin/stdout/stderr to UART1*/
+    __XC_UART = 1; /* Redirect stdin/stdout/stderr to U
+     printf("timer init\n");ART1*/
     
     /*int temperature[8];
     int air_quality[5];
@@ -54,12 +61,11 @@ int main() {
     adc_init();
     //int temp_room[6];//humi_room[2];
     // air_quality_room[4];//motion_detected[2];
-    
     while(1) {
-        printf("Hello World");
         valuesinti();
         updateSensors();
         print();
+        delay(500);
     }
     return (EXIT_SUCCESS);
 }
