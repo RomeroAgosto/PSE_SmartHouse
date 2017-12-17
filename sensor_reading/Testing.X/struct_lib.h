@@ -67,5 +67,5 @@ typedef struct {
  */
 /* *****************************************************************************
  End of File*/
-static sensorvalues sensor_value;
+static sensorvalues current_values;
  #endif

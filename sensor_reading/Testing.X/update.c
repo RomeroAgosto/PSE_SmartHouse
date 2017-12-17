@@ -2,7 +2,6 @@
 #include "update.h"
 #include <stdio.h>
 
-static sensorvalues current_values;
 
 /** 
   @Function
@@ -75,6 +74,12 @@ int updateSensors()
     
 }
  
+void print() {
+    int i;
+    for(i=0;i<8;i++){
+        printf("%d\n",current_values.air_temperature_sensor[i].temp);
+    }
+}
 
 /*## AIR QUALITY ##*/
 int GetAirQuality(int n_air, double *p){

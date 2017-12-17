@@ -22,4 +22,5 @@ int GetWaterTemperature();
 
 int SetWaterHeaterSate(int state);
 
+void print();
 #endif
