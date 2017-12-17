@@ -28,7 +28,7 @@ int i2c1_s7();
  *  
  * \date 18/12/2017
  */
-int i2c1_s8(int *humi_temp[2]); 
+int i2c1_s8(int *humi_temp); 
 
 #endif	/* I2C1_H */
 

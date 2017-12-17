@@ -8,7 +8,6 @@
       <itemPath>config_bits.h</itemPath>
       <itemPath>uart.h</itemPath>
       <itemPath>i2c.h</itemPath>
-      <itemPath>adc_init.h</itemPath>
       <itemPath>i2c1.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -22,14 +21,13 @@
       <itemPath>sr.c</itemPath>
       <itemPath>i2c1.c</itemPath>
       <itemPath>uart.c</itemPath>
-      <itemPath>i2c2.c</itemPath>
       <itemPath>temp_analog.c</itemPath>
       <itemPath>air_quality_level.c</itemPath>
       <itemPath>temp_digital.c</itemPath>
       <itemPath>motion_detection.c</itemPath>
-      <itemPath>adc_init.c</itemPath>
-      <itemPath>i2c1_s7.c</itemPath>
       <itemPath>i2c1_s8.c</itemPath>
+      <itemPath>i2c1_s7.c</itemPath>
+      <itemPath>adc_init.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -38,7 +36,6 @@
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
-    <Elem>../tmep</Elem>
     <Elem>../CKCommon/UART</Elem>
     <Elem>../CKCommon/ConfigBits</Elem>
     <Elem>.</Elem>

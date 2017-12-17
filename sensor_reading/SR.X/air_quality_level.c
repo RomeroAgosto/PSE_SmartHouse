@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <xc.h>
+#define _SUPPRESS_PLIB_WARNING 1
+#include <plib.h>
 #include "i2c1.h"
 
-int air_quality_level(int *a[20]){
+int air_quality_level(int *a){
     int flag;                       // Flag variable to check for activated pins on PIC32MX795F512L.
     double a1, a2, a3, a4, am;      // Variables to calculate voltage reading from ADC converter.
     double c_threshold;             // Variable of upper threshold of the gas concentration reading.
