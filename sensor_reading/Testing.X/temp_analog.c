@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <xc.h>
 
-int air_temp_analog(int *t[6]){         //function to return air temperature value 
+int air_temp_analog(int *t){         //function to return air temperature value 
     int flag;
     double t1, t2, t3, t4, tm, temperature; //variables of voltages read from ADC converter 
     double calibration_value; //variable of voltage reading from a certain temperature
@@ -70,10 +70,10 @@ int air_temp_analog(int *t[6]){         //function to return air temperature val
 
             tm= (t1+t2+t3+t4)/4;  //average value of voltage read from ADC
 
-            *(t[i])= (int)(21+(tm-calibration_value)*100); //calculate respective voltage and storing to a variable
+            t[i]= (int)(21+(tm-calibration_value)*100); //calculate respective voltage and storing to a variable
         }
         else{
-            *(t[i])=-77;
+            t[i]=-77;
         }
             
 
@@ -101,7 +101,7 @@ int water_temp_analog(int *t){    //function to return air temperature value
 
     tm= (t1+t2+t3+t4)/4;  //average value of voltage read from ADC
 
-    x= (int)(100*tm/3.3);
+    *t= (int)(100*tm/3.3);
 
     return 0;
 }
