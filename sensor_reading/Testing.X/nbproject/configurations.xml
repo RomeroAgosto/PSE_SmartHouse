@@ -10,6 +10,9 @@
       <itemPath>i2c1.h</itemPath>
       <itemPath>sr.h</itemPath>
       <itemPath>uart.h</itemPath>
+      <itemPath>hallClock.h</itemPath>
+      <itemPath>timer_libs.h</itemPath>
+      <itemPath>schedules.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -18,16 +21,19 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>main.c</itemPath>
       <itemPath>adc_init.c</itemPath>
       <itemPath>air_quality_level.c</itemPath>
       <itemPath>i2c1.c</itemPath>
       <itemPath>i2c1_s7.c</itemPath>
       <itemPath>i2c1_s8.c</itemPath>
+      <itemPath>main.c</itemPath>
       <itemPath>motion_detection.c</itemPath>
       <itemPath>temp_analog.c</itemPath>
       <itemPath>temp_digital.c</itemPath>
       <itemPath>uart.c</itemPath>
+      <itemPath>hallClock.c</itemPath>
+      <itemPath>timer_libs.c</itemPath>
+      <itemPath>desiredValues.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

@@ -9,8 +9,6 @@
 
 #include <stdio.h>
 #include <xc.h>
-#define _SUPPRESS_PLIB_WARNING 1
-#include <plib.h>
 
 int air_temp_analog(int *t[6]){         //function to return air temperature value 
     int flag;

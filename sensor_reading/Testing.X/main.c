@@ -19,8 +19,11 @@
 /*
  * 
  */
-int main(int argc, char** argv) {
-
+int main() {
+    valuesinti();
+    
+    
+    
     return (EXIT_SUCCESS);
 }
 
