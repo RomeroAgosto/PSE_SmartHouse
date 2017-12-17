@@ -100,6 +100,7 @@ void run_alonsideWClock(void){
     SetTimer(3);
 }
 int main(int argc, char** argv) {
+    
     // Variable declarations;
     int i=0;
 
@@ -127,6 +128,10 @@ int main(int argc, char** argv) {
 #if 1
     
     /*read message -> set a flag corresponding to the input*/
+    while(1){
+        updateSensors();
+    }
+    
     char input[1];
     read_input(input);
     
