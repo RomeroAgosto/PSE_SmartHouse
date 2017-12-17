@@ -1,22 +1,3 @@
-/* 
- * File:   CKLedBlink.c
- * Author: Paulo Pedreiras
- *
- * Created on Oct 25, 2017
- * MPLAB X IDE v3.50 + XC32 v1.42
- *
- * Target: Digilent chipKIT MAx32 board 
- * Configurations:
- *      HSPLL; CPUCLK=80MHz, PBCLCK=40MHz; Watchdog timer disabled
- *      
- * Overview:
- *      Blinks led connected on port RA3 (Digital pin 13 of the chipKIT board)
- *      Inits the UART (U1A, 115200, 8,n,1) and sends '*' when the led toggles
- *
- *  Revisions:
- *      2017-10-15: Initial release
- */
-
 #include "../CKCommon/ConfigBits/config_bits.h" // NOTE!! Must precede project file includes
 //#include <xc.h>
 #define _SUPPRESS_PLIB_WARNING 1
@@ -182,4 +163,5 @@ int main(int argc, char** argv) {
 
     return (EXIT_SUCCESS);
 }
+
 
