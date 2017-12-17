@@ -4,7 +4,7 @@
 #include "../sensor_struct/struct_lib.h"
 #include <time.h>
 #include <string.h>
-#include "log_functions.h"
+#include "log_stru.h"
 
 static sensorvalues sensor_values;
 static log msd;
@@ -36,22 +36,22 @@ int log_data_saving()
         msd.data[i].sensor_data[10]=sensor_values.air_temperature_sensor[5].temp;
         msd.data[i].sensor_data[11]=sensor_values.air_temperature_sensor[6].temp;
         msd.data[i].sensor_data[12]=sensor_values.air_temperature_sensor[7].temp;
-        msd.data[i].sensor_data[13]=sensor_values.air_temperature_sensor[0].state;
-        msd.data[i].sensor_data[14]=sensor_values.air_temperature_sensor[1].state;
-        msd.data[i].sensor_data[15]=sensor_values.air_temperature_sensor[2].state;
-        msd.data[i].sensor_data[16]=sensor_values.air_temperature_sensor[3].state;
-        msd.data[i].sensor_data[17]=sensor_values.air_temperature_sensor[4].state;
-        msd.data[i].sensor_data[18]=sensor_values.air_temperature_sensor[5].state;
-        msd.data[i].sensor_data[19]=sensor_values.air_temperature_sensor[6].state;
-        msd.data[i].sensor_data[20]=sensor_values.air_temperature_sensor[7].state;
+        msd.data[i].sensor_data[13]=sensor_values.air_temperature_sensor[0].heater;
+        msd.data[i].sensor_data[14]=sensor_values.air_temperature_sensor[1].heater;
+        msd.data[i].sensor_data[15]=sensor_values.air_temperature_sensor[2].heater;
+        msd.data[i].sensor_data[16]=sensor_values.air_temperature_sensor[3].heater;
+        msd.data[i].sensor_data[17]=sensor_values.air_temperature_sensor[4].heater;
+        msd.data[i].sensor_data[18]=sensor_values.air_temperature_sensor[5].heater;
+        msd.data[i].sensor_data[19]=sensor_values.air_temperature_sensor[6].heater;
+        msd.data[i].sensor_data[20]=sensor_values.air_temperature_sensor[7].heater;
         //data from water control
         msd.data[i].sensor_data[21]=sensor_values.water_temperature.temp;
         msd.data[i].sensor_data[22]=sensor_values.water_temperature.water_heater;
         // data air quality
-        msd.data[i].sensor_data[23]=sensor_values.air_quality_sensor[0].state;
-        msd.data[i].sensor_data[24]=sensor_values.air_quality_sensor[1].state;
-        msd.data[i].sensor_data[25]=sensor_values.air_quality_sensor[2].state;
-        msd.data[i].sensor_data[26]=sensor_values.air_quality_sensor[3].state;
+        msd.data[i].sensor_data[23]=sensor_values.air_quality_sensor[0].ventilator;
+        msd.data[i].sensor_data[24]=sensor_values.air_quality_sensor[1].ventilator;
+        msd.data[i].sensor_data[25]=sensor_values.air_quality_sensor[2].ventilator;
+        msd.data[i].sensor_data[26]=sensor_values.air_quality_sensor[3].ventilator;
         i++;
     }
 

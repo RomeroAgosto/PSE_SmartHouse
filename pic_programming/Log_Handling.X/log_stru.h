@@ -5,6 +5,9 @@
 #ifndef LOG_SEND_LOG_STRU_H
 #define LOG_SEND_LOG_STRU_H
 
+
+#include <time.h>
+
 /** \file log_functions.h
 * \brief functions that allow log management
 * \author Rafael Almeida
@@ -117,4 +120,6 @@ typedef union{
     }; measured_data data[48];
 } log;
 
+
+int log_data_saving(void);
 #endif //LOG_SEND_LOG_STRU_H

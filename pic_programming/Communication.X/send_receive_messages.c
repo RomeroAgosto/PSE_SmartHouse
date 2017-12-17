@@ -1,7 +1,12 @@
 
 #include <string.h>
 #include <stdio.h>
-#include "message.h"
+#define _SUPPRESS_PLIB_WARNING 1
+#include <plib.h>
+#include "send_receive_messages.h"
+
+volatile static int message_flag;
+volatile static char message [5000];
 
 int get_digits(int score_int, char *score_char) {
     int i=0, div;
@@ -28,23 +33,17 @@ int send_message(char *message) {
         i++;
         checksum=checksum+message[i]; /*adds all characters to a sum*/
     }while(message[i]!='\0');
-    printf("the checksum is: %ld\n",checksum);
-
-
     char check_sum[100], delimiter_checksum_start[]="(",delimiter_checksum_end[]=")", length_checksum[2], delimiter_overall[]="*";
     length_checksum[0]=get_digits(checksum,check_sum) +'0'; /*returns the length of the checksum*/
     length_checksum[1]='\0';
-    printf("%s\n",delimiter_checksum_start);
     strcat(message,delimiter_checksum_start); /*appends start delimiter for the checksum*/
     strcat(message,length_checksum); /*appends the length*/
     strcat(message,delimiter_checksum_end); /*enddelimiter for the checksum*/
     strcat(message,check_sum);/*appends the checksum itself*/
     strcat(message,delimiter_overall);/*appends the overall delimiter for our messages *  */
-    printf("%s\n",message);
     return 1;
 
 }
-
 
 double power(double a, double b){
         int i;
@@ -95,3 +94,57 @@ long int check_received_message(char *message){
     return 1;
 
     }
+
+
+int message_handle() {
+    if (message_flag==TRUE){
+        if (message[1]='?') {
+            create_normal_message(message);
+            //send_message(message);
+        } 
+        else if (message[1]='!') {
+           // get_schedule_message(message);
+        } else if (message_flag == SEND_DATALOG) {
+            
+        }
+        message_flag=0;
+       
+    }
+        return 1;
+}
+
+
+#define UART_PRIORITY_P 4
+#define UART_PRIORITY_S 3
+void init_uart(void){
+
+    IFS0bits.U1RXIF = 0;
+    IFS0bits.U1TXIF = 0;
+
+    IPC6bits.U1IP = UART_PRIORITY_P;
+    IPC6bits.U1IS = UART_PRIORITY_S;
+
+    U1STAbits.URXISEL=0;
+    U1STAbits.UTXISEL=0;
+
+    IEC0bits.U1RXIE =1;
+
+}
+
+
+void __ISR(_UART_1_VECTOR,IPL4AUTO) _UART1Handler(void){
+    static int message_counter;
+    char charbuf[1];
+    charbuf[0]= U1RXREG;
+    message[message_counter]=charbuf[0];
+    message_counter++;
+    if (charbuf[0]=='*'){
+
+        message_flag=TRUE;
+        message_counter=0;
+    }
+    
+    IFS0bits.U1RXIF=0;
+    IFS0bits.U1TXIF=0;
+}
+
