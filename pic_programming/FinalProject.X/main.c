@@ -1,18 +1,12 @@
-#include "../CKCommon/ConfigBits/config_bits.h" // NOTE!! Must precede project file includes
-//#include <xc.h>
 #define _SUPPRESS_PLIB_WARNING 1
 #include <plib.h>
-#include <p32xxxx.h>
+#include "../CKCommon/ConfigBits/config_bits.h"
 #include "../CKCommon/UART/uart.h"
-#include "statemachine_light_control.h"
-#include "statemachine_airquality_control.h" 
+#include "../Statemachines.X/statemachines.h"
+#include "../Communication.X/send_receive_messages.h"
+//#include "../Timer_Clock.X/hallClock.h"
 #include <string.h>
 #include <stdio.h>
-#include "timer_libs.h"
-#include "hallClock.h"
-
-#define TIMER 1
-
 #define SYSCLK  80000000L // System clock frequency, in Hz
 #define PBCLOCK 40000000L // Peripheral Bus Clock frequency, in Hz
 
@@ -27,10 +21,7 @@ static int count_interrupt;
 extern struct tm time_hall;
 
 #include "../sensor_struct/struct_lib.h"
-sensorvalues ola;
-/*
- * 
- */
+
 
 /**
  *      @brief  Developing routine for the pic
@@ -41,45 +32,15 @@ sensorvalues ola;
  *
  * ==============================================
  */
+char message[500];
 
-int read_input(char *input){
-    char check_input[2];
-    char waiting[]="waiting\n";
-    /*do{
-      
-        GetChar(check_input);
-        send_messages(waiting);
-    } while (check_input[0]!='#');
-    char char_bit[1];
-    int i=0;
-    do{
-        GetChar(char_bit);
-        if (char_bit[0]!=input[i]){strcat(input,char_bit);}/* PIC reads to fast!*/
-     /*   i++;
-    }while(char_bit[0]!='*');
-    send_messages(input);*/
-    *input='a';//dummy
-    return 1;
-}
-
-int Send_Message(){
-    return 1;
-}
-/**
- *      @brief  This function will run alongside the clock hall
- *     @author  Samuel Simoes, samuelmsimoes@ua.pt
- *     Created  20-Set-2017
- *     Company  University of Aveiro
- *   Copyright  Copyright (c) 2017, Sascha Marquardt
- *
- * ==============================================
- */
 void run_alonsideWClock(void){
     SetTimer(0);
     SetTimer(1);
     SetTimer(2);
     SetTimer(3);
 }
+
 int main(int argc, char** argv) {
     
     // Variable declarations;
@@ -89,79 +50,27 @@ int main(int argc, char** argv) {
     SYSTEMConfigPerformance(SYSCLK);
     mOSCSetPBDIV(OSC_PB_DIV_2); // This is necessary since SYSTEMConfigPerformance defaults FPBDIV to DIV_1
 
+    INTConfigureSystem(INT_SYSTEM_CONFIG_MULT_VECTOR);
+    INTEnableInterrupts();
+
     // Set RA3 as outpout
     TRISAbits.TRISA3 = 0;
-
     
-    
-    
-                // Init UART
-    if(UartInit(PBCLOCK,115200) != UART_SUCCESS) {
-            PORTAbits.RA3 = 1;
-            while(1);
-    }
-/*timer initialization*/    
-
-    setup_clockHall(&run_alonsideWClock);
+    UartInit(PBCLOCK,115200);
+    _mon_putc('a');
+    _mon_putc('\n');
+    //setup_clockHall(&run_alonsideWClock);
+    init_uart();
+    /*timer initialization*/    
     PORTAbits.RA3=0;
-
-    printf("timer init\n");
-#if 1
-    
-    /*read message -> set a flag corresponding to the input*/
     while(1){
-        updateSensors();
-    }
-    
-    char input[1];
-    read_input(input);
-    
-    char to_send[500]; 
-    while(1){ /*endless loop in the end*/
-        /*start the message*/
-        /*checking the input in the beginning and setting flags*/
-        if (GetChar(input) != 0){
-            if (input[0]=='?'){  
-                /* New status sends the current sensor values*/
-                send_flag=SEND_NEW_STATUS;
-            }
-            else if(input[0]=='!'){
-                /*sends the current schedule*/
-                send_flag=SEND_SCHEDULES;
-            }
-            else if(input[0]=='+'){
-                /*receive a new schedule*/
-                send_flag=RECEIVE_SCHEDULES;
-            }
-            else if(input[0]=='%'){
-                /*send a Datalog to the pc side*/
-                send_flag=SEND_DATALOG;
-            }                
-        }            
+        Statemachine_AirQuality();
+        Statemachine_LightControl(1);
+        message_handle();
        
-        /*water temperature control*/
-        Statemachine_WaterControl(60,to_send);
-        
-        /*light control*/
-        Statemachine_LightControl(0,to_send);
-        Statemachine_LightControl(1,to_send);
-        Statemachine_LightControl(2,to_send);
-        Statemachine_LightControl(3,to_send);
-        
-        /*Air Quality*/
-        Statemachine_AirQuality(to_send);
-        
-        /*Airtemperature Control*/
-        int k;
-        for(k=0;k<4;k++) {
-           // Statemachine_AirControl(k, to_send,25);
-        }
+            //message_handle(1);
     }
-#endif
-    char test[]="test message";
-    send_message(test);
-
+        
     return (EXIT_SUCCESS);
 }
-
 

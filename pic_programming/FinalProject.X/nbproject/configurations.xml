@@ -4,6 +4,70 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="Communication.X"
+                     displayName="Communication.X"
+                     projectFiles="true">
+        <logicalFolder name="cmake-build-debug"
+                       displayName="cmake-build-debug"
+                       projectFiles="true">
+          <logicalFolder name="CMakeFiles" displayName="CMakeFiles" projectFiles="true">
+            <logicalFolder name="3.8.2" displayName="3.8.2" projectFiles="true">
+              <logicalFolder name="CompilerIdC" displayName="CompilerIdC" projectFiles="true">
+              </logicalFolder>
+              <logicalFolder name="CompilerIdCXX"
+                             displayName="CompilerIdCXX"
+                             projectFiles="true">
+              </logicalFolder>
+            </logicalFolder>
+            <logicalFolder name="communication.dir"
+                           displayName="communication.dir"
+                           projectFiles="true">
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+        <itemPath>../Communication.X/send_receive_messages.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Log_Handling.X"
+                     displayName="Log_Handling.X"
+                     projectFiles="true">
+        <itemPath>../Log_Handling.X/log_functions.h</itemPath>
+        <itemPath>../Log_Handling.X/log_stru.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Statemachines.X"
+                     displayName="Statemachines.X"
+                     projectFiles="true">
+        <logicalFolder name="cmake-build-debug"
+                       displayName="cmake-build-debug"
+                       projectFiles="true">
+          <logicalFolder name="CMakeFiles" displayName="CMakeFiles" projectFiles="true">
+            <logicalFolder name="3.8.2" displayName="3.8.2" projectFiles="true">
+              <logicalFolder name="CompilerIdC" displayName="CompilerIdC" projectFiles="true">
+                <itemPath>../Statemachines.X/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/CMakeCCompilerId.c</itemPath>
+              </logicalFolder>
+              <logicalFolder name="CompilerIdCXX"
+                             displayName="CompilerIdCXX"
+                             projectFiles="true">
+              </logicalFolder>
+            </logicalFolder>
+            <logicalFolder name="Statemachines_X.dir"
+                           displayName="Statemachines_X.dir"
+                           projectFiles="true">
+            </logicalFolder>
+            <itemPath>../Statemachines.X/cmake-build-debug/CMakeFiles/feature_tests.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <itemPath>../Statemachines.X/statemachine_airtemp_control.h</itemPath>
+        <itemPath>../Statemachines.X/statemachines.h</itemPath>
+        <itemPath>../Statemachines.X/statemachine_airquality_control.h</itemPath>
+        <itemPath>../Statemachines.X/statemachine_watertemp_control.h</itemPath>
+        <itemPath>../Statemachines.X/statemachine_light_control.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Timer_Clock.X"
+                     displayName="Timer_Clock.X"
+                     projectFiles="true">
+        <itemPath>../Timer_Clock.X/hallClock.h</itemPath>
+        <itemPath>../Timer_Clock.X/timer_libs.h</itemPath>
+      </logicalFolder>
       <itemPath>../CKCommon/ConfigBits/config_bits.h</itemPath>
       <itemPath>../CKCommon/UART/uart.h</itemPath>
     </logicalFolder>
@@ -14,6 +78,70 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="Communication.X"
+                     displayName="Communication.X"
+                     projectFiles="true">
+        <logicalFolder name="cmake-build-debug"
+                       displayName="cmake-build-debug"
+                       projectFiles="true">
+          <logicalFolder name="CMakeFiles" displayName="CMakeFiles" projectFiles="true">
+            <logicalFolder name="3.8.2" displayName="3.8.2" projectFiles="true">
+              <logicalFolder name="CompilerIdC" displayName="CompilerIdC" projectFiles="true">
+                <itemPath>../Communication.X/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/CMakeCCompilerId.c</itemPath>
+              </logicalFolder>
+              <logicalFolder name="CompilerIdCXX"
+                             displayName="CompilerIdCXX"
+                             projectFiles="true">
+              </logicalFolder>
+            </logicalFolder>
+            <logicalFolder name="communication.dir"
+                           displayName="communication.dir"
+                           projectFiles="true">
+            </logicalFolder>
+            <itemPath>../Communication.X/cmake-build-debug/CMakeFiles/feature_tests.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <itemPath>../Communication.X/send_receive_messages.c</itemPath>
+        <itemPath>../Communication.X/create_normal_message.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Log_Handling.X"
+                     displayName="Log_Handling.X"
+                     projectFiles="true">
+        <itemPath>../Log_Handling.X/log_functions.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Statemachines.X"
+                     displayName="Statemachines.X"
+                     projectFiles="true">
+        <logicalFolder name="cmake-build-debug"
+                       displayName="cmake-build-debug"
+                       projectFiles="true">
+          <logicalFolder name="CMakeFiles" displayName="CMakeFiles" projectFiles="true">
+            <logicalFolder name="3.8.2" displayName="3.8.2" projectFiles="true">
+              <logicalFolder name="CompilerIdC" displayName="CompilerIdC" projectFiles="true">
+              </logicalFolder>
+              <logicalFolder name="CompilerIdCXX"
+                             displayName="CompilerIdCXX"
+                             projectFiles="true">
+              </logicalFolder>
+            </logicalFolder>
+            <logicalFolder name="Statemachines_X.dir"
+                           displayName="Statemachines_X.dir"
+                           projectFiles="true">
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+        <itemPath>../Statemachines.X/statemachine_airquality_control.c</itemPath>
+        <itemPath>../Statemachines.X/statemachine_airtemp_control.c</itemPath>
+        <itemPath>../Statemachines.X/statemachine_watertemp_control.c</itemPath>
+        <itemPath>../Statemachines.X/statemachine_light_control.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Timer_Clock.X"
+                     displayName="Timer_Clock.X"
+                     projectFiles="true">
+        <itemPath>../Timer_Clock.X/hallClock.c</itemPath>
+        <itemPath>../Timer_Clock.X/main.c</itemPath>
+        <itemPath>../Timer_Clock.X/timer_libs.c</itemPath>
+      </logicalFolder>
       <itemPath>../CKCommon/UART/uart.c</itemPath>
       <itemPath>main.c</itemPath>
     </logicalFolder>
@@ -26,6 +154,10 @@
   <sourceRootList>
     <Elem>../CKCommon/ConfigBits</Elem>
     <Elem>../CKCommon/UART</Elem>
+    <Elem>../Statemachines.X</Elem>
+    <Elem>../Communication.X</Elem>
+    <Elem>../Log_Handling.X</Elem>
+    <Elem>../Timer_Clock.X</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -35,7 +167,7 @@
         <targetDevice>PIC32MX795F512L</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>ICD3PlatformTool</platformTool>
+        <platformTool>PK3OBPlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>1.44</languageToolchainVersion>
         <platform>2</platform>
@@ -169,6 +301,9 @@
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
       </C32Global>
+      <PK3OBPlatformTool>
+        <property key="firmware.download.all" value="false"/>
+      </PK3OBPlatformTool>
     </conf>
   </confs>
 </configurationDescriptor>
