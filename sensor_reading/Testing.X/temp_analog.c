@@ -72,10 +72,10 @@ int air_temp_analog(int *t[6]){         //function to return air temperature val
 
             tm= (t1+t2+t3+t4)/4;  //average value of voltage read from ADC
 
-            t[i]= (int)(21+(tm-calibration_value)*100); //calculate respective voltage and storing to a variable
+            *(t[i])= (int)(21+(tm-calibration_value)*100); //calculate respective voltage and storing to a variable
         }
         else{
-            t[i]=-77;
+            *(t[i])=-77;
         }
             
 
