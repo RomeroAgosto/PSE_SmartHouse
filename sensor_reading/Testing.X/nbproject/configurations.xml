@@ -13,6 +13,8 @@
       <itemPath>hallClock.h</itemPath>
       <itemPath>timer_libs.h</itemPath>
       <itemPath>schedules.h</itemPath>
+      <itemPath>struct_lib.h</itemPath>
+      <itemPath>update.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -34,6 +36,7 @@
       <itemPath>hallClock.c</itemPath>
       <itemPath>timer_libs.c</itemPath>
       <itemPath>desiredValues.c</itemPath>
+      <itemPath>update.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=adc_init.c air_quality_level.c i2c1.c i2c1_s7.c i2c1_s8.c main.c motion_detection.c temp_analog.c temp_digital.c uart.c hallClock.c timer_libs.c desiredValues.c
+SOURCEFILES_QUOTED_IF_SPACED=adc_init.c air_quality_level.c i2c1.c i2c1_s7.c i2c1_s8.c main.c motion_detection.c temp_analog.c temp_digital.c uart.c hallClock.c timer_libs.c desiredValues.c update.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/adc_init.o ${OBJECTDIR}/air_quality_level.o ${OBJECTDIR}/i2c1.o ${OBJECTDIR}/i2c1_s7.o ${OBJECTDIR}/i2c1_s8.o ${OBJECTDIR}/main.o ${OBJECTDIR}/motion_detection.o ${OBJECTDIR}/temp_analog.o ${OBJECTDIR}/temp_digital.o ${OBJECTDIR}/uart.o ${OBJECTDIR}/hallClock.o ${OBJECTDIR}/timer_libs.o ${OBJECTDIR}/desiredValues.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/adc_init.o.d ${OBJECTDIR}/air_quality_level.o.d ${OBJECTDIR}/i2c1.o.d ${OBJECTDIR}/i2c1_s7.o.d ${OBJECTDIR}/i2c1_s8.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/motion_detection.o.d ${OBJECTDIR}/temp_analog.o.d ${OBJECTDIR}/temp_digital.o.d ${OBJECTDIR}/uart.o.d ${OBJECTDIR}/hallClock.o.d ${OBJECTDIR}/timer_libs.o.d ${OBJECTDIR}/desiredValues.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/adc_init.o ${OBJECTDIR}/air_quality_level.o ${OBJECTDIR}/i2c1.o ${OBJECTDIR}/i2c1_s7.o ${OBJECTDIR}/i2c1_s8.o ${OBJECTDIR}/main.o ${OBJECTDIR}/motion_detection.o ${OBJECTDIR}/temp_analog.o ${OBJECTDIR}/temp_digital.o ${OBJECTDIR}/uart.o ${OBJECTDIR}/hallClock.o ${OBJECTDIR}/timer_libs.o ${OBJECTDIR}/desiredValues.o ${OBJECTDIR}/update.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/adc_init.o.d ${OBJECTDIR}/air_quality_level.o.d ${OBJECTDIR}/i2c1.o.d ${OBJECTDIR}/i2c1_s7.o.d ${OBJECTDIR}/i2c1_s8.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/motion_detection.o.d ${OBJECTDIR}/temp_analog.o.d ${OBJECTDIR}/temp_digital.o.d ${OBJECTDIR}/uart.o.d ${OBJECTDIR}/hallClock.o.d ${OBJECTDIR}/timer_libs.o.d ${OBJECTDIR}/desiredValues.o.d ${OBJECTDIR}/update.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/adc_init.o ${OBJECTDIR}/air_quality_level.o ${OBJECTDIR}/i2c1.o ${OBJECTDIR}/i2c1_s7.o ${OBJECTDIR}/i2c1_s8.o ${OBJECTDIR}/main.o ${OBJECTDIR}/motion_detection.o ${OBJECTDIR}/temp_analog.o ${OBJECTDIR}/temp_digital.o ${OBJECTDIR}/uart.o ${OBJECTDIR}/hallClock.o ${OBJECTDIR}/timer_libs.o ${OBJECTDIR}/desiredValues.o
+OBJECTFILES=${OBJECTDIR}/adc_init.o ${OBJECTDIR}/air_quality_level.o ${OBJECTDIR}/i2c1.o ${OBJECTDIR}/i2c1_s7.o ${OBJECTDIR}/i2c1_s8.o ${OBJECTDIR}/main.o ${OBJECTDIR}/motion_detection.o ${OBJECTDIR}/temp_analog.o ${OBJECTDIR}/temp_digital.o ${OBJECTDIR}/uart.o ${OBJECTDIR}/hallClock.o ${OBJECTDIR}/timer_libs.o ${OBJECTDIR}/desiredValues.o ${OBJECTDIR}/update.o
 
 # Source Files
-SOURCEFILES=adc_init.c air_quality_level.c i2c1.c i2c1_s7.c i2c1_s8.c main.c motion_detection.c temp_analog.c temp_digital.c uart.c hallClock.c timer_libs.c desiredValues.c
+SOURCEFILES=adc_init.c air_quality_level.c i2c1.c i2c1_s7.c i2c1_s8.c main.c motion_detection.c temp_analog.c temp_digital.c uart.c hallClock.c timer_libs.c desiredValues.c update.c
 
 
 CFLAGS=
@@ -184,6 +184,12 @@ ${OBJECTDIR}/desiredValues.o: desiredValues.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/desiredValues.o 
 	@${FIXDEPS} "${OBJECTDIR}/desiredValues.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/desiredValues.o.d" -o ${OBJECTDIR}/desiredValues.o desiredValues.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
+${OBJECTDIR}/update.o: update.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/update.o.d 
+	@${RM} ${OBJECTDIR}/update.o 
+	@${FIXDEPS} "${OBJECTDIR}/update.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/update.o.d" -o ${OBJECTDIR}/update.o update.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
 else
 ${OBJECTDIR}/adc_init.o: adc_init.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -262,6 +268,12 @@ ${OBJECTDIR}/desiredValues.o: desiredValues.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/desiredValues.o.d 
 	@${RM} ${OBJECTDIR}/desiredValues.o 
 	@${FIXDEPS} "${OBJECTDIR}/desiredValues.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/desiredValues.o.d" -o ${OBJECTDIR}/desiredValues.o desiredValues.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/update.o: update.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/update.o.d 
+	@${RM} ${OBJECTDIR}/update.o 
+	@${FIXDEPS} "${OBJECTDIR}/update.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/update.o.d" -o ${OBJECTDIR}/update.o update.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 endif
 

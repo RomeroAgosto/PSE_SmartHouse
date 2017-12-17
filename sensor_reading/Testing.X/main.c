@@ -16,13 +16,13 @@
 #define PBUSCLK 40000000L   // Peripheral bus clock
 
 #include <p32xxxx.h>
+#include "update.h"
 /*
  * 
  */
 int main() {
     valuesinti();
-    
-    
+    updateSensors();
     
     return (EXIT_SUCCESS);
 }
