@@ -13,17 +13,16 @@
 
 #define TURNED_OFF 0
 #define TURNED_ON 1
-#define TRUE 1
-#define FALSE 0
-
-#define CYCLES 20 /*after CYCLES the light is turned off again */
 
 
-int update_sensorvalues(int light);
+
+int SetNewCycle(int room,int new_cycle);
+int desiredLight_dummy(int light);
+int GetLightControl_dummy(int light);
+int SetLightState_dummy(int light, int ON );
+int SetTimer(int light);
 void Statemachine_LightControl(int light);
-int create_message(char *existing_string, char *new_input);
-int SetTimer(int number);
-int SetLight(int number, int on); /* parameters are the light number and if the light is supposed to be on (TRUE) or off (FALSE)*/
+
 
 
 #endif /* STATEMACHINE_H */

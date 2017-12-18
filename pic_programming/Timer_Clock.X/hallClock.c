@@ -8,6 +8,7 @@
 *
 * \date 03-11-2017
 */
+
 #include "hallClock.h"
 #include <stdio.h>
 #include <string.h>
@@ -18,6 +19,9 @@ static void (*longside_func)()=NULL; /*!<Buffur for function that will work alon
 // Stetup Hall clock and can put a func run alonside clock
 void setup_clockHall(void (*func)(void))
 {
+        
+    _mon_putc('a');
+    _mon_putc('\n');
     longside_func=func;
     tmr_config(2,2);
     tmr_intrpt_config(2,2,&inc_clock);

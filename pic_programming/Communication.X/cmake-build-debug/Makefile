@@ -150,33 +150,6 @@ create_normal_message.c.s:
 	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/create_normal_message.c.s
 .PHONY : create_normal_message.c.s
 
-get_schedule_message.o: get_schedule_message.c.o
-
-.PHONY : get_schedule_message.o
-
-# target to build an object file
-get_schedule_message.c.o:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/get_schedule_message.c.o
-.PHONY : get_schedule_message.c.o
-
-get_schedule_message.i: get_schedule_message.c.i
-
-.PHONY : get_schedule_message.i
-
-# target to preprocess a source file
-get_schedule_message.c.i:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/get_schedule_message.c.i
-.PHONY : get_schedule_message.c.i
-
-get_schedule_message.s: get_schedule_message.c.s
-
-.PHONY : get_schedule_message.s
-
-# target to generate assembly for a file
-get_schedule_message.c.s:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/get_schedule_message.c.s
-.PHONY : get_schedule_message.c.s
-
 main.o: main.c.o
 
 .PHONY : main.o
@@ -203,60 +176,6 @@ main.s: main.c.s
 main.c.s:
 	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/main.c.s
 .PHONY : main.c.s
-
-message.o: message.c.o
-
-.PHONY : message.o
-
-# target to build an object file
-message.c.o:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/message.c.o
-.PHONY : message.c.o
-
-message.i: message.c.i
-
-.PHONY : message.i
-
-# target to preprocess a source file
-message.c.i:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/message.c.i
-.PHONY : message.c.i
-
-message.s: message.c.s
-
-.PHONY : message.s
-
-# target to generate assembly for a file
-message.c.s:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/message.c.s
-.PHONY : message.c.s
-
-schedules.o: schedules.c.o
-
-.PHONY : schedules.o
-
-# target to build an object file
-schedules.c.o:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/schedules.c.o
-.PHONY : schedules.c.o
-
-schedules.i: schedules.c.i
-
-.PHONY : schedules.i
-
-# target to preprocess a source file
-schedules.c.i:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/schedules.c.i
-.PHONY : schedules.c.i
-
-schedules.s: schedules.c.s
-
-.PHONY : schedules.s
-
-# target to generate assembly for a file
-schedules.c.s:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/schedules.c.s
-.PHONY : schedules.c.s
 
 send_receive_messages.o: send_receive_messages.c.o
 
@@ -297,18 +216,9 @@ help:
 	@echo "... create_normal_message.o"
 	@echo "... create_normal_message.i"
 	@echo "... create_normal_message.s"
-	@echo "... get_schedule_message.o"
-	@echo "... get_schedule_message.i"
-	@echo "... get_schedule_message.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... message.o"
-	@echo "... message.i"
-	@echo "... message.s"
-	@echo "... schedules.o"
-	@echo "... schedules.i"
-	@echo "... schedules.s"
 	@echo "... send_receive_messages.o"
 	@echo "... send_receive_messages.i"
 	@echo "... send_receive_messages.s"

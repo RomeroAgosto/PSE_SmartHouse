@@ -1,0 +1,52 @@
+/* 
+ * File:   main.c
+ * Author: Ricardo
+ *
+ * Created on 17 December 2017, 00:06
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <xc.h>
+//#include <sys/attribs.h>
+
+#define _SUPPRESS_PLIB_WARNING 1
+#include <plib.h>
+
+#define SYSCLK  80000000L   // System clock frequency, in Hz
+#define PBCLOCK 40000000L   // Peripheral bus clock
+
+#include <p32xxxx.h>
+#include "../Sensors.X/update.h"
+
+#include "../../pic_programming/CKCommon/ConfigBits/config_bits.h"
+#include "../../pic_programming/CKCommon/UART/uart.h" 
+#include "../Sensors.X/adc_init.h"
+/*
+ * 
+ */
+
+void delay(unsigned int dms){
+    unsigned int t;
+    t=ReadCoreTimer()+40000*dms;
+    while(ReadCoreTimer() < t);
+}
+
+int main() {
+       SYSTEMConfigPerformance(SYSCLK);
+    mOSCSetPBDIV(OSC_PB_DIV_2); // This is necessary since SYSTEMConfigPerformance defaults FPBDIV to DIV_1
+
+    // Set RA3 and D5 ports
+    TRISAbits.TRISA3 = 0;  // A3 as output
+
+    
+    adc_init();
+    
+    while(1) {
+//        valuesinti();
+        updateSensors();
+
+        delay(500);
+    }
+    return (EXIT_SUCCESS);
+}
+

@@ -109,7 +109,7 @@ int message_handle() {
             //send_message(message);
         } 
         else if (message[1]=='+') {
-           get_schedule_message(message);
+//           get_schedule_message(message);
         }
         message_flag=0;
        
