@@ -49,15 +49,5 @@
 		<script type="text/javascript" src="runtime/js/m_buttons-arrowright.js"></script>  
 		<script type="text/javascript" src="runtime/js/m_buttons-help.js"></script>
 		<script type="text/javascript" src="runtime/js/m_buttons-set.js"></script>
-
-		<?php if($_GET['s']=='debug'): ?>
-			<script type="text/javascript">
-				$(document).ready(function(){
-					$('#buttons-dontclick-overlay').hide();
-					$('#screen-dontclick-overlay').hide();
-					loadScreen('home');
-				});
-			</script>
-		<?php endif ?>
 	</body>
 </html>

@@ -15,6 +15,29 @@ $(document).ready(function() {
 								option.removeClass('option-disabled');
 							} else {
 								option.addClass('option-disabled');
+
+								var current_selection2 = -1;
+								var allopt2 = $('#screen-menu1 .row .col2 .option[data-field=' + option.data('field') + ']').get();
+								for(i=0; i<allopt2.length; i++) {
+									if( $(allopt2[i]).hasClass('option-selected') ) {
+										current_selection2 = i;
+										break;
+									}
+								}
+								$('#screen-menu1 .col3-schedules-' + option.data('field') + "-" + (current_selection2+1) + '-1 .schedule').addClass('schedule-disabled');
+								$('#screen-menu1 .col3-schedules-' + option.data('field') + "-" + (current_selection2+1) + '-2 .schedule').addClass('schedule-disabled');
+								$('#screen-menu1 .col3-schedules-' + option.data('field') + "-" + (current_selection2+1) + '-3 .schedule').addClass('schedule-disabled');
+								$('#screen-menu1 .col3-schedules-' + option.data('field') + "-" + (current_selection2+1) + '-4 .schedule').addClass('schedule-disabled');
+								$('#screen-menu1 .col3-schedules-' + option.data('field') + "-" + (current_selection2+1) + '-5 .schedule').addClass('schedule-disabled');
+								$('#screen-menu1 .col3-schedules-' + option.data('field') + "-" + (current_selection2+1) + '-6 .schedule').addClass('schedule-disabled');
+								$('#screen-menu1 .col3-schedules-' + option.data('field') + "-" + (current_selection2+1) + '-7 .schedule').addClass('schedule-disabled');
+								$('#screen-menu1 .col3-schedules-' + option.data('field') + "-" + (current_selection2+1) + '-1 .schedule').data('dirty','1');
+								$('#screen-menu1 .col3-schedules-' + option.data('field') + "-" + (current_selection2+1) + '-2 .schedule').data('dirty','1');
+								$('#screen-menu1 .col3-schedules-' + option.data('field') + "-" + (current_selection2+1) + '-3 .schedule').data('dirty','1');
+								$('#screen-menu1 .col3-schedules-' + option.data('field') + "-" + (current_selection2+1) + '-4 .schedule').data('dirty','1');
+								$('#screen-menu1 .col3-schedules-' + option.data('field') + "-" + (current_selection2+1) + '-5 .schedule').data('dirty','1');
+								$('#screen-menu1 .col3-schedules-' + option.data('field') + "-" + (current_selection2+1) + '-6 .schedule').data('dirty','1');
+								$('#screen-menu1 .col3-schedules-' + option.data('field') + "-" + (current_selection2+1) + '-7 .schedule').data('dirty','1');
 							}
 						}
 					} else {
@@ -52,11 +75,21 @@ $(document).ready(function() {
 						}
 
 						if(current_selection4==-1) {
-							if($(allsch[0]).hasClass('schedule-disabled')) $(allsch).removeClass('schedule-disabled');
-							else $(allsch).addClass('schedule-disabled');	
+							if($(allsch[0]).hasClass('schedule-disabled')) {
+								$(allsch).removeClass('schedule-disabled');
+								$(allsch).data('dirty','1');
+							} else {
+								$(allsch).addClass('schedule-disabled');	
+								$(allsch).data('dirty','1');
+							}
 						} else {
-							if($(allsch[current_selection4]).hasClass('schedule-disabled')) $(allsch[current_selection4]).removeClass('schedule-disabled');
-							else $(allsch[current_selection4]).addClass('schedule-disabled');
+							if($(allsch[current_selection4]).hasClass('schedule-disabled')) {
+			 					$(allsch[current_selection4]).removeClass('schedule-disabled');
+								$(allsch[current_selection4]).data('dirty','1');
+							}	else {
+								$(allsch[current_selection4]).addClass('schedule-disabled');
+								$(allsch[current_selection4]).data('dirty','1');
+							}
 						}
 					}
 

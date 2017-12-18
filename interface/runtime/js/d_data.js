@@ -6,3 +6,9 @@ function updateTime() {
 	if(mm<10) mm = "0"+mm;	
 	$('#screen-home .time-area .time').html(HH + ":" + mm);
 }
+
+function updateDataFromPIC() {
+	if(nextmsg_willbe!=null && !sending_schedules) return;
+	nextmsg_willbe="status";
+	if(connected) socket.send("#?*");
+}

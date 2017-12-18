@@ -24,7 +24,7 @@
 	class Serial: private boost::noncopyable {
 		public:
 			int getNativePort();
-  	  static const int readBufferSize=512;
+  	  static const int readBufferSize=5000;
   	  void doRead();
   	  void doWrite(const unsigned char*, size_t);
   	  void doClose();

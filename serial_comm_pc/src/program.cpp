@@ -61,6 +61,13 @@ int main(int argc, char* argv[]) {
 
 
 void MessageReceived(char* message) {
+	printf("Removing STX and ETX characters from the message...\n");
+	unsigned int i=0;
+	for(i=0; message[i]!='*' && message[i]!='\0'; i++) {
+		message[i]=message[i+1];
+		if(message[i+1]=='*') message[i+1]='\0';	
+	}
+
 	printf("Sending to all socket clients: %s\n", message);
 	websocket_sendToAll(message);
 }

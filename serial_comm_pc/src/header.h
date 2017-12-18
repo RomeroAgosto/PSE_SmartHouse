@@ -25,8 +25,8 @@
 	using namespace std;
 
 
-	#define STX '#'//0x02
-	#define ETX '*'   //0x03
+	#define STX '#'
+	#define ETX '*'   
 
 
 	extern void websocket_reception_handler(boost::mutex*, string);

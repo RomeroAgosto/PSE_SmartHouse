@@ -73,7 +73,7 @@ $(document).ready(function() {
 								break;
 							case 4:
 								menu1_lockflag1=false;
-								//TODO: SendValues !
+								$(allsch[current_selection4]).data('dirty','1');
 								break;
 						}
 

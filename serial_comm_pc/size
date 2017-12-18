@@ -1,0 +1,46 @@
+Binary file bin/simple_interface matches
+src/websocket/server_ws.hpp:      Connection(std::unique_ptr<socket_type> &&socket) noexcept : socket(std::move(socket)), timeout_idle(0), strand(this->socket->get_io_service()), closed(false) {}
+src/websocket/server_ws.hpp:        std::weak_ptr<Connection> connection_weak(this->shared_from_this()); // To avoid keeping Connection instance alive longer than needed
+src/websocket/server_ws.hpp:        auto self = this->shared_from_this();
+src/websocket/server_ws.hpp:        auto self = this->shared_from_this();
+src/websocket/server_ws.hpp:            this->connection_close(connection, endpoint, status, reason);
+src/websocket/server_ws.hpp:            this->read_message(connection, endpoint);
+src/websocket/server_ws.hpp:            this->read_message(connection, endpoint);
+src/websocket/server_ws.hpp:            this->read_message(connection, endpoint);
+src/websocket/server_ws.hpp:            this->read_message(connection, endpoint);
+src/websocket/server_ws.hpp:          this->connection_error(connection, endpoint, ec);
+src/websocket/client_ws.hpp:        std::weak_ptr<Connection> connection_weak(this->shared_from_this()); // To avoid keeping Connection instance alive longer than needed
+src/websocket/client_ws.hpp:        auto self = this->shared_from_this();
+src/websocket/client_ws.hpp:        auto self = this->shared_from_this();
+src/websocket/client_ws.hpp:          connection->set_timeout(this->config.timeout_request);
+src/websocket/client_ws.hpp:                this->connection_error(connection, make_error_code::make_error_code(errc::protocol_error));
+src/websocket/client_ws.hpp:                this->connection_open(connection);
+src/websocket/client_ws.hpp:                this->connection_error(connection, make_error_code::make_error_code(errc::protocol_error));
+src/websocket/client_ws.hpp:              this->connection_error(connection, ec);
+src/websocket/client_ws.hpp:          this->connection_error(connection, ec);
+src/websocket/client_ws.hpp:            this->read_message(connection, 0);
+src/websocket/client_ws.hpp:            this->connection_close(connection, 1002, reason);
+src/websocket/client_ws.hpp:                this->read_message_content(connection, num_additional_bytes);
+src/websocket/client_ws.hpp:                this->connection_error(connection, ec);
+src/websocket/client_ws.hpp:                this->read_message_content(connection, num_additional_bytes);
+src/websocket/client_ws.hpp:                this->connection_error(connection, ec);
+src/websocket/client_ws.hpp:            this->read_message_content(connection, num_additional_bytes);
+src/websocket/client_ws.hpp:          this->connection_error(connection, ec);
+src/websocket/client_ws.hpp:            this->connection_close(connection, status, reason);
+src/websocket/client_ws.hpp:            if(this->on_ping)
+src/websocket/client_ws.hpp:              this->on_ping(connection);
+src/websocket/client_ws.hpp:            this->read_message(connection, num_additional_bytes);
+src/websocket/client_ws.hpp:            if(this->on_pong)
+src/websocket/client_ws.hpp:              this->on_pong(connection);
+src/websocket/client_ws.hpp:            this->read_message(connection, num_additional_bytes);
+src/websocket/client_ws.hpp:            this->read_message(connection, num_additional_bytes);
+src/websocket/client_ws.hpp:            if(this->on_message) {
+src/websocket/client_ws.hpp:                this->on_message(connection, connection->fragmented_message);
+src/websocket/client_ws.hpp:                this->on_message(connection, connection->message);
+src/websocket/client_ws.hpp:            this->read_message(connection, num_additional_bytes);
+src/websocket/client_ws.hpp:          this->connection_error(connection, ec);
+src/websocket/client_ws.hpp:      auto connection = this->connection = std::shared_ptr<Connection>(new Connection(handler_runner, config.timeout_idle, *io_service));
+src/websocket/client_ws.hpp:          connection->set_timeout(this->config.timeout_request);
+src/websocket/client_ws.hpp:              this->handshake(connection);
+src/websocket/client_ws.hpp:              this->connection_error(connection, ec);
+src/websocket/client_ws.hpp:          this->connection_error(connection, ec);

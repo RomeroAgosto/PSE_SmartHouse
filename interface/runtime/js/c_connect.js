@@ -1,3 +1,172 @@
+function processStatusMsg(json_obj) {
+	var i=0;
+
+	// Water
+	if( Number(json_obj.water_data.water_heater) > 0 )
+		$($('#screen-home .col1 div span').get(0)).html('ON');
+	else
+		$($('#screen-home .col1 div span').get(0)).html(' ');
+
+	$($('#screen-home .row-2 div').get(2)).find('span').html('Water Temp.: ' + Math.round(Number(json_obj.water_data.temp)) + ' ºC');
+	$('#screen-menu1 .col3-up-watertemperature-1 span').html(Math.round(Number(json_obj.water_data.temp) + ' ºC'));
+
+	// Light
+	if( Number(json_obj.light_data[0].light_state) > 0 ) {
+		$($($($('#screen-home .col2 .col2-row').get(1)).find('div').get(0)).find('span').get(0)).html('ON');
+	} else {
+		$($($($('#screen-home .col2 .col2-row').get(1)).find('div').get(0)).find('span').get(0)).html(' ');
+	}
+	if( Number(json_obj.light_data[0].light_state) > 0 ) {
+		$($($($('#screen-home .col2 .col2-row').get(1)).find('div').get(1)).find('span').get(0)).html('ON');
+	} else {
+		$($($($('#screen-home .col2 .col2-row').get(1)).find('div').get(1)).find('span').get(0)).html(' ');
+	}
+	if( Number(json_obj.light_data[0].light_state) > 0 ) {
+		$($($($('#screen-home .col2 .col2-row').get(2)).find('div').get(0)).find('span').get(0)).html('ON');
+	} else {
+		$($($($('#screen-home .col2 .col2-row').get(2)).find('div').get(0)).find('span').get(0)).html(' ');
+	}
+	if( Number(json_obj.light_data[0].light_state) > 0 ) {
+		$($($($('#screen-home .col2 .col2-row').get(2)).find('div').get(1)).find('span').get(0)).html('ON');
+	} else {
+		$($($($('#screen-home .col2 .col2-row').get(2)).find('div').get(1)).find('span').get(0)).html(' ');
+	}
+	if( Number(json_obj.light_data[0].light_state) > 0 ) {
+		$($($($('#screen-home .col2 .col2-row').get(3)).find('div').get(0)).find('span').get(0)).html('ON');
+	} else {
+		$($($($('#screen-home .col2 .col2-row').get(3)).find('div').get(0)).find('span').get(0)).html(' ');
+	}
+	if( Number(json_obj.light_data[0].light_state) > 0 ) {
+		$($($($('#screen-home .col2 .col2-row').get(3)).find('div').get(1)).find('span').get(0)).html('ON');
+	} else {
+		$($($($('#screen-home .col2 .col2-row').get(3)).find('div').get(1)).find('span').get(0)).html(' ');
+	}
+	if( Number(json_obj.light_data[0].light_state) > 0 ) {
+		$($($($('#screen-home .col2 .col2-row').get(4)).find('div').get(0)).find('span').get(0)).html('ON');
+	} else {
+		$($($($('#screen-home .col2 .col2-row').get(4)).find('div').get(0)).find('span').get(0)).html(' ');
+	}
+	if( Number(json_obj.light_data[0].light_state) > 0 ) {
+		$($($($('#screen-home .col2 .col2-row').get(4)).find('div').get(1)).find('span').get(0)).html('ON');
+	} else {
+		$($($($('#screen-home .col2 .col2-row').get(4)).find('div').get(1)).find('span').get(0)).html(' ');
+	}
+
+
+	// Air quality
+	if( Number(json_obj.air_quality.fan) > 0 ) {
+		$($('#screen-home .col3 div span').get(0)).html('ON');
+		$($('#screen-home .col3 div span').get(1)).html('ON');
+		$($('#screen-home .col3 div span').get(2)).html('ON');
+		$($('#screen-home .col3 div span').get(3)).html('ON');
+	} else {
+		$($('#screen-home .col3 div span').get(0)).html(' ');
+		$($('#screen-home .col3 div span').get(1)).html(' ');
+		$($('#screen-home .col3 div span').get(2)).html(' ');
+		$($('#screen-home .col3 div span').get(3)).html(' ');
+	}
+
+	for(i=0; i<4; i++) {
+		switch(json_obj.air_quality.rooms[i].air_quality_state) {
+			case "0":
+				$('#screen-menu1 .col3-up-airquality-' + (i+1) +' span').html("OK");
+				break;
+			case "1":
+				$('#screen-menu1 .col3-up-airquality-' + (i+1) +' span').html("WARNING");
+				break;
+			case "2":
+				$('#screen-menu1 .col3-up-airquality-' + (i+1) +' span').html("DANGER!");
+				break;
+		}
+	}
+
+	// Air temperature
+	if( Number(json_obj.air_temperature[0].air_heater) > 0 ) {
+		$($($($('#screen-home .col4 .col4-row').get(1)).find('div').get(0)).find('span').get(0)).html('ON');
+	} else {
+		$($($($('#screen-home .col4 .col4-row').get(1)).find('div').get(0)).find('span').get(0)).html(' ');
+	}
+	if( Number(json_obj.air_temperature[1].air_heater) > 0 ) {
+		$($($($('#screen-home .col4 .col4-row').get(1)).find('div').get(1)).find('span').get(0)).html('ON');
+	} else {
+		$($($($('#screen-home .col4 .col4-row').get(1)).find('div').get(1)).find('span').get(0)).html(' ');
+	}
+	if( Number(json_obj.air_temperature[2].air_heater) > 0 ) {
+		$($($($('#screen-home .col4 .col4-row').get(2)).find('div').get(0)).find('span').get(0)).html('ON');
+	} else {
+		$($($($('#screen-home .col4 .col4-row').get(2)).find('div').get(0)).find('span').get(0)).html(' ');
+	}
+	if( Number(json_obj.air_temperature[3].air_heater) > 0 ) {
+		$($($($('#screen-home .col4 .col4-row').get(2)).find('div').get(1)).find('span').get(0)).html('ON');
+	} else {
+		$($($($('#screen-home .col4 .col4-row').get(2)).find('div').get(1)).find('span').get(0)).html(' ');
+	}
+	if( Number(json_obj.air_temperature[4].air_heater) > 0 ) {
+		$($($($('#screen-home .col4 .col4-row').get(3)).find('div').get(0)).find('span').get(0)).html('ON');
+	} else {
+		$($($($('#screen-home .col4 .col4-row').get(3)).find('div').get(0)).find('span').get(0)).html(' ');
+	}
+	if( Number(json_obj.air_temperature[5].air_heater) > 0 ) {
+		$($($($('#screen-home .col4 .col4-row').get(3)).find('div').get(1)).find('span').get(0)).html('ON');
+	} else {
+		$($($($('#screen-home .col4 .col4-row').get(3)).find('div').get(1)).find('span').get(0)).html(' ');
+	}
+	if( Number(json_obj.air_temperature[6].air_heater) > 0 ) {
+		$($($($('#screen-home .col4 .col4-row').get(4)).find('div').get(0)).find('span').get(0)).html('ON');
+	} else {
+		$($($($('#screen-home .col4 .col4-row').get(4)).find('div').get(0)).find('span').get(0)).html(' ');
+	}
+	if( Number(json_obj.air_temperature[7].air_heater) > 0 ) {
+		$($($($('#screen-home .col4 .col4-row').get(4)).find('div').get(1)).find('span').get(0)).html('ON');
+	} else {
+		$($($($('#screen-home .col4 .col4-row').get(4)).find('div').get(1)).find('span').get(0)).html(' ');
+	}
+	for(i=0; i<8; i++) {
+		$('#screen-menu1 .col3-up-heating-' + (i+1) + ' span').html(Math.round(Number(json_obj.air_temperature[i].air_temp) + ' ºC'));
+	}
+
+}
+
+
+function sendAllDirtySchedules() {
+	if(nextmsg_willbe == "status") return;
+	if(!connected) return;
+	sending_schedules = true;
+	functionalities = ["watertemperature", "heating", "lightcontrol"];
+	var i=0; var j=0; var k=0; var w=0;
+	for (i=0; i<functionalities.length; i++) {
+		n_rooms = $('#screen-menu1 .col2 .option[data-field=' + functionalities[i] + ']').length;
+		for(j=1; j<n_rooms+1; j++) {
+			for(k=1; k<8; k++) {
+				for(w=1; w<4+1; w++) {
+					sch = $('#screen-menu1 .col3-schedules-' + functionalities[i] + '-' + j + '-' + k + ' .schedule-' + w);
+					if(sch.data('dirty')!="1") continue;
+					start_time = $(sch.find('.start_time').get(0)).html();
+					end_time = $(sch.find('.end_time').get(0)).html();
+					if(functionalities[i]=="lightcontrol") desired_value=0; else desired_value = $(sch.find('.desired_value').get(0)).html();
+					var enabled = sch.hasClass('schedule-disabled') ? 0 : 1;
+					newmessage = "#+" + i + "" + (j-1) + "" + (k-1) + "" + (w-1) + "" + Math.floor(desired_value/10) + "" + (desired_value%10) + "" + enabled + "" + start_time[0] + "" + start_time[1] + "" + start_time[3] + "" + start_time[4] + "" + end_time[0] + "" + end_time[1] + "" + end_time[3] + "" + end_time[4] + "*";
+
+
+					socket.send(newmessage);
+					sch.data('dirty','0');
+
+
+
+				}
+			}
+		}
+	}	
+	sending_schedules=false;
+}
+
+
+
+
+
+
+
+
 $(document).ready( function() {
 	$('#connect_button').click(function() {
 		socket=new WebSocket("ws://localhost:8080/interface_api");
@@ -6,6 +175,7 @@ $(document).ready( function() {
 		socket.onopen = function() {
 			$('#screen-dontclick-overlay').hide();
 			$('#buttons-dontclick-overlay').hide();
+			connected = true;
 			loadScreen('home');
 		};
 
@@ -14,6 +184,7 @@ $(document).ready( function() {
 			$('.scrmsg').html("DISCONNECTED.");
 			$('#screen-dontclick-overlay').show();
 			$('#buttons-dontclick-overlay').show();
+			connected = false;
 		}
 
 		socket.onerror = function() {
@@ -25,7 +196,18 @@ $(document).ready( function() {
 
 		socket.onmessage = function(e) {
 			var server_message = e.data;
-	$('.col3-up-heating-1 .status').html(server_message);	
+			var json_obj = JSON.parse(server_message);
+
+			switch(nextmsg_willbe) {
+				case "status":
+					processStatusMsg(json_obj);
+					break;
+				default:
+					console.log('unknown message type detected.');
+			}	
+
+			nextmsg_willbe = null;
+
 		}
 
 	});
