@@ -18,8 +18,8 @@
 #define SEND_DATALOG 4
 
 
-int message_handle();
-void _UART1Handler(void);
+int message_handle(void);
+int create_normal_message(char *message);
 
 /*send messages*/
 int get_digits(int score_int, char *score_char);
@@ -29,5 +29,11 @@ int send_message(char *message);
 long int check_received_message(char *message);
 long int get_int(char* received_checksum,int length);
 double power(double a, double b);
+
+#define RUN 1
+
+#if RUN ==1
+void _UART1Handler(void);
+#endif
 
 #endif //COMMUNICATION_SEND_MESSAGES_C_H

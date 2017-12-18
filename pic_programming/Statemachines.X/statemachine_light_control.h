@@ -19,7 +19,7 @@
 #define CYCLES 20 /*after CYCLES the light is turned off again */
 
 
-int update_sensorvalues(int light, int *sensor_values);
+int update_sensorvalues(int light);
 void Statemachine_LightControl(int light);
 int create_message(char *existing_string, char *new_input);
 int SetTimer(int number);

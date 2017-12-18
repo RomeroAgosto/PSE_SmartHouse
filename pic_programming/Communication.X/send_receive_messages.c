@@ -1,12 +1,17 @@
-
+#include "send_receive_messages.h"
 #include <string.h>
+#include "../Schedules.X/schedules.h"
 #include <stdio.h>
+
+#if RUN==1
 #define _SUPPRESS_PLIB_WARNING 1
 #include <plib.h>
-#include "send_receive_messages.h"
+#endif
 
-volatile static int message_flag;
-volatile static char message [5000];
+static int message_flag=1;
+#if RUN ==1
+static char message [5000];
+#endif
 
 int get_digits(int score_int, char *score_char) {
     int i=0, div;
@@ -69,8 +74,8 @@ long int get_int(char* received_checksum,int length){
 
 long int check_received_message(char *message){
         int i=1;
-        int checksum_length=0,checksum_calculated=0;
-        long int checksum=0;
+        int checksum_length=0;
+        long int checksum=0,checksum_calculated=0;
         char received_checksum[100];
         do{
             checksum_calculated=checksum_calculated+message[i];
@@ -94,18 +99,17 @@ long int check_received_message(char *message){
     return 1;
 
     }
-
-
+#if RUN == 0
+char message[]="#+27300122002200*";
+#endif
 int message_handle() {
-    if (message_flag==TRUE){
-        if (message[1]='?') {
+    if (message_flag==1){
+        if (message[1]=='?') {
             create_normal_message(message);
             //send_message(message);
         } 
-        else if (message[1]='!') {
-           // get_schedule_message(message);
-        } else if (message_flag == SEND_DATALOG) {
-            
+        else if (message[1]=='+') {
+           get_schedule_message(message);
         }
         message_flag=0;
        
@@ -113,7 +117,7 @@ int message_handle() {
         return 1;
 }
 
-
+#if RUN == 1
 #define UART_PRIORITY_P 4
 #define UART_PRIORITY_S 3
 void init_uart(void){
@@ -142,9 +146,11 @@ void __ISR(_UART_1_VECTOR,IPL4AUTO) _UART1Handler(void){
 
         message_flag=TRUE;
         message_counter=0;
+        printf("message is: %s\n",message);
     }
     
     IFS0bits.U1RXIF=0;
     IFS0bits.U1TXIF=0;
-}
 
+}
+#endif

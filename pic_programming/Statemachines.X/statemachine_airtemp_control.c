@@ -1,5 +1,7 @@
 #include "statemachine_airtemp_control.h"
 
+
+static int desired_temp;
 int SetVentilation(int on){
     if (on==TRUE);//{printf("Ventilation on\n");}
     else;// {printf("Ventilation turned off \n");}
@@ -24,9 +26,9 @@ int GetAirTemperature(){
  *
  * ==============================================
  */
-void Statemachine_AirControl(int room, int desired_temp) {
+void Statemachine_AirControl(int room) {
     int air_temperature=GetAirTemperature();
-
+    desired_temp=ds_DesiredAirTemp(room);/* defined nd desiredValues.h*/
     lower_threshold_air=desired_temp-1;/*two degree trigger-band*/
     upper_threshold_air=desired_temp+1;
     //printf("i'm going into state: %d\n",air_temp_state[room]);

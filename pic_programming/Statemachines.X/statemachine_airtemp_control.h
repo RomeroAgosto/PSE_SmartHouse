@@ -21,6 +21,6 @@ static int air_temp_state[4]={0};
 int GetAirTemperature(void);
 int SetHeatingAir(int on);
 int SetVentilation(int on);
-void Statemachine_AirControl(int room, int desired_temp);
+void Statemachine_AirControl(int room);
 
 #endif //STATEMACHINE_STATEMACHINE_AIRTEMP_CONTROL_H

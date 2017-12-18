@@ -2,25 +2,20 @@
 #include <plib.h>
 #include "../CKCommon/ConfigBits/config_bits.h"
 #include "../CKCommon/UART/uart.h"
+#include "../Schedules.X/desiredValues.h"
 #include "../Statemachines.X/statemachines.h"
 #include "../Communication.X/send_receive_messages.h"
-//#include "../Timer_Clock.X/hallClock.h"
+#include "../Timer_Clock.X/hallClock.h"
 #include <string.h>
 #include <stdio.h>
+
 #define SYSCLK  80000000L // System clock frequency, in Hz
 #define PBCLOCK 40000000L // Peripheral Bus Clock frequency, in Hz
 
-#define SEND_NO_MESSAGE 0
-#define SEND_NEW_STATUS 1
-#define SEND_SCHEDULES 2
-#define RECEIVE_SCHEDULES 3
-#define SEND_DATALOG 4
-
-static int send_flag=SEND_NO_MESSAGE;
 static int count_interrupt;
 extern struct tm time_hall;
 
-#include "../sensor_struct/struct_lib.h"
+//#include "../sensor_struct/struct_lib.h"
 
 
 /**
@@ -33,6 +28,7 @@ extern struct tm time_hall;
  * ==============================================
  */
 char message[500];
+
 
 void run_alonsideWClock(void){
     SetTimer(0);
@@ -59,16 +55,20 @@ int main(int argc, char** argv) {
     UartInit(PBCLOCK,115200);
     _mon_putc('a');
     _mon_putc('\n');
-    //setup_clockHall(&run_alonsideWClock);
+    setup_clockHall(&run_alonsideWClock);
     init_uart();
+    valuesinti();
     /*timer initialization*/    
     PORTAbits.RA3=0;
     while(1){
+        
+        
+        
         Statemachine_AirQuality();
-        Statemachine_LightControl(1);
+        for(i=0;i<4;i++){
+            Statemachine_LightControl(i);
+        }
         message_handle();
-       
-            //message_handle(1);
     }
         
     return (EXIT_SUCCESS);

@@ -11,13 +11,24 @@
  *
  * ==============================================
  */
+#define TEST_SCHEDULE 0
+#if TEST_SCHEDULE == 1
+#include "schedules.h"
+int init_schedule(){
+    char to_send[100]="111112322002305";
+    get_schedule_message(to_send);
 
+}
+
+#endif
 int main(int argc, char** argv) {
     
     // Variable declarations;
     int i=0;
+        //valuesinti();
+        //init_schedule();
         /*water temperature control*/
-        Statemachine_WaterControl(60);
+        Statemachine_WaterControl();
         
         /*light control*/
         Statemachine_LightControl(0);
@@ -31,7 +42,7 @@ int main(int argc, char** argv) {
         /*Airtemperature Control*/
         int k;
         for(k=0;k<4;k++){
-            Statemachine_AirControl(k, 25);
+            Statemachine_AirControl(k);
         }
 
     return (EXIT_SUCCESS);

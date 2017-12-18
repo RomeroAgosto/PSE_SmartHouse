@@ -1,5 +1,6 @@
 #include "struct_lib.h"
 #include "update.h"
+#include <stdio.h>
 
 static sensorvalues current_values;
 
@@ -27,7 +28,7 @@ int updateSensors()
 {
     static int p[20];
     static int i, j;
-    air_temp_analog(p);
+    air_temp_analog(&p);
     
     for(i=0;i<6;i++) {
         p[i]=current_values.air_temperature_sensor[i].temp;
@@ -74,6 +75,13 @@ int updateSensors()
     
 }
  
+void print() {
+    int i;
+    for(i=0;i<8;i++){
+        printf("%d",current_values.air_temperature_sensor[i].temp);
+    }
+}
+
 /*## AIR QUALITY ##*/
 int GetAirQuality(int n_air, double *p){
     (p[0])=current_values.air_quality_sensor[n_air].p10;
