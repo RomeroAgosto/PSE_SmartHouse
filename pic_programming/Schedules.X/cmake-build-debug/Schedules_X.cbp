@@ -84,22 +84,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Schedules.X/get_schedules.c">
+		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Schedules.X/create_normal_message.c">
+			<Option target="Schedules_X"/>
+		</Unit>
+		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Schedules.X/desiredValues.c">
+			<Option target="Schedules_X"/>
+		</Unit>
+		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Schedules.X/desiredValues.h">
 			<Option target="Schedules_X"/>
 		</Unit>
 		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Schedules.X/main.c">
-			<Option target="Schedules_X"/>
-		</Unit>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Schedules.X/message.c">
-			<Option target="Schedules_X"/>
-		</Unit>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Schedules.X/message.h">
 			<Option target="Schedules_X"/>
 		</Unit>
 		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Schedules.X/schedules.c">
 			<Option target="Schedules_X"/>
 		</Unit>
 		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Schedules.X/schedules.h">
+			<Option target="Schedules_X"/>
+		</Unit>
+		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Schedules.X/send_receive_messages.c">
+			<Option target="Schedules_X"/>
+		</Unit>
+		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Schedules.X/send_receive_messages.h">
 			<Option target="Schedules_X"/>
 		</Unit>
 		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Schedules.X/CMakeLists.txt">

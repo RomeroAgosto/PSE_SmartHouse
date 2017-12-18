@@ -13,6 +13,8 @@
 #include "statemachine_watertemp_control.h"
 #include "statemachine_light_control.h"
 
+#include "../Schedules.X/desiredValues.h"
+
 #include "stdio.h"
 #include <stdlib.h>
 #include <string.h>

@@ -1,6 +1,7 @@
 #include "statemachine_watertemp_control.h"
 #define DEVELOP 0
 
+static int desired_temperature;
 #if DEVELOP == 1 //structure just as a dummy for the registers
 struct PORTA{
     int RA0;
@@ -22,8 +23,9 @@ int GetWaterTemperature(){
     return 50; /* dummy which returns a temperature to check the behaviour of the state machine*/
 }
 
-void Statemachine_WaterControl(int desired_temperature) {
+void Statemachine_WaterControl() {
     int water_temperature=GetWaterTemperature();
+    desired_temperature= ds_DesiredWaterTemp();
     upper_threshold_water=desired_temperature+5; /*trigger band is 10 degrees!*/
     lower_threshold_water=desired_temperature-5;
     /* states are stored in the states variables. so higher function can easily access the current states*/

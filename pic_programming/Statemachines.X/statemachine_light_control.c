@@ -4,30 +4,28 @@
 
 static int counter[4]; /* Counter for all timer/lights */
 static int light_state[4];//={0};
+int sensor_value;
 /* dummy to get fictive sensor values*/
-int update_sensorvalues(int light, int *sensor_values) //just for test int
+int update_sensorvalues(int light) //just for test int
 {
-    // light 1
-    if (light==0){
-    sensor_values[0]=TRUE; //movement, sensor 0
-    sensor_values[1]=TRUE;//switch 0
-    }
-    // light 2
-    else if(light==1){
-    sensor_values[0]=FALSE; //movement, sensor 1
-    sensor_values[1]=FALSE;//switch 1
-    }
-    else if(light==2){
-    // light 3
-    sensor_values[0]=FALSE; //movement, sensor 2
-    sensor_values[1]=FALSE;//switch 2
-    }
-    else if(light==3){
-    // light 4
-    sensor_values[0]=FALSE; //movement, sensor 3
-    sensor_values[1]=FALSE; // switch 3
-    }
 
+        // light 1
+        if (light==0){
+        sensor_value=TRUE; //movement, sensor 0
+        }
+        // light 2
+        else if(light==1){
+        sensor_value=FALSE; //movement, sensor 1
+        }
+        else if(light==2){
+        // light 3
+        sensor_value=FALSE; //movement, sensor 2
+        }
+        else if(light==3){
+        // light 4
+        sensor_value=FALSE; //movement, sensor 3
+        }
+    
     return 0;
 }
 
@@ -47,37 +45,38 @@ int SetTimer(int light)
 }
 
 void Statemachine_LightControl(int light) {
-    int movement, mechanical_switch;/*initialize the specific sensors, increase readability*/
+    int movement;/*initialize the specific sensors, increase readability*/
     int sensor_value[2];/* initialize the sensor array -> contains Values of the switch and the movement detection*/
     
-    
-    update_sensorvalues(light,sensor_value); /*expects as return value a pointer to the sensor values*/
-   
-    
-    /*update sensor values*/
-    movement=sensor_value[0]; /*obtain movement sensor*/
-    mechanical_switch= sensor_value[1];/*mechanical switch -> manually pressed*/
-    
-    
-    /* states are stored in the states variables. so higher function can easily access the current states*/
-    switch (light_state[light]) {
-        case TURNED_OFF:
-            counter[light]=0;
-            SetLight(light,FALSE);
-            if(movement==TRUE || mechanical_switch==TRUE) {
-                light_state[light] = TURNED_ON;
-            }
-            break;
+    int turned_on=ds_DesiredLigth(light);
+    if(turned_on==TRUE){
+        //update_sensorvalues(light,sensor_value); /*expects as return value a pointer to the sensor values*/
 
-        case TURNED_ON:
-            SetLight(light, TRUE);
-            if(counter[light]>=CYCLES && mechanical_switch==FALSE){
-                light_state[light] = TURNED_OFF;
-            }
-            break;
-        default:
-            printf("i couldn't go into one state!\n");
-            light_state[light] = TURNED_OFF; /* default state is turn off!*/
-            break;
+
+        /*update sensor values*/
+        movement; /*obtain movement sensor*/
+
+
+        /* states are stored in the states variables. so higher function can easily access the current states*/
+        switch (light_state[light]) {
+            case TURNED_OFF:
+                counter[light]=0;
+                SetLight(light,FALSE);
+                if(movement==TRUE ) {
+                    light_state[light] = TURNED_ON;
+                }
+                break;
+
+            case TURNED_ON:
+                SetLight(light, TRUE);
+                if(counter[light]>=CYCLES){
+                    light_state[light] = TURNED_OFF;
+                }
+                break;
+            default:
+                //printf("i couldn't go into one state!\n");
+                light_state[light] = TURNED_OFF; /* default state is turn off!*/
+                break;
+        }
     }
 }

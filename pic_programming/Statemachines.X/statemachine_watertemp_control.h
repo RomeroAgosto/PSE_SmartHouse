@@ -20,6 +20,6 @@ static int lower_threshold_water=55;
 
 int GetWaterTemperature(void);
 int SetHeatingWater(int Command);
-void Statemachine_WaterControl(int upper_threshold);
+void Statemachine_WaterControl(void);
 
 #endif //STATEMACHINE_STATEMACHINE_WATERTEMP_CONTROL_C_H

@@ -15,5 +15,5 @@
 
 
 int message_handle(int message_flag,char *message);
-int create_normal_message(char *message);
+
 #endif //COMMUNICATION_MESSAGE_H

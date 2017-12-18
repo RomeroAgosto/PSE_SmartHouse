@@ -12,6 +12,7 @@ set(SOURCE_FILES
         statemachine_light_control.c
         statemachine_light_control.h
         statemachine_watertemp_control.c
-        statemachine_watertemp_control.h)
+        statemachine_watertemp_control.h
+)
 
 add_executable(Statemachines_X ${SOURCE_FILES})
