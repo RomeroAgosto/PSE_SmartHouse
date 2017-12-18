@@ -9,8 +9,10 @@
 
 #include <stdio.h>
 #include <xc.h>
+#define _SUPPRESS_PLIB_WARNING 1
+#include <plib.h>
 
-int air_temp_analog(int *t[6]){         //function to return air temperature value 
+int air_temp_analog(int *t){         //function to return air temperature value 
     int flag;
     double t1, t2, t3, t4, tm, temperature; //variables of voltages read from ADC converter 
     double calibration_value; //variable of voltage reading from a certain temperature
@@ -82,7 +84,7 @@ int air_temp_analog(int *t[6]){         //function to return air temperature val
 }
 int water_temp_analog(int *t){    //function to return air temperature value 
     double t1, t2, t3, t4, tm, temperature; //variables of voltages read from ADC converter 
-    int x;
+
     
     AD1CHSbits.CH0SA = 9; // Select AN4 as input for A/D converter
     TRISBbits.TRISB9 = 1; // AN4 in input mode
@@ -101,7 +103,7 @@ int water_temp_analog(int *t){    //function to return air temperature value
 
     tm= (t1+t2+t3+t4)/4;  //average value of voltage read from ADC
 
-    x= (int)(100*tm/3.3);
+    t[0]= (int)(100*tm/3.3);
 
     return 0;
 }

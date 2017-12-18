@@ -1,3 +1,4 @@
+#define _SUPPRESS_PLIB_WARNING 1
 #include <plib.h>
 
 void adc_init(){

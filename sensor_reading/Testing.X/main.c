@@ -32,35 +32,21 @@ void delay(unsigned int dms){
 }
 
 int main() {
-    // Performance optimization (flash access time, enable instruct and data cache,... and PBClock setup
-    SYSTEMConfigPerformance(SYSCLK);
+       SYSTEMConfigPerformance(SYSCLK);
     mOSCSetPBDIV(OSC_PB_DIV_2); // This is necessary since SYSTEMConfigPerformance defaults FPBDIV to DIV_1
 
-    // Set RA3 as outpout
-    TRISAbits.TRISA3 = 0;
+    // Set RA3 and D5 ports
+    TRISAbits.TRISA3 = 0;  // A3 as output
 
-    
-    
-    
-                // Init UART
-    if(UartInit(PBCLOCK,115200) != UART_SUCCESS) {
-            PORTAbits.RA3 = 1;
-            while(1);
+    // Init UART and redirect tdin/stdot/stderr to UART
+    if(UartInit(PBCLOCK, 115200) != UART_SUCCESS) {
+        PORTAbits.RA3 = 1;
+        while(1);
     }
-/*timer initialization*/    
-
-    //setup_clockHall(NULL);
-    PORTAbits.RA3=0;
-
-    __XC_UART = 1; /* Redirect stdin/stdout/stderr to U
-     printf("timer init\n");ART1*/
+    __XC_UART = 1; /* Redirect stdin/stdout/stderr to UART1*/
     
-    /*int temperature[8];
-    int air_quality[5];
-    int motion[4];*/
     adc_init();
-    //int temp_room[6];//humi_room[2];
-    // air_quality_room[4];//motion_detected[2];
+    
     while(1) {
         valuesinti();
         updateSensors();

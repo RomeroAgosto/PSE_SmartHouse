@@ -85,7 +85,25 @@ int i2c1_send(unsigned char value);
  * \date 18/12/2017
  */
 char i2c1_receive(char ack_bit);
+/** \brief Returns temperature value reading from TC74 sensor.
+ *         
+ * \author Bruno Barbosa NMEC 68150 
+ *  
+ * \date 18/12/2017
+ */
+int i2c1_s7();
 
+/** \brief Humidity and temperature value reading from HIH8120 sensor.
+ *         
+ * \author Bruno Barbosa NMEC 68150 
+ * 
+ * @param *humi_temp[2] - pointers to register the humidity and temperature <br>
+ *                        reading from the sensor. First value is the humidity <br>
+ *                        value, second value is the temperature value.
+ *  
+ * \date 18/12/2017
+ */
+int i2c1_s8(int *humi_temp); 
 #endif	/* I2C_H */
 
 

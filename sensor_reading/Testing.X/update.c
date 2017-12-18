@@ -2,7 +2,6 @@
 #include "update.h"
 #include <stdio.h>
 
-static sensorvalues current_values;
 
 /** 
   @Function
@@ -28,20 +27,20 @@ int updateSensors()
 {
     static int p[20];
     static int i, j;
-    air_temp_analog(&p);
+    air_temp_analog(p);
     
     for(i=0;i<6;i++) {
-        p[i]=current_values.air_temperature_sensor[i].temp;
+        current_values.air_temperature_sensor[i].temp=p[i];
     }
  
     water_temp_analog(p);
     
-    p[0]=current_values.water_temperature.temp;
+    current_values.water_temperature.temp=p[0];
  
     temp_digital(p);
 
     for(i=0;i<2;i++) {
-        p[i]=current_values.air_temperature_sensor[i+6].temp;
+        current_values.air_temperature_sensor[i+6].temp=p[i];
     }
  
     air_quality_level(p);
@@ -49,26 +48,26 @@ int updateSensors()
     for (i=0;i<4;i++) {
         for(j=0;j<5;j++)
             if(j==0){
-                p[i*5+j]=current_values.air_quality_sensor[i].p10;
+                current_values.air_quality_sensor[i].p10=p[i*5+j];
             }
             if(j==1) {
-                p[i*5+j]=current_values.air_quality_sensor[i].co;
+                current_values.air_quality_sensor[i].co=p[i*5+j];
             }
             if(j==2) {
-                p[i*5+j]=current_values.air_quality_sensor[i].co2;
+                current_values.air_quality_sensor[i].co2=p[i*5+j];
             }
             if(j==3) {
-                p[i*5+j]=current_values.air_quality_sensor[i].o3;
+                current_values.air_quality_sensor[i].o3=p[i*5+j];
             }
             if(j==4) {
-                p[i*5+j]=current_values.air_quality_sensor[i].humity;
+                current_values.air_quality_sensor[i].humity=p[i*5+j];
             }
     }
  
     motion_detection(p);
     
     for(i==0;i<4;) {
-        p[i]=current_values.light_sensors[i].movement_sensor;
+        current_values.light_sensors[i].movement_sensor=p[i];
     }
  
     return 0;
@@ -78,7 +77,7 @@ int updateSensors()
 void print() {
     int i;
     for(i=0;i<8;i++){
-        printf("%d",current_values.air_temperature_sensor[i].temp);
+        printf("%d\n",current_values.air_temperature_sensor[i].temp);
     }
 }
 

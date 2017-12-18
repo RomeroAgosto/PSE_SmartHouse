@@ -38,19 +38,14 @@ int send_message(char *message) {
         i++;
         checksum=checksum+message[i]; /*adds all characters to a sum*/
     }while(message[i]!='\0');
-    printf("the checksum is: %ld\n",checksum);
-
-
     char check_sum[100], delimiter_checksum_start[]="(",delimiter_checksum_end[]=")", length_checksum[2], delimiter_overall[]="*";
     length_checksum[0]=get_digits(checksum,check_sum) +'0'; /*returns the length of the checksum*/
     length_checksum[1]='\0';
-    printf("%s\n",delimiter_checksum_start);
     strcat(message,delimiter_checksum_start); /*appends start delimiter for the checksum*/
     strcat(message,length_checksum); /*appends the length*/
     strcat(message,delimiter_checksum_end); /*enddelimiter for the checksum*/
     strcat(message,check_sum);/*appends the checksum itself*/
     strcat(message,delimiter_overall);/*appends the overall delimiter for our messages *  */
-    printf("%s\n",message);
     return 1;
 
 }

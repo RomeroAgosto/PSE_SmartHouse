@@ -3,7 +3,7 @@
 #define _SUPPRESS_PLIB_WARNING 1
 #include <plib.h>
 
-int motion_detection(int *m[4]){
+int motion_detection(int *m){
     TRISD=(TRISD & 0x0000)|0x000f;              // define RD3-RD0 as input
     int i;
     int button_on;

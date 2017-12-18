@@ -50,7 +50,7 @@ int UartInit(UINT64 pbclock, UINT32 br)
             break;
             
         case 9600:
-            U1ABRG=259; /*Baudrate generator*/
+            U1ABRG=259; 
             U1AMODEbits.BRGH = 0;
             break;
         default:
@@ -108,7 +108,7 @@ void UartClose(void)
 int GetChar(UINT8 *byte)
 {
 	char dummy;
-    
+
 	if(U1STAbits.OERR ||U1STAbits.FERR || U1STAbits.PERR) // receive errors?
 	{
 		dummy = U1RXREG; 			// dummy read to clear FERR/PERR
@@ -141,51 +141,4 @@ void PutChar(UINT8 txChar)
     U1ATXREG = txChar;
 }
 
-
-/**
- *      @brief  sends a message from the pic to the pc 
- *      @param  *messages is the message to send
- *     @author  Sascha Marquardt, sascha.marquardt@ua.pt
- *     Created  20-Set-2017
- *     Company  University of Aveiro
- *   Copyright  Copyright (c) 2017, Sascha Marquardt
- *
- * ==============================================
- */
-
-int send_messages(char *message){
-    int k=0;
-    do{    
-        PutChar(message[k]);  
-        k++;
-    }
-    while(message[k]!='\0');
-}
-
-
-// Function replacements to redirect stdin/stdout to USART1
-
-// These functions are called by printf(), scanf(), ...
-void _mon_putc(char c) {
-    while (U1STAbits.UTXBF); // Wait till buffer available (TX Buffer Full)
-    U1TXREG = c; // Put char in Tx buffer
-    return;
-}
-
-int _mon_getc(int canblock) {
-
-    // Reset Overrun Eror Flag - if set UART does not receive any chars
-    if (U1STAbits.OERR)
-        U1STAbits.OERR;
-
-    if (canblock == 0) {
-        if (U1STAbits.URXDA)
-            return (int) U1RXREG;
-    }
-    else {
-        while (!U1STAbits.URXDA);
-        return (int) U1RXREG;
-    }
-    return -1;
-}
 /***************************************End Of File*************************************/

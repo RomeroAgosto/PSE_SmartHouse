@@ -13,15 +13,6 @@ extern "C" {
 #endif
 
 
-
-
-#ifdef	__cplusplus
-}
-#endif
-
-#endif	/* SCHEDULES_H */
-
-
 typedef union{
 	struct{
 		int id;
@@ -86,3 +77,11 @@ typedef union {
 }house;
 
 house home;
+
+
+#ifdef	__cplusplus
+}
+#endif
+
+#endif	/* SCHEDULES_H */
+

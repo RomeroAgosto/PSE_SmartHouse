@@ -17,6 +17,7 @@ extern struct tm time_hall;
 
 //#include "../sensor_struct/struct_lib.h"
 
+
 /**
  *      @brief  Developing routine for the pic
  *     @author  Sascha Marquardt, sascha.marquardt@ua.pt
@@ -26,6 +27,7 @@ extern struct tm time_hall;
  *
  * ==============================================
  */
+char message[500];
 
 
 void run_alonsideWClock(void){

@@ -18,7 +18,7 @@
  *  
  * \date 18/12/2017
  */
-int air_temp_analog(int *t[6]);
+int air_temp_analog(int *t);
 
 /** \brief Water temperature value reading from a potentiometer, by using the ADC <br>
  *         converter.
@@ -40,7 +40,7 @@ int water_temp_analog(int *t);
  *  
  * \date 18/12/2017
  */
-int temp_digital(int *t[2]);
+int temp_digital(int *t);
 
 /** \brief Specific gas concentration readings, that is manipulated by 20 <br> 
  *         potentiometers, using the ADC converter.
@@ -51,7 +51,7 @@ int temp_digital(int *t[2]);
  *  
  * \date 18/12/2017
  */
-int air_quality_level(int *a[20]);
+int air_quality_level(int *a);
 
 /** \brief Initialize ADC used by the PIC32MX795F512L to read analog values <br>
  *         with the use of the ADC converter.
@@ -70,6 +70,6 @@ void adc_init();
  * 
  * \date 18/12/2017
  */
-int motion_detection(int *m[4]);
+int motion_detection(int *m);
 #endif	/* SR_H */
 
