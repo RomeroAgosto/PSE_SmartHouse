@@ -18,7 +18,6 @@
 #include <plib.h>
 #include "uart.h" 
 #include "sr.h"
-#include "struct_lib.h"
 
 #define SYSCLK  80000000L // System clock frequency, in Hz
 #define PBCLOCK 40000000L // Peripheral Bus Clock frequency, in Hz
@@ -67,7 +66,7 @@ int main(int argc, char** argv) {
         water_temp_analog(p);
 
         printf("%s","   Water Temperature (C):");
-        printf("%i\n\r",p[6]);
+        printf("%i\n\r",p[0]);
         delay(500);
 
         temp_digital(p);

@@ -15,12 +15,12 @@
 //next two lines are two functions used to calculate temperatures from the 2 I2C 
 //modules, that are connected to their respective digital sensor
 
-int temp_digital(int *t[2]){
+int temp_digital(int *t){
     int i; //variable to control selection of the sensors
     int temp_d;  //variable to save value from one of the digital sensors
     int humi_temp[2];
-    for(i=5;i<7;i++){
-        switch(i-5){    //select one of the 2 digital sensors
+    for(i=7;i<9;i++){
+        switch(i-7){    //select one of the 2 digital sensors
             case(0):
                 temp_d=i2c1_s7();  //get and save value from I2C1 module
                 break;

@@ -5,51 +5,33 @@
 #define disable -100
 
 static struct tm tclock;
-int conv_clock=0;
+static int conv_clock=0;
 
 static int desired_AirTemp[8][4];
 static int desired_water[4];
-static int desired_ligth[8][4];
-
-int valuesinti()
-{
-    int i, j;
-    for(i=0;i<8;i++)
-    {
-        for (j=0;j<4;j++)
-        {
-            desired_AirTemp[i][j]=-100;
-        }
-    }
-    for (j=0;j<4;j++)
-    {
-        desired_water[j]=-100;
-    }
-    for(i=0;i<8;i++)
-    {
-        for (j=0;j<4;j++)
-        {
-            desired_ligth[i][j]=0;
-        }
-    }
-
-}
+static int desired_ligth[4][4];
 
 int compareHour(int time1, int time2)
 {
-    if(conv_clock>time1 && conv_clock<time2)
+    if(time2<time1) {
+        if(conv_clock<time1 || conv_clock>time2) {
+            return 1;
+        }
+    }
+    else if(conv_clock>time1 && conv_clock<time2)
         return 1;
     else
         return 0;
 }
 
-int  ds_updateDSchedules_time()
+int  updateTimeDesiredValue()
 {
     get_timeHall(&tclock);
     conv_clock=tclock.tm_hour*100+tclock.tm_min;
     return 0;
 }
-int ds_DesiredWaterTemp()
+
+int desiredWaterTemperature()
 {
     int i, maximum;
     maximum=disable;
@@ -76,7 +58,8 @@ int ds_DesiredWaterTemp()
     }
     return maximum;
 }
-int ds_DesiredAirTemp(int n_air)
+
+int desiredAirTemperature(int n_air)
 {
     int i, maximum;
     maximum=disable;
@@ -104,7 +87,7 @@ int ds_DesiredAirTemp(int n_air)
     return maximum;
 }
 
-int ds_DesiredLigth(int n_ligth)
+int desiredLigth(int n_ligth)
 {
     int i;
     for(i=0;i<4;i++)        /* Used 4 because theres's 4 schedule per day of the week */
@@ -131,6 +114,7 @@ int ds_DesiredLigth(int n_ligth)
     }
     return 0;
 }
+
 /* *****************************************************************************
  End of File
  */
