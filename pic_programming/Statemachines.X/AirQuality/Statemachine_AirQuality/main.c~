@@ -1,4 +1,4 @@
-#include "Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.h"
+#include "statemachine_airquality_control.h"
 
 /**
  *      @brief  This function is used to test the testmachines -> a virtual register is placed to simulate turn ons of LED'S
@@ -27,18 +27,11 @@ int main(int argc, char** argv)
         Statemachine_LightControl(3);
 
         /*Air Quality*/
-       /* AirQuality(0);
+        AirQuality(0);
         AirQuality(1);
         AirQuality(2);
         AirQuality(3);
 
-        /*Airtemperature Control*/
-       // SetAirThreshold(2, 1, 0, 0.567);
-
-        int k, dummy[10];
-        for (k = 0; k < 4; k++) {
-            Statemachine_AirControl(k,dummy);
-        }
     }
     return (EXIT_SUCCESS);
 }

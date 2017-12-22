@@ -123,86 +123,59 @@ Statemachines_X/fast:
 	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/build
 .PHONY : Statemachines_X/fast
 
-Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.o: Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c.o
+AirQuality/Statemachine_AirQuality/main.o: AirQuality/Statemachine_AirQuality/main.c.o
 
-.PHONY : Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.o
-
-# target to build an object file
-Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c.o:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c.o
-.PHONY : Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c.o
-
-Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.i: Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c.i
-
-.PHONY : Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.i
-
-# target to preprocess a source file
-Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c.i:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c.i
-.PHONY : Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c.i
-
-Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.s: Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c.s
-
-.PHONY : Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.s
-
-# target to generate assembly for a file
-Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c.s:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c.s
-.PHONY : Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c.s
-
-Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.o: Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.c.o
-
-.PHONY : Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.o
+.PHONY : AirQuality/Statemachine_AirQuality/main.o
 
 # target to build an object file
-Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.c.o:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.c.o
-.PHONY : Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.c.o
+AirQuality/Statemachine_AirQuality/main.c.o:
+	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/AirQuality/Statemachine_AirQuality/main.c.o
+.PHONY : AirQuality/Statemachine_AirQuality/main.c.o
 
-Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.i: Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.c.i
+AirQuality/Statemachine_AirQuality/main.i: AirQuality/Statemachine_AirQuality/main.c.i
 
-.PHONY : Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.i
+.PHONY : AirQuality/Statemachine_AirQuality/main.i
 
 # target to preprocess a source file
-Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.c.i:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.c.i
-.PHONY : Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.c.i
+AirQuality/Statemachine_AirQuality/main.c.i:
+	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/AirQuality/Statemachine_AirQuality/main.c.i
+.PHONY : AirQuality/Statemachine_AirQuality/main.c.i
 
-Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.s: Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.c.s
+AirQuality/Statemachine_AirQuality/main.s: AirQuality/Statemachine_AirQuality/main.c.s
 
-.PHONY : Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.s
+.PHONY : AirQuality/Statemachine_AirQuality/main.s
 
 # target to generate assembly for a file
-Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.c.s:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.c.s
-.PHONY : Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.c.s
+AirQuality/Statemachine_AirQuality/main.c.s:
+	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/AirQuality/Statemachine_AirQuality/main.c.s
+.PHONY : AirQuality/Statemachine_AirQuality/main.c.s
 
-main.o: main.c.o
+AirQuality/Statemachine_AirQuality/statemachine_airquality_control.o: AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c.o
 
-.PHONY : main.o
+.PHONY : AirQuality/Statemachine_AirQuality/statemachine_airquality_control.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/main.c.o
-.PHONY : main.c.o
+AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c.o:
+	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c.o
+.PHONY : AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c.o
 
-main.i: main.c.i
+AirQuality/Statemachine_AirQuality/statemachine_airquality_control.i: AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c.i
 
-.PHONY : main.i
+.PHONY : AirQuality/Statemachine_AirQuality/statemachine_airquality_control.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/main.c.i
-.PHONY : main.c.i
+AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c.i:
+	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c.i
+.PHONY : AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c.i
 
-main.s: main.c.s
+AirQuality/Statemachine_AirQuality/statemachine_airquality_control.s: AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c.s
 
-.PHONY : main.s
+.PHONY : AirQuality/Statemachine_AirQuality/statemachine_airquality_control.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/main.c.s
-.PHONY : main.c.s
+AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c.s:
+	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c.s
+.PHONY : AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c.s
 
 # Help Target
 help:
@@ -213,15 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Statemachines_X"
-	@echo "... Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.o"
-	@echo "... Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.i"
-	@echo "... Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.s"
-	@echo "... Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.o"
-	@echo "... Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.i"
-	@echo "... Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... AirQuality/Statemachine_AirQuality/main.o"
+	@echo "... AirQuality/Statemachine_AirQuality/main.i"
+	@echo "... AirQuality/Statemachine_AirQuality/main.s"
+	@echo "... AirQuality/Statemachine_AirQuality/statemachine_airquality_control.o"
+	@echo "... AirQuality/Statemachine_AirQuality/statemachine_airquality_control.i"
+	@echo "... AirQuality/Statemachine_AirQuality/statemachine_airquality_control.s"
 .PHONY : help
 
 

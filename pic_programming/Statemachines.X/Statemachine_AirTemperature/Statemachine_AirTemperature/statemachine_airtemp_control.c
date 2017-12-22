@@ -17,7 +17,7 @@ static int air_temp_state[8]={0};/*!< stored the temp_state from all rooms */
 int heating_state;
 int air_temperature[8]={0};
 
-void reset_state(int room ){
+void reset_state_air_temp(int room ){
     air_temp_state[room]=0;
 }
 

@@ -21,7 +21,7 @@ int set_water_temp(int temp);
 int set_desired_temperature(int temp);
 int desiredWaterTemperature();
 int SetWaterHeaterSate(int set);
-int reset_state();
+int reset_state_water_temp();
 int Statemachine_WaterControl(int *test);
 #else
 void Statemachine_WaterControl(void);

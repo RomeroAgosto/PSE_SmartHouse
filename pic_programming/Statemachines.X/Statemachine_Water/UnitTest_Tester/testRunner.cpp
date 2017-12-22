@@ -1,11 +1,3 @@
-/*
- * testRunner.cpp
- *
- *  Created on: Dec 9, 2012
- *      Author: pf
- */
-
-
 #include <CppUTest/TestHarness.h>
 #include <stdio.h>
 extern "C" {
@@ -26,7 +18,7 @@ TEST_GROUP(WaterControl)
 
 // Increases the temperature and checks if the Heater is turned on
 TEST(WaterControl,SWITCH_TO_INCREASE_WATER_TEMPERATURE){
-	reset_state();
+	reset_state_water_temp();
 	int desired_temp = 70;
 	int water_temp=60;
 	int ResultExpected[6]={0,0,1,1,1,1};
@@ -50,7 +42,7 @@ TEST(WaterControl,SWITCH_TO_INCREASE_WATER_TEMPERATURE){
 }
 // Increases the temperature with temperature change
 TEST(WaterControl,INCREASE_WATER_TEMPERATURE_TEMPERATUE_CHANGE){
-	reset_state();
+	reset_state_water_temp();
 	/*first set temperature to 60 degree*/
 	int desired_temp = 70;
 	int water_temp=60;
@@ -83,9 +75,9 @@ TEST(WaterControl,INCREASE_WATER_TEMPERATURE_TEMPERATUE_CHANGE){
 }
 // Increases the temperature with desired value change
 TEST(WaterControl,INCREASE_WATER_TEMPERATURE_CHANGE_DESIRED_VALUE){
-	reset_state();
+	reset_state_water_temp();
 	/*first set temperature to 60 degree*/
-	reset_state();
+	reset_state_water_temp();
 	int desired_temp = 70;
 	int water_temp=60;
 	/* state before, setHeater state after*/
@@ -118,7 +110,7 @@ TEST(WaterControl,INCREASE_WATER_TEMPERATURE_CHANGE_DESIRED_VALUE){
 }
 // stay in state desired temperature
 TEST(WaterControl,TEST_WaterControl_STAY_DECREASE_TEMPERATURE){
-	int reset_state();
+	int reset_state_water_temp();
 	int desired_temp = 50;
 	int water_temp=60;
 	int ResultExpected[3]={0,0,0};

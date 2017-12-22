@@ -19,7 +19,7 @@ TEST_GROUP(AirTemp)
 };
 /* Increase Temperature */
 TEST(AirTemp,TEST_AIR_INCREASE_TEMPERATURE_SIMPLE) {
-    reset_state(1);
+    reset_state_air_temp(1);
     /*first set temperature to 60 degree*/
     int length=6;
     /* state before, setHeater state after*/
@@ -43,7 +43,7 @@ TEST(AirTemp,TEST_AIR_INCREASE_TEMPERATURE_SIMPLE) {
 }
 /* stay on off, test limit*/
 TEST(AirTemp,TEST_AIR_KEEP_TEMPERATURE_SIMPLE_MINIMALVALUE) {
-    reset_state(1);
+    reset_state_air_temp(1);
     /*first set temperature to 60 degree*/
     int length=6;
     /* state before, setHeater state after*/
@@ -67,7 +67,7 @@ TEST(AirTemp,TEST_AIR_KEEP_TEMPERATURE_SIMPLE_MINIMALVALUE) {
 }
 /* Increase Temperature -> when in increasing state reduce desired value*/
 TEST(AirTemp,TEST_AIR_INCREASE_TEMPERATURE_CHANGE_DESIRED_VALUE) {
-	reset_state(1);
+	reset_state_air_temp(1);
 	/*first set temperature to 60 degree*/
     int length=12;
 	/* state before, setHeater state after*/
@@ -98,7 +98,7 @@ TEST(AirTemp,TEST_AIR_INCREASE_TEMPERATURE_CHANGE_DESIRED_VALUE) {
 
 /* Increase Temperature -> when in increasing state reduce desired value*/
 TEST(AirTemp,TEST_AIR_INCREASE_TEMPERATURE_CHANGE_TEMPERATURE) {
-    reset_state(1);
+    reset_state_air_temp(1);
     /*first set temperature to 60 degree*/
     int length=12;
     /* state before, setHeater state after*/
@@ -131,7 +131,7 @@ TEST(AirTemp,TEST_AIR_INCREASE_TEMPERATURE_CHANGE_TEMPERATURE) {
 TEST(AirTemp,TEST_AIR_INCREASE_TEMPERATURE_CHANGE_TEMPERATURE_CHECK_ALL_ROOMS) {
     int j;
     for (j = 0; j <8 ; j++) {
-        reset_state(j);
+        reset_state_air_temp(j);
     }
 
     int room=0;
@@ -187,7 +187,7 @@ TEST(AirTemp,TEST_AIR_INCREASE_TEMPERATURE_CHANGE_TEMPERATURE_CHECK_ALL_ROOMS) {
 TEST(AirTemp,TEST_AIR_INCREASE_TEMPERATURE_CHANGE_DESIRED_VALUE_CHECK_ALL_ROOMS) {
     int j;
     for (j = 0; j <8 ; j++) {
-        reset_state(j);
+        reset_state_air_temp(j);
     }
 
     int room=0;

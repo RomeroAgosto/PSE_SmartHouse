@@ -20,7 +20,7 @@ int GetAirTemperature(int room);
 void Statemachine_AirControl(int room, int *test);
 int setdesiredTemp(int room,int temp);
 int SetAirTemperature(int room, int temp);
-void reset_state(int room);
+void reset_state_air_temp(int room);
 #else
 void Statemachine_AirControl(int room);
 

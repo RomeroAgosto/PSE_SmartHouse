@@ -21,7 +21,95 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AirQuality/UnitTest_Tester/Makefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="15" column="62" lean-forward="false" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testRunner.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AirQuality/UnitTest_Tester/testRunner.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="906">
+              <caret line="655" column="8" lean-forward="true" selection-start-line="655" selection-start-column="8" selection-end-line="655" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+                <element signature="e#500#573#1" expanded="false" />
+                <element signature="e#697#2586#0" expanded="false" />
+                <element signature="e#2700#4040#0" expanded="false" />
+                <element signature="e#4155#6077#0" expanded="false" />
+                <element signature="e#6196#7540#0" expanded="false" />
+                <element signature="e#7661#9555#0" expanded="false" />
+                <element signature="e#9615#9688#1" expanded="false" />
+                <element signature="e#9828#11694#0" expanded="false" />
+                <element signature="e#11854#13721#0" expanded="false" />
+                <element signature="e#13881#15747#0" expanded="false" />
+                <element signature="e#15907#17811#0" expanded="false" />
+                <element signature="e#18189#20104#0" expanded="false" />
+                <element signature="e#20211#22126#0" expanded="false" />
+                <element signature="e#22184#22257#1" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AirQuality/Statemachine_AirQuality/main.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="49" lean-forward="false" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="statemachine_airquality_control.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1692">
+              <caret line="139" column="18" lean-forward="false" selection-start-line="139" selection-start-column="18" selection-end-line="139" selection-end-column="18" />
+              <folding>
+                <element signature="e#632#1189#0" expanded="false" />
+                <element signature="e#1476#1930#0" expanded="false" />
+                <element signature="e#1932#2175#0" expanded="false" />
+                <element signature="e#1932#2239#0" expanded="false" />
+                <element signature="e#2243#2656#0" expanded="false" />
+                <element signature="e#2719#3069#0" expanded="false" />
+                <element signature="e#3682#3867#0" expanded="false" />
+                <element signature="e#3964#4004#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="statemachine_airquality_control.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="16" column="55" lean-forward="false" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+              <folding>
+                <element signature="e#727#766#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -32,6 +120,8 @@
       <find>DEBUG</find>
       <find>prin</find>
       <find>room</find>
+      <find>TEMP</find>
+      <find>1</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -59,14 +149,22 @@
         <option value="$PROJECT_DIR$/Statemachine_AirTemperature/statemachine_airtemp_control.h" />
         <option value="$PROJECT_DIR$/UnitTest_Tester/testRunner.cpp" />
         <option value="$PROJECT_DIR$/UnitTest_Tester/Makefile" />
-        <option value="$PROJECT_DIR$/Statemachine_Water/UnitTest_Tester/testRunner.cpp" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/statemachines.h" />
         <option value="$PROJECT_DIR$/statemachine_airquality_control.h" />
-        <option value="$PROJECT_DIR$/Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.h" />
+        <option value="$PROJECT_DIR$/AirQuality/Statemachine_AirQuality/Makefile" />
+        <option value="$PROJECT_DIR$/AirQuality/UnitTest_Tester/Makefile" />
         <option value="$PROJECT_DIR$/Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c" />
+        <option value="$PROJECT_DIR$/Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.h" />
         <option value="$PROJECT_DIR$/Statemachine_AirTemperature/UnitTest_Tester/testRunner.cpp" />
+        <option value="$PROJECT_DIR$/Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.c" />
+        <option value="$PROJECT_DIR$/Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.h" />
+        <option value="$PROJECT_DIR$/Statemachine_Water/UnitTest_Tester/testRunner.cpp" />
+        <option value="$PROJECT_DIR$/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/AirQuality/Statemachine_AirQuality/main.c" />
+        <option value="$PROJECT_DIR$/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c" />
+        <option value="$PROJECT_DIR$/AirQuality/UnitTest_Tester/testRunner.cpp" />
       </list>
     </option>
   </component>
@@ -77,7 +175,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="65" />
     <option name="y" value="24" />
     <option name="width" value="927" />
@@ -105,6 +203,23 @@
               <item name="Statemachines_X" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="Statemachines.X" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Statemachines_X" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="Statemachines.X" type="462c0819:PsiDirectoryNode" />
+              <item name="AirQuality" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Statemachines_X" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="Statemachines.X" type="462c0819:PsiDirectoryNode" />
+              <item name="AirQuality" type="462c0819:PsiDirectoryNode" />
+              <item name="Statemachine_AirQuality" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Statemachines_X" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="Statemachines.X" type="462c0819:PsiDirectoryNode" />
+              <item name="AirQuality" type="462c0819:PsiDirectoryNode" />
+              <item name="UnitTest_Tester" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -116,12 +231,16 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Statemachines.X" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/AirQuality/Statemachine_AirQuality" />
+      <recent name="$PROJECT_DIR$/Statemachine_AirQuality" />
+      <recent name="$PROJECT_DIR$/Statemachine_Water/Machine" />
       <recent name="$PROJECT_DIR$/Statemachine_AirTemperature" />
       <recent name="$PROJECT_DIR$/Statemachine_Water" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Statemachine_Water/Machine" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/AirQuality/Statemachine_AirQuality" />
+      <recent name="$PROJECT_DIR$/Statemachine_AirQuality" />
       <recent name="$PROJECT_DIR$/Statemachine_AirTemperature" />
       <recent name="$PROJECT_DIR$/Statemachine_Water" />
     </key>
@@ -173,12 +292,13 @@
       <workItem from="1513865274832" duration="1341000" />
       <workItem from="1513875521290" duration="8179000" />
       <workItem from="1513887514104" duration="1872000" />
-      <workItem from="1513905544177" duration="4606000" />
+      <workItem from="1513905544177" duration="5553000" />
+      <workItem from="1513941180659" duration="15579000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37596000" />
+    <option name="totallyTimeSpent" value="54122000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -190,26 +310,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="7" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.104477614" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.063571036" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30793992" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3197425" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34871244" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39914164" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39914164" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -242,34 +363,23 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/AirQuality/Statemachine_AirQuality/main.c</url>
+          <line>37</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="24" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="bounds_sensorvalues" language="ObjectiveC" />
+        <watch expression="air_quality_state" language="ObjectiveC" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/statemachine_airquality_control.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Statemachine_AirTemperature/statemachine_airtemp_control.h" />
-    <entry file="file://$PROJECT_DIR$/statemachine_light_control.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="10" lean-forward="false" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="37" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/statemachines.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -290,11 +400,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#147#191#0" expanded="false" />
-            <element signature="e#192#244#0" expanded="false" />
-            <element signature="e#380#443#0" expanded="false" />
-            <element signature="e#444#501#0" expanded="false" />
-            <marker date="1513884944562" expanded="true" signature="62:558" ph="..." />
+            <element signature="e#203#255#0" expanded="false" />
+            <element signature="e#391#454#0" expanded="false" />
+            <element signature="e#455#512#0" expanded="false" />
+            <marker date="1513942685629" expanded="true" signature="62:569" ph="..." />
           </folding>
         </state>
       </provider>
@@ -342,11 +451,10 @@
         <state relative-caret-position="108">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <element signature="e#147#191#0" expanded="false" />
-            <element signature="e#192#244#0" expanded="false" />
-            <element signature="e#380#443#0" expanded="false" />
-            <element signature="e#444#501#0" expanded="false" />
-            <marker date="1513884944562" expanded="true" signature="62:558" ph="..." />
+            <element signature="e#203#255#0" expanded="false" />
+            <element signature="e#391#454#0" expanded="false" />
+            <element signature="e#455#512#0" expanded="false" />
+            <marker date="1513942685629" expanded="true" signature="62:569" ph="..." />
           </folding>
         </state>
       </provider>
@@ -359,11 +467,10 @@
         <state relative-caret-position="342">
           <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding>
-            <element signature="e#147#191#0" expanded="false" />
-            <element signature="e#192#244#0" expanded="false" />
-            <element signature="e#380#443#0" expanded="false" />
-            <element signature="e#444#501#0" expanded="false" />
-            <marker date="1513884944562" expanded="true" signature="62:558" ph="..." />
+            <element signature="e#203#255#0" expanded="false" />
+            <element signature="e#391#454#0" expanded="false" />
+            <element signature="e#455#512#0" expanded="false" />
+            <marker date="1513942685629" expanded="true" signature="62:569" ph="..." />
           </folding>
         </state>
       </provider>
@@ -385,13 +492,6 @@
     <entry file="file://$PROJECT_DIR$/Statemachine_Test/CMakeLists.txt" />
     <entry file="file://$PROJECT_DIR$/test_statemachines.c" />
     <entry file="file://$PROJECT_DIR$/test_statemachines.h" />
-    <entry file="file://$PROJECT_DIR$/statemachine_airquality_control.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="43" lean-forward="false" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Statemachine_Test/mainTester.cpp" />
     <entry file="file://$PROJECT_DIR$/Statemachine_Test/Statemachine_Test.cpp" />
     <entry file="file://$PROJECT_DIR$/Statemachine_Water/Statemachine_Water/Makefile">
@@ -405,14 +505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -437,14 +529,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="64" lean-forward="false" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Statemachine_Water/UnitTest_Tester/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -463,20 +547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="44" lean-forward="true" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/CppUTest/Utest.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="55" column="17" lean-forward="false" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statemachine_airquality_control.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -485,7 +555,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -497,75 +566,167 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Statemachine_Water/UnitTest_Tester/testRunner.cpp">
+    <entry file="file://$PROJECT_DIR$/Statemachine_AirTemperature/Statemachine_AirTemperature/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="29" column="26" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.c">
+    <entry file="file://$PROJECT_DIR$/AirQuality/Statemachine_AirQuality/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#147#191#0" expanded="false" />
-            <element signature="e#192#244#0" expanded="false" />
-            <element signature="e#380#443#0" expanded="false" />
-            <element signature="e#444#501#0" expanded="false" />
-            <marker date="1513884944562" expanded="true" signature="62:558" ph="..." />
-          </folding>
+        <state relative-caret-position="72">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="396">
+          <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Statemachine_AirTemperature/UnitTest_Tester/testRunner.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="179" column="50" lean-forward="false" selection-start-line="179" selection-start-column="50" selection-end-line="179" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#33#0" expanded="false" />
+            <element signature="e#194#271#1" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="80" column="6" lean-forward="true" selection-start-line="80" selection-start-column="6" selection-end-line="80" selection-end-column="6" />
+          <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
           <folding>
             <element signature="e#269#583#0" expanded="false" />
-            <element signature="e#650#708#0" expanded="false" />
-            <element signature="e#767#836#0" expanded="false" />
-            <element signature="e#837#906#0" expanded="false" />
-            <element signature="e#907#1379#0" expanded="false" />
-            <element signature="e#1963#2417#0" expanded="false" />
-            <element signature="e#2510#2549#0" expanded="true" />
-            <marker date="1513908876406" expanded="false" signature="907:1231" ph="/**...*/" />
-            <marker date="1513908876406" expanded="false" signature="1381:1716" ph="/**...*/" />
+            <element signature="e#650#717#0" expanded="false" />
+            <element signature="e#776#845#0" expanded="false" />
+            <element signature="e#846#915#0" expanded="false" />
+            <element signature="e#916#1240#0" expanded="false" />
+            <element signature="e#916#1388#0" expanded="false" />
+            <element signature="e#1390#1725#0" expanded="false" />
+            <element signature="e#1972#2426#0" expanded="false" />
+            <element signature="e#2519#2558#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Statemachine_AirTemperature/UnitTest_Tester/testRunner.cpp">
+    <entry file="file://$PROJECT_DIR$/Statemachine_Water/UnitTest_Tester/testRunner.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="e#194#271#1" expanded="false" />
-            <element signature="e#350#1103#0" expanded="false" />
-            <element signature="e#1192#1945#0" expanded="false" />
-            <element signature="e#2085#2986#0" expanded="false" />
-            <element signature="e#3125#4089#0" expanded="false" />
-            <element signature="e#4244#5797#0" expanded="false" />
-            <element signature="e#5954#7504#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Statemachine_AirTemperature/Statemachine_AirTemperature/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="197">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding>
+            <element signature="e#203#255#0" expanded="false" />
+            <element signature="e#391#454#0" expanded="false" />
+            <element signature="e#455#512#0" expanded="false" />
+            <marker date="1513942685629" expanded="true" signature="62:569" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AirQuality/UnitTest_Tester/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="15" column="62" lean-forward="false" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="55" lean-forward="false" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+          <folding>
+            <element signature="e#727#766#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="49" lean-forward="false" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/CppUTest/Utest.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="55" column="17" lean-forward="false" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AirQuality/Statemachine_AirQuality/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1692">
+          <caret line="139" column="18" lean-forward="false" selection-start-line="139" selection-start-column="18" selection-end-line="139" selection-end-column="18" />
+          <folding>
+            <element signature="e#632#1189#0" expanded="false" />
+            <element signature="e#1476#1930#0" expanded="false" />
+            <element signature="e#1932#2175#0" expanded="false" />
+            <element signature="e#1932#2239#0" expanded="false" />
+            <element signature="e#2243#2656#0" expanded="false" />
+            <element signature="e#2719#3069#0" expanded="false" />
+            <element signature="e#3682#3867#0" expanded="false" />
+            <element signature="e#3964#4004#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AirQuality/UnitTest_Tester/testRunner.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="906">
+          <caret line="655" column="8" lean-forward="true" selection-start-line="655" selection-start-column="8" selection-end-line="655" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+            <element signature="e#500#573#1" expanded="false" />
+            <element signature="e#697#2586#0" expanded="false" />
+            <element signature="e#2700#4040#0" expanded="false" />
+            <element signature="e#4155#6077#0" expanded="false" />
+            <element signature="e#6196#7540#0" expanded="false" />
+            <element signature="e#7661#9555#0" expanded="false" />
+            <element signature="e#9615#9688#1" expanded="false" />
+            <element signature="e#9828#11694#0" expanded="false" />
+            <element signature="e#11854#13721#0" expanded="false" />
+            <element signature="e#13881#15747#0" expanded="false" />
+            <element signature="e#15907#17811#0" expanded="false" />
+            <element signature="e#18189#20104#0" expanded="false" />
+            <element signature="e#20211#22126#0" expanded="false" />
+            <element signature="e#22184#22257#1" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

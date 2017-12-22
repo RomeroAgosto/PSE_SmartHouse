@@ -4,7 +4,7 @@ static int desired_test;
 static int water_temp;
 int heater_state;
 #include <stdio.h>
-int reset_state(){
+int reset_state_water_temp(){
     water_temp_state=0;
 }
 int set_water_temp(int temp){

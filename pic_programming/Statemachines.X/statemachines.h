@@ -2,7 +2,7 @@
 #define	STATEMACHINES_H
 
 #include "Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.h"
-#include "statemachine_airquality_control.h"
+#include "AirQuality/Statemachine_AirQuality/statemachine_airquality_control.h"
 #include "Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.h"
 #include "statemachine_light_control.h"
 
