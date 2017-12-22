@@ -84,31 +84,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c">
+			<Option target="Statemachines_X"/>
+		</Unit>
+		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/Statemachine_AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.h">
+			<Option target="Statemachines_X"/>
+		</Unit>
+		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.c">
+			<Option target="Statemachines_X"/>
+		</Unit>
+		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.h">
+			<Option target="Statemachines_X"/>
+		</Unit>
 		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/main.c">
 			<Option target="Statemachines_X"/>
 		</Unit>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_airquality_control.c">
-			<Option target="Statemachines_X"/>
-		</Unit>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_airquality_control.h">
-			<Option target="Statemachines_X"/>
-		</Unit>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_airtemp_control.c">
-			<Option target="Statemachines_X"/>
-		</Unit>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_airtemp_control.h">
-			<Option target="Statemachines_X"/>
-		</Unit>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_light_control.c">
-			<Option target="Statemachines_X"/>
-		</Unit>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_light_control.h">
-			<Option target="Statemachines_X"/>
-		</Unit>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_watertemp_control.c">
-			<Option target="Statemachines_X"/>
-		</Unit>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_watertemp_control.h">
+		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachines.h">
 			<Option target="Statemachines_X"/>
 		</Unit>
 		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/CMakeLists.txt">

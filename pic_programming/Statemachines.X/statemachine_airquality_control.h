@@ -14,8 +14,6 @@
 
 int SetAirThreshold(int room,int warning_level, int threshold, double value);
 int GetAirQualityState(void);
-int SetVentilationState_dummy(int room,int on);
-int SetLightQuality_dummy( int room, int light);
 void Statemachine_AirQuality(int room);
 int SetWarning(void);
 

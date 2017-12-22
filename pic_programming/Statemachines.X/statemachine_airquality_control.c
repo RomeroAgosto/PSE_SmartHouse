@@ -20,20 +20,6 @@ int SetAirThreshold(int room,int warning_level, int threshold, double value){
     printf("threshold %d of warining level %d of room %d was  set to %f",threshold,warning_level,room,value);
         thresholds[room][warning_level][threshold]=value;
 };
-
-/**
- *      @brief  Dummy function for setting the color
- *      @param  color: which color should be used? 
- *     @author  Sascha Marquardt, sascha.marquardt@ua.pt
- *     Created  20-Set-2017
- *     Company  DeepImpact
- *   Copyright  Copyright (c) 2017, Sascha Marquardt
- *
- * ==============================================
- */
-int SetLightQuality_dummy(int room,int  color){
-    printf("Color output of room %d is: %d\n", room,color);
-};
 /**
  *      @brief Since the state is protected inside of the function, other functions can get the state thorugh this function
  *      @return returns the current state of the air quality control -> RED/YELLOW/GREEN
@@ -45,25 +31,6 @@ int SetLightQuality_dummy(int room,int  color){
  */
 int GetAirQualityState(){
     return air_quality_state;
-}
-/**
- *      @brief Function to check the air quality_statemachine -> this function can provide artificial Temp values
- *      @param room: sensors for which room?
- *      @param sensor_values: pointer to the sensor value array as provided by the sensor struct
- *     Created  20-Set-2017
- *     Company  Deep Impact
- *   Copyright  Copyright (c) 2017, Sascha Marquardt
- *
- * ==============================================
- */
-
-int GetAirQuality_dummy(int room, double *sensor_values){
-    sensor_values[0]=0.1;
-    sensor_values[1]=0.2;
-    sensor_values[2]=0.1;
-    sensor_values[3]=0.2;
-    sensor_values[4]=0.1;
-    return 1;
 }
 
 /**
@@ -78,19 +45,8 @@ int GetAirQuality_dummy(int room, double *sensor_values){
 int SetWarning(){
     printf("dummy for message warning");
 }
-/**
- *      @brief  function simulates a Ventilation turn on
- *      @param  on
- *     Created  20-Set-2017
- *     Company  Deep Impact
- *   Copyright  Copyright (c) 2017, Sascha Marquardt
- *
- * ==============================================
- */
 
-int SetVentilationState_dummy(int room,int on){
-    printf("set ventlation %d",on);
-}
+
 /**
  *      @brief  This state machine implements the air quality control, inside of this function, the decisions are made
  *      @states The states used to describe the behavior are RED GREEN and YELLOW and they represent the current air quality
@@ -100,17 +56,12 @@ int SetVentilationState_dummy(int room,int on){
  *
  * ==============================================
  */
-
-
 void Statemachine_AirQuality(int room) {
 	double sensor_values[5]; /*!< the getter function will return an array pointer with all defined values */
     int air_quality;
     static int air_quality_state[4];
-#if _DEBUG ==0
     GetAirQuality(room,sensor_values); /*!< in air_quality the current value will be saved -> getter function from the global struct */
-#else
-    GetAirQuality_dummy(room, sensor_values);
-#endif
+
     int j;
     /* check Yellow first, RED can overwrite YELLOW -> when one Value exceeds the preset limit -> react*/
     for (j = 0; j <5 ; j++) {
@@ -123,13 +74,8 @@ void Statemachine_AirQuality(int room) {
     switch (air_quality_state[room]) {
 
         case GREEN:
-#if _DEBUG==0
             SetLightQuality(room,GREEN);
             SetVentilationState(room,FALSE);/* it is just possible to turn off the ventilation when the Air quality is good!*/
-#else
-            SetLightQuality_dummy(room,GREEN);
-            SetVentilationState_dummy(room,FALSE);/* it is just possible to turn off the ventilation when the Air quality is good!*/
-#endif
 
             /*It is double check, but thus im not gonna break the state machine principle is used*/
             if (air_quality==RED){air_quality_state[room]=RED;}
@@ -137,26 +83,18 @@ void Statemachine_AirQuality(int room) {
             break;
 
         case YELLOW:
-#if _DEBUG==0
+
             SetLightQuality(room,YELLOW);
             SetVentilationState(room,FALSE);/* it is just possible to turn off the ventilation when the Air quality is good!*/
-#else
-            SetLightQuality_dummy(room,YELLOW);
-            SetVentilationState_dummy(room,TRUE);/* it is just possible to turn off the ventilation when the Air quality is good!*/
-#endif
+
             /*It is double check, but thus im not gonna break the state machine principle is used*/
             if (air_quality==RED){air_quality_state[room]=RED;}
             else if(air_quality==YELLOW){air_quality_state[room]=YELLOW;}
             break;
 
         case RED:
-#if _DEBUG==0
-            SetLightQuality(RED);
-            SetVentilationState(TRUE);/* it is just possible to turn off the ventilation when the Air quality is good!*/
-#else
-            SetLightQuality_dummy(room,RED);
-            SetVentilationState_dummy(room,TRUE);/* it is just possible to turn off the ventilation when the Air quality is good!*/
-#endif
+            SetLightQuality(room,RED);
+            SetVentilationState(room, TRUE);/* it is just possible to turn off the ventilation when the Air quality is good!*/
             /*set next state*/
             /*It is double check, but thus im not gonna break the state machine principle is used*/
             if (air_quality==RED){air_quality_state[room]=RED;}
@@ -165,13 +103,9 @@ void Statemachine_AirQuality(int room) {
             break;
 
         default:
-#if _DEBUG==0
             SetLightQuality(room,RED);
             SetVentilationState(room,TRUE);
-#else
-            SetLightQuality_dummy(room,FALSE);
-            SetVentilationState_dummy(room,TRUE);
-#endif
+
             SetWarning();/*something that declares that something went wrong*/
             break;
     }
