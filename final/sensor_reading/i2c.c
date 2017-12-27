@@ -53,7 +53,7 @@ int i2c1_s7(){
     setbuf(stdout, NULL); //no output buffer (for printf)
     i2c1_init();
     if(i2c1_setClock(TC74_CLK_FREQ)) {
-        //printf("Error in i2c1_setClock()\n\r");
+        printf("Error in i2c1_setClock()\n\r");
         while(1);
     }
     i2c1_start(); // Send Start event
@@ -63,7 +63,7 @@ int i2c1_s7(){
     ack+=i2c1_send(ADDR_RD_TC74);    // Send Address + RD (ADDR_RD); add return value to "ack" variable
     // Test "ack" variable; if "ack" != 0 then an error has occurred
     if(ack) {
-        //printf("Error during temperature reading\n\r");            
+        printf("Error during temperature reading\n\r");            
     }
     // Receive a value from slave ? send NACK; copy received value to
     // "temperature" variable
@@ -87,14 +87,14 @@ int i2c1_s8(int *humi_temp){
     setbuf(stdout, NULL); //no output buffer (for printf)
     i2c1_init();
     if(i2c1_setClock(HIH8120_CLK_FREQ)) {
-        //printf("Error in i2c1_setClock()\n\r");
+        printf("Error in i2c1_setClock()\n\r");
         while(1);
     }
     i2c1_start(); // Send Start event
     ack=i2c1_send(ADDR_RD_HIH8120); // Send Address + WR (ADDR_WR); copy return value to "ack" variable
     flag=1;
     if(ack) {
-        //printf("Error during temperature and humidity reading\n\r");      
+        printf("Error during temperature and humidity reading\n\r");      
         flag=0;
         
     }
