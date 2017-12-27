@@ -10,14 +10,14 @@ int get_schedule_message(char *to_send)
     char n_start[4];
     char n_stop[4];
     //strcpy(message,to_send);
-    /*message[1]:numeric valor to acess array_function
-    message[2]:numeric valor to acess array_room
-    message[3]:numeric valor to acess array_schedule
-    essage[4]:numeric valor to acess schedules
-    message[5]: id valor
-    message[6]:value valor
-    message[7--10]:star time values
-    message[11-14]:stop_time values*/
+    /*message[2]:numeric valor to acess array_function
+    message[3]:numeric valor to acess array_room
+    message[4]:numeric valor to acess array_schedule
+    message[5]:numeric valor to acess schedules
+    message[6]: id valor
+    message[7-8]:value valor
+    message[8--11]:star time values
+    message[12-15]:stop_time values*/
     for(i=0;i<4;i++)
     {
         n_start[i]=to_send[7+i];
