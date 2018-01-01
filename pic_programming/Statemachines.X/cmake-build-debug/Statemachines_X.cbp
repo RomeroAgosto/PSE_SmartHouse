@@ -84,13 +84,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/AirQuality/Statemachine_AirQuality/main.c">
+		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/LightControl/StatemachineLightControl/main.c">
 			<Option target="Statemachines_X"/>
 		</Unit>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c">
+		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.c">
 			<Option target="Statemachines_X"/>
 		</Unit>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.h">
+		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.h">
 			<Option target="Statemachines_X"/>
 		</Unit>
 		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachines.h">

@@ -23,8 +23,6 @@ int SetWaterHeaterSate(int set){
     heater_state=set;
 }
 
-#else
-
 #endif
 
 #if UNITTEST==1

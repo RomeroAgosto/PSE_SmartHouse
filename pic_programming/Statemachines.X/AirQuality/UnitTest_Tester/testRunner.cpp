@@ -12,7 +12,7 @@ void SetLightQuality(int room, int color);
 void SetVentilationState(int room, int on);
 void ResetAirQualityState();
 
-/* TEST THE GREEN STAGE*/
+/*--------------------------    TEST THE GREEN-------------------------------------------------*/
 TEST_GROUP(AirQuality_GREEN) {
     void setup() // setup
     {
@@ -259,7 +259,7 @@ TEST(AirQuality_GREEN, TEST_AIR_QUALITY_GREEN_YELLOW_THRESHOLD) {
 }
 
 
-/* TEST THE YELLOW STAGE */
+/*----------------------------- TEST THE YELLOW-----------------------------------------------*/
 TEST_GROUP(AirQuality_YELLOW) {
     void setup() // setup
     {
@@ -478,7 +478,7 @@ TEST(AirQuality_YELLOW, TEST_AIR_QUALITY_YELLOW_TO_RED_THROUGH_SENSOR_CHANGE_WIT
 }
 
 
-/* TEST THE RED STAGE */
+/*----------------------------TEST THE RED STAGE ------------------------------------------------*/
 TEST_GROUP(AirQuality_RED) {
     void setup() // setup
     {
@@ -630,7 +630,7 @@ TEST(CHECK_CHANGE_BOUND, CHANGE_FROM_GREEN_TO_RED_THROUGH_BOUND_CHANGE) {
     SetAirThreshold(0,1,2,0.6);
     SetAirThreshold(0,1,3,0.6);
     SetAirThreshold(0,1,4,0.6);
-    int i;
+    int i=0;
     for (i = 0; i < 2; i++) {
         Statemachine_AirQuality(0, Result);
         Result_complete[i * 4 + 0] = Result[0];
@@ -640,8 +640,10 @@ TEST(CHECK_CHANGE_BOUND, CHANGE_FROM_GREEN_TO_RED_THROUGH_BOUND_CHANGE) {
         //printf("result[]= %d\n",Result_complete[i*3]);
     }
     /** Change the sensor value, bound is in the tests 0.05 for all sensors */
+    printf("2 rounds\n");
     int j;
-    for(j=0;j++;j<5){
+    for(j=0;j<5;j++){
+        printf("set hysteresis\n");
         SetHysteresis(1,j,0.01);
     }
     for (i ; i < 4; i++) {

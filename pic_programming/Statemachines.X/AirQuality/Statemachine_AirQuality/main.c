@@ -21,7 +21,7 @@ int main(int argc, char** argv)
     /* state before, setHeater state after*/
     int Result[3], Result_complete[length];
     /* set sensor values for test*/
-    double sensor_values[5]={0.5,.5,.55,.5,.5};
+    double sensor_values[5]={0.62,.62,.62,.62,.62};
     SetAirQuality(0,sensor_values);
     /*set thresholds*/
     /* set yellow thresholds */
@@ -40,8 +40,9 @@ int main(int argc, char** argv)
         Statemachine_AirQuality(0,Result);
         int j;
         for(j=0;j<5;j++) {
-            sensor_values[j] =0.66;
+            SetHysteresis(1,j,0.01);
         }
+        printf("the state is: %d\n", GetAirQualityState(0));
 
     }
     return (EXIT_SUCCESS);

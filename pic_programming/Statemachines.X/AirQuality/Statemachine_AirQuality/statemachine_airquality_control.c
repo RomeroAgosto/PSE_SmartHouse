@@ -8,6 +8,7 @@ static int air_quality_state[4];/*!< statemachine states are in general protecte
 
 int SetHysteresis(int stage, int sensor, double value){
     bounds_sensorvalues[stage][sensor]=value;
+    printf("set new hystersis");
 }
 /**
  *      @brief  Setter Functions to adapt the thresholds -> Can be just used from the technician
@@ -135,6 +136,8 @@ void Statemachine_AirQuality(int room) {
                 if (sensor_values[j] < thresholds[room][0][j]-bounds_sensorvalues[0][j]){air_quality_state[room]=GREEN;};
             }
             for (j = 0; j <5 ; j++) {
+
+              //  printf("sensorvalue: %f threshold + bound %f\n",sensor_values[j],thresholds[room][1][j]+bounds_sensorvalues[1][j]);
                 if (sensor_values[j] > (thresholds[room][1][j] + bounds_sensorvalues[1][j]) ){
                     air_quality_state[room] = RED;
                 };
@@ -172,5 +175,6 @@ void Statemachine_AirQuality(int room) {
     test[1]=Ventilation_state[room];
     test[2]=room_color[room];
     test[3]=air_quality_state[room];
+    //printf("air_quality_state[%d] = %d, test[3] = %d\n",room,air_quality_state[room],test[3]);
 #endif
 }
