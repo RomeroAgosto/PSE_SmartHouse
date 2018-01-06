@@ -4,6 +4,9 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="actuators" displayName="actuators" projectFiles="true">
+        <itemPath>../actuators/actuators.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="CKCommon" displayName="CKCommon" projectFiles="true">
         <logicalFolder name="ConfigBits" displayName="ConfigBits" projectFiles="true">
           <itemPath>../CKCommon/ConfigBits/config_bits.h</itemPath>
@@ -15,6 +18,13 @@
       <logicalFolder name="clock_hall" displayName="clock_hall" projectFiles="true">
         <itemPath>../clock_hall/hallClock.h</itemPath>
         <itemPath>../clock_hall/timer_libs.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="message" displayName="message" projectFiles="true">
+        <itemPath>../message/send_receive_messages.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="schedules" displayName="schedules" projectFiles="true">
+        <itemPath>../schedules/desiredValues.h</itemPath>
+        <itemPath>../schedules/schedules.h</itemPath>
       </logicalFolder>
       <logicalFolder name="sensors" displayName="sensors" projectFiles="true">
         <itemPath>../sensors/adc_init.h</itemPath>
@@ -30,12 +40,10 @@
         <itemPath>../statemachine/statemachine_light_control.h</itemPath>
         <itemPath>../statemachine/statemachine_watertemp_control.h</itemPath>
       </logicalFolder>
-      <itemPath>struct_lib.h</itemPath>
-      <itemPath>desiredValues.h</itemPath>
-      <itemPath>update.h</itemPath>
-      <itemPath>send_receive_messages.h</itemPath>
-      <itemPath>schedules.h</itemPath>
-      <itemPath>actuators.h</itemPath>
+      <logicalFolder name="update" displayName="update" projectFiles="true">
+        <itemPath>../update/struct_lib.h</itemPath>
+        <itemPath>../update/update.h</itemPath>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -44,6 +52,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="actuators" displayName="actuators" projectFiles="true">
+        <itemPath>../actuators/actuators.c</itemPath>
+      </logicalFolder>
       <logicalFolder name="CKCommon" displayName="CKCommon" projectFiles="true">
         <logicalFolder name="ConfigBits" displayName="ConfigBits" projectFiles="true">
         </logicalFolder>
@@ -55,10 +66,19 @@
         <itemPath>../clock_hall/hallClock.c</itemPath>
         <itemPath>../clock_hall/timer_libs.c</itemPath>
       </logicalFolder>
+      <logicalFolder name="message" displayName="message" projectFiles="true">
+        <itemPath>../message/create_normal_message.c</itemPath>
+        <itemPath>../message/send_receive_messages.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="schedules" displayName="schedules" projectFiles="true">
+        <itemPath>../schedules/desiredValues.c</itemPath>
+        <itemPath>../schedules/schedules.c</itemPath>
+      </logicalFolder>
       <logicalFolder name="sensors" displayName="sensors" projectFiles="true">
         <itemPath>../sensors/adc_init.c</itemPath>
         <itemPath>../sensors/air_quality_level.c</itemPath>
         <itemPath>../sensors/i2c.c</itemPath>
+        <itemPath>../sensors/motion_detection.c</itemPath>
         <itemPath>../sensors/temp_analog.c</itemPath>
         <itemPath>../sensors/temp_digital.c</itemPath>
       </logicalFolder>
@@ -70,14 +90,10 @@
         <itemPath>../statemachine/statemachine_light_control.c</itemPath>
         <itemPath>../statemachine/statemachine_watertemp_control.c</itemPath>
       </logicalFolder>
+      <logicalFolder name="update" displayName="update" projectFiles="true">
+        <itemPath>../update/update.c</itemPath>
+      </logicalFolder>
       <itemPath>main.c</itemPath>
-      <itemPath>desiredValues.c</itemPath>
-      <itemPath>update.c</itemPath>
-      <itemPath>motion_detection.c</itemPath>
-      <itemPath>send_receive_messages.c</itemPath>
-      <itemPath>schedules.c</itemPath>
-      <itemPath>create_normal_message.c</itemPath>
-      <itemPath>actuators.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -88,12 +104,13 @@
   <sourceRootList>
     <Elem>.</Elem>
     <Elem>../clock_hall</Elem>
-    <Elem>../CKCommon/ConfigBits</Elem>
-    <Elem>../CKCommon/UART</Elem>
     <Elem>../statemachine</Elem>
-    <Elem>../../pic_programming/Statemachines.X</Elem>
     <Elem>../CKCommon</Elem>
     <Elem>../sensors</Elem>
+    <Elem>../actuators</Elem>
+    <Elem>../schedules</Elem>
+    <Elem>../message</Elem>
+    <Elem>../update</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

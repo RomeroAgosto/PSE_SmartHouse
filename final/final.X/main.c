@@ -11,10 +11,10 @@
 #include "../CKCommon/ConfigBits/config_bits.h"
 #include "../CKCommon/UART/uart.h"
 
-#include "send_receive_messages.h"
-#include "update.h"
+#include "../message/send_receive_messages.h"
 #include "../sensors/sr.h"
-#include "struct_lib.h"
+#include "../update/struct_lib.h"
+#include "../update/update.h"
 
 
 #define SYSCLK  80000000L // System clock frequency, in Hz

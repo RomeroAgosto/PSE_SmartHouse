@@ -5,7 +5,7 @@ build/default/production/_ext/1570893445/statemachine_airquality_control.o:  \
  ../statemachine/statemachine_airtemp_control.h  \
  ../statemachine/statemachine_watertemp_control.h  \
  ../statemachine/statemachine_light_control.h  \
- ../statemachine/../final.X/desiredValues.h  \
- ../statemachine/../final.X/update.h  \
- ../statemachine/../final.X/struct_lib.h  \
- ../statemachine/../final.X/actuators.h 
+ ../statemachine/../schedules/desiredValues.h  \
+ ../statemachine/../update/update.h  \
+ ../statemachine/../update/struct_lib.h  \
+ ../statemachine/../actuators/actuators.h 
