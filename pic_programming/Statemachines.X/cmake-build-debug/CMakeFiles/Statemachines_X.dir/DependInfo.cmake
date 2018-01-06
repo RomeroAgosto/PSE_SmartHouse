@@ -4,11 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/main.c" "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/Statemachines_X.dir/main.c.o"
-  "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_airquality_control.c" "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.o"
-  "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_airtemp_control.c" "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.o"
-  "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_light_control.c" "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.o"
-  "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_watertemp_control.c" "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.o"
+  "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/LightControl/StatemachineLightControl/main.c" "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.o"
+  "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.c" "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

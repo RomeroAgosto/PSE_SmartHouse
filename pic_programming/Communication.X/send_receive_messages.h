@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
+#define _DEBUG 1
 
 #define SEND_NO_MESSAGE 0
 #define SEND_NEW_STATUS 1
@@ -30,9 +30,8 @@ long int check_received_message(char *message);
 long int get_int(char* received_checksum,int length);
 double power(double a, double b);
 
-#define RUN 1
 
-#if RUN ==1
+#if _DEBUG==0
 void _UART1Handler(void);
 #endif
 

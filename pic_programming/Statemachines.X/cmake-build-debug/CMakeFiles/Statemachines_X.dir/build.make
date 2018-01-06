@@ -57,145 +57,67 @@ include CMakeFiles/Statemachines_X.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Statemachines_X.dir/flags.make
 
-CMakeFiles/Statemachines_X.dir/main.c.o: CMakeFiles/Statemachines_X.dir/flags.make
-CMakeFiles/Statemachines_X.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Statemachines_X.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Statemachines_X.dir/main.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/main.c
+CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.o: CMakeFiles/Statemachines_X.dir/flags.make
+CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.o: ../LightControl/StatemachineLightControl/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/LightControl/StatemachineLightControl/main.c
 
-CMakeFiles/Statemachines_X.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Statemachines_X.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/main.c > CMakeFiles/Statemachines_X.dir/main.c.i
+CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/LightControl/StatemachineLightControl/main.c > CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.i
 
-CMakeFiles/Statemachines_X.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Statemachines_X.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/main.c -o CMakeFiles/Statemachines_X.dir/main.c.s
+CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/LightControl/StatemachineLightControl/main.c -o CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.s
 
-CMakeFiles/Statemachines_X.dir/main.c.o.requires:
+CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.o.requires:
 
-.PHONY : CMakeFiles/Statemachines_X.dir/main.c.o.requires
+.PHONY : CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.o.requires
 
-CMakeFiles/Statemachines_X.dir/main.c.o.provides: CMakeFiles/Statemachines_X.dir/main.c.o.requires
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/main.c.o.provides.build
-.PHONY : CMakeFiles/Statemachines_X.dir/main.c.o.provides
+CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.o.provides: CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.o.requires
+	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.o.provides.build
+.PHONY : CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.o.provides
 
-CMakeFiles/Statemachines_X.dir/main.c.o.provides.build: CMakeFiles/Statemachines_X.dir/main.c.o
-
-
-CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.o: CMakeFiles/Statemachines_X.dir/flags.make
-CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.o: ../statemachine_airquality_control.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_airquality_control.c
-
-CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_airquality_control.c > CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.i
-
-CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_airquality_control.c -o CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.s
-
-CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.o.requires:
-
-.PHONY : CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.o.requires
-
-CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.o.provides: CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.o.requires
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.o.provides.build
-.PHONY : CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.o.provides
-
-CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.o.provides.build: CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.o
+CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.o.provides.build: CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.o
 
 
-CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.o: CMakeFiles/Statemachines_X.dir/flags.make
-CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.o: ../statemachine_airtemp_control.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_airtemp_control.c
+CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.o: CMakeFiles/Statemachines_X.dir/flags.make
+CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.o: ../LightControl/StatemachineLightControl/statemachine_light_control.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.c
 
-CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_airtemp_control.c > CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.i
+CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.c > CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.i
 
-CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_airtemp_control.c -o CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.s
+CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.c -o CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.s
 
-CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.o.requires:
+CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.o.requires:
 
-.PHONY : CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.o.requires
+.PHONY : CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.o.requires
 
-CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.o.provides: CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.o.requires
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.o.provides.build
-.PHONY : CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.o.provides
+CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.o.provides: CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.o.requires
+	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.o.provides.build
+.PHONY : CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.o.provides
 
-CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.o.provides.build: CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.o
-
-
-CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.o: CMakeFiles/Statemachines_X.dir/flags.make
-CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.o: ../statemachine_light_control.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_light_control.c
-
-CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_light_control.c > CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.i
-
-CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_light_control.c -o CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.s
-
-CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.o.requires:
-
-.PHONY : CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.o.requires
-
-CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.o.provides: CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.o.requires
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.o.provides.build
-.PHONY : CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.o.provides
-
-CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.o.provides.build: CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.o
-
-
-CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.o: CMakeFiles/Statemachines_X.dir/flags.make
-CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.o: ../statemachine_watertemp_control.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_watertemp_control.c
-
-CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_watertemp_control.c > CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.i
-
-CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachine_watertemp_control.c -o CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.s
-
-CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.o.requires:
-
-.PHONY : CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.o.requires
-
-CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.o.provides: CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.o.requires
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.o.provides.build
-.PHONY : CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.o.provides
-
-CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.o.provides.build: CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.o
+CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.o.provides.build: CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.o
 
 
 # Object files for target Statemachines_X
 Statemachines_X_OBJECTS = \
-"CMakeFiles/Statemachines_X.dir/main.c.o" \
-"CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.o" \
-"CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.o" \
-"CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.o" \
-"CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.o"
+"CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.o" \
+"CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.o"
 
 # External object files for target Statemachines_X
 Statemachines_X_EXTERNAL_OBJECTS =
 
-Statemachines_X: CMakeFiles/Statemachines_X.dir/main.c.o
-Statemachines_X: CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.o
-Statemachines_X: CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.o
-Statemachines_X: CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.o
-Statemachines_X: CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.o
+Statemachines_X: CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.o
+Statemachines_X: CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.o
 Statemachines_X: CMakeFiles/Statemachines_X.dir/build.make
 Statemachines_X: CMakeFiles/Statemachines_X.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable Statemachines_X"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable Statemachines_X"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Statemachines_X.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -203,11 +125,8 @@ CMakeFiles/Statemachines_X.dir/build: Statemachines_X
 
 .PHONY : CMakeFiles/Statemachines_X.dir/build
 
-CMakeFiles/Statemachines_X.dir/requires: CMakeFiles/Statemachines_X.dir/main.c.o.requires
-CMakeFiles/Statemachines_X.dir/requires: CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.o.requires
-CMakeFiles/Statemachines_X.dir/requires: CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.o.requires
-CMakeFiles/Statemachines_X.dir/requires: CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.o.requires
-CMakeFiles/Statemachines_X.dir/requires: CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.o.requires
+CMakeFiles/Statemachines_X.dir/requires: CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.o.requires
+CMakeFiles/Statemachines_X.dir/requires: CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.o.requires
 
 .PHONY : CMakeFiles/Statemachines_X.dir/requires
 

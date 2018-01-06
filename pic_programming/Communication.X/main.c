@@ -1,7 +1,6 @@
+#include "send_receive_messages.h"
 
-
-#define RUN 0
-#if RUN == 1
+#if _DEBUG == 0
 
 #include <proc/p32mx795f512l.h>
 #include <string.h>
@@ -12,10 +11,9 @@
 #include "../CKCommon/ConfigBits/config_bits.h" // NOTE!! Must precede project file includes
 #include "../CKCommon/UART/uart.h"
 //#include <xc.h>
-#endif
+#else
 
-#include "send_receive_messages.h"
-#include "message.h"
+#endif
 
 #define SYSCLK  80000000L // System clock frequency, in Hz
 #define PBCLOCK 40000000L // Peripheral Bus Clock frequency, in Hz
@@ -92,10 +90,11 @@ int main(int argc, char** argv) {
     INTEnableInterrupts();
     // Init UART
     UartInit(PBCLOCK,115200) != UART_SUCCESS;
+    printf("init");
     init_uart();
 #endif
     while(1){
-        message_handle(message_flag,message);
+        message_handle();
         if(message_flag==1){
             check_received_message(message);
             int j=0;

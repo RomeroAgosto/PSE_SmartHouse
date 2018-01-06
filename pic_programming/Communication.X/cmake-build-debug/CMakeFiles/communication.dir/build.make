@@ -105,33 +105,9 @@ CMakeFiles/communication.dir/send_receive_messages.c.o.provides: CMakeFiles/comm
 CMakeFiles/communication.dir/send_receive_messages.c.o.provides.build: CMakeFiles/communication.dir/send_receive_messages.c.o
 
 
-CMakeFiles/communication.dir/message.c.o: CMakeFiles/communication.dir/flags.make
-CMakeFiles/communication.dir/message.c.o: ../message.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/communication.dir/message.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/communication.dir/message.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/message.c
-
-CMakeFiles/communication.dir/message.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/communication.dir/message.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/message.c > CMakeFiles/communication.dir/message.c.i
-
-CMakeFiles/communication.dir/message.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/communication.dir/message.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/message.c -o CMakeFiles/communication.dir/message.c.s
-
-CMakeFiles/communication.dir/message.c.o.requires:
-
-.PHONY : CMakeFiles/communication.dir/message.c.o.requires
-
-CMakeFiles/communication.dir/message.c.o.provides: CMakeFiles/communication.dir/message.c.o.requires
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/message.c.o.provides.build
-.PHONY : CMakeFiles/communication.dir/message.c.o.provides
-
-CMakeFiles/communication.dir/message.c.o.provides.build: CMakeFiles/communication.dir/message.c.o
-
-
 CMakeFiles/communication.dir/create_normal_message.c.o: CMakeFiles/communication.dir/flags.make
 CMakeFiles/communication.dir/create_normal_message.c.o: ../create_normal_message.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/communication.dir/create_normal_message.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/communication.dir/create_normal_message.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/communication.dir/create_normal_message.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/create_normal_message.c
 
 CMakeFiles/communication.dir/create_normal_message.c.i: cmake_force
@@ -153,75 +129,21 @@ CMakeFiles/communication.dir/create_normal_message.c.o.provides: CMakeFiles/comm
 CMakeFiles/communication.dir/create_normal_message.c.o.provides.build: CMakeFiles/communication.dir/create_normal_message.c.o
 
 
-CMakeFiles/communication.dir/get_schedule_message.c.o: CMakeFiles/communication.dir/flags.make
-CMakeFiles/communication.dir/get_schedule_message.c.o: ../get_schedule_message.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/communication.dir/get_schedule_message.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/communication.dir/get_schedule_message.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/get_schedule_message.c
-
-CMakeFiles/communication.dir/get_schedule_message.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/communication.dir/get_schedule_message.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/get_schedule_message.c > CMakeFiles/communication.dir/get_schedule_message.c.i
-
-CMakeFiles/communication.dir/get_schedule_message.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/communication.dir/get_schedule_message.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/get_schedule_message.c -o CMakeFiles/communication.dir/get_schedule_message.c.s
-
-CMakeFiles/communication.dir/get_schedule_message.c.o.requires:
-
-.PHONY : CMakeFiles/communication.dir/get_schedule_message.c.o.requires
-
-CMakeFiles/communication.dir/get_schedule_message.c.o.provides: CMakeFiles/communication.dir/get_schedule_message.c.o.requires
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/get_schedule_message.c.o.provides.build
-.PHONY : CMakeFiles/communication.dir/get_schedule_message.c.o.provides
-
-CMakeFiles/communication.dir/get_schedule_message.c.o.provides.build: CMakeFiles/communication.dir/get_schedule_message.c.o
-
-
-CMakeFiles/communication.dir/schedules.c.o: CMakeFiles/communication.dir/flags.make
-CMakeFiles/communication.dir/schedules.c.o: ../schedules.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/communication.dir/schedules.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/communication.dir/schedules.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/schedules.c
-
-CMakeFiles/communication.dir/schedules.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/communication.dir/schedules.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/schedules.c > CMakeFiles/communication.dir/schedules.c.i
-
-CMakeFiles/communication.dir/schedules.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/communication.dir/schedules.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/schedules.c -o CMakeFiles/communication.dir/schedules.c.s
-
-CMakeFiles/communication.dir/schedules.c.o.requires:
-
-.PHONY : CMakeFiles/communication.dir/schedules.c.o.requires
-
-CMakeFiles/communication.dir/schedules.c.o.provides: CMakeFiles/communication.dir/schedules.c.o.requires
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/schedules.c.o.provides.build
-.PHONY : CMakeFiles/communication.dir/schedules.c.o.provides
-
-CMakeFiles/communication.dir/schedules.c.o.provides.build: CMakeFiles/communication.dir/schedules.c.o
-
-
 # Object files for target communication
 communication_OBJECTS = \
 "CMakeFiles/communication.dir/main.c.o" \
 "CMakeFiles/communication.dir/send_receive_messages.c.o" \
-"CMakeFiles/communication.dir/message.c.o" \
-"CMakeFiles/communication.dir/create_normal_message.c.o" \
-"CMakeFiles/communication.dir/get_schedule_message.c.o" \
-"CMakeFiles/communication.dir/schedules.c.o"
+"CMakeFiles/communication.dir/create_normal_message.c.o"
 
 # External object files for target communication
 communication_EXTERNAL_OBJECTS =
 
 communication: CMakeFiles/communication.dir/main.c.o
 communication: CMakeFiles/communication.dir/send_receive_messages.c.o
-communication: CMakeFiles/communication.dir/message.c.o
 communication: CMakeFiles/communication.dir/create_normal_message.c.o
-communication: CMakeFiles/communication.dir/get_schedule_message.c.o
-communication: CMakeFiles/communication.dir/schedules.c.o
 communication: CMakeFiles/communication.dir/build.make
 communication: CMakeFiles/communication.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable communication"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable communication"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/communication.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -231,10 +153,7 @@ CMakeFiles/communication.dir/build: communication
 
 CMakeFiles/communication.dir/requires: CMakeFiles/communication.dir/main.c.o.requires
 CMakeFiles/communication.dir/requires: CMakeFiles/communication.dir/send_receive_messages.c.o.requires
-CMakeFiles/communication.dir/requires: CMakeFiles/communication.dir/message.c.o.requires
 CMakeFiles/communication.dir/requires: CMakeFiles/communication.dir/create_normal_message.c.o.requires
-CMakeFiles/communication.dir/requires: CMakeFiles/communication.dir/get_schedule_message.c.o.requires
-CMakeFiles/communication.dir/requires: CMakeFiles/communication.dir/schedules.c.o.requires
 
 .PHONY : CMakeFiles/communication.dir/requires
 

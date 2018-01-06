@@ -123,140 +123,59 @@ Statemachines_X/fast:
 	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/build
 .PHONY : Statemachines_X/fast
 
-main.o: main.c.o
+LightControl/StatemachineLightControl/main.o: LightControl/StatemachineLightControl/main.c.o
 
-.PHONY : main.o
-
-# target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/main.c.o
-.PHONY : main.c.o
-
-main.i: main.c.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/main.c.s
-.PHONY : main.c.s
-
-statemachine_airquality_control.o: statemachine_airquality_control.c.o
-
-.PHONY : statemachine_airquality_control.o
+.PHONY : LightControl/StatemachineLightControl/main.o
 
 # target to build an object file
-statemachine_airquality_control.c.o:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.o
-.PHONY : statemachine_airquality_control.c.o
+LightControl/StatemachineLightControl/main.c.o:
+	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.o
+.PHONY : LightControl/StatemachineLightControl/main.c.o
 
-statemachine_airquality_control.i: statemachine_airquality_control.c.i
+LightControl/StatemachineLightControl/main.i: LightControl/StatemachineLightControl/main.c.i
 
-.PHONY : statemachine_airquality_control.i
+.PHONY : LightControl/StatemachineLightControl/main.i
 
 # target to preprocess a source file
-statemachine_airquality_control.c.i:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.i
-.PHONY : statemachine_airquality_control.c.i
+LightControl/StatemachineLightControl/main.c.i:
+	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.i
+.PHONY : LightControl/StatemachineLightControl/main.c.i
 
-statemachine_airquality_control.s: statemachine_airquality_control.c.s
+LightControl/StatemachineLightControl/main.s: LightControl/StatemachineLightControl/main.c.s
 
-.PHONY : statemachine_airquality_control.s
+.PHONY : LightControl/StatemachineLightControl/main.s
 
 # target to generate assembly for a file
-statemachine_airquality_control.c.s:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/statemachine_airquality_control.c.s
-.PHONY : statemachine_airquality_control.c.s
+LightControl/StatemachineLightControl/main.c.s:
+	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.s
+.PHONY : LightControl/StatemachineLightControl/main.c.s
 
-statemachine_airtemp_control.o: statemachine_airtemp_control.c.o
+LightControl/StatemachineLightControl/statemachine_light_control.o: LightControl/StatemachineLightControl/statemachine_light_control.c.o
 
-.PHONY : statemachine_airtemp_control.o
+.PHONY : LightControl/StatemachineLightControl/statemachine_light_control.o
 
 # target to build an object file
-statemachine_airtemp_control.c.o:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.o
-.PHONY : statemachine_airtemp_control.c.o
+LightControl/StatemachineLightControl/statemachine_light_control.c.o:
+	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.o
+.PHONY : LightControl/StatemachineLightControl/statemachine_light_control.c.o
 
-statemachine_airtemp_control.i: statemachine_airtemp_control.c.i
+LightControl/StatemachineLightControl/statemachine_light_control.i: LightControl/StatemachineLightControl/statemachine_light_control.c.i
 
-.PHONY : statemachine_airtemp_control.i
-
-# target to preprocess a source file
-statemachine_airtemp_control.c.i:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.i
-.PHONY : statemachine_airtemp_control.c.i
-
-statemachine_airtemp_control.s: statemachine_airtemp_control.c.s
-
-.PHONY : statemachine_airtemp_control.s
-
-# target to generate assembly for a file
-statemachine_airtemp_control.c.s:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/statemachine_airtemp_control.c.s
-.PHONY : statemachine_airtemp_control.c.s
-
-statemachine_light_control.o: statemachine_light_control.c.o
-
-.PHONY : statemachine_light_control.o
-
-# target to build an object file
-statemachine_light_control.c.o:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.o
-.PHONY : statemachine_light_control.c.o
-
-statemachine_light_control.i: statemachine_light_control.c.i
-
-.PHONY : statemachine_light_control.i
+.PHONY : LightControl/StatemachineLightControl/statemachine_light_control.i
 
 # target to preprocess a source file
-statemachine_light_control.c.i:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.i
-.PHONY : statemachine_light_control.c.i
+LightControl/StatemachineLightControl/statemachine_light_control.c.i:
+	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.i
+.PHONY : LightControl/StatemachineLightControl/statemachine_light_control.c.i
 
-statemachine_light_control.s: statemachine_light_control.c.s
+LightControl/StatemachineLightControl/statemachine_light_control.s: LightControl/StatemachineLightControl/statemachine_light_control.c.s
 
-.PHONY : statemachine_light_control.s
-
-# target to generate assembly for a file
-statemachine_light_control.c.s:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/statemachine_light_control.c.s
-.PHONY : statemachine_light_control.c.s
-
-statemachine_watertemp_control.o: statemachine_watertemp_control.c.o
-
-.PHONY : statemachine_watertemp_control.o
-
-# target to build an object file
-statemachine_watertemp_control.c.o:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.o
-.PHONY : statemachine_watertemp_control.c.o
-
-statemachine_watertemp_control.i: statemachine_watertemp_control.c.i
-
-.PHONY : statemachine_watertemp_control.i
-
-# target to preprocess a source file
-statemachine_watertemp_control.c.i:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.i
-.PHONY : statemachine_watertemp_control.c.i
-
-statemachine_watertemp_control.s: statemachine_watertemp_control.c.s
-
-.PHONY : statemachine_watertemp_control.s
+.PHONY : LightControl/StatemachineLightControl/statemachine_light_control.s
 
 # target to generate assembly for a file
-statemachine_watertemp_control.c.s:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/statemachine_watertemp_control.c.s
-.PHONY : statemachine_watertemp_control.c.s
+LightControl/StatemachineLightControl/statemachine_light_control.c.s:
+	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.s
+.PHONY : LightControl/StatemachineLightControl/statemachine_light_control.c.s
 
 # Help Target
 help:
@@ -267,21 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Statemachines_X"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... statemachine_airquality_control.o"
-	@echo "... statemachine_airquality_control.i"
-	@echo "... statemachine_airquality_control.s"
-	@echo "... statemachine_airtemp_control.o"
-	@echo "... statemachine_airtemp_control.i"
-	@echo "... statemachine_airtemp_control.s"
-	@echo "... statemachine_light_control.o"
-	@echo "... statemachine_light_control.i"
-	@echo "... statemachine_light_control.s"
-	@echo "... statemachine_watertemp_control.o"
-	@echo "... statemachine_watertemp_control.i"
-	@echo "... statemachine_watertemp_control.s"
+	@echo "... LightControl/StatemachineLightControl/main.o"
+	@echo "... LightControl/StatemachineLightControl/main.i"
+	@echo "... LightControl/StatemachineLightControl/main.s"
+	@echo "... LightControl/StatemachineLightControl/statemachine_light_control.o"
+	@echo "... LightControl/StatemachineLightControl/statemachine_light_control.i"
+	@echo "... LightControl/StatemachineLightControl/statemachine_light_control.s"
 .PHONY : help
 
 

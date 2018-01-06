@@ -4,79 +4,6 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <logicalFolder name="Communication.X"
-                     displayName="Communication.X"
-                     projectFiles="true">
-        <logicalFolder name="cmake-build-debug"
-                       displayName="cmake-build-debug"
-                       projectFiles="true">
-          <logicalFolder name="CMakeFiles" displayName="CMakeFiles" projectFiles="true">
-            <logicalFolder name="3.8.2" displayName="3.8.2" projectFiles="true">
-              <logicalFolder name="CompilerIdC" displayName="CompilerIdC" projectFiles="true">
-              </logicalFolder>
-              <logicalFolder name="CompilerIdCXX"
-                             displayName="CompilerIdCXX"
-                             projectFiles="true">
-              </logicalFolder>
-            </logicalFolder>
-            <logicalFolder name="communication.dir"
-                           displayName="communication.dir"
-                           projectFiles="true">
-            </logicalFolder>
-          </logicalFolder>
-        </logicalFolder>
-        <itemPath>../Communication.X/message.h</itemPath>
-        <itemPath>../Communication.X/send_receive_messages.h</itemPath>
-      </logicalFolder>
-      <logicalFolder name="Schedules.X" displayName="Schedules.X" projectFiles="true">
-        <logicalFolder name="cmake-build-debug"
-                       displayName="cmake-build-debug"
-                       projectFiles="true">
-          <logicalFolder name="CMakeFiles" displayName="CMakeFiles" projectFiles="true">
-            <logicalFolder name="3.8.2" displayName="3.8.2" projectFiles="true">
-              <logicalFolder name="CompilerIdC" displayName="CompilerIdC" projectFiles="true">
-              </logicalFolder>
-              <logicalFolder name="CompilerIdCXX"
-                             displayName="CompilerIdCXX"
-                             projectFiles="true">
-              </logicalFolder>
-            </logicalFolder>
-            <logicalFolder name="Schedules_X.dir"
-                           displayName="Schedules_X.dir"
-                           projectFiles="true">
-            </logicalFolder>
-          </logicalFolder>
-        </logicalFolder>
-        <itemPath>../Schedules.X/schedules.h</itemPath>
-        <itemPath>../Schedules.X/desiredValues.h</itemPath>
-      </logicalFolder>
-      <logicalFolder name="Statemachines.X"
-                     displayName="Statemachines.X"
-                     projectFiles="true">
-        <logicalFolder name="cmake-build-debug"
-                       displayName="cmake-build-debug"
-                       projectFiles="true">
-          <logicalFolder name="CMakeFiles" displayName="CMakeFiles" projectFiles="true">
-            <logicalFolder name="3.8.2" displayName="3.8.2" projectFiles="true">
-              <logicalFolder name="CompilerIdC" displayName="CompilerIdC" projectFiles="true">
-              </logicalFolder>
-              <logicalFolder name="CompilerIdCXX"
-                             displayName="CompilerIdCXX"
-                             projectFiles="true">
-              </logicalFolder>
-            </logicalFolder>
-            <logicalFolder name="Statemachines_X.dir"
-                           displayName="Statemachines_X.dir"
-                           projectFiles="true">
-            </logicalFolder>
-          </logicalFolder>
-        </logicalFolder>
-        <itemPath>../Statemachines.X/statemachine_airtemp_control.h</itemPath>
-        <itemPath>../Statemachines.X/statemachines.h</itemPath>
-        <itemPath>../Statemachines.X/statemachine_airquality_control.h</itemPath>
-        <itemPath>../Statemachines.X/statemachine_watertemp_control.h</itemPath>
-        <itemPath>../Statemachines.X/statemachine_light_control.h</itemPath>
-      </logicalFolder>
       <logicalFolder name="Timer_Clock.X"
                      displayName="Timer_Clock.X"
                      projectFiles="true">
@@ -93,84 +20,6 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <logicalFolder name="Communication.X"
-                     displayName="Communication.X"
-                     projectFiles="true">
-        <logicalFolder name="cmake-build-debug"
-                       displayName="cmake-build-debug"
-                       projectFiles="true">
-          <logicalFolder name="CMakeFiles" displayName="CMakeFiles" projectFiles="true">
-            <logicalFolder name="3.8.2" displayName="3.8.2" projectFiles="true">
-              <logicalFolder name="CompilerIdC" displayName="CompilerIdC" projectFiles="true">
-                <itemPath>../Communication.X/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/CMakeCCompilerId.c</itemPath>
-              </logicalFolder>
-              <logicalFolder name="CompilerIdCXX"
-                             displayName="CompilerIdCXX"
-                             projectFiles="true">
-              </logicalFolder>
-            </logicalFolder>
-            <logicalFolder name="communication.dir"
-                           displayName="communication.dir"
-                           projectFiles="true">
-            </logicalFolder>
-            <itemPath>../Communication.X/cmake-build-debug/CMakeFiles/feature_tests.c</itemPath>
-          </logicalFolder>
-        </logicalFolder>
-        <itemPath>../Communication.X/send_receive_messages.c</itemPath>
-        <itemPath>../Communication.X/create_normal_message.c</itemPath>
-      </logicalFolder>
-      <logicalFolder name="Schedules.X" displayName="Schedules.X" projectFiles="true">
-        <logicalFolder name="cmake-build-debug"
-                       displayName="cmake-build-debug"
-                       projectFiles="true">
-          <logicalFolder name="CMakeFiles" displayName="CMakeFiles" projectFiles="true">
-            <logicalFolder name="3.8.2" displayName="3.8.2" projectFiles="true">
-              <logicalFolder name="CompilerIdC" displayName="CompilerIdC" projectFiles="true">
-                <itemPath>../Schedules.X/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/CMakeCCompilerId.c</itemPath>
-              </logicalFolder>
-              <logicalFolder name="CompilerIdCXX"
-                             displayName="CompilerIdCXX"
-                             projectFiles="true">
-              </logicalFolder>
-            </logicalFolder>
-            <logicalFolder name="Schedules_X.dir"
-                           displayName="Schedules_X.dir"
-                           projectFiles="true">
-            </logicalFolder>
-            <itemPath>../Schedules.X/cmake-build-debug/CMakeFiles/feature_tests.c</itemPath>
-          </logicalFolder>
-        </logicalFolder>
-        <itemPath>../Schedules.X/desiredValues.c</itemPath>
-        <itemPath>../Schedules.X/schedules.c</itemPath>
-      </logicalFolder>
-      <logicalFolder name="Statemachines.X"
-                     displayName="Statemachines.X"
-                     projectFiles="true">
-        <logicalFolder name="cmake-build-debug"
-                       displayName="cmake-build-debug"
-                       projectFiles="true">
-          <logicalFolder name="CMakeFiles" displayName="CMakeFiles" projectFiles="true">
-            <logicalFolder name="3.8.2" displayName="3.8.2" projectFiles="true">
-              <logicalFolder name="CompilerIdC" displayName="CompilerIdC" projectFiles="true">
-                <itemPath>../Statemachines.X/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/CMakeCCompilerId.c</itemPath>
-              </logicalFolder>
-              <logicalFolder name="CompilerIdCXX"
-                             displayName="CompilerIdCXX"
-                             projectFiles="true">
-              </logicalFolder>
-            </logicalFolder>
-            <logicalFolder name="Statemachines_X.dir"
-                           displayName="Statemachines_X.dir"
-                           projectFiles="true">
-            </logicalFolder>
-            <itemPath>../Statemachines.X/cmake-build-debug/CMakeFiles/feature_tests.c</itemPath>
-          </logicalFolder>
-        </logicalFolder>
-        <itemPath>../Statemachines.X/statemachine_airquality_control.c</itemPath>
-        <itemPath>../Statemachines.X/statemachine_airtemp_control.c</itemPath>
-        <itemPath>../Statemachines.X/statemachine_watertemp_control.c</itemPath>
-        <itemPath>../Statemachines.X/statemachine_light_control.c</itemPath>
-      </logicalFolder>
       <logicalFolder name="Timer_Clock.X"
                      displayName="Timer_Clock.X"
                      projectFiles="true">
@@ -195,6 +44,7 @@
     <Elem>../Timer_Clock.X</Elem>
     <Elem>../Sensor_Structure.X</Elem>
     <Elem>../Schedules.X</Elem>
+    <Elem>../Sensors.X</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

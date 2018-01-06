@@ -87,25 +87,7 @@
 		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/create_normal_message.c">
 			<Option target="communication"/>
 		</Unit>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/get_schedule_message.c">
-			<Option target="communication"/>
-		</Unit>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/get_schedules.h">
-			<Option target="communication"/>
-		</Unit>
 		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/main.c">
-			<Option target="communication"/>
-		</Unit>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/message.c">
-			<Option target="communication"/>
-		</Unit>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/message.h">
-			<Option target="communication"/>
-		</Unit>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/schedules.c">
-			<Option target="communication"/>
-		</Unit>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/schedules.h">
 			<Option target="communication"/>
 		</Unit>
 		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/send_receive_messages.c">
