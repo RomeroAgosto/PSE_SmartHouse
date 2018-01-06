@@ -41,7 +41,7 @@ typedef union{
         day saturday;
         day sunday;
     };
-    day array_schedule[7];
+    day array_wday[7];
 
 }room;
 
@@ -67,7 +67,7 @@ typedef union {
         function light;
 
     };
-    function array_function[3];
+    function array_type[3];
 
 }house;
 

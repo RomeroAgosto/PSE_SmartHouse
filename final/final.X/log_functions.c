@@ -16,7 +16,8 @@ int log_data_saving()
     prt_ts=gmtime(&read_time);
 
     static int i=0;
-    if(i==48) i=0;
+    int j;
+    if(i==49) i=0;
     if(i>=0 && i<48)
     {
         //mesure_time
@@ -26,39 +27,32 @@ int log_data_saving()
         msd.data[i].sensor_data[3]=prt_ts->tm_hour;
         msd.data[i].sensor_data[4]=prt_ts->tm_min;
 
-        
+
         //data from air temperature
-        msd.data[i].sensor_data[5]=sensor_values.air_temperature_sensor[0].temp;
-        msd.data[i].sensor_data[6]=sensor_values.air_temperature_sensor[1].temp;
-        msd.data[i].sensor_data[7]=sensor_values.air_temperature_sensor[2].temp;
-        msd.data[i].sensor_data[8]=sensor_values.air_temperature_sensor[3].temp;
-        msd.data[i].sensor_data[9]=sensor_values.air_temperature_sensor[4].temp;
-        msd.data[i].sensor_data[10]=sensor_values.air_temperature_sensor[5].temp;
-        msd.data[i].sensor_data[11]=sensor_values.air_temperature_sensor[6].temp;
-        msd.data[i].sensor_data[12]=sensor_values.air_temperature_sensor[7].temp;
-        msd.data[i].sensor_data[13]=sensor_values.air_temperature_sensor[0].heater;
-        msd.data[i].sensor_data[14]=sensor_values.air_temperature_sensor[1].heater;
-        msd.data[i].sensor_data[15]=sensor_values.air_temperature_sensor[2].heater;
-        msd.data[i].sensor_data[16]=sensor_values.air_temperature_sensor[3].heater;
-        msd.data[i].sensor_data[17]=sensor_values.air_temperature_sensor[4].heater;
-        msd.data[i].sensor_data[18]=sensor_values.air_temperature_sensor[5].heater;
-        msd.data[i].sensor_data[19]=sensor_values.air_temperature_sensor[6].heater;
-        msd.data[i].sensor_data[20]=sensor_values.air_temperature_sensor[7].heater;
+
+        for(j=0;j<8;j++)
+        {
+            msd.data[i].sensor_data[j+5]=sensor_values.air_temperature_sensor[j].temp;
+            msd.data[i].sensor_data[j+13]=sensor_values.air_temperature_sensor[j].heater;
+        }
+
         //data from water control
         msd.data[i].sensor_data[21]=sensor_values.water_temperature.temp;
         msd.data[i].sensor_data[22]=sensor_values.water_temperature.water_heater;
         // data air quality
-        msd.data[i].sensor_data[23]=sensor_values.air_quality_sensor[0].ventilator;
-        msd.data[i].sensor_data[24]=sensor_values.air_quality_sensor[1].ventilator;
-        msd.data[i].sensor_data[25]=sensor_values.air_quality_sensor[2].ventilator;
-        msd.data[i].sensor_data[26]=sensor_values.air_quality_sensor[3].ventilator;
+        for(j=0;j<4;j++) {
+            msd.data[i].sensor_data[j+23] = sensor_values.air_quality_sensor[j].ventilator;
+        }
+
         i++;
     }
 
 }
-
 int log_create_msg(char *message)
 {
+    strcpy(message,"#");
+    char end_indicator[3];
+    strcpy(end_indicator,"]*");
     char temp_message[3000];
     int j;
     for(j=0;j<48;j++)
@@ -76,5 +70,5 @@ int log_create_msg(char *message)
 
         strcat(message,temp_message);
     }
-
+    strcat(message,end_indicator);
 }
