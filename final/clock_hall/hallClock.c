@@ -47,15 +47,17 @@ int update_time(struct tm time_temp)
     return 0;
 }
 
+static int count=0;
+
 // will put clock runs every secnd
 void inc_clock(void)
 {
-    static int count=0;
-    if(count++%2)
+    if(count%2)
     {
         increment_time();
         longside_func();
     }
+    count++;
 }
 
 // will runs every second
@@ -105,7 +107,7 @@ void increment_time(void)
             }
         }
     }
-    //printf("day:%d hours:%d, minutes:%d, seconds:%d\n",time_hall.tm_mday,time_hall.tm_hour,time_hall.tm_min,time_hall.tm_sec);
+    //printf("seconds:%d \n",time_hall.tm_sec);
 }
 
 
