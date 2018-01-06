@@ -14,6 +14,7 @@
 #include "update.h"
 #include "sr.h"
 #include "struct_lib.h"
+#include "../../pic_programming/Statemachines.X/statemachines.h"
 
 
 #define SYSCLK  80000000L // System clock frequency, in Hz
@@ -71,9 +72,9 @@ int main(int argc, char** argv) {
         int i;
         
         updateSensors();
-        
-        Statemachine_AirQuality();
-        
+        for(i=0;i<4;i++){
+        Statemachine_AirQuality(i);
+        }
         
         for(i=0;i<4;i++){
             Statemachine_LightControl(i);
