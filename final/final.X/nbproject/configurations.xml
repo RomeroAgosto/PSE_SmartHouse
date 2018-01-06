@@ -104,7 +104,10 @@
   <sourceRootList>
     <Elem>.</Elem>
     <Elem>../clock_hall</Elem>
+    <Elem>../CKCommon/ConfigBits</Elem>
+    <Elem>../CKCommon/UART</Elem>
     <Elem>../statemachine</Elem>
+    <Elem>../../pic_programming/Statemachines.X</Elem>
     <Elem>../CKCommon</Elem>
     <Elem>../sensors</Elem>
     <Elem>../actuators</Elem>
@@ -123,7 +126,7 @@
         <platformTool>PK3OBPlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>1.44</languageToolchainVersion>
-        <platform>3</platform>
+        <platform>2</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
