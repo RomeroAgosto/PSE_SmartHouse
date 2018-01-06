@@ -14,13 +14,13 @@
 
 int SetAirThreshold(int room,int warning_level,int threshold_for_sensor, double value);
 int GetAirQualityState(int room);
-int SetHysteresis(int stage, int sensor, double value);
+int SetHysteresis(int stage, int sensor, int value);
 int SetWarning(void);
 
 #if UNITTEST == 1
 void Statemachine_AirQuality(int room,int *test);
-void SetAirQuality(int room, double *input_values);
-void GetAirQuality(int room, double *sensor_values);
+void SetAirQuality(int room, int *input_values);
+void GetAirQuality(int room, int *sensor_values);
 void SetLightQuality(int room, int color);
 void SetVentilationState(int room, int on);
 void ResetAirQualityState();

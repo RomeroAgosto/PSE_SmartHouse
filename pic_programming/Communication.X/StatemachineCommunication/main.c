@@ -1,19 +1,19 @@
 #include "send_receive_messages.h"
+#include "create_normal_message.h"
 
-#if _DEBUG == 0
+#if UNITTEST == 0
 
-#include <proc/p32mx795f512l.h>
-#include <string.h>
-#include <stdio.h>
-#define _SUPPRESS_PLIB_WARNING 1
 #include <plib.h>
 #include <p32xxxx.h>
 #include "../CKCommon/ConfigBits/config_bits.h" // NOTE!! Must precede project file includes
 #include "../CKCommon/UART/uart.h"
-//#include <xc.h>
-#else
+#include <proc/p32mx795f512l.h>
 
 #endif
+#include <string.h>
+#include <stdio.h>
+#define _SUPPRESS_PLIB_WARNING 1
+//#include <xc.h>
 
 #define SYSCLK  80000000L // System clock frequency, in Hz
 #define PBCLOCK 40000000L // Peripheral Bus Clock frequency, in Hz
@@ -27,7 +27,7 @@
 static int send_flag=SEND_NO_MESSAGE;
 static int count_interrupt;
 int message_flag;
-char message[5000];
+//char message[5000];
 /*
  *
  *
@@ -93,6 +93,7 @@ int main(int argc, char** argv) {
     printf("init");
     init_uart();
 #endif
+    /*
     while(1){
         message_handle();
         if(message_flag==1){

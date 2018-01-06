@@ -1,17 +1,21 @@
 #include "send_receive_messages.h"
 #include <string.h>
-#include "../Schedules.X/schedules.h"
+#include "../../Schedules.X/schedules.h"
 #include <stdio.h>
+static int message_flag=1;
 
-#if RUN==1
+
+#if UNITTEST==0
 #define _SUPPRESS_PLIB_WARNING 1
 #include <plib.h>
+static char message [5000];
+#else
+
+void SetMessageFlag(int flag){
+    message_flag=flag;
+}
 #endif
 
-static int message_flag=1;
-#if RUN ==1
-static char message [5000];
-#endif
 
 int get_digits(int score_int, char *score_char) {
     int i=0, div;
@@ -99,11 +103,12 @@ long int check_received_message(char *message){
     return 1;
 
     }
-#if RUN == 0
+#if UNITTEST== 1
 char message[]="#+27300122002200*";
 #endif
-int message_handle() {
-    if (message_flag==1){
+int  Statemachine_Communication() {
+
+    if (message_flag==SEND_NEW_STATUS){
         if (message[1]=='?') {
             create_normal_message(message);
             //send_message(message);
@@ -117,7 +122,7 @@ int message_handle() {
         return 1;
 }
 
-#if RUN == 1
+#if UNITTEST== 0
 #define UART_PRIORITY_P 4
 #define UART_PRIORITY_S 3
 void init_uart(void){

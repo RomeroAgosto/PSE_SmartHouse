@@ -123,86 +123,86 @@ communication/fast:
 	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/build
 .PHONY : communication/fast
 
-create_normal_message.o: create_normal_message.c.o
+StatemachineCommunication/create_normal_message.o: StatemachineCommunication/create_normal_message.c.o
 
-.PHONY : create_normal_message.o
-
-# target to build an object file
-create_normal_message.c.o:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/create_normal_message.c.o
-.PHONY : create_normal_message.c.o
-
-create_normal_message.i: create_normal_message.c.i
-
-.PHONY : create_normal_message.i
-
-# target to preprocess a source file
-create_normal_message.c.i:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/create_normal_message.c.i
-.PHONY : create_normal_message.c.i
-
-create_normal_message.s: create_normal_message.c.s
-
-.PHONY : create_normal_message.s
-
-# target to generate assembly for a file
-create_normal_message.c.s:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/create_normal_message.c.s
-.PHONY : create_normal_message.c.s
-
-main.o: main.c.o
-
-.PHONY : main.o
+.PHONY : StatemachineCommunication/create_normal_message.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/main.c.o
-.PHONY : main.c.o
+StatemachineCommunication/create_normal_message.c.o:
+	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.o
+.PHONY : StatemachineCommunication/create_normal_message.c.o
 
-main.i: main.c.i
+StatemachineCommunication/create_normal_message.i: StatemachineCommunication/create_normal_message.c.i
 
-.PHONY : main.i
+.PHONY : StatemachineCommunication/create_normal_message.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/main.c.i
-.PHONY : main.c.i
+StatemachineCommunication/create_normal_message.c.i:
+	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.i
+.PHONY : StatemachineCommunication/create_normal_message.c.i
 
-main.s: main.c.s
+StatemachineCommunication/create_normal_message.s: StatemachineCommunication/create_normal_message.c.s
 
-.PHONY : main.s
+.PHONY : StatemachineCommunication/create_normal_message.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/main.c.s
-.PHONY : main.c.s
+StatemachineCommunication/create_normal_message.c.s:
+	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.s
+.PHONY : StatemachineCommunication/create_normal_message.c.s
 
-send_receive_messages.o: send_receive_messages.c.o
+StatemachineCommunication/main.o: StatemachineCommunication/main.c.o
 
-.PHONY : send_receive_messages.o
+.PHONY : StatemachineCommunication/main.o
 
 # target to build an object file
-send_receive_messages.c.o:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/send_receive_messages.c.o
-.PHONY : send_receive_messages.c.o
+StatemachineCommunication/main.c.o:
+	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/StatemachineCommunication/main.c.o
+.PHONY : StatemachineCommunication/main.c.o
 
-send_receive_messages.i: send_receive_messages.c.i
+StatemachineCommunication/main.i: StatemachineCommunication/main.c.i
 
-.PHONY : send_receive_messages.i
+.PHONY : StatemachineCommunication/main.i
 
 # target to preprocess a source file
-send_receive_messages.c.i:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/send_receive_messages.c.i
-.PHONY : send_receive_messages.c.i
+StatemachineCommunication/main.c.i:
+	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/StatemachineCommunication/main.c.i
+.PHONY : StatemachineCommunication/main.c.i
 
-send_receive_messages.s: send_receive_messages.c.s
+StatemachineCommunication/main.s: StatemachineCommunication/main.c.s
 
-.PHONY : send_receive_messages.s
+.PHONY : StatemachineCommunication/main.s
 
 # target to generate assembly for a file
-send_receive_messages.c.s:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/send_receive_messages.c.s
-.PHONY : send_receive_messages.c.s
+StatemachineCommunication/main.c.s:
+	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/StatemachineCommunication/main.c.s
+.PHONY : StatemachineCommunication/main.c.s
+
+StatemachineCommunication/send_receive_messages.o: StatemachineCommunication/send_receive_messages.c.o
+
+.PHONY : StatemachineCommunication/send_receive_messages.o
+
+# target to build an object file
+StatemachineCommunication/send_receive_messages.c.o:
+	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o
+.PHONY : StatemachineCommunication/send_receive_messages.c.o
+
+StatemachineCommunication/send_receive_messages.i: StatemachineCommunication/send_receive_messages.c.i
+
+.PHONY : StatemachineCommunication/send_receive_messages.i
+
+# target to preprocess a source file
+StatemachineCommunication/send_receive_messages.c.i:
+	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.i
+.PHONY : StatemachineCommunication/send_receive_messages.c.i
+
+StatemachineCommunication/send_receive_messages.s: StatemachineCommunication/send_receive_messages.c.s
+
+.PHONY : StatemachineCommunication/send_receive_messages.s
+
+# target to generate assembly for a file
+StatemachineCommunication/send_receive_messages.c.s:
+	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.s
+.PHONY : StatemachineCommunication/send_receive_messages.c.s
 
 # Help Target
 help:
@@ -213,15 +213,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... communication"
-	@echo "... create_normal_message.o"
-	@echo "... create_normal_message.i"
-	@echo "... create_normal_message.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... send_receive_messages.o"
-	@echo "... send_receive_messages.i"
-	@echo "... send_receive_messages.s"
+	@echo "... StatemachineCommunication/create_normal_message.o"
+	@echo "... StatemachineCommunication/create_normal_message.i"
+	@echo "... StatemachineCommunication/create_normal_message.s"
+	@echo "... StatemachineCommunication/main.o"
+	@echo "... StatemachineCommunication/main.i"
+	@echo "... StatemachineCommunication/main.s"
+	@echo "... StatemachineCommunication/send_receive_messages.o"
+	@echo "... StatemachineCommunication/send_receive_messages.i"
+	@echo "... StatemachineCommunication/send_receive_messages.s"
 .PHONY : help
 
 
