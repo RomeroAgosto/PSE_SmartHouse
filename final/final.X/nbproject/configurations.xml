@@ -4,119 +4,35 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <logicalFolder name="Statemachines.X"
-                     displayName="Statemachines.X"
+      <logicalFolder name="CKCommon" displayName="CKCommon" projectFiles="true">
+        <logicalFolder name="ConfigBits" displayName="ConfigBits" projectFiles="true">
+          <itemPath>../CKCommon/ConfigBits/config_bits.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="UART" displayName="UART" projectFiles="true">
+          <itemPath>../CKCommon/UART/uart.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="clock_hall" displayName="clock_hall" projectFiles="true">
+        <itemPath>../clock_hall/hallClock.h</itemPath>
+        <itemPath>../clock_hall/timer_libs.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="sensors" displayName="sensors" projectFiles="true">
+        <itemPath>../sensors/adc_init.h</itemPath>
+        <itemPath>../sensors/i2c.h</itemPath>
+        <itemPath>../sensors/sr.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="statemachine"
+                     displayName="statemachine"
                      projectFiles="true">
-        <logicalFolder name="AirQuality" displayName="AirQuality" projectFiles="true">
-          <logicalFolder name="Statemachine_AirQuality"
-                         displayName="Statemachine_AirQuality"
-                         projectFiles="true">
-            <itemPath>../../pic_programming/Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.h</itemPath>
-          </logicalFolder>
-          <logicalFolder name="UnitTest_Tester"
-                         displayName="UnitTest_Tester"
-                         projectFiles="true">
-          </logicalFolder>
-        </logicalFolder>
-        <logicalFolder name="AirTemperature"
-                       displayName="AirTemperature"
-                       projectFiles="true">
-          <logicalFolder name="Statemachine_AirTemperature"
-                         displayName="Statemachine_AirTemperature"
-                         projectFiles="true">
-            <itemPath>../../pic_programming/Statemachines.X/AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.h</itemPath>
-          </logicalFolder>
-          <logicalFolder name="UnitTest_Tester"
-                         displayName="UnitTest_Tester"
-                         projectFiles="true">
-          </logicalFolder>
-        </logicalFolder>
-        <logicalFolder name="cmake-build-debug"
-                       displayName="cmake-build-debug"
-                       projectFiles="true">
-          <logicalFolder name="CMakeFiles" displayName="CMakeFiles" projectFiles="true">
-            <logicalFolder name="3.8.2" displayName="3.8.2" projectFiles="true">
-              <logicalFolder name="CompilerIdC" displayName="CompilerIdC" projectFiles="true">
-              </logicalFolder>
-              <logicalFolder name="CompilerIdCXX"
-                             displayName="CompilerIdCXX"
-                             projectFiles="true">
-              </logicalFolder>
-            </logicalFolder>
-            <logicalFolder name="Statemachines_X.dir"
-                           displayName="Statemachines_X.dir"
-                           projectFiles="true">
-              <logicalFolder name="AirQuality" displayName="AirQuality" projectFiles="true">
-                <logicalFolder name="Statemachine_AirQuality"
-                               displayName="Statemachine_AirQuality"
-                               projectFiles="true">
-                </logicalFolder>
-              </logicalFolder>
-              <logicalFolder name="LightControl"
-                             displayName="LightControl"
-                             projectFiles="true">
-                <logicalFolder name="StatemachineLightControl"
-                               displayName="StatemachineLightControl"
-                               projectFiles="true">
-                </logicalFolder>
-              </logicalFolder>
-              <logicalFolder name="Statemachine_AirTemperature"
-                             displayName="Statemachine_AirTemperature"
-                             projectFiles="true">
-                <logicalFolder name="Statemachine_AirTemperature"
-                               displayName="Statemachine_AirTemperature"
-                               projectFiles="true">
-                </logicalFolder>
-              </logicalFolder>
-              <logicalFolder name="Statemachine_Water"
-                             displayName="Statemachine_Water"
-                             projectFiles="true">
-                <logicalFolder name="Statemachine_Water"
-                               displayName="Statemachine_Water"
-                               projectFiles="true">
-                </logicalFolder>
-              </logicalFolder>
-            </logicalFolder>
-          </logicalFolder>
-        </logicalFolder>
-        <logicalFolder name="LightControl"
-                       displayName="LightControl"
-                       projectFiles="true">
-          <logicalFolder name="StatemachineLightControl"
-                         displayName="StatemachineLightControl"
-                         projectFiles="true">
-            <itemPath>../../pic_programming/Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.h</itemPath>
-          </logicalFolder>
-          <logicalFolder name="UnitTest_Tester"
-                         displayName="UnitTest_Tester"
-                         projectFiles="true">
-          </logicalFolder>
-        </logicalFolder>
-        <logicalFolder name="WaterTemperature"
-                       displayName="WaterTemperature"
-                       projectFiles="true">
-          <logicalFolder name="Statemachine_Water"
-                         displayName="Statemachine_Water"
-                         projectFiles="true">
-            <itemPath>../../pic_programming/Statemachines.X/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.h</itemPath>
-          </logicalFolder>
-          <logicalFolder name="UnitTest_Tester"
-                         displayName="UnitTest_Tester"
-                         projectFiles="true">
-          </logicalFolder>
-        </logicalFolder>
-        <itemPath>../../pic_programming/Statemachines.X/statemachines.h</itemPath>
+        <itemPath>../statemachine/statemachines.h</itemPath>
+        <itemPath>../statemachine/statemachine_airquality_control.h</itemPath>
+        <itemPath>../statemachine/statemachine_airtemp_control.h</itemPath>
+        <itemPath>../statemachine/statemachine_light_control.h</itemPath>
+        <itemPath>../statemachine/statemachine_watertemp_control.h</itemPath>
       </logicalFolder>
       <itemPath>struct_lib.h</itemPath>
-      <itemPath>../clock_hall/timer_libs.h</itemPath>
-      <itemPath>../CKCommon/ConfigBits/config_bits.h</itemPath>
-      <itemPath>../CKCommon/UART/uart.h</itemPath>
-      <itemPath>../clock_hall/hallClock.h</itemPath>
-      <itemPath>adc_init.h</itemPath>
       <itemPath>desiredValues.h</itemPath>
-      <itemPath>i2c.h</itemPath>
       <itemPath>update.h</itemPath>
-      <itemPath>sr.h</itemPath>
       <itemPath>send_receive_messages.h</itemPath>
       <itemPath>schedules.h</itemPath>
       <itemPath>actuators.h</itemPath>
@@ -128,76 +44,40 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <logicalFolder name="Statemachines.X"
-                     displayName="Statemachines.X"
-                     projectFiles="true">
-        <logicalFolder name="AirQuality" displayName="AirQuality" projectFiles="true">
-          <logicalFolder name="Statemachine_AirQuality"
-                         displayName="Statemachine_AirQuality"
-                         projectFiles="true">
-            <itemPath>../../pic_programming/Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c</itemPath>
-          </logicalFolder>
-          <logicalFolder name="UnitTest_Tester"
-                         displayName="UnitTest_Tester"
-                         projectFiles="true">
-          </logicalFolder>
+      <logicalFolder name="CKCommon" displayName="CKCommon" projectFiles="true">
+        <logicalFolder name="ConfigBits" displayName="ConfigBits" projectFiles="true">
         </logicalFolder>
-        <logicalFolder name="AirTemperature"
-                       displayName="AirTemperature"
-                       projectFiles="true">
-          <logicalFolder name="Statemachine_AirTemperature"
-                         displayName="Statemachine_AirTemperature"
-                         projectFiles="true">
-            <itemPath>../../pic_programming/Statemachines.X/AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c</itemPath>
-          </logicalFolder>
-          <logicalFolder name="UnitTest_Tester"
-                         displayName="UnitTest_Tester"
-                         projectFiles="true">
-          </logicalFolder>
-        </logicalFolder>
-        <logicalFolder name="LightControl"
-                       displayName="LightControl"
-                       projectFiles="true">
-          <logicalFolder name="StatemachineLightControl"
-                         displayName="StatemachineLightControl"
-                         projectFiles="true">
-            <itemPath>../../pic_programming/Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.c</itemPath>
-          </logicalFolder>
-          <logicalFolder name="UnitTest_Tester"
-                         displayName="UnitTest_Tester"
-                         projectFiles="true">
-          </logicalFolder>
-        </logicalFolder>
-        <logicalFolder name="WaterTemperature"
-                       displayName="WaterTemperature"
-                       projectFiles="true">
-          <logicalFolder name="Statemachine_Water"
-                         displayName="Statemachine_Water"
-                         projectFiles="true">
-            <itemPath>../../pic_programming/Statemachines.X/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c</itemPath>
-          </logicalFolder>
-          <logicalFolder name="UnitTest_Tester"
-                         displayName="UnitTest_Tester"
-                         projectFiles="true">
-          </logicalFolder>
+        <logicalFolder name="UART" displayName="UART" projectFiles="true">
+          <itemPath>../CKCommon/UART/uart.c</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <itemPath>../clock_hall/timer_libs.c</itemPath>
-      <itemPath>../CKCommon/UART/uart.c</itemPath>
-      <itemPath>../clock_hall/hallClock.c</itemPath>
+      <logicalFolder name="clock_hall" displayName="clock_hall" projectFiles="true">
+        <itemPath>../clock_hall/hallClock.c</itemPath>
+        <itemPath>../clock_hall/timer_libs.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="sensors" displayName="sensors" projectFiles="true">
+        <itemPath>../sensors/adc_init.c</itemPath>
+        <itemPath>../sensors/air_quality_level.c</itemPath>
+        <itemPath>../sensors/i2c.c</itemPath>
+        <itemPath>../sensors/temp_analog.c</itemPath>
+        <itemPath>../sensors/temp_digital.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="statemachine"
+                     displayName="statemachine"
+                     projectFiles="true">
+        <itemPath>../statemachine/statemachine_airquality_control.c</itemPath>
+        <itemPath>../statemachine/statemachine_airtemp_control.c</itemPath>
+        <itemPath>../statemachine/statemachine_light_control.c</itemPath>
+        <itemPath>../statemachine/statemachine_watertemp_control.c</itemPath>
+      </logicalFolder>
       <itemPath>main.c</itemPath>
-      <itemPath>adc_init.c</itemPath>
       <itemPath>desiredValues.c</itemPath>
-      <itemPath>i2c.c</itemPath>
       <itemPath>update.c</itemPath>
       <itemPath>motion_detection.c</itemPath>
-      <itemPath>temp_analog.c</itemPath>
-      <itemPath>temp_digital.c</itemPath>
       <itemPath>send_receive_messages.c</itemPath>
       <itemPath>schedules.c</itemPath>
       <itemPath>create_normal_message.c</itemPath>
       <itemPath>actuators.c</itemPath>
-      <itemPath>air_quality_level.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -208,10 +88,9 @@
   <sourceRootList>
     <Elem>.</Elem>
     <Elem>../clock_hall</Elem>
-    <Elem>../CKCommon/ConfigBits</Elem>
-    <Elem>../CKCommon/UART</Elem>
     <Elem>../statemachine</Elem>
-    <Elem>../../pic_programming/Statemachines.X</Elem>
+    <Elem>../CKCommon</Elem>
+    <Elem>../sensors</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

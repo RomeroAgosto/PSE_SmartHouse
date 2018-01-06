@@ -1,7 +1,7 @@
 #include "struct_lib.h"
 #include "update.h"
 #include <stdio.h>
-#include "sr.h"
+#include "../sensors/sr.h"
 #include <p32xxxx.h>
 
 

@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../clock_hall/timer_libs.c ../CKCommon/UART/uart.c ../clock_hall/hallClock.c main.c adc_init.c desiredValues.c i2c.c update.c motion_detection.c temp_analog.c temp_digital.c send_receive_messages.c schedules.c create_normal_message.c actuators.c air_quality_level.c ../../pic_programming/Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c ../../pic_programming/Statemachines.X/AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c ../../pic_programming/Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.c ../../pic_programming/Statemachines.X/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c desiredValues.c update.c motion_detection.c send_receive_messages.c schedules.c create_normal_message.c actuators.c ../statemachine/statemachine_airquality_control.c ../statemachine/statemachine_airtemp_control.c ../statemachine/statemachine_light_control.c ../statemachine/statemachine_watertemp_control.c ../clock_hall/hallClock.c ../clock_hall/timer_libs.c ../CKCommon/UART/uart.c ../sensors/adc_init.c ../sensors/air_quality_level.c ../sensors/i2c.c ../sensors/temp_analog.c ../sensors/temp_digital.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/731469447/timer_libs.o ${OBJECTDIR}/_ext/1062335525/uart.o ${OBJECTDIR}/_ext/731469447/hallClock.o ${OBJECTDIR}/main.o ${OBJECTDIR}/adc_init.o ${OBJECTDIR}/desiredValues.o ${OBJECTDIR}/i2c.o ${OBJECTDIR}/update.o ${OBJECTDIR}/motion_detection.o ${OBJECTDIR}/temp_analog.o ${OBJECTDIR}/temp_digital.o ${OBJECTDIR}/send_receive_messages.o ${OBJECTDIR}/schedules.o ${OBJECTDIR}/create_normal_message.o ${OBJECTDIR}/actuators.o ${OBJECTDIR}/air_quality_level.o ${OBJECTDIR}/_ext/233402921/statemachine_airquality_control.o ${OBJECTDIR}/_ext/269988671/statemachine_airtemp_control.o ${OBJECTDIR}/_ext/1943155218/statemachine_light_control.o ${OBJECTDIR}/_ext/361023501/statemachine_watertemp_control.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/731469447/timer_libs.o.d ${OBJECTDIR}/_ext/1062335525/uart.o.d ${OBJECTDIR}/_ext/731469447/hallClock.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/adc_init.o.d ${OBJECTDIR}/desiredValues.o.d ${OBJECTDIR}/i2c.o.d ${OBJECTDIR}/update.o.d ${OBJECTDIR}/motion_detection.o.d ${OBJECTDIR}/temp_analog.o.d ${OBJECTDIR}/temp_digital.o.d ${OBJECTDIR}/send_receive_messages.o.d ${OBJECTDIR}/schedules.o.d ${OBJECTDIR}/create_normal_message.o.d ${OBJECTDIR}/actuators.o.d ${OBJECTDIR}/air_quality_level.o.d ${OBJECTDIR}/_ext/233402921/statemachine_airquality_control.o.d ${OBJECTDIR}/_ext/269988671/statemachine_airtemp_control.o.d ${OBJECTDIR}/_ext/1943155218/statemachine_light_control.o.d ${OBJECTDIR}/_ext/361023501/statemachine_watertemp_control.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/desiredValues.o ${OBJECTDIR}/update.o ${OBJECTDIR}/motion_detection.o ${OBJECTDIR}/send_receive_messages.o ${OBJECTDIR}/schedules.o ${OBJECTDIR}/create_normal_message.o ${OBJECTDIR}/actuators.o ${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o ${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o ${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o ${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o ${OBJECTDIR}/_ext/731469447/hallClock.o ${OBJECTDIR}/_ext/731469447/timer_libs.o ${OBJECTDIR}/_ext/1062335525/uart.o ${OBJECTDIR}/_ext/299869866/adc_init.o ${OBJECTDIR}/_ext/299869866/air_quality_level.o ${OBJECTDIR}/_ext/299869866/i2c.o ${OBJECTDIR}/_ext/299869866/temp_analog.o ${OBJECTDIR}/_ext/299869866/temp_digital.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/desiredValues.o.d ${OBJECTDIR}/update.o.d ${OBJECTDIR}/motion_detection.o.d ${OBJECTDIR}/send_receive_messages.o.d ${OBJECTDIR}/schedules.o.d ${OBJECTDIR}/create_normal_message.o.d ${OBJECTDIR}/actuators.o.d ${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o.d ${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o.d ${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o.d ${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o.d ${OBJECTDIR}/_ext/731469447/hallClock.o.d ${OBJECTDIR}/_ext/731469447/timer_libs.o.d ${OBJECTDIR}/_ext/1062335525/uart.o.d ${OBJECTDIR}/_ext/299869866/adc_init.o.d ${OBJECTDIR}/_ext/299869866/air_quality_level.o.d ${OBJECTDIR}/_ext/299869866/i2c.o.d ${OBJECTDIR}/_ext/299869866/temp_analog.o.d ${OBJECTDIR}/_ext/299869866/temp_digital.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/731469447/timer_libs.o ${OBJECTDIR}/_ext/1062335525/uart.o ${OBJECTDIR}/_ext/731469447/hallClock.o ${OBJECTDIR}/main.o ${OBJECTDIR}/adc_init.o ${OBJECTDIR}/desiredValues.o ${OBJECTDIR}/i2c.o ${OBJECTDIR}/update.o ${OBJECTDIR}/motion_detection.o ${OBJECTDIR}/temp_analog.o ${OBJECTDIR}/temp_digital.o ${OBJECTDIR}/send_receive_messages.o ${OBJECTDIR}/schedules.o ${OBJECTDIR}/create_normal_message.o ${OBJECTDIR}/actuators.o ${OBJECTDIR}/air_quality_level.o ${OBJECTDIR}/_ext/233402921/statemachine_airquality_control.o ${OBJECTDIR}/_ext/269988671/statemachine_airtemp_control.o ${OBJECTDIR}/_ext/1943155218/statemachine_light_control.o ${OBJECTDIR}/_ext/361023501/statemachine_watertemp_control.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/desiredValues.o ${OBJECTDIR}/update.o ${OBJECTDIR}/motion_detection.o ${OBJECTDIR}/send_receive_messages.o ${OBJECTDIR}/schedules.o ${OBJECTDIR}/create_normal_message.o ${OBJECTDIR}/actuators.o ${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o ${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o ${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o ${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o ${OBJECTDIR}/_ext/731469447/hallClock.o ${OBJECTDIR}/_ext/731469447/timer_libs.o ${OBJECTDIR}/_ext/1062335525/uart.o ${OBJECTDIR}/_ext/299869866/adc_init.o ${OBJECTDIR}/_ext/299869866/air_quality_level.o ${OBJECTDIR}/_ext/299869866/i2c.o ${OBJECTDIR}/_ext/299869866/temp_analog.o ${OBJECTDIR}/_ext/299869866/temp_digital.o
 
 # Source Files
-SOURCEFILES=../clock_hall/timer_libs.c ../CKCommon/UART/uart.c ../clock_hall/hallClock.c main.c adc_init.c desiredValues.c i2c.c update.c motion_detection.c temp_analog.c temp_digital.c send_receive_messages.c schedules.c create_normal_message.c actuators.c air_quality_level.c ../../pic_programming/Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c ../../pic_programming/Statemachines.X/AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c ../../pic_programming/Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.c ../../pic_programming/Statemachines.X/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c
+SOURCEFILES=main.c desiredValues.c update.c motion_detection.c send_receive_messages.c schedules.c create_normal_message.c actuators.c ../statemachine/statemachine_airquality_control.c ../statemachine/statemachine_airtemp_control.c ../statemachine/statemachine_light_control.c ../statemachine/statemachine_watertemp_control.c ../clock_hall/hallClock.c ../clock_hall/timer_libs.c ../CKCommon/UART/uart.c ../sensors/adc_init.c ../sensors/air_quality_level.c ../sensors/i2c.c ../sensors/temp_analog.c ../sensors/temp_digital.c
 
 
 CFLAGS=
@@ -106,47 +106,17 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/731469447/timer_libs.o: ../clock_hall/timer_libs.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/731469447" 
-	@${RM} ${OBJECTDIR}/_ext/731469447/timer_libs.o.d 
-	@${RM} ${OBJECTDIR}/_ext/731469447/timer_libs.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/731469447/timer_libs.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/731469447/timer_libs.o.d" -o ${OBJECTDIR}/_ext/731469447/timer_libs.o ../clock_hall/timer_libs.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
-	
-${OBJECTDIR}/_ext/1062335525/uart.o: ../CKCommon/UART/uart.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1062335525" 
-	@${RM} ${OBJECTDIR}/_ext/1062335525/uart.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1062335525/uart.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1062335525/uart.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1062335525/uart.o.d" -o ${OBJECTDIR}/_ext/1062335525/uart.o ../CKCommon/UART/uart.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
-	
-${OBJECTDIR}/_ext/731469447/hallClock.o: ../clock_hall/hallClock.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/731469447" 
-	@${RM} ${OBJECTDIR}/_ext/731469447/hallClock.o.d 
-	@${RM} ${OBJECTDIR}/_ext/731469447/hallClock.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/731469447/hallClock.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/731469447/hallClock.o.d" -o ${OBJECTDIR}/_ext/731469447/hallClock.o ../clock_hall/hallClock.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
-	
 ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
 	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/adc_init.o: adc_init.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/adc_init.o.d 
-	@${RM} ${OBJECTDIR}/adc_init.o 
-	@${FIXDEPS} "${OBJECTDIR}/adc_init.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/adc_init.o.d" -o ${OBJECTDIR}/adc_init.o adc_init.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
-	
 ${OBJECTDIR}/desiredValues.o: desiredValues.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/desiredValues.o.d 
 	@${RM} ${OBJECTDIR}/desiredValues.o 
 	@${FIXDEPS} "${OBJECTDIR}/desiredValues.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/desiredValues.o.d" -o ${OBJECTDIR}/desiredValues.o desiredValues.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
-	
-${OBJECTDIR}/i2c.o: i2c.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/i2c.o.d 
-	@${RM} ${OBJECTDIR}/i2c.o 
-	@${FIXDEPS} "${OBJECTDIR}/i2c.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/i2c.o.d" -o ${OBJECTDIR}/i2c.o i2c.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 ${OBJECTDIR}/update.o: update.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -159,18 +129,6 @@ ${OBJECTDIR}/motion_detection.o: motion_detection.c  nbproject/Makefile-${CND_CO
 	@${RM} ${OBJECTDIR}/motion_detection.o.d 
 	@${RM} ${OBJECTDIR}/motion_detection.o 
 	@${FIXDEPS} "${OBJECTDIR}/motion_detection.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/motion_detection.o.d" -o ${OBJECTDIR}/motion_detection.o motion_detection.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
-	
-${OBJECTDIR}/temp_analog.o: temp_analog.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/temp_analog.o.d 
-	@${RM} ${OBJECTDIR}/temp_analog.o 
-	@${FIXDEPS} "${OBJECTDIR}/temp_analog.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/temp_analog.o.d" -o ${OBJECTDIR}/temp_analog.o temp_analog.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
-	
-${OBJECTDIR}/temp_digital.o: temp_digital.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/temp_digital.o.d 
-	@${RM} ${OBJECTDIR}/temp_digital.o 
-	@${FIXDEPS} "${OBJECTDIR}/temp_digital.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/temp_digital.o.d" -o ${OBJECTDIR}/temp_digital.o temp_digital.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 ${OBJECTDIR}/send_receive_messages.o: send_receive_messages.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -196,78 +154,90 @@ ${OBJECTDIR}/actuators.o: actuators.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/actuators.o 
 	@${FIXDEPS} "${OBJECTDIR}/actuators.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/actuators.o.d" -o ${OBJECTDIR}/actuators.o actuators.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/air_quality_level.o: air_quality_level.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/air_quality_level.o.d 
-	@${RM} ${OBJECTDIR}/air_quality_level.o 
-	@${FIXDEPS} "${OBJECTDIR}/air_quality_level.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/air_quality_level.o.d" -o ${OBJECTDIR}/air_quality_level.o air_quality_level.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o: ../statemachine/statemachine_airquality_control.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1570893445" 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o.d" -o ${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o ../statemachine/statemachine_airquality_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/_ext/233402921/statemachine_airquality_control.o: ../../pic_programming/Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/233402921" 
-	@${RM} ${OBJECTDIR}/_ext/233402921/statemachine_airquality_control.o.d 
-	@${RM} ${OBJECTDIR}/_ext/233402921/statemachine_airquality_control.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/233402921/statemachine_airquality_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/233402921/statemachine_airquality_control.o.d" -o ${OBJECTDIR}/_ext/233402921/statemachine_airquality_control.o ../../pic_programming/Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o: ../statemachine/statemachine_airtemp_control.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1570893445" 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o.d" -o ${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o ../statemachine/statemachine_airtemp_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/_ext/269988671/statemachine_airtemp_control.o: ../../pic_programming/Statemachines.X/AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/269988671" 
-	@${RM} ${OBJECTDIR}/_ext/269988671/statemachine_airtemp_control.o.d 
-	@${RM} ${OBJECTDIR}/_ext/269988671/statemachine_airtemp_control.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/269988671/statemachine_airtemp_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/269988671/statemachine_airtemp_control.o.d" -o ${OBJECTDIR}/_ext/269988671/statemachine_airtemp_control.o ../../pic_programming/Statemachines.X/AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o: ../statemachine/statemachine_light_control.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1570893445" 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o.d" -o ${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o ../statemachine/statemachine_light_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/_ext/1943155218/statemachine_light_control.o: ../../pic_programming/Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1943155218" 
-	@${RM} ${OBJECTDIR}/_ext/1943155218/statemachine_light_control.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1943155218/statemachine_light_control.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1943155218/statemachine_light_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1943155218/statemachine_light_control.o.d" -o ${OBJECTDIR}/_ext/1943155218/statemachine_light_control.o ../../pic_programming/Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
-	
-${OBJECTDIR}/_ext/361023501/statemachine_watertemp_control.o: ../../pic_programming/Statemachines.X/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/361023501" 
-	@${RM} ${OBJECTDIR}/_ext/361023501/statemachine_watertemp_control.o.d 
-	@${RM} ${OBJECTDIR}/_ext/361023501/statemachine_watertemp_control.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/361023501/statemachine_watertemp_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/361023501/statemachine_watertemp_control.o.d" -o ${OBJECTDIR}/_ext/361023501/statemachine_watertemp_control.o ../../pic_programming/Statemachines.X/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
-	
-else
-${OBJECTDIR}/_ext/731469447/timer_libs.o: ../clock_hall/timer_libs.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/731469447" 
-	@${RM} ${OBJECTDIR}/_ext/731469447/timer_libs.o.d 
-	@${RM} ${OBJECTDIR}/_ext/731469447/timer_libs.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/731469447/timer_libs.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/731469447/timer_libs.o.d" -o ${OBJECTDIR}/_ext/731469447/timer_libs.o ../clock_hall/timer_libs.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
-	
-${OBJECTDIR}/_ext/1062335525/uart.o: ../CKCommon/UART/uart.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1062335525" 
-	@${RM} ${OBJECTDIR}/_ext/1062335525/uart.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1062335525/uart.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1062335525/uart.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1062335525/uart.o.d" -o ${OBJECTDIR}/_ext/1062335525/uart.o ../CKCommon/UART/uart.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o: ../statemachine/statemachine_watertemp_control.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1570893445" 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o.d" -o ${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o ../statemachine/statemachine_watertemp_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 ${OBJECTDIR}/_ext/731469447/hallClock.o: ../clock_hall/hallClock.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/731469447" 
 	@${RM} ${OBJECTDIR}/_ext/731469447/hallClock.o.d 
 	@${RM} ${OBJECTDIR}/_ext/731469447/hallClock.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/731469447/hallClock.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/731469447/hallClock.o.d" -o ${OBJECTDIR}/_ext/731469447/hallClock.o ../clock_hall/hallClock.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/731469447/hallClock.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/731469447/hallClock.o.d" -o ${OBJECTDIR}/_ext/731469447/hallClock.o ../clock_hall/hallClock.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
+${OBJECTDIR}/_ext/731469447/timer_libs.o: ../clock_hall/timer_libs.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/731469447" 
+	@${RM} ${OBJECTDIR}/_ext/731469447/timer_libs.o.d 
+	@${RM} ${OBJECTDIR}/_ext/731469447/timer_libs.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/731469447/timer_libs.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/731469447/timer_libs.o.d" -o ${OBJECTDIR}/_ext/731469447/timer_libs.o ../clock_hall/timer_libs.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/1062335525/uart.o: ../CKCommon/UART/uart.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1062335525" 
+	@${RM} ${OBJECTDIR}/_ext/1062335525/uart.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1062335525/uart.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1062335525/uart.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1062335525/uart.o.d" -o ${OBJECTDIR}/_ext/1062335525/uart.o ../CKCommon/UART/uart.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/299869866/adc_init.o: ../sensors/adc_init.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/299869866" 
+	@${RM} ${OBJECTDIR}/_ext/299869866/adc_init.o.d 
+	@${RM} ${OBJECTDIR}/_ext/299869866/adc_init.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/299869866/adc_init.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/299869866/adc_init.o.d" -o ${OBJECTDIR}/_ext/299869866/adc_init.o ../sensors/adc_init.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/299869866/air_quality_level.o: ../sensors/air_quality_level.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/299869866" 
+	@${RM} ${OBJECTDIR}/_ext/299869866/air_quality_level.o.d 
+	@${RM} ${OBJECTDIR}/_ext/299869866/air_quality_level.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/299869866/air_quality_level.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/299869866/air_quality_level.o.d" -o ${OBJECTDIR}/_ext/299869866/air_quality_level.o ../sensors/air_quality_level.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/299869866/i2c.o: ../sensors/i2c.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/299869866" 
+	@${RM} ${OBJECTDIR}/_ext/299869866/i2c.o.d 
+	@${RM} ${OBJECTDIR}/_ext/299869866/i2c.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/299869866/i2c.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/299869866/i2c.o.d" -o ${OBJECTDIR}/_ext/299869866/i2c.o ../sensors/i2c.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/299869866/temp_analog.o: ../sensors/temp_analog.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/299869866" 
+	@${RM} ${OBJECTDIR}/_ext/299869866/temp_analog.o.d 
+	@${RM} ${OBJECTDIR}/_ext/299869866/temp_analog.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/299869866/temp_analog.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/299869866/temp_analog.o.d" -o ${OBJECTDIR}/_ext/299869866/temp_analog.o ../sensors/temp_analog.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/299869866/temp_digital.o: ../sensors/temp_digital.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/299869866" 
+	@${RM} ${OBJECTDIR}/_ext/299869866/temp_digital.o.d 
+	@${RM} ${OBJECTDIR}/_ext/299869866/temp_digital.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/299869866/temp_digital.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/299869866/temp_digital.o.d" -o ${OBJECTDIR}/_ext/299869866/temp_digital.o ../sensors/temp_digital.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+else
 ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
 	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/adc_init.o: adc_init.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/adc_init.o.d 
-	@${RM} ${OBJECTDIR}/adc_init.o 
-	@${FIXDEPS} "${OBJECTDIR}/adc_init.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/adc_init.o.d" -o ${OBJECTDIR}/adc_init.o adc_init.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
-	
 ${OBJECTDIR}/desiredValues.o: desiredValues.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/desiredValues.o.d 
 	@${RM} ${OBJECTDIR}/desiredValues.o 
 	@${FIXDEPS} "${OBJECTDIR}/desiredValues.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/desiredValues.o.d" -o ${OBJECTDIR}/desiredValues.o desiredValues.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
-	
-${OBJECTDIR}/i2c.o: i2c.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/i2c.o.d 
-	@${RM} ${OBJECTDIR}/i2c.o 
-	@${FIXDEPS} "${OBJECTDIR}/i2c.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/i2c.o.d" -o ${OBJECTDIR}/i2c.o i2c.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 ${OBJECTDIR}/update.o: update.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -280,18 +250,6 @@ ${OBJECTDIR}/motion_detection.o: motion_detection.c  nbproject/Makefile-${CND_CO
 	@${RM} ${OBJECTDIR}/motion_detection.o.d 
 	@${RM} ${OBJECTDIR}/motion_detection.o 
 	@${FIXDEPS} "${OBJECTDIR}/motion_detection.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/motion_detection.o.d" -o ${OBJECTDIR}/motion_detection.o motion_detection.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
-	
-${OBJECTDIR}/temp_analog.o: temp_analog.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/temp_analog.o.d 
-	@${RM} ${OBJECTDIR}/temp_analog.o 
-	@${FIXDEPS} "${OBJECTDIR}/temp_analog.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/temp_analog.o.d" -o ${OBJECTDIR}/temp_analog.o temp_analog.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
-	
-${OBJECTDIR}/temp_digital.o: temp_digital.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/temp_digital.o.d 
-	@${RM} ${OBJECTDIR}/temp_digital.o 
-	@${FIXDEPS} "${OBJECTDIR}/temp_digital.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/temp_digital.o.d" -o ${OBJECTDIR}/temp_digital.o temp_digital.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 ${OBJECTDIR}/send_receive_messages.o: send_receive_messages.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -317,35 +275,77 @@ ${OBJECTDIR}/actuators.o: actuators.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/actuators.o 
 	@${FIXDEPS} "${OBJECTDIR}/actuators.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/actuators.o.d" -o ${OBJECTDIR}/actuators.o actuators.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/air_quality_level.o: air_quality_level.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/air_quality_level.o.d 
-	@${RM} ${OBJECTDIR}/air_quality_level.o 
-	@${FIXDEPS} "${OBJECTDIR}/air_quality_level.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/air_quality_level.o.d" -o ${OBJECTDIR}/air_quality_level.o air_quality_level.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o: ../statemachine/statemachine_airquality_control.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1570893445" 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o.d" -o ${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o ../statemachine/statemachine_airquality_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/_ext/233402921/statemachine_airquality_control.o: ../../pic_programming/Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/233402921" 
-	@${RM} ${OBJECTDIR}/_ext/233402921/statemachine_airquality_control.o.d 
-	@${RM} ${OBJECTDIR}/_ext/233402921/statemachine_airquality_control.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/233402921/statemachine_airquality_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/233402921/statemachine_airquality_control.o.d" -o ${OBJECTDIR}/_ext/233402921/statemachine_airquality_control.o ../../pic_programming/Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o: ../statemachine/statemachine_airtemp_control.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1570893445" 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o.d" -o ${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o ../statemachine/statemachine_airtemp_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/_ext/269988671/statemachine_airtemp_control.o: ../../pic_programming/Statemachines.X/AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/269988671" 
-	@${RM} ${OBJECTDIR}/_ext/269988671/statemachine_airtemp_control.o.d 
-	@${RM} ${OBJECTDIR}/_ext/269988671/statemachine_airtemp_control.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/269988671/statemachine_airtemp_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/269988671/statemachine_airtemp_control.o.d" -o ${OBJECTDIR}/_ext/269988671/statemachine_airtemp_control.o ../../pic_programming/Statemachines.X/AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o: ../statemachine/statemachine_light_control.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1570893445" 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o.d" -o ${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o ../statemachine/statemachine_light_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/_ext/1943155218/statemachine_light_control.o: ../../pic_programming/Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1943155218" 
-	@${RM} ${OBJECTDIR}/_ext/1943155218/statemachine_light_control.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1943155218/statemachine_light_control.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1943155218/statemachine_light_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1943155218/statemachine_light_control.o.d" -o ${OBJECTDIR}/_ext/1943155218/statemachine_light_control.o ../../pic_programming/Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o: ../statemachine/statemachine_watertemp_control.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1570893445" 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o.d" -o ${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o ../statemachine/statemachine_watertemp_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/_ext/361023501/statemachine_watertemp_control.o: ../../pic_programming/Statemachines.X/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/361023501" 
-	@${RM} ${OBJECTDIR}/_ext/361023501/statemachine_watertemp_control.o.d 
-	@${RM} ${OBJECTDIR}/_ext/361023501/statemachine_watertemp_control.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/361023501/statemachine_watertemp_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/361023501/statemachine_watertemp_control.o.d" -o ${OBJECTDIR}/_ext/361023501/statemachine_watertemp_control.o ../../pic_programming/Statemachines.X/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/731469447/hallClock.o: ../clock_hall/hallClock.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/731469447" 
+	@${RM} ${OBJECTDIR}/_ext/731469447/hallClock.o.d 
+	@${RM} ${OBJECTDIR}/_ext/731469447/hallClock.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/731469447/hallClock.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/731469447/hallClock.o.d" -o ${OBJECTDIR}/_ext/731469447/hallClock.o ../clock_hall/hallClock.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/731469447/timer_libs.o: ../clock_hall/timer_libs.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/731469447" 
+	@${RM} ${OBJECTDIR}/_ext/731469447/timer_libs.o.d 
+	@${RM} ${OBJECTDIR}/_ext/731469447/timer_libs.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/731469447/timer_libs.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/731469447/timer_libs.o.d" -o ${OBJECTDIR}/_ext/731469447/timer_libs.o ../clock_hall/timer_libs.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/1062335525/uart.o: ../CKCommon/UART/uart.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1062335525" 
+	@${RM} ${OBJECTDIR}/_ext/1062335525/uart.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1062335525/uart.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1062335525/uart.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1062335525/uart.o.d" -o ${OBJECTDIR}/_ext/1062335525/uart.o ../CKCommon/UART/uart.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/299869866/adc_init.o: ../sensors/adc_init.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/299869866" 
+	@${RM} ${OBJECTDIR}/_ext/299869866/adc_init.o.d 
+	@${RM} ${OBJECTDIR}/_ext/299869866/adc_init.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/299869866/adc_init.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/299869866/adc_init.o.d" -o ${OBJECTDIR}/_ext/299869866/adc_init.o ../sensors/adc_init.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/299869866/air_quality_level.o: ../sensors/air_quality_level.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/299869866" 
+	@${RM} ${OBJECTDIR}/_ext/299869866/air_quality_level.o.d 
+	@${RM} ${OBJECTDIR}/_ext/299869866/air_quality_level.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/299869866/air_quality_level.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/299869866/air_quality_level.o.d" -o ${OBJECTDIR}/_ext/299869866/air_quality_level.o ../sensors/air_quality_level.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/299869866/i2c.o: ../sensors/i2c.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/299869866" 
+	@${RM} ${OBJECTDIR}/_ext/299869866/i2c.o.d 
+	@${RM} ${OBJECTDIR}/_ext/299869866/i2c.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/299869866/i2c.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/299869866/i2c.o.d" -o ${OBJECTDIR}/_ext/299869866/i2c.o ../sensors/i2c.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/299869866/temp_analog.o: ../sensors/temp_analog.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/299869866" 
+	@${RM} ${OBJECTDIR}/_ext/299869866/temp_analog.o.d 
+	@${RM} ${OBJECTDIR}/_ext/299869866/temp_analog.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/299869866/temp_analog.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/299869866/temp_analog.o.d" -o ${OBJECTDIR}/_ext/299869866/temp_analog.o ../sensors/temp_analog.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/299869866/temp_digital.o: ../sensors/temp_digital.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/299869866" 
+	@${RM} ${OBJECTDIR}/_ext/299869866/temp_digital.o.d 
+	@${RM} ${OBJECTDIR}/_ext/299869866/temp_digital.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/299869866/temp_digital.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/299869866/temp_digital.o.d" -o ${OBJECTDIR}/_ext/299869866/temp_digital.o ../sensors/temp_digital.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 endif
 

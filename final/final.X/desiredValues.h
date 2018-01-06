@@ -14,7 +14,7 @@ extern "C" {
 
 int compareHour(int time1, int time2);
 
-int  updateTimeDesiredValue();
+int updateTimeDesiredValue();
 
 int desiredWaterTemperature();
 

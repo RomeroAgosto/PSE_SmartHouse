@@ -2,4 +2,4 @@ build/default/production/update.o:  \
 update.c  \
 struct_lib.h  \
 update.h  \
-sr.h 
+ ../sensors/sr.h 
