@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/communication.dir/main.c.o"
-  "CMakeFiles/communication.dir/send_receive_messages.c.o"
-  "CMakeFiles/communication.dir/create_normal_message.c.o"
+  "CMakeFiles/communication.dir/StatemachineCommunication/main.c.o"
+  "CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o"
+  "CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.o"
   "communication.pdb"
   "communication"
 )

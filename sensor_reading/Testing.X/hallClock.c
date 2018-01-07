@@ -105,7 +105,7 @@ void increment_time(void)
             }
         }
     }
-    printf("day:%d hours:%d, minutes:%d, seconds:%d\n",time_hall.tm_mday,time_hall.tm_hour,time_hall.tm_min,time_hall.tm_sec);
+    //printf("day:%d hours:%d, minutes:%d, seconds:%d\n",time_hall.tm_mday,time_hall.tm_hour,time_hall.tm_min,time_hall.tm_sec);
 }
 
 

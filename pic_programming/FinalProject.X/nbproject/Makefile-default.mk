@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../CKCommon/UART/uart.c main.c ../Timer_Clock.X/hallClock.c ../Timer_Clock.X/timer_libs.c
+SOURCEFILES_QUOTED_IF_SPACED=../Timer_Clock.X/hallClock.c ../Timer_Clock.X/timer_libs.c ../CKCommon/UART/uart.c main.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1062335525/uart.o ${OBJECTDIR}/main.o ${OBJECTDIR}/_ext/2140114641/hallClock.o ${OBJECTDIR}/_ext/2140114641/timer_libs.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1062335525/uart.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/_ext/2140114641/hallClock.o.d ${OBJECTDIR}/_ext/2140114641/timer_libs.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/2140114641/hallClock.o ${OBJECTDIR}/_ext/2140114641/timer_libs.o ${OBJECTDIR}/_ext/1062335525/uart.o ${OBJECTDIR}/main.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/2140114641/hallClock.o.d ${OBJECTDIR}/_ext/2140114641/timer_libs.o.d ${OBJECTDIR}/_ext/1062335525/uart.o.d ${OBJECTDIR}/main.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1062335525/uart.o ${OBJECTDIR}/main.o ${OBJECTDIR}/_ext/2140114641/hallClock.o ${OBJECTDIR}/_ext/2140114641/timer_libs.o
+OBJECTFILES=${OBJECTDIR}/_ext/2140114641/hallClock.o ${OBJECTDIR}/_ext/2140114641/timer_libs.o ${OBJECTDIR}/_ext/1062335525/uart.o ${OBJECTDIR}/main.o
 
 # Source Files
-SOURCEFILES=../CKCommon/UART/uart.c main.c ../Timer_Clock.X/hallClock.c ../Timer_Clock.X/timer_libs.c
+SOURCEFILES=../Timer_Clock.X/hallClock.c ../Timer_Clock.X/timer_libs.c ../CKCommon/UART/uart.c main.c
 
 
 CFLAGS=
@@ -106,18 +106,6 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/1062335525/uart.o: ../CKCommon/UART/uart.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1062335525" 
-	@${RM} ${OBJECTDIR}/_ext/1062335525/uart.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1062335525/uart.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1062335525/uart.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DPK3OBPlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1062335525/uart.o.d" -o ${OBJECTDIR}/_ext/1062335525/uart.o ../CKCommon/UART/uart.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
-	
-${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/main.o.d 
-	@${RM} ${OBJECTDIR}/main.o 
-	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DPK3OBPlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
-	
 ${OBJECTDIR}/_ext/2140114641/hallClock.o: ../Timer_Clock.X/hallClock.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/2140114641" 
 	@${RM} ${OBJECTDIR}/_ext/2140114641/hallClock.o.d 
@@ -130,19 +118,19 @@ ${OBJECTDIR}/_ext/2140114641/timer_libs.o: ../Timer_Clock.X/timer_libs.c  nbproj
 	@${RM} ${OBJECTDIR}/_ext/2140114641/timer_libs.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/2140114641/timer_libs.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DPK3OBPlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/2140114641/timer_libs.o.d" -o ${OBJECTDIR}/_ext/2140114641/timer_libs.o ../Timer_Clock.X/timer_libs.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-else
 ${OBJECTDIR}/_ext/1062335525/uart.o: ../CKCommon/UART/uart.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1062335525" 
 	@${RM} ${OBJECTDIR}/_ext/1062335525/uart.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1062335525/uart.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1062335525/uart.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1062335525/uart.o.d" -o ${OBJECTDIR}/_ext/1062335525/uart.o ../CKCommon/UART/uart.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1062335525/uart.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DPK3OBPlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1062335525/uart.o.d" -o ${OBJECTDIR}/_ext/1062335525/uart.o ../CKCommon/UART/uart.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
-	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DPK3OBPlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
+else
 ${OBJECTDIR}/_ext/2140114641/hallClock.o: ../Timer_Clock.X/hallClock.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/2140114641" 
 	@${RM} ${OBJECTDIR}/_ext/2140114641/hallClock.o.d 
@@ -154,6 +142,18 @@ ${OBJECTDIR}/_ext/2140114641/timer_libs.o: ../Timer_Clock.X/timer_libs.c  nbproj
 	@${RM} ${OBJECTDIR}/_ext/2140114641/timer_libs.o.d 
 	@${RM} ${OBJECTDIR}/_ext/2140114641/timer_libs.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/2140114641/timer_libs.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/2140114641/timer_libs.o.d" -o ${OBJECTDIR}/_ext/2140114641/timer_libs.o ../Timer_Clock.X/timer_libs.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/1062335525/uart.o: ../CKCommon/UART/uart.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1062335525" 
+	@${RM} ${OBJECTDIR}/_ext/1062335525/uart.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1062335525/uart.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1062335525/uart.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1062335525/uart.o.d" -o ${OBJECTDIR}/_ext/1062335525/uart.o ../CKCommon/UART/uart.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 endif
 

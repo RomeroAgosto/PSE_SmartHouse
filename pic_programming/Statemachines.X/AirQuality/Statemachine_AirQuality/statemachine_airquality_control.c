@@ -1,12 +1,12 @@
 #include "statemachine_airquality_control.h"
 #include <string.h>
 
-static double thresholds[4][2][5];  /*!< Thresholds for the specific air quality parameter -> can be adapted by a setter function*/
-static double bounds_sensorvalues[2][5]={{0.05, 0.05, 0.05, 0.05,.05},{0.05, 0.05, 0.05, 0.05,.05}};/*!<Hysteresis for the air quality [2] indicates the stage (red yellow), [5] indicates the sensorvalue*/
+static int thresholds[4][2][5];  /*!< Thresholds for the specific air quality parameter -> can be adapted by a setter function*/
+static int bounds_sensorvalues[2][5]={{2, 20, 2,5,1},{2, 20, 2, 2,2}};/*!<Hysteresis for the air quality [2] indicates the stage (red yellow), [5] indicates the sensorvalue*/
 static int air_quality_state[4];/*!< statemachine states are in general protected and just inside of the function known */
 
 
-int SetHysteresis(int stage, int sensor, double value){
+int SetHysteresis(int stage, int sensor, int value){
     bounds_sensorvalues[stage][sensor]=value;
     printf("set new hystersis");
 }
@@ -39,6 +39,7 @@ int GetAirQualityState(int room){
     return air_quality_state[room];
 }
 
+
 /**
  *      @brief  Function sets a alarm, connect to a pin, here a dummy pin
  *     Created  20-Set-2017
@@ -65,16 +66,16 @@ int SetWarning(){
  */
 
 #if UNITTEST == TRUE
-static double sensor_values_test[4][5];
+static int sensor_values_test[4][5];
 /********** AirQualitySensors ********************/
-void SetAirQuality(int room, double *input_values){
+void SetAirQuality(int room, int *input_values){
     sensor_values_test[room][0]=input_values[0];
     sensor_values_test[room][1]=input_values[1];
     sensor_values_test[room][2]=input_values[2];
     sensor_values_test[room][3]=input_values[3];
     sensor_values_test[room][4]=input_values[4];
 }
-void GetAirQuality(int room, double *sensor_values){
+void GetAirQuality(int room, int *sensor_values){
     sensor_values[0]=sensor_values_test[room][0];
     sensor_values[1]=sensor_values_test[room][1];
     sensor_values[2]=sensor_values_test[room][2];
@@ -105,7 +106,7 @@ void Statemachine_AirQuality(int room,int *test) {
 #else
 void Statemachine_AirQuality(int room) {
 #endif
-	double sensor_values[5]; /*!< the getter function will return an array pointer with all defined values */
+	int sensor_values[5]; /*!< the getter function will return an array pointer with all defined values */
     int air_quality;
     GetAirQuality(room,sensor_values); /*!< in air_quality the current value will be saved -> getter function from the global struct */
 

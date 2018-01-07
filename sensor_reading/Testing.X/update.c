@@ -77,7 +77,7 @@ int updateSensors()
 void print() {
     int i;
     for(i=0;i<8;i++){
-        printf("%d\n",current_values.air_temperature_sensor[i].temp);
+        //printf("%d\n",current_values.air_temperature_sensor[i].temp);
     }
 }
 
@@ -123,7 +123,10 @@ int SetLightSate(int n_ligth,int state)
     return 0; /*we should introduce a check, if this procedure was successful */
 }
  
- 
+int GetLightState(int n_ligth) {
+    return current_values.light_sensors[n_ligth].ligth_state;
+}
+
 /*## WATER TEMPERATURE ##*/
 int GetWaterTemperature()
 {

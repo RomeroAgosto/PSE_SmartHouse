@@ -57,90 +57,90 @@ include CMakeFiles/communication.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/communication.dir/flags.make
 
-CMakeFiles/communication.dir/main.c.o: CMakeFiles/communication.dir/flags.make
-CMakeFiles/communication.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/communication.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/communication.dir/main.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/main.c
+CMakeFiles/communication.dir/StatemachineCommunication/main.c.o: CMakeFiles/communication.dir/flags.make
+CMakeFiles/communication.dir/StatemachineCommunication/main.c.o: ../StatemachineCommunication/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/communication.dir/StatemachineCommunication/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/communication.dir/StatemachineCommunication/main.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/StatemachineCommunication/main.c
 
-CMakeFiles/communication.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/communication.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/main.c > CMakeFiles/communication.dir/main.c.i
+CMakeFiles/communication.dir/StatemachineCommunication/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/communication.dir/StatemachineCommunication/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/StatemachineCommunication/main.c > CMakeFiles/communication.dir/StatemachineCommunication/main.c.i
 
-CMakeFiles/communication.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/communication.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/main.c -o CMakeFiles/communication.dir/main.c.s
+CMakeFiles/communication.dir/StatemachineCommunication/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/communication.dir/StatemachineCommunication/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/StatemachineCommunication/main.c -o CMakeFiles/communication.dir/StatemachineCommunication/main.c.s
 
-CMakeFiles/communication.dir/main.c.o.requires:
+CMakeFiles/communication.dir/StatemachineCommunication/main.c.o.requires:
 
-.PHONY : CMakeFiles/communication.dir/main.c.o.requires
+.PHONY : CMakeFiles/communication.dir/StatemachineCommunication/main.c.o.requires
 
-CMakeFiles/communication.dir/main.c.o.provides: CMakeFiles/communication.dir/main.c.o.requires
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/main.c.o.provides.build
-.PHONY : CMakeFiles/communication.dir/main.c.o.provides
+CMakeFiles/communication.dir/StatemachineCommunication/main.c.o.provides: CMakeFiles/communication.dir/StatemachineCommunication/main.c.o.requires
+	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/StatemachineCommunication/main.c.o.provides.build
+.PHONY : CMakeFiles/communication.dir/StatemachineCommunication/main.c.o.provides
 
-CMakeFiles/communication.dir/main.c.o.provides.build: CMakeFiles/communication.dir/main.c.o
-
-
-CMakeFiles/communication.dir/send_receive_messages.c.o: CMakeFiles/communication.dir/flags.make
-CMakeFiles/communication.dir/send_receive_messages.c.o: ../send_receive_messages.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/communication.dir/send_receive_messages.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/communication.dir/send_receive_messages.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/send_receive_messages.c
-
-CMakeFiles/communication.dir/send_receive_messages.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/communication.dir/send_receive_messages.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/send_receive_messages.c > CMakeFiles/communication.dir/send_receive_messages.c.i
-
-CMakeFiles/communication.dir/send_receive_messages.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/communication.dir/send_receive_messages.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/send_receive_messages.c -o CMakeFiles/communication.dir/send_receive_messages.c.s
-
-CMakeFiles/communication.dir/send_receive_messages.c.o.requires:
-
-.PHONY : CMakeFiles/communication.dir/send_receive_messages.c.o.requires
-
-CMakeFiles/communication.dir/send_receive_messages.c.o.provides: CMakeFiles/communication.dir/send_receive_messages.c.o.requires
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/send_receive_messages.c.o.provides.build
-.PHONY : CMakeFiles/communication.dir/send_receive_messages.c.o.provides
-
-CMakeFiles/communication.dir/send_receive_messages.c.o.provides.build: CMakeFiles/communication.dir/send_receive_messages.c.o
+CMakeFiles/communication.dir/StatemachineCommunication/main.c.o.provides.build: CMakeFiles/communication.dir/StatemachineCommunication/main.c.o
 
 
-CMakeFiles/communication.dir/create_normal_message.c.o: CMakeFiles/communication.dir/flags.make
-CMakeFiles/communication.dir/create_normal_message.c.o: ../create_normal_message.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/communication.dir/create_normal_message.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/communication.dir/create_normal_message.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/create_normal_message.c
+CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o: CMakeFiles/communication.dir/flags.make
+CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o: ../StatemachineCommunication/send_receive_messages.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/StatemachineCommunication/send_receive_messages.c
 
-CMakeFiles/communication.dir/create_normal_message.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/communication.dir/create_normal_message.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/create_normal_message.c > CMakeFiles/communication.dir/create_normal_message.c.i
+CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/StatemachineCommunication/send_receive_messages.c > CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.i
 
-CMakeFiles/communication.dir/create_normal_message.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/communication.dir/create_normal_message.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/create_normal_message.c -o CMakeFiles/communication.dir/create_normal_message.c.s
+CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/StatemachineCommunication/send_receive_messages.c -o CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.s
 
-CMakeFiles/communication.dir/create_normal_message.c.o.requires:
+CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o.requires:
 
-.PHONY : CMakeFiles/communication.dir/create_normal_message.c.o.requires
+.PHONY : CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o.requires
 
-CMakeFiles/communication.dir/create_normal_message.c.o.provides: CMakeFiles/communication.dir/create_normal_message.c.o.requires
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/create_normal_message.c.o.provides.build
-.PHONY : CMakeFiles/communication.dir/create_normal_message.c.o.provides
+CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o.provides: CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o.requires
+	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o.provides.build
+.PHONY : CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o.provides
 
-CMakeFiles/communication.dir/create_normal_message.c.o.provides.build: CMakeFiles/communication.dir/create_normal_message.c.o
+CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o.provides.build: CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o
+
+
+CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.o: CMakeFiles/communication.dir/flags.make
+CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.o: ../StatemachineCommunication/create_normal_message.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/StatemachineCommunication/create_normal_message.c
+
+CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/StatemachineCommunication/create_normal_message.c > CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.i
+
+CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/StatemachineCommunication/create_normal_message.c -o CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.s
+
+CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.o.requires:
+
+.PHONY : CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.o.requires
+
+CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.o.provides: CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.o.requires
+	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.o.provides.build
+.PHONY : CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.o.provides
+
+CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.o.provides.build: CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.o
 
 
 # Object files for target communication
 communication_OBJECTS = \
-"CMakeFiles/communication.dir/main.c.o" \
-"CMakeFiles/communication.dir/send_receive_messages.c.o" \
-"CMakeFiles/communication.dir/create_normal_message.c.o"
+"CMakeFiles/communication.dir/StatemachineCommunication/main.c.o" \
+"CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o" \
+"CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.o"
 
 # External object files for target communication
 communication_EXTERNAL_OBJECTS =
 
-communication: CMakeFiles/communication.dir/main.c.o
-communication: CMakeFiles/communication.dir/send_receive_messages.c.o
-communication: CMakeFiles/communication.dir/create_normal_message.c.o
+communication: CMakeFiles/communication.dir/StatemachineCommunication/main.c.o
+communication: CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o
+communication: CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.o
 communication: CMakeFiles/communication.dir/build.make
 communication: CMakeFiles/communication.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable communication"
@@ -151,9 +151,9 @@ CMakeFiles/communication.dir/build: communication
 
 .PHONY : CMakeFiles/communication.dir/build
 
-CMakeFiles/communication.dir/requires: CMakeFiles/communication.dir/main.c.o.requires
-CMakeFiles/communication.dir/requires: CMakeFiles/communication.dir/send_receive_messages.c.o.requires
-CMakeFiles/communication.dir/requires: CMakeFiles/communication.dir/create_normal_message.c.o.requires
+CMakeFiles/communication.dir/requires: CMakeFiles/communication.dir/StatemachineCommunication/main.c.o.requires
+CMakeFiles/communication.dir/requires: CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o.requires
+CMakeFiles/communication.dir/requires: CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.o.requires
 
 .PHONY : CMakeFiles/communication.dir/requires
 
