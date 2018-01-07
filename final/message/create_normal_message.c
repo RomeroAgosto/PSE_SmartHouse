@@ -31,7 +31,7 @@ int create_normal_message(char *message){
                     "            {\"air_temp\":\"%d\",\"air_heater\":\"%d\"},\n"
                     "            {\"air_temp\":\"%d\",\"air_heater\":\"%d\"},\n"
                     "            {\"air_temp\":\"%d\",\"air_heater\":\"%d\"},\n"
-                    "            {\"air_temp\":\"%d\",\"air_heater\":\"%d\"}]}*\n",GetWaterTemperature(),2,GetWaterHeater(),GetLigthControl(0),GetLightState(0),GetLigthControl(1),GetLightState(1),GetLigthControl(2), GetLightState(2),GetLigthControl(3),GetLightState(3),12,13,14,15,16,17,
+                    "            {\"air_temp\":\"%d\",\"air_heater\":\"%d\"}]}*\n",GetWaterTemperature(),2,GetWaterHeater(),GetLightControl(0),GetLightState(0),GetLightControl(1),GetLightState(1),GetLightControl(2), GetLightState(2),GetLightControl(3),GetLightState(3),12,13,14,15,16,17,
             18,19,20,21,22,23,24,25,26,27,GetVentilatorState(),GetVentilatorState(),GetVentilatorState(),GetVentilatorState(),32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48);
     printf("%s",message);
 }

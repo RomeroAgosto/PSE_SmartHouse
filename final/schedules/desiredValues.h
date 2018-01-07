@@ -20,7 +20,7 @@ int desiredWaterTemperature();
 
 int desiredAirTemperature(int n_air);
 
-int desiredLigth(int n_ligth);
+int desiredLight(int n_ligth);
 
 #ifdef	__cplusplus
 }

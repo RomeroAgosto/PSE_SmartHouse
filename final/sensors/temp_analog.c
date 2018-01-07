@@ -102,7 +102,6 @@ int water_temp_analog(int *t){    //function to return air temperature value
     t2 = (ADC1BUF1 * 3.3) / 1023;
     t3 = (ADC1BUF2 * 3.3) / 1023;
     t4 = (ADC1BUF3 * 3.3) / 1023;
-
     tm= (t1+t2+t3+t4)/4;  //average value of voltage read from ADC
 
     t[0]= (int)(100*tm/3.3);

@@ -62,17 +62,25 @@ int main(int argc, char** argv) {
     update_time(str_time);
     struct tm time;
 
+    
     TRISE=TRISE && 0xf000;
     PORTE=PORTE && 0xf000;
     TRISG=TRISG && 0xfff0;
+    TRISGbits.TRISG2=0;
     PORTG=PORTG || 0x000f;
-    
+    TRISAbits.TRISA0=0;
+    TRISAbits.TRISA1=0;
+    TRISAbits.TRISA2=0;
+    TRISAbits.TRISA3=0;
+    TRISAbits.TRISA4=0;
+    TRISAbits.TRISA5=0;
+    TRISAbits.TRISA6=0;
+    TRISAbits.TRISA7=0;
     // Loop
     while (1) {
         int i;
         
         updateSensors();
-        
         Statemachine_AirQuality();
         
         
@@ -80,6 +88,10 @@ int main(int argc, char** argv) {
             Statemachine_LightControl(i);
         }
         Statemachine_WaterControl();
+        for(i=0;i<4;i++){
+            Statemachine_AirControl(i);
+        }
+        
         message_handle();
         
     }

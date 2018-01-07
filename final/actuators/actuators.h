@@ -20,6 +20,7 @@ extern "C" {
 #define TRUE 1
     
 int setLight(int n_light, int state);
+int SetHeater(int room, int state);
 
 
 

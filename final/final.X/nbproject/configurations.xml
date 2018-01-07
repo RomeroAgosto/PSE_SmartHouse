@@ -31,14 +31,44 @@
         <itemPath>../sensors/i2c.h</itemPath>
         <itemPath>../sensors/sr.h</itemPath>
       </logicalFolder>
-      <logicalFolder name="statemachine"
-                     displayName="statemachine"
+      <logicalFolder name="Statemachines.X "
+                     displayName="Statemachines.X "
                      projectFiles="true">
-        <itemPath>../statemachine/statemachines.h</itemPath>
-        <itemPath>../statemachine/statemachine_airquality_control.h</itemPath>
-        <itemPath>../statemachine/statemachine_airtemp_control.h</itemPath>
-        <itemPath>../statemachine/statemachine_light_control.h</itemPath>
-        <itemPath>../statemachine/statemachine_watertemp_control.h</itemPath>
+        <logicalFolder name="AirQuality" displayName="AirQuality" projectFiles="true">
+          <logicalFolder name="Statemachine_AirQuality"
+                         displayName="Statemachine_AirQuality"
+                         projectFiles="true">
+            <itemPath>../Statemachines.X /AirQuality/Statemachine_AirQuality/statemachine_airquality_control.h</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="AirTemperature"
+                       displayName="AirTemperature"
+                       projectFiles="true">
+          <logicalFolder name="Statemachine_AirTemperature"
+                         displayName="Statemachine_AirTemperature"
+                         projectFiles="true">
+            <itemPath>../Statemachines.X /AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.h</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="LightControl"
+                       displayName="LightControl"
+                       projectFiles="true">
+          <logicalFolder name="StatemachineLightControl"
+                         displayName="StatemachineLightControl"
+                         projectFiles="true">
+            <itemPath>../Statemachines.X /LightControl/StatemachineLightControl/statemachine_light_control.h</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="WaterTemperature"
+                       displayName="WaterTemperature"
+                       projectFiles="true">
+          <logicalFolder name="Statemachine_Water"
+                         displayName="Statemachine_Water"
+                         projectFiles="true">
+            <itemPath>../Statemachines.X /WaterTemperature/Statemachine_Water/statemachine_watertemp_control.h</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <itemPath>../Statemachines.X /statemachines.h</itemPath>
       </logicalFolder>
       <logicalFolder name="update" displayName="update" projectFiles="true">
         <itemPath>../update/struct_lib.h</itemPath>
@@ -82,13 +112,43 @@
         <itemPath>../sensors/temp_analog.c</itemPath>
         <itemPath>../sensors/temp_digital.c</itemPath>
       </logicalFolder>
-      <logicalFolder name="statemachine"
-                     displayName="statemachine"
+      <logicalFolder name="Statemachines.X "
+                     displayName="Statemachines.X "
                      projectFiles="true">
-        <itemPath>../statemachine/statemachine_airquality_control.c</itemPath>
-        <itemPath>../statemachine/statemachine_airtemp_control.c</itemPath>
-        <itemPath>../statemachine/statemachine_light_control.c</itemPath>
-        <itemPath>../statemachine/statemachine_watertemp_control.c</itemPath>
+        <logicalFolder name="AirQuality" displayName="AirQuality" projectFiles="true">
+          <logicalFolder name="Statemachine_AirQuality"
+                         displayName="Statemachine_AirQuality"
+                         projectFiles="true">
+            <itemPath>../Statemachines.X /AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="AirTemperature"
+                       displayName="AirTemperature"
+                       projectFiles="true">
+          <logicalFolder name="Statemachine_AirTemperature"
+                         displayName="Statemachine_AirTemperature"
+                         projectFiles="true">
+            <itemPath>../Statemachines.X /AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="LightControl"
+                       displayName="LightControl"
+                       projectFiles="true">
+          <logicalFolder name="StatemachineLightControl"
+                         displayName="StatemachineLightControl"
+                         projectFiles="true">
+            <itemPath>../Statemachines.X /LightControl/StatemachineLightControl/statemachine_light_control.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="WaterTemperature"
+                       displayName="WaterTemperature"
+                       projectFiles="true">
+          <logicalFolder name="Statemachine_Water"
+                         displayName="Statemachine_Water"
+                         projectFiles="true">
+            <itemPath>../Statemachines.X /WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
       </logicalFolder>
       <logicalFolder name="update" displayName="update" projectFiles="true">
         <itemPath>../update/update.c</itemPath>
@@ -114,6 +174,8 @@
     <Elem>../schedules</Elem>
     <Elem>../message</Elem>
     <Elem>../update</Elem>
+    <Elem>../Statemachines.X</Elem>
+    <Elem>../Statemachines.X </Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

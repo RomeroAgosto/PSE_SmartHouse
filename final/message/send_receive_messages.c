@@ -109,6 +109,7 @@ int message_handle() {
             //send_message(message);
         } 
         else if (message[1]=='+') {
+           printf("new schedule");
            get_schedule_message(message);
         }
         message_flag=0;

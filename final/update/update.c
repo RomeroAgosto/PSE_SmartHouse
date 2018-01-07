@@ -30,14 +30,13 @@ int updateSensors()
     static int p[20];
     static int i, j;
     air_temp_analog(p);
-    
     for(i=0;i<6;i++) {
         current_values.air_temperature_sensor[i].temp=p[i];
     }
  
     water_temp_analog(p);
     current_values.water_temperature.temp=p[0];
-    temp_digital(p);
+    //temp_digital(p);
 
     for(i=0;i<2;i++) {
         current_values.air_temperature_sensor[i+6].temp=p[i];
@@ -109,7 +108,7 @@ int GetVentilatorState() {
     return current_values.air_quality_sensor[0].ventilator;
 }
 /*## Ligth ##*/
-int GetLigthControl(int n_ligth)
+int GetLightControl(int n_ligth)
 {
     return current_values.light_sensors[n_ligth].movement_sensor;
    
@@ -128,6 +127,7 @@ int GetLightState(int n_ligth) {
 /*## WATER TEMPERATURE ##*/
 int GetWaterTemperature()
 {
+    
     return current_values.water_temperature.temp;
 }
 

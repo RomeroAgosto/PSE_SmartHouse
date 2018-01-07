@@ -16,7 +16,7 @@ int GetAirTemperature(int n_air);
 
 int SetHeatingAirState(int n_air,int state);
 
-int GetLigthControl(int n_ligth);
+int GetLightControl(int n_ligth);
 
 int SetLightState(int n_ligth,int state);
 

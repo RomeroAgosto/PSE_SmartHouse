@@ -93,7 +93,7 @@ int desiredAirTemperature(int n_air)
     return maximum;
 }
 
-int desiredLigth(int n_ligth)
+int desiredLight(int n_ligth)
 {
     int i;
     for(i=0;i<4;i++)        /* Used 4 because theres's 4 schedule per day of the week */
