@@ -10,10 +10,11 @@
 #include "../clock_hall/timer_libs.h"
 #include "../CKCommon/ConfigBits/config_bits.h"
 #include "../CKCommon/UART/uart.h"
-#include "send_receive_messages.h"
-#include "update.h"
-#include "sr.h"
-#include "struct_lib.h"
+
+#include "../message/send_receive_messages.h"
+#include "../sensors/sr.h"
+#include "../update/struct_lib.h"
+#include "../update/update.h"
 
 
 #define SYSCLK  80000000L // System clock frequency, in Hz
@@ -61,24 +62,38 @@ int main(int argc, char** argv) {
     update_time(str_time);
     struct tm time;
 
+    
     TRISE=TRISE && 0xf000;
     PORTE=PORTE && 0xf000;
     TRISG=TRISG && 0xfff0;
+    TRISGbits.TRISG2=0;
     PORTG=PORTG || 0x000f;
-    
+    TRISAbits.TRISA0=0;
+    TRISAbits.TRISA1=0;
+    TRISAbits.TRISA2=0;
+    TRISAbits.TRISA3=0;
+    TRISAbits.TRISA4=0;
+    TRISAbits.TRISA5=0;
+    TRISAbits.TRISA6=0;
+    TRISAbits.TRISA7=0;
     // Loop
     while (1) {
         int i;
         
         updateSensors();
-        
         Statemachine_AirQuality();
-        
+        //printf("air Quality done\n");
         
         for(i=0;i<4;i++){
             Statemachine_LightControl(i);
         }
+               // printf("light done\n");
         Statemachine_WaterControl();
+                       // printf("water done\n");
+        for(i=0;i<4;i++){
+            Statemachine_AirControl(i);
+        }      
+        
         message_handle();
         
     }

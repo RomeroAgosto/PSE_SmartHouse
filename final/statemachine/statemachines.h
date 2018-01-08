@@ -16,8 +16,8 @@
 #include "stdio.h"
 #include <stdlib.h>
 #include <string.h>
-#include "../final.X/desiredValues.h"
-#include "../final.X/update.h"
+#include "../schedules/desiredValues.h"
+#include "../update/update.h"
 
 #endif	/* STATEMACHINES_H */
 

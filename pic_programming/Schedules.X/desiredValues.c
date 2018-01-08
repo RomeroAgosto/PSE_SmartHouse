@@ -45,7 +45,7 @@ int compareHour(int time1, int time2)
 
 int  ds_updateDSchedules_time()
 {
-    get_timeHall(&tclock);
+//    get_timeHall(&tclock);
     conv_clock=tclock.tm_hour*100+tclock.tm_min;
     return 0;
 }

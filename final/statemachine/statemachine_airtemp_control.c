@@ -1,6 +1,6 @@
 #include "statemachine_airtemp_control.h"
-#include "../final.X/update.h"
-#include "../final.X/actuators.h"
+#include "../update/update.h"
+#include "../actuators/actuators.h"
 
 static int desired_temp;
 

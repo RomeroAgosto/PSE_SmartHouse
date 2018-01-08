@@ -52,7 +52,7 @@ static int count=0;
 // will put clock runs every secnd
 void inc_clock(void)
 {
-    if(count%2)
+    if(count%2==0)
     {
         increment_time();
         longside_func();

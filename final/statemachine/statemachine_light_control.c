@@ -2,7 +2,7 @@
 #include <proc/p32mx795f512l.h>
 
 #include "statemachine_light_control.h"
-#include "../final.X/actuators.h"
+#include "../actuators/actuators.h"
 
 
 static int counter[4]; /* Counter for all timer/lights */

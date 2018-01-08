@@ -1,0 +1,42 @@
+#include <CppUTest/TestHarness.h>
+#include <CppUTest/TestHarness.h>
+#include <stdio.h>
+extern "C" {
+
+#include "../Statemachine_AirQuality/statemachine_airquality_control.h"
+
+TEST_GROUP(AirQuality) {
+    void setup() // setup
+    {
+
+    }
+
+    void teardown() {
+
+    }
+};
+/* Increase Temperature */
+TEST(AirQuality, TEST_AIR_QUALITY_SIMPLE) {
+    ResetAirQualityState();
+    /*first set temperature to 60 degree*/
+    int length = 6;
+    /* state before, setHeater state after*/
+    int ResultExpected[6] = {0, 0, 1, 1, 1, 1};
+    int Result[3], Result_complete[length];
+
+    int i;
+    setdesiredTemp(1, 25);
+    SetAirTemperature(1, 23);
+    for (i = 0; i < 2; i++) {
+        Statemachine_AirControl(1, Result);
+        Result_complete[i * 3 + 0] = Result[0];
+        Result_complete[i * 3 + 1] = Result[1];
+        Result_complete[i * 3 + 2] = Result[2];
+        //printf("result[]= %d\n",Result_complete[i*3]);
+    }
+    for (i = 0; i < length; i++) {
+        //printf("I compare[%d] %d %d\n",i,ResultExpected[i],Result_complete[i]);
+        CHECK_EQUAL(ResultExpected[i], Result_complete[i]);
+    }
+}
+}

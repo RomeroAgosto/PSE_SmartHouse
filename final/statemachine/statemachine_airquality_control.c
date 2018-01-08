@@ -1,6 +1,6 @@
 #include "statemachine_airquality_control.h"
 #include <string.h>
-#include "../final.X/actuators.h"
+#include "../actuators/actuators.h"
 
 int SetLightQuality(int color){
    // printf("Color output is: %d\n", color);
@@ -45,7 +45,7 @@ void Statemachine_AirQuality() {
     switch (air_quality_state) {
 
         case GREEN:
-            SetVentilatorState(air_quality_state);/* it is just possible to turn off the ventilation when the Air quality is good!*/
+            SetVentilatorState(0,air_quality_state);/* it is just possible to turn off the ventilation when the Air quality is good!*/
             setVentilatorBuzzer(air_quality_state);
 
             /*set next state*/
@@ -64,7 +64,7 @@ void Statemachine_AirQuality() {
             break;
 
         case YELLOW:
-            SetVentilatorState(air_quality_state);
+            SetVentilatorState(0,air_quality_state);
             setVentilatorBuzzer(air_quality_state);
 
             /*set next state*/
@@ -83,7 +83,7 @@ void Statemachine_AirQuality() {
             break;
 
         case RED:
-            SetVentilatorState(air_quality_state);
+            SetVentilatorState(0,air_quality_state);
             setVentilatorBuzzer(air_quality_state);
             
             /*set next state*/
@@ -102,7 +102,7 @@ void Statemachine_AirQuality() {
             break;
 
         default:
-            SetVentilatorState(GREEN);
+            SetVentilatorState(0,GREEN);
             setVentilatorBuzzer(GREEN);
             /*SetWarning();something that declares that something went wrong*/
             break;

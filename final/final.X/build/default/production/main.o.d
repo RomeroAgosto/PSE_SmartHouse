@@ -4,7 +4,8 @@ main.c  \
  ../clock_hall/timer_libs.h  \
 ../CKCommon/ConfigBits/config_bits.h  \
  ../CKCommon/UART/uart.h  \
-send_receive_messages.h  \
-update.h  \
-struct_lib.h  \
- sr.h 
+../message/send_receive_messages.h  \
+ ../sensors/sr.h  \
+../update/struct_lib.h  \
+../update/update.h  \
+ ../update/struct_lib.h 

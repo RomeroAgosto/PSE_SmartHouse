@@ -4,64 +4,6 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <logicalFolder name="Communication.X"
-                     displayName="Communication.X"
-                     projectFiles="true">
-        <logicalFolder name="cmake-build-debug"
-                       displayName="cmake-build-debug"
-                       projectFiles="true">
-          <logicalFolder name="CMakeFiles" displayName="CMakeFiles" projectFiles="true">
-            <logicalFolder name="3.8.2" displayName="3.8.2" projectFiles="true">
-              <logicalFolder name="CompilerIdC" displayName="CompilerIdC" projectFiles="true">
-              </logicalFolder>
-              <logicalFolder name="CompilerIdCXX"
-                             displayName="CompilerIdCXX"
-                             projectFiles="true">
-              </logicalFolder>
-            </logicalFolder>
-            <logicalFolder name="communication.dir"
-                           displayName="communication.dir"
-                           projectFiles="true">
-            </logicalFolder>
-          </logicalFolder>
-        </logicalFolder>
-        <itemPath>../Communication.X/send_receive_messages.h</itemPath>
-      </logicalFolder>
-      <logicalFolder name="Log_Handling.X"
-                     displayName="Log_Handling.X"
-                     projectFiles="true">
-        <itemPath>../Log_Handling.X/log_functions.h</itemPath>
-        <itemPath>../Log_Handling.X/log_stru.h</itemPath>
-      </logicalFolder>
-      <logicalFolder name="Statemachines.X"
-                     displayName="Statemachines.X"
-                     projectFiles="true">
-        <logicalFolder name="cmake-build-debug"
-                       displayName="cmake-build-debug"
-                       projectFiles="true">
-          <logicalFolder name="CMakeFiles" displayName="CMakeFiles" projectFiles="true">
-            <logicalFolder name="3.8.2" displayName="3.8.2" projectFiles="true">
-              <logicalFolder name="CompilerIdC" displayName="CompilerIdC" projectFiles="true">
-                <itemPath>../Statemachines.X/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/CMakeCCompilerId.c</itemPath>
-              </logicalFolder>
-              <logicalFolder name="CompilerIdCXX"
-                             displayName="CompilerIdCXX"
-                             projectFiles="true">
-              </logicalFolder>
-            </logicalFolder>
-            <logicalFolder name="Statemachines_X.dir"
-                           displayName="Statemachines_X.dir"
-                           projectFiles="true">
-            </logicalFolder>
-            <itemPath>../Statemachines.X/cmake-build-debug/CMakeFiles/feature_tests.c</itemPath>
-          </logicalFolder>
-        </logicalFolder>
-        <itemPath>../Statemachines.X/statemachine_airtemp_control.h</itemPath>
-        <itemPath>../Statemachines.X/statemachines.h</itemPath>
-        <itemPath>../Statemachines.X/statemachine_airquality_control.h</itemPath>
-        <itemPath>../Statemachines.X/statemachine_watertemp_control.h</itemPath>
-        <itemPath>../Statemachines.X/statemachine_light_control.h</itemPath>
-      </logicalFolder>
       <logicalFolder name="Timer_Clock.X"
                      displayName="Timer_Clock.X"
                      projectFiles="true">
@@ -78,68 +20,10 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <logicalFolder name="Communication.X"
-                     displayName="Communication.X"
-                     projectFiles="true">
-        <logicalFolder name="cmake-build-debug"
-                       displayName="cmake-build-debug"
-                       projectFiles="true">
-          <logicalFolder name="CMakeFiles" displayName="CMakeFiles" projectFiles="true">
-            <logicalFolder name="3.8.2" displayName="3.8.2" projectFiles="true">
-              <logicalFolder name="CompilerIdC" displayName="CompilerIdC" projectFiles="true">
-                <itemPath>../Communication.X/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/CMakeCCompilerId.c</itemPath>
-              </logicalFolder>
-              <logicalFolder name="CompilerIdCXX"
-                             displayName="CompilerIdCXX"
-                             projectFiles="true">
-              </logicalFolder>
-            </logicalFolder>
-            <logicalFolder name="communication.dir"
-                           displayName="communication.dir"
-                           projectFiles="true">
-            </logicalFolder>
-            <itemPath>../Communication.X/cmake-build-debug/CMakeFiles/feature_tests.c</itemPath>
-          </logicalFolder>
-        </logicalFolder>
-        <itemPath>../Communication.X/send_receive_messages.c</itemPath>
-        <itemPath>../Communication.X/create_normal_message.c</itemPath>
-      </logicalFolder>
-      <logicalFolder name="Log_Handling.X"
-                     displayName="Log_Handling.X"
-                     projectFiles="true">
-        <itemPath>../Log_Handling.X/log_functions.c</itemPath>
-      </logicalFolder>
-      <logicalFolder name="Statemachines.X"
-                     displayName="Statemachines.X"
-                     projectFiles="true">
-        <logicalFolder name="cmake-build-debug"
-                       displayName="cmake-build-debug"
-                       projectFiles="true">
-          <logicalFolder name="CMakeFiles" displayName="CMakeFiles" projectFiles="true">
-            <logicalFolder name="3.8.2" displayName="3.8.2" projectFiles="true">
-              <logicalFolder name="CompilerIdC" displayName="CompilerIdC" projectFiles="true">
-              </logicalFolder>
-              <logicalFolder name="CompilerIdCXX"
-                             displayName="CompilerIdCXX"
-                             projectFiles="true">
-              </logicalFolder>
-            </logicalFolder>
-            <logicalFolder name="Statemachines_X.dir"
-                           displayName="Statemachines_X.dir"
-                           projectFiles="true">
-            </logicalFolder>
-          </logicalFolder>
-        </logicalFolder>
-        <itemPath>../Statemachines.X/statemachine_airquality_control.c</itemPath>
-        <itemPath>../Statemachines.X/statemachine_airtemp_control.c</itemPath>
-        <itemPath>../Statemachines.X/statemachine_watertemp_control.c</itemPath>
-        <itemPath>../Statemachines.X/statemachine_light_control.c</itemPath>
-      </logicalFolder>
       <logicalFolder name="Timer_Clock.X"
                      displayName="Timer_Clock.X"
                      projectFiles="true">
         <itemPath>../Timer_Clock.X/hallClock.c</itemPath>
-        <itemPath>../Timer_Clock.X/main.c</itemPath>
         <itemPath>../Timer_Clock.X/timer_libs.c</itemPath>
       </logicalFolder>
       <itemPath>../CKCommon/UART/uart.c</itemPath>
@@ -158,6 +42,9 @@
     <Elem>../Communication.X</Elem>
     <Elem>../Log_Handling.X</Elem>
     <Elem>../Timer_Clock.X</Elem>
+    <Elem>../Sensor_Structure.X</Elem>
+    <Elem>../Schedules.X</Elem>
+    <Elem>../Sensors.X</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -222,6 +109,29 @@
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32>
+      <C32-AR>
+        <property key="additional-options-chop-files" value="false"/>
+      </C32-AR>
+      <C32-AS>
+        <property key="assembler-symbols" value=""/>
+        <property key="enable-symbols" value="true"/>
+        <property key="exclude-floating-point-library" value="false"/>
+        <property key="expand-macros" value="false"/>
+        <property key="extra-include-directories-for-assembler" value=""/>
+        <property key="extra-include-directories-for-preprocessor" value=""/>
+        <property key="false-conditionals" value="false"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="keep-locals" value="false"/>
+        <property key="list-assembly" value="false"/>
+        <property key="list-source" value="false"/>
+        <property key="list-symbols" value="false"/>
+        <property key="oXC32asm-list-to-file" value="false"/>
+        <property key="omit-debug-dirs" value="false"/>
+        <property key="omit-forms" value="false"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="warning-level" value=""/>
+      </C32-AS>
       <C32-LD>
         <property key="additional-options-use-response-files" value="false"/>
         <property key="allocate-dinit" value="false"/>
@@ -241,7 +151,7 @@
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-cross-reference-file" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
-        <property key="heap-size" value=""/>
+        <property key="heap-size" value="1024"/>
         <property key="input-libraries" value=""/>
         <property key="kseg-length" value=""/>
         <property key="kseg-origin" value=""/>
@@ -302,7 +212,34 @@
         <property key="wpo-lto" value="false"/>
       </C32Global>
       <PK3OBPlatformTool>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="firmware.download.all" value="false"/>
+        <property key="memories.bootflash" value="true"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.dataflash" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.ranges"
+                  value="${memories.programmemory.ranges}"/>
+        <property key="memories.userotp" value="true"/>
+        <property key="poweroptions.powerenable" value="false"/>
+        <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.preservedataflash" value="false"/>
+        <property key="programoptions.preservedataflash.ranges"
+                  value="${programoptions.preservedataflash.ranges}"/>
+        <property key="programoptions.preserveeeprom" value="false"/>
+        <property key="programoptions.preserveeeprom.ranges"
+                  value="${programoptions.preserveeeprom.ranges}"/>
+        <property key="programoptions.preserveprogram.ranges" value=""/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.usehighvoltageonmclr" value="false"/>
+        <property key="programoptions.uselvpprogramming" value="false"/>
+        <property key="voltagevalue" value="3.25"/>
       </PK3OBPlatformTool>
     </conf>
   </confs>
