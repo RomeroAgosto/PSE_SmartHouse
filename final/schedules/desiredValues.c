@@ -1,6 +1,7 @@
 #include "schedules.h"
 #include <time.h>
 #include "../clock_hall/hallClock.h"
+#include <stdio.h>
 extern house home;
 #define disable -100
 
@@ -13,6 +14,8 @@ static int desired_ligth[4][4];
 
 int compareHour(int time1, int time2)
 {
+    
+    
     if(time2<time1) {
         if(conv_clock<time1 || conv_clock>time2) {
             return 1;
@@ -36,12 +39,19 @@ int desiredWaterTemperature()
     int i, maximum;
     maximum=disable;
     for(i=0;i<4;i++)        /* Used 4 because theres's 4 schedule per day of the week */
-    {
-        if(home.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].enable==1)
+    {      
+        
+    printf("id %d\n",home.array_function[0].array_room[0].array_schedule[0].schedules[0].id);
+    printf("value %d\n",home.array_function[0].array_room[0].array_schedule[0].schedules[0].value);
+    printf("enable %d\n",home.array_function[0].array_room[0].array_schedule[0].schedules[0].enable);
+    printf("start %d\n",home.array_function[0].array_room[0].array_schedule[0].schedules[0].start_time);
+    printf("end %d\n",home.array_function[0].array_room[0].array_schedule[0].schedules[0].stop_time);
+        
+        if(home.water_temperature.array_room[0].array_schedule[tclock.tm_wday].schedules[i].enable==1)
         {
-            if(compareHour(home.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].start_time,home.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].stop_time))
+            if(compareHour(home.water_temperature.array_room[0].array_schedule[tclock.tm_wday].schedules[i].start_time,home.water_temperature.array_room[0].array_schedule[tclock.tm_wday].schedules[i].stop_time))
             {
-                desired_water[i]=home.water_temperature.array_room[1].array_schedule[tclock.tm_wday].schedules[i].value;
+                desired_water[i]=home.water_temperature.array_room[0].array_schedule[tclock.tm_wday].schedules[i].value;
             }
             else
             {
