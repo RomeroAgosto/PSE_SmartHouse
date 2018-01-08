@@ -82,16 +82,17 @@ int main(int argc, char** argv) {
         
         updateSensors();
         Statemachine_AirQuality();
-        
+        //printf("air Quality done\n");
         
         for(i=0;i<4;i++){
             Statemachine_LightControl(i);
         }
+               // printf("light done\n");
         Statemachine_WaterControl();
+                       // printf("water done\n");
         for(i=0;i<4;i++){
             Statemachine_AirControl(i);
-        }
-        
+        }      
         message_handle();
         
     }

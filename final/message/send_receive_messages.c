@@ -105,15 +105,12 @@ char message[]="#+27300122002200*";
 int message_handle() {
     if (message_flag==1){
         if (message[1]=='?') {
+            printf("create message");
             create_normal_message(message);
             //send_message(message);
         } 
         else if (message[1]=='+') {
-           //printf("new schedule");
-           get_schedule_message(message);
-        }
-        else if(message[1]==''){
-            
+            get_schedule_message(message);
         }
         message_flag=0;
        

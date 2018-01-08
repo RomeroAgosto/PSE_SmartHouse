@@ -34,11 +34,11 @@ int  get_schedule_message(char *to_send)
     sscanf(n_stop,"%4d",&stop);// convert 4 char's to a int
     sscanf(n_value,"%2d",&value);// convert 2 char's to a int
  
-    home.array_type[to_send[2]-'0'].array_room[to_send[3]-'0'].array_wday[to_send[4]-'0'].schedules[to_send[5]-'0'].id=to_send[6]-'0';
-    home.array_type[to_send[2]-'0'].array_room[to_send[3]-'0'].array_wday[to_send[4]-'0'].schedules[to_send[5]-'0'].value=value;
-    home.array_type[to_send[2]-'0'].array_room[to_send[3]-'0'].array_wday[to_send[4]-'0'].schedules[to_send[5]-'0'].enable=to_send[9]-'0';
-    home.array_type[to_send[2]-'0'].array_room[to_send[3]-'0'].array_wday[to_send[4]-'0'].schedules[to_send[5]-'0'].start_time=start;
-    home.array_type[to_send[2]-'0'].array_room[to_send[3]-'0'].array_wday[to_send[4]-'0'].schedules[to_send[5]-'0'].stop_time=stop;
+    home.array_function[to_send[2]-'0'].array_room[to_send[3]-'0'].array_schedule[to_send[4]-'0'].schedules[to_send[5]-'0'].id=to_send[6]-'0';
+    home.array_function[to_send[2]-'0'].array_room[to_send[3]-'0'].array_schedule[to_send[4]-'0'].schedules[to_send[5]-'0'].value=value;
+    home.array_function[to_send[2]-'0'].array_room[to_send[3]-'0'].array_schedule[to_send[4]-'0'].schedules[to_send[5]-'0'].enable=to_send[9]-'0';
+    home.array_function[to_send[2]-'0'].array_room[to_send[3]-'0'].array_schedule[to_send[4]-'0'].schedules[to_send[5]-'0'].start_time=start;
+    home.array_function[to_send[2]-'0'].array_room[to_send[3]-'0'].array_schedule[to_send[4]-'0'].schedules[to_send[5]-'0'].stop_time=stop;
  
  
  

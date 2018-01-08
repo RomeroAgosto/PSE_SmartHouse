@@ -103,6 +103,7 @@
       <logicalFolder name="schedules" displayName="schedules" projectFiles="true">
         <itemPath>../schedules/desiredValues.c</itemPath>
         <itemPath>../schedules/schedules.c</itemPath>
+        <itemPath>../schedules/get_schedule_message.c</itemPath>
       </logicalFolder>
       <logicalFolder name="sensors" displayName="sensors" projectFiles="true">
         <itemPath>../sensors/adc_init.c</itemPath>
