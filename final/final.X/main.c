@@ -93,6 +93,7 @@ int main(int argc, char** argv) {
         for(i=0;i<4;i++){
             Statemachine_AirControl(i);
         }      
+        
         message_handle();
         
     }

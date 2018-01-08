@@ -8,9 +8,10 @@
 #include <plib.h>
 #endif
 
-static int message_flag=1;
+static int message_flag;
 #if RUN ==1
 static char message[5000];
+static int message_counter;
 #endif
 
 int get_digits(int score_int, char *score_char) {
@@ -35,8 +36,9 @@ int send_message(char *message) {
     long int checksum=0;
     int i=0;
     do{
-        i++;
         checksum=checksum+message[i]; /*adds all characters to a sum*/
+        i++;
+        
     }while(message[i]!='\0');
     char check_sum[100], delimiter_checksum_start[]="(",delimiter_checksum_end[]=")", length_checksum[2], delimiter_overall[]="*";
     length_checksum[0]=get_digits(checksum,check_sum) +'0'; /*returns the length of the checksum*/
@@ -103,16 +105,34 @@ long int check_received_message(char *message){
 char message[]="#+27300122002200*";
 #endif
 int message_handle() {
-    if (message_flag==1){
-        if (message[1]=='?') {
-            printf("create message");
+    if (message_flag==TRUE){
+        int error_flag=0;
+        int p=0;
+        
+        while(message[p]!='#' && p<message_counter){
+            if(message[p]=='*'){
+                error_flag=1;
+                break;
+            }
+            p++;
+        };
+        
+        if(error_flag==1){
+            message_counter=0;
+            return 0;
+        }       
+        //send_message(message);
+        
+        if (message[p+1]=='?') {
             create_normal_message(message);
             //send_message(message);
         } 
-        else if (message[1]=='+') {
+        else if (message[p+1]=='+') {
             get_schedule_message(message);
         }
-        message_flag=0;
+        message_flag=FALSE;
+        
+        
        
     }
         return 1;
@@ -138,14 +158,14 @@ void init_uart(void){
 
 
 void __ISR(_UART_1_VECTOR,IPL4AUTO) _UART1Handler(void){
-    static int message_counter;
     char charbuf[1];
     charbuf[0]= U1RXREG;
     message[message_counter]=charbuf[0];
     message_counter++;
     if (charbuf[0]=='*'){
-
+        
         message_flag=TRUE;
+        message[message_counter]='\0';
         message_counter=0;
         printf("message is: %s\n",message);
     }
