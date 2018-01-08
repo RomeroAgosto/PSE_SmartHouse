@@ -3,7 +3,9 @@
 static int CYCLES[4]={20,20,20,20};/*!< every light can have a different cycle*/
 static int counter[4]={0,0,0,0}; /* Counter for all timer/lights */
 static int light_state[4]={0,0,0,0};//={0};
-
+int GetCycle(int room){
+    return CYCLES[room];
+}
 /**
  *      @brief  enforces the user to set a new cycle time
  *      @param  new_cycle is expected in seconds

@@ -28,7 +28,12 @@ TEST(TEST_COMMUNICATION, SIMPLEMESSAGE) {
     int i;
     for (i = 0; i < length; i++) {
         //printf("I compare [%d] the expected result %d with current result %d\n",i,ResultExpected[i],Result_complete[i]);
-        CHECK_EQUAL(ResultExpected[i], Result_complete[i]);
+        char message[]="#?*";
+        SetMessage(message);
+        SetMessageFlag(1);
+        int result= Statemachine_Communication();
+        CHECK_EQUAL(result,1);
+        //CHECK_EQUAL(ResultExpected[i], Result_complete[i]);
     }
 }
 

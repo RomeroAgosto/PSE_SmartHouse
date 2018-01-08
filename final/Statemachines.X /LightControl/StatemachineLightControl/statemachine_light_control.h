@@ -18,6 +18,7 @@
 
 int SetNewCycle(int room,int new_cycle);
 int SetTimer(int light);
+int GetCycle(int room);
 
 #if UNITTEST==1
 int ResetLightStates();
