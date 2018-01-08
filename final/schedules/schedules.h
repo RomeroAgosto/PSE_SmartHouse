@@ -75,5 +75,6 @@ house home; /*in the end, this definition should be in get_schedules.c*/
 
 int get_schedule_message(char *to_send);
 
+
 #endif	/* SCHEDULES_H */
 

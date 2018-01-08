@@ -1,6 +1,7 @@
 #include "schedules.h"
+#include "desiredValues.h"
  
- 
+extern house home; 
 //static house home; /*home definition is supposed to be here!*/
  
 int  get_schedule_message(char *to_send)

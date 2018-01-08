@@ -1,7 +1,7 @@
 #include "schedules.h"
 #include <time.h>
 #include "../clock_hall/hallClock.h"
-
+extern house home;
 #define disable -100
 
 static struct tm tclock;
