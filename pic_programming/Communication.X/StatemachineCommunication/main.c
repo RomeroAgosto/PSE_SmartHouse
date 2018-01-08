@@ -1,5 +1,6 @@
-#include "send_receive_messages.h"
 #include "create_normal_message.h"
+#include "send_receive_messages.h"
+
 
 #if UNITTEST == 0
 
@@ -80,7 +81,11 @@ void __ISR(_UART_1_VECTOR,IPL4AUTO) _UART1Handler(void){
 int main(int argc, char** argv) {
 
     // Variable declarations;
+    char message[]="#?*";
+    SetMessage(message);
+    SetMessageFlag(1);
     int i=0;
+    Statemachine_Communication();
 #if RUN ==  1
     // Performance optimization (flash access time, enable instruct and data cache,... and PBClock setup
     SYSTEMConfigPerformance(SYSCLK);

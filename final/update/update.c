@@ -77,7 +77,9 @@ void print() {
         printf("%d\n\r",current_values.air_temperature_sensor[i].temp);
     }
 }
-
+int GetHeatingAirState(int n_air){
+    return current_values.air_temperature_sensor[n_air].heater;
+}
 /*## AIR QUALITY ##*/
 int GetAirQuality(int n_air, int *p){
     (p[0])=current_values.air_quality_sensor[n_air].p10;

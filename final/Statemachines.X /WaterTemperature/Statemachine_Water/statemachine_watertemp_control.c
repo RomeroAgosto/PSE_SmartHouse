@@ -34,7 +34,6 @@ int SetWaterHeaterSate(int set){
 #endif
     int water_temperature=GetWaterTemperature();
     int desired_temperature= desiredWaterTemperature();
-    desired_temperature=50;
     upper_threshold_water=desired_temperature+2; /*trigger band is 10 degrees!*/
     lower_threshold_water=desired_temperature-2;
     /* states are stored in the states variables. so higher function can easily access the current states*/

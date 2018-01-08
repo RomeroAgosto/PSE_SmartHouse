@@ -107,7 +107,7 @@ void increment_time(void)
             }
         }
     }
-    printf("seconds:%d \n",time_hall.tm_sec);
+    //printf("seconds:%d \n",time_hall.tm_sec);
 }
 
 

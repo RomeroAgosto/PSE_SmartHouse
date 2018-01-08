@@ -3,14 +3,20 @@
 #include "../../Schedules.X/schedules.h"
 #include <stdio.h>
 static int message_flag=1;
-
+static char message [5000];
 
 #if UNITTEST==0
 #define _SUPPRESS_PLIB_WARNING 1
 #include <plib.h>
-static char message [5000];
 #else
-
+void SetMessage(char *mess){
+    int j=0;
+    while(mess[j]!='*'){
+        message[j]=mess[j];
+        j++;
+    }
+    message[j]='*';
+}
 void SetMessageFlag(int flag){
     message_flag=flag;
 }
@@ -103,14 +109,13 @@ long int check_received_message(char *message){
     return 1;
 
     }
-#if UNITTEST== 1
-char message[]="#+27300122002200*";
-#endif
+
 int  Statemachine_Communication() {
 
     if (message_flag==SEND_NEW_STATUS){
         if (message[1]=='?') {
             create_normal_message(message);
+            printf("%s\n",message);
             //send_message(message);
         } 
         else if (message[1]=='+') {

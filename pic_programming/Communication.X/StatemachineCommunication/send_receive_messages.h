@@ -21,6 +21,7 @@
 
 #if UNITTEST==1
 void SetMessageFlag(int flag);
+void SetMessage(char *mess);
 #else
 void _UART1Handler(void);
 
