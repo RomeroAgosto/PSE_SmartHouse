@@ -27,7 +27,6 @@
 /pic_programming/SR.X/nbproject/private/
 sensor_reading/Testing\.X/build/
 
-/final/Statemachines.X/.idea/
 
 sensor_reading/Testing\.X/dist/
 
@@ -42,3 +41,6 @@ sensor_reading/SR\.X/nbproject/
 /pic_programming/Sensors.X/nbproject/private/
 /pic_programming/Sensors.X/build/default/
 /pic_programming/Sensors.X/dist/default/
+/final/Statemachines.X/build/default/
+/final/Statemachines.X/dist/default/
+/final/Statemachines.X/nbproject/private/
