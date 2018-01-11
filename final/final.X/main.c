@@ -6,15 +6,14 @@
 #include <plib.h>
 #include <p32xxxx.h>
 #include <time.h>
-#include "../clock_hall/hallClock.h"
-#include "../clock_hall/timer_libs.h"
 #include "../CKCommon/ConfigBits/config_bits.h"
 #include "../CKCommon/UART/uart.h"
+#include "../clock_hall/hallClock.h"
 
 #include "../message/send_receive_messages.h"
 #include "../sensors/sr.h"
-#include "../update/struct_lib.h"
 #include "../update/update.h"
+#include "../log/log_functions.h"
 
 
 #define SYSCLK  80000000L // System clock frequency, in Hz
@@ -52,15 +51,14 @@ int main(int argc, char** argv) {
 //##-------- 
     struct tm str_time;
     str_time.tm_year = 2000-1900;
-    str_time.tm_mon = 1;
-    str_time.tm_mday = 28;
-    str_time.tm_hour = 23;
+    str_time.tm_mon = 0;
+    str_time.tm_mday = 0;
+    str_time.tm_hour = 0;
     str_time.tm_min = 59;
-    str_time.tm_sec = 40;
-    str_time.tm_isdst = 0;
+    str_time.tm_sec = 0;
+    str_time.tm_wday = 0;
     
     update_time(str_time);
-    struct tm time;
 
     
     TRISE=TRISE && 0xf000;
@@ -82,15 +80,17 @@ int main(int argc, char** argv) {
         
         updateSensors();
         Statemachine_AirQuality();
-        
+        //printf("air Quality done\n");
         
         for(i=0;i<4;i++){
             Statemachine_LightControl(i);
         }
+               // printf("light done\n");
         Statemachine_WaterControl();
+                       // printf("water done\n");
         for(i=0;i<4;i++){
             Statemachine_AirControl(i);
-        }
+        }      
         
         message_handle();
         

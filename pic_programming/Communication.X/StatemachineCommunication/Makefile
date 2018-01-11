@@ -1,19 +1,32 @@
 
-SRC=main.c create_normal_message.c send_receive_messages.c send_receive_messages.h create_normal_message.h
-PROG=primo
+.PHONY: clean
+
+SRC=main.c send_receive_messages.c send_receive_messages.h
+
+#O binário executável (nome do programa)
+PROG=example
+
+################################
+
+CC=gcc
+CFLAGS=-Wall # - wall -> show all warnings
+
+OBJ=$(SRC:.c=.o) 
+
+$(PROG): $(OBJ) 
+	gcc -o $@ $^
+# for each c file generate an o file, 
 
 
 
-$(PROG):
-	gcc $(SRC) -o $(PROG)
 
-doc: Doxyfile
-	doxygen
-
-Doxyfile: 
-	doxygen -g
-
-all: $(PROG) doc
+run: example
+	- ./example
 
 clean:
-	rm -rf primo html latex Doxyfile
+	rm -f *.o
+	rm -f example
+	rm -rf doc/*
+	rm -f *~
+
+

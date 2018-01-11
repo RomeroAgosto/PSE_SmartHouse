@@ -10,7 +10,6 @@ CPPUTEST_HOME =/home/ppedreiras/Software/cpputest-3.8
 # - Location of main program files
 PROG_LOCATION_COMMUNICATION=../StatemachineCommunication
 
-
 CXXFLAGS += -I$(CPPUTEST_HOME)/include-I$(PROG_LOCATION_COMMUNICATION)
 
 # The following is required in Red Hat based systems (Fedora, CentOS) to

@@ -17,7 +17,6 @@
       </logicalFolder>
       <logicalFolder name="clock_hall" displayName="clock_hall" projectFiles="true">
         <itemPath>../clock_hall/hallClock.h</itemPath>
-        <itemPath>../clock_hall/timer_libs.h</itemPath>
       </logicalFolder>
       <logicalFolder name="message" displayName="message" projectFiles="true">
         <itemPath>../message/send_receive_messages.h</itemPath>
@@ -31,14 +30,14 @@
         <itemPath>../sensors/i2c.h</itemPath>
         <itemPath>../sensors/sr.h</itemPath>
       </logicalFolder>
-      <logicalFolder name="Statemachines.X "
-                     displayName="Statemachines.X "
+      <logicalFolder name="Statemachines.X"
+                     displayName="Statemachines.X"
                      projectFiles="true">
         <logicalFolder name="AirQuality" displayName="AirQuality" projectFiles="true">
           <logicalFolder name="Statemachine_AirQuality"
                          displayName="Statemachine_AirQuality"
                          projectFiles="true">
-            <itemPath>../Statemachines.X /AirQuality/Statemachine_AirQuality/statemachine_airquality_control.h</itemPath>
+            <itemPath>../Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.h</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="AirTemperature"
@@ -47,7 +46,11 @@
           <logicalFolder name="Statemachine_AirTemperature"
                          displayName="Statemachine_AirTemperature"
                          projectFiles="true">
-            <itemPath>../Statemachines.X /AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.h</itemPath>
+            <itemPath>../Statemachines.X/AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="UnitTest_Tester"
+                         displayName="UnitTest_Tester"
+                         projectFiles="true">
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="LightControl"
@@ -56,7 +59,11 @@
           <logicalFolder name="StatemachineLightControl"
                          displayName="StatemachineLightControl"
                          projectFiles="true">
-            <itemPath>../Statemachines.X /LightControl/StatemachineLightControl/statemachine_light_control.h</itemPath>
+            <itemPath>../Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="UnitTest_Tester"
+                         displayName="UnitTest_Tester"
+                         projectFiles="true">
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="WaterTemperature"
@@ -65,10 +72,14 @@
           <logicalFolder name="Statemachine_Water"
                          displayName="Statemachine_Water"
                          projectFiles="true">
-            <itemPath>../Statemachines.X /WaterTemperature/Statemachine_Water/statemachine_watertemp_control.h</itemPath>
+            <itemPath>../Statemachines.X/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="UnitTest_Tester"
+                         displayName="UnitTest_Tester"
+                         projectFiles="true">
           </logicalFolder>
         </logicalFolder>
-        <itemPath>../Statemachines.X /statemachines.h</itemPath>
+        <itemPath>../Statemachines.X/statemachines.h</itemPath>
       </logicalFolder>
       <logicalFolder name="update" displayName="update" projectFiles="true">
         <itemPath>../update/struct_lib.h</itemPath>
@@ -93,8 +104,8 @@
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="clock_hall" displayName="clock_hall" projectFiles="true">
+        <itemPath>../clock_hall/get_time.c</itemPath>
         <itemPath>../clock_hall/hallClock.c</itemPath>
-        <itemPath>../clock_hall/timer_libs.c</itemPath>
       </logicalFolder>
       <logicalFolder name="message" displayName="message" projectFiles="true">
         <itemPath>../message/create_normal_message.c</itemPath>
@@ -103,6 +114,7 @@
       <logicalFolder name="schedules" displayName="schedules" projectFiles="true">
         <itemPath>../schedules/desiredValues.c</itemPath>
         <itemPath>../schedules/schedules.c</itemPath>
+        <itemPath>../schedules/get_schedule_message.c</itemPath>
       </logicalFolder>
       <logicalFolder name="sensors" displayName="sensors" projectFiles="true">
         <itemPath>../sensors/adc_init.c</itemPath>
@@ -119,7 +131,7 @@
           <logicalFolder name="Statemachine_AirQuality"
                          displayName="Statemachine_AirQuality"
                          projectFiles="true">
-            <itemPath>../Statemachines.X /AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c</itemPath>
+            <itemPath>../Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="AirTemperature"
@@ -128,7 +140,7 @@
           <logicalFolder name="Statemachine_AirTemperature"
                          displayName="Statemachine_AirTemperature"
                          projectFiles="true">
-            <itemPath>../Statemachines.X /AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c</itemPath>
+            <itemPath>../Statemachines.X/AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="LightControl"
@@ -137,7 +149,7 @@
           <logicalFolder name="StatemachineLightControl"
                          displayName="StatemachineLightControl"
                          projectFiles="true">
-            <itemPath>../Statemachines.X /LightControl/StatemachineLightControl/statemachine_light_control.c</itemPath>
+            <itemPath>../Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.c</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="WaterTemperature"
@@ -146,7 +158,7 @@
           <logicalFolder name="Statemachine_Water"
                          displayName="Statemachine_Water"
                          projectFiles="true">
-            <itemPath>../Statemachines.X /WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c</itemPath>
+            <itemPath>../Statemachines.X/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c</itemPath>
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>
@@ -164,18 +176,20 @@
   <sourceRootList>
     <Elem>.</Elem>
     <Elem>../clock_hall</Elem>
-    <Elem>../CKCommon/ConfigBits</Elem>
-    <Elem>../CKCommon/UART</Elem>
     <Elem>../statemachine</Elem>
-    <Elem>../../pic_programming/Statemachines.X</Elem>
     <Elem>../CKCommon</Elem>
     <Elem>../sensors</Elem>
     <Elem>../actuators</Elem>
     <Elem>../schedules</Elem>
     <Elem>../message</Elem>
     <Elem>../update</Elem>
+    <Elem>../CKCommon/ConfigBits</Elem>
+    <Elem>../CKCommon/UART</Elem>
+    <Elem>../../pic_programming/Statemachines.X</Elem>
     <Elem>../Statemachines.X</Elem>
     <Elem>../Statemachines.X </Elem>
+    <Elem>../log</Elem>
+    <Elem>../../schedule</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -188,7 +202,7 @@
         <platformTool>PK3OBPlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>1.44</languageToolchainVersion>
-        <platform>2</platform>
+        <platform>3</platform>
       </toolsSet>
       <compileType>
         <linkerTool>

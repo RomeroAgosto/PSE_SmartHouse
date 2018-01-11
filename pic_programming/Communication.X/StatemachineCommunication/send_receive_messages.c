@@ -4,11 +4,14 @@
 #include <stdio.h>
 static int message_flag=1;
 static char message [5000];
-
+int sent_message=0;
+int message_counter;
 #if UNITTEST==0
 #define _SUPPRESS_PLIB_WARNING 1
 #include <plib.h>
+#include "create_normal_message.h"
 #else
+int message_counter=0;
 void SetMessage(char *mess){
     int j=0;
     while(mess[j]!='*'){
@@ -16,12 +19,25 @@ void SetMessage(char *mess){
         j++;
     }
     message[j]='*';
+    message_counter=j;
 }
 void SetMessageFlag(int flag){
     message_flag=flag;
 }
+int create_normal_message(char *message){
+    sent_message=1;
+}
+int get_schedule_message(char *message) {
+    sent_message=2;
+}
+int reset_messages() {
+    message_flag=0;
+    sent_message=0;
+}
+void log_create_msg(char *message) {
+    sent_message=3;
+}
 #endif
-
 
 int get_digits(int score_int, char *score_char) {
     int i=0, div;
@@ -41,12 +57,14 @@ int get_digits(int score_int, char *score_char) {
     score_char[j]='\0';/*end delimiter*/
     return j;
 }
+
 int send_message(char *message) {
     long int checksum=0;
     int i=0;
     do{
-        i++;
         checksum=checksum+message[i]; /*adds all characters to a sum*/
+        i++;
+        
     }while(message[i]!='\0');
     char check_sum[100], delimiter_checksum_start[]="(",delimiter_checksum_end[]=")", length_checksum[2], delimiter_overall[]="*";
     length_checksum[0]=get_digits(checksum,check_sum) +'0'; /*returns the length of the checksum*/
@@ -110,24 +128,60 @@ long int check_received_message(char *message){
 
     }
 
-int  Statemachine_Communication() {
+#if UNITTEST == 1
+int  Statemachine_Communication(int *test) {
+#else
+    int  Statemachine_Communication(){
+#endif
+    if (message_flag==TRUE) {
 
-    if (message_flag==SEND_NEW_STATUS){
-        if (message[1]=='?') {
-            create_normal_message(message);
-            printf("%s\n",message);
-            //send_message(message);
-        } 
-        else if (message[1]=='+') {
-//           get_schedule_message(message);
+        int error_flag=0;
+        int p=0;
+        while(message[p]!='#' && p<message_counter){
+            if(message[p]=='*'){
+                error_flag=1;
+                break;
+            }
+            p++;
+        };
+
+        switch (message[p + 1]) {
+            case '?':
+                create_normal_message(message);
+                //printf("%s\n",message);
+                //send_message(message);
+                break;
+
+            case ('+'):
+                get_schedule_message(message);
+                break;
+            case ('!'):
+                log_create_msg(message);
+                break;
+            default:
+                error_flag = 1;
+                break;
         }
-        message_flag=0;
-       
+        message_flag = 0;
+
+#if UNITTEST == 1
+        if (message[p+1]=='?') {test[0] = 1; }
+        else if (message[p+1]=='+') { test[0] = 2;}
+        else if (message[p+1]=='!') test[0]=3;
+        test[2]=p;
     }
-        return 1;
+    else {
+        test[0] = 0;
+        test[2]=0;
+    }
+    test[1]=sent_message;
+    return 1;
+
+}
+#else
+}
 }
 
-#if UNITTEST== 0
 #define UART_PRIORITY_P 4
 #define UART_PRIORITY_S 3
 void init_uart(void){
