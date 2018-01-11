@@ -6,15 +6,14 @@
 #include <plib.h>
 #include <p32xxxx.h>
 #include <time.h>
-#include "../clock_hall/hallClock.h"
-#include "../clock_hall/timer_libs.h"
 #include "../CKCommon/ConfigBits/config_bits.h"
 #include "../CKCommon/UART/uart.h"
+#include "../clock_hall/hallClock.h"
 
 #include "../message/send_receive_messages.h"
 #include "../sensors/sr.h"
-#include "../update/struct_lib.h"
 #include "../update/update.h"
+#include "../log/log_functions.h"
 
 
 #define SYSCLK  80000000L // System clock frequency, in Hz

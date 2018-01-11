@@ -12,7 +12,7 @@ int get_time(char *to_send)
     {
         n_year[i]=to_send[i+2];
     }
-    for (int i = 0; i < 2; i++) {
+    for (i = 0; i < 2; i++) {
         n_month[i]=to_send[i+6];
         n_day[i]=to_send[i+9];
         n_hour[i]=to_send[i+11];

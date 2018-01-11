@@ -29,8 +29,7 @@ void setup_clockHall(void (*func)(void));
 */
 void get_timeHall(struct tm *);
 int update_time(struct tm );
-void increment_time();
-
+int get_time(char *to_send);
 
 
 #endif /*CLOCK_HALL_H*/

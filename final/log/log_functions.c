@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "log_stru.h"
-#include "struct_lib.h"
 #include <time.h>
 #include <string.h>
-#include "update.h"
+#include "../update/update.h"
 #include "log_functions.h"
+#include "log_stru.h"
 
-static sensorvalues sensor_values;
 static log msd;
 static time_t read_time;
 int log_data_saving()
@@ -34,7 +32,7 @@ int log_data_saving()
         for(j=0;j<8;j++)
         {
             msd.data[i].sensor_data[j+5]=GetAirTemperature(j);//sensor_values.air_temperature_sensor[j].temp;
-            msd.data[i].sensor_data[j+13]=//sensor_values.air_temperature_sensor[j].heater;
+            msd.data[i].sensor_data[j+13]=GetHeatingAirState(j);//sensor_values.air_temperature_sensor[j].heater;
         }
 
         //data from water control
