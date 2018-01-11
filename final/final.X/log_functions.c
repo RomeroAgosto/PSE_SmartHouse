@@ -4,6 +4,7 @@
 #include "struct_lib.h"
 #include <time.h>
 #include <string.h>
+#include "update.h"
 #include "log_functions.h"
 
 static sensorvalues sensor_values;
@@ -32,16 +33,16 @@ int log_data_saving()
 
         for(j=0;j<8;j++)
         {
-            msd.data[i].sensor_data[j+5]=sensor_values.air_temperature_sensor[j].temp;
-            msd.data[i].sensor_data[j+13]=sensor_values.air_temperature_sensor[j].heater;
+            msd.data[i].sensor_data[j+5]=GetAirTemperature(j);//sensor_values.air_temperature_sensor[j].temp;
+            msd.data[i].sensor_data[j+13]=//sensor_values.air_temperature_sensor[j].heater;
         }
 
         //data from water control
-        msd.data[i].sensor_data[21]=sensor_values.water_temperature.temp;
-        msd.data[i].sensor_data[22]=sensor_values.water_temperature.water_heater;
+        msd.data[i].sensor_data[21]=GetWaterTemperature();//sensor_values.water_temperature.temp;
+        msd.data[i].sensor_data[22]=GetWaterHeater();//sensor_values.water_temperature.water_heater
         // data air quality
         for(j=0;j<4;j++) {
-            msd.data[i].sensor_data[j+23] = sensor_values.air_quality_sensor[j].ventilator;
+            msd.data[i].sensor_data[j+23] =GetVentilatorState();// sensor_values.air_quality_sensor[j].ventilator;
         }
 
         i++;
