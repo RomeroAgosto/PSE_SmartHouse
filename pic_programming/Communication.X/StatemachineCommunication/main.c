@@ -1,4 +1,3 @@
-#include "create_normal_message.h"
 #include "send_receive_messages.h"
 
 
@@ -82,46 +81,11 @@ int main(int argc, char** argv) {
 
     // Variable declarations;
     char message[]="#?*";
+	int a[2];
     SetMessage(message);
     SetMessageFlag(1);
     int i=0;
-    Statemachine_Communication();
-#if RUN ==  1
-    // Performance optimization (flash access time, enable instruct and data cache,... and PBClock setup
-    SYSTEMConfigPerformance(SYSCLK);
-    mOSCSetPBDIV(OSC_PB_DIV_2); // This is necessary since SYSTEMConfigPerformance defaults FPBDIV to DIV_1
-
-    INTConfigureSystem(INT_SYSTEM_CONFIG_MULT_VECTOR);
-    INTEnableInterrupts();
-    // Init UART
-    UartInit(PBCLOCK,115200) != UART_SUCCESS;
-    printf("init");
-    init_uart();
-#endif
-    /*
-    while(1){
-        message_handle();
-        if(message_flag==1){
-            check_received_message(message);
-            int j=0;
-            do{
-#if RUN== 1
-                _mon_putc(message[j]);
-#endif
-                message_flag=0;
-                j++;
-            }while(message[j]!='*');
-#if RUN== 1
-            _mon_putc(message[j]);
-#endif
-
-        }
-
-    };
-
-/*timer initialization*/
-
-
+    Statemachine_Communication(a);
     return (EXIT_SUCCESS);
 }
 
