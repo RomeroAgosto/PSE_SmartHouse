@@ -57,6 +57,7 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
+<<<<<<< Updated upstream
 SOURCEFILES_QUOTED_IF_SPACED=../actuators/actuators.c ../CKCommon/UART/uart.c ../clock_hall/hallClock.c ../clock_hall/timer_libs.c ../message/create_normal_message.c ../message/send_receive_messages.c ../schedules/desiredValues.c ../schedules/schedules.c ../schedules/get_schedule_message.c ../sensors/adc_init.c ../sensors/air_quality_level.c ../sensors/i2c.c ../sensors/motion_detection.c ../sensors/temp_analog.c ../sensors/temp_digital.c ../Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c ../Statemachines.X/AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c ../Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.c ../Statemachines.X/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c ../update/update.c main.c
 
 # Object Files Quoted if spaced
@@ -68,6 +69,19 @@ OBJECTFILES=${OBJECTDIR}/_ext/470364171/actuators.o ${OBJECTDIR}/_ext/1062335525
 
 # Source Files
 SOURCEFILES=../actuators/actuators.c ../CKCommon/UART/uart.c ../clock_hall/hallClock.c ../clock_hall/timer_libs.c ../message/create_normal_message.c ../message/send_receive_messages.c ../schedules/desiredValues.c ../schedules/schedules.c ../schedules/get_schedule_message.c ../sensors/adc_init.c ../sensors/air_quality_level.c ../sensors/i2c.c ../sensors/motion_detection.c ../sensors/temp_analog.c ../sensors/temp_digital.c ../Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c ../Statemachines.X/AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c ../Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.c ../Statemachines.X/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c ../update/update.c main.c
+=======
+SOURCEFILES_QUOTED_IF_SPACED=../actuators/actuators.c ../CKCommon/UART/uart.c ../clock_hall/hallClock.c ../clock_hall/timer_libs.c ../message/create_normal_message.c ../message/send_receive_messages.c ../schedules/desiredValues.c ../schedules/schedules.c ../sensors/adc_init.c ../sensors/air_quality_level.c ../sensors/i2c.c ../sensors/motion_detection.c ../sensors/temp_analog.c ../sensors/temp_digital.c ../statemachine/statemachine_airquality_control.c ../statemachine/statemachine_airtemp_control.c ../statemachine/statemachine_light_control.c ../statemachine/statemachine_watertemp_control.c ../update/update.c main.c
+
+# Object Files Quoted if spaced
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/470364171/actuators.o ${OBJECTDIR}/_ext/1062335525/uart.o ${OBJECTDIR}/_ext/731469447/hallClock.o ${OBJECTDIR}/_ext/731469447/timer_libs.o ${OBJECTDIR}/_ext/725581128/create_normal_message.o ${OBJECTDIR}/_ext/725581128/send_receive_messages.o ${OBJECTDIR}/_ext/219456723/desiredValues.o ${OBJECTDIR}/_ext/219456723/schedules.o ${OBJECTDIR}/_ext/299869866/adc_init.o ${OBJECTDIR}/_ext/299869866/air_quality_level.o ${OBJECTDIR}/_ext/299869866/i2c.o ${OBJECTDIR}/_ext/299869866/motion_detection.o ${OBJECTDIR}/_ext/299869866/temp_analog.o ${OBJECTDIR}/_ext/299869866/temp_digital.o ${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o ${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o ${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o ${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o ${OBJECTDIR}/_ext/754508808/update.o ${OBJECTDIR}/main.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/470364171/actuators.o.d ${OBJECTDIR}/_ext/1062335525/uart.o.d ${OBJECTDIR}/_ext/731469447/hallClock.o.d ${OBJECTDIR}/_ext/731469447/timer_libs.o.d ${OBJECTDIR}/_ext/725581128/create_normal_message.o.d ${OBJECTDIR}/_ext/725581128/send_receive_messages.o.d ${OBJECTDIR}/_ext/219456723/desiredValues.o.d ${OBJECTDIR}/_ext/219456723/schedules.o.d ${OBJECTDIR}/_ext/299869866/adc_init.o.d ${OBJECTDIR}/_ext/299869866/air_quality_level.o.d ${OBJECTDIR}/_ext/299869866/i2c.o.d ${OBJECTDIR}/_ext/299869866/motion_detection.o.d ${OBJECTDIR}/_ext/299869866/temp_analog.o.d ${OBJECTDIR}/_ext/299869866/temp_digital.o.d ${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o.d ${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o.d ${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o.d ${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o.d ${OBJECTDIR}/_ext/754508808/update.o.d ${OBJECTDIR}/main.o.d
+
+# Object Files
+OBJECTFILES=${OBJECTDIR}/_ext/470364171/actuators.o ${OBJECTDIR}/_ext/1062335525/uart.o ${OBJECTDIR}/_ext/731469447/hallClock.o ${OBJECTDIR}/_ext/731469447/timer_libs.o ${OBJECTDIR}/_ext/725581128/create_normal_message.o ${OBJECTDIR}/_ext/725581128/send_receive_messages.o ${OBJECTDIR}/_ext/219456723/desiredValues.o ${OBJECTDIR}/_ext/219456723/schedules.o ${OBJECTDIR}/_ext/299869866/adc_init.o ${OBJECTDIR}/_ext/299869866/air_quality_level.o ${OBJECTDIR}/_ext/299869866/i2c.o ${OBJECTDIR}/_ext/299869866/motion_detection.o ${OBJECTDIR}/_ext/299869866/temp_analog.o ${OBJECTDIR}/_ext/299869866/temp_digital.o ${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o ${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o ${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o ${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o ${OBJECTDIR}/_ext/754508808/update.o ${OBJECTDIR}/main.o
+
+# Source Files
+SOURCEFILES=../actuators/actuators.c ../CKCommon/UART/uart.c ../clock_hall/hallClock.c ../clock_hall/timer_libs.c ../message/create_normal_message.c ../message/send_receive_messages.c ../schedules/desiredValues.c ../schedules/schedules.c ../sensors/adc_init.c ../sensors/air_quality_level.c ../sensors/i2c.c ../sensors/motion_detection.c ../sensors/temp_analog.c ../sensors/temp_digital.c ../statemachine/statemachine_airquality_control.c ../statemachine/statemachine_airtemp_control.c ../statemachine/statemachine_light_control.c ../statemachine/statemachine_watertemp_control.c ../update/update.c main.c
+>>>>>>> Stashed changes
 
 
 CFLAGS=
@@ -110,13 +124,21 @@ ${OBJECTDIR}/_ext/470364171/actuators.o: ../actuators/actuators.c  nbproject/Mak
 	@${MKDIR} "${OBJECTDIR}/_ext/470364171" 
 	@${RM} ${OBJECTDIR}/_ext/470364171/actuators.o.d 
 	@${RM} ${OBJECTDIR}/_ext/470364171/actuators.o 
+<<<<<<< Updated upstream
 	@${FIXDEPS} "${OBJECTDIR}/_ext/470364171/actuators.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DPK3OBPlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/470364171/actuators.o.d" -o ${OBJECTDIR}/_ext/470364171/actuators.o ../actuators/actuators.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
+	@${FIXDEPS} "${OBJECTDIR}/_ext/470364171/actuators.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/470364171/actuators.o.d" -o ${OBJECTDIR}/_ext/470364171/actuators.o ../actuators/actuators.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> Stashed changes
 	
 ${OBJECTDIR}/_ext/1062335525/uart.o: ../CKCommon/UART/uart.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1062335525" 
 	@${RM} ${OBJECTDIR}/_ext/1062335525/uart.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1062335525/uart.o 
+<<<<<<< Updated upstream
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1062335525/uart.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DPK3OBPlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1062335525/uart.o.d" -o ${OBJECTDIR}/_ext/1062335525/uart.o ../CKCommon/UART/uart.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1062335525/uart.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1062335525/uart.o.d" -o ${OBJECTDIR}/_ext/1062335525/uart.o ../CKCommon/UART/uart.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> Stashed changes
 	
 ${OBJECTDIR}/_ext/731469447/hallClock.o: ../clock_hall/hallClock.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/731469447" 
@@ -134,24 +156,37 @@ ${OBJECTDIR}/_ext/725581128/create_normal_message.o: ../message/create_normal_me
 	@${MKDIR} "${OBJECTDIR}/_ext/725581128" 
 	@${RM} ${OBJECTDIR}/_ext/725581128/create_normal_message.o.d 
 	@${RM} ${OBJECTDIR}/_ext/725581128/create_normal_message.o 
+<<<<<<< Updated upstream
 	@${FIXDEPS} "${OBJECTDIR}/_ext/725581128/create_normal_message.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DPK3OBPlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/725581128/create_normal_message.o.d" -o ${OBJECTDIR}/_ext/725581128/create_normal_message.o ../message/create_normal_message.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
+	@${FIXDEPS} "${OBJECTDIR}/_ext/725581128/create_normal_message.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/725581128/create_normal_message.o.d" -o ${OBJECTDIR}/_ext/725581128/create_normal_message.o ../message/create_normal_message.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> Stashed changes
 	
 ${OBJECTDIR}/_ext/725581128/send_receive_messages.o: ../message/send_receive_messages.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/725581128" 
 	@${RM} ${OBJECTDIR}/_ext/725581128/send_receive_messages.o.d 
 	@${RM} ${OBJECTDIR}/_ext/725581128/send_receive_messages.o 
+<<<<<<< Updated upstream
 	@${FIXDEPS} "${OBJECTDIR}/_ext/725581128/send_receive_messages.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DPK3OBPlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/725581128/send_receive_messages.o.d" -o ${OBJECTDIR}/_ext/725581128/send_receive_messages.o ../message/send_receive_messages.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
+	@${FIXDEPS} "${OBJECTDIR}/_ext/725581128/send_receive_messages.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/725581128/send_receive_messages.o.d" -o ${OBJECTDIR}/_ext/725581128/send_receive_messages.o ../message/send_receive_messages.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> Stashed changes
 	
 ${OBJECTDIR}/_ext/219456723/desiredValues.o: ../schedules/desiredValues.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/219456723" 
 	@${RM} ${OBJECTDIR}/_ext/219456723/desiredValues.o.d 
 	@${RM} ${OBJECTDIR}/_ext/219456723/desiredValues.o 
+<<<<<<< Updated upstream
 	@${FIXDEPS} "${OBJECTDIR}/_ext/219456723/desiredValues.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DPK3OBPlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/219456723/desiredValues.o.d" -o ${OBJECTDIR}/_ext/219456723/desiredValues.o ../schedules/desiredValues.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
+	@${FIXDEPS} "${OBJECTDIR}/_ext/219456723/desiredValues.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/219456723/desiredValues.o.d" -o ${OBJECTDIR}/_ext/219456723/desiredValues.o ../schedules/desiredValues.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> Stashed changes
 	
 ${OBJECTDIR}/_ext/219456723/schedules.o: ../schedules/schedules.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/219456723" 
 	@${RM} ${OBJECTDIR}/_ext/219456723/schedules.o.d 
 	@${RM} ${OBJECTDIR}/_ext/219456723/schedules.o 
+<<<<<<< Updated upstream
 	@${FIXDEPS} "${OBJECTDIR}/_ext/219456723/schedules.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DPK3OBPlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/219456723/schedules.o.d" -o ${OBJECTDIR}/_ext/219456723/schedules.o ../schedules/schedules.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 ${OBJECTDIR}/_ext/219456723/get_schedule_message.o: ../schedules/get_schedule_message.c  nbproject/Makefile-${CND_CONF}.mk
@@ -159,6 +194,9 @@ ${OBJECTDIR}/_ext/219456723/get_schedule_message.o: ../schedules/get_schedule_me
 	@${RM} ${OBJECTDIR}/_ext/219456723/get_schedule_message.o.d 
 	@${RM} ${OBJECTDIR}/_ext/219456723/get_schedule_message.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/219456723/get_schedule_message.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DPK3OBPlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/219456723/get_schedule_message.o.d" -o ${OBJECTDIR}/_ext/219456723/get_schedule_message.o ../schedules/get_schedule_message.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
+	@${FIXDEPS} "${OBJECTDIR}/_ext/219456723/schedules.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/219456723/schedules.o.d" -o ${OBJECTDIR}/_ext/219456723/schedules.o ../schedules/schedules.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> Stashed changes
 	
 ${OBJECTDIR}/_ext/299869866/adc_init.o: ../sensors/adc_init.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/299869866" 
@@ -194,6 +232,7 @@ ${OBJECTDIR}/_ext/299869866/temp_digital.o: ../sensors/temp_digital.c  nbproject
 	@${MKDIR} "${OBJECTDIR}/_ext/299869866" 
 	@${RM} ${OBJECTDIR}/_ext/299869866/temp_digital.o.d 
 	@${RM} ${OBJECTDIR}/_ext/299869866/temp_digital.o 
+<<<<<<< Updated upstream
 	@${FIXDEPS} "${OBJECTDIR}/_ext/299869866/temp_digital.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DPK3OBPlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/299869866/temp_digital.o.d" -o ${OBJECTDIR}/_ext/299869866/temp_digital.o ../sensors/temp_digital.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 ${OBJECTDIR}/_ext/1295191707/statemachine_airquality_control.o: ../Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c  nbproject/Makefile-${CND_CONF}.mk
@@ -219,18 +258,53 @@ ${OBJECTDIR}/_ext/502816713/statemachine_watertemp_control.o: ../Statemachines.X
 	@${RM} ${OBJECTDIR}/_ext/502816713/statemachine_watertemp_control.o.d 
 	@${RM} ${OBJECTDIR}/_ext/502816713/statemachine_watertemp_control.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/502816713/statemachine_watertemp_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DPK3OBPlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/502816713/statemachine_watertemp_control.o.d" -o ${OBJECTDIR}/_ext/502816713/statemachine_watertemp_control.o ../Statemachines.X/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
+	@${FIXDEPS} "${OBJECTDIR}/_ext/299869866/temp_digital.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/299869866/temp_digital.o.d" -o ${OBJECTDIR}/_ext/299869866/temp_digital.o ../sensors/temp_digital.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o: ../statemachine/statemachine_airquality_control.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1570893445" 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o.d" -o ${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o ../statemachine/statemachine_airquality_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o: ../statemachine/statemachine_airtemp_control.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1570893445" 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o.d" -o ${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o ../statemachine/statemachine_airtemp_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o: ../statemachine/statemachine_light_control.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1570893445" 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o.d" -o ${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o ../statemachine/statemachine_light_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o: ../statemachine/statemachine_watertemp_control.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1570893445" 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o.d" -o ${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o ../statemachine/statemachine_watertemp_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> Stashed changes
 	
 ${OBJECTDIR}/_ext/754508808/update.o: ../update/update.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/754508808" 
 	@${RM} ${OBJECTDIR}/_ext/754508808/update.o.d 
 	@${RM} ${OBJECTDIR}/_ext/754508808/update.o 
+<<<<<<< Updated upstream
 	@${FIXDEPS} "${OBJECTDIR}/_ext/754508808/update.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DPK3OBPlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/754508808/update.o.d" -o ${OBJECTDIR}/_ext/754508808/update.o ../update/update.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
+	@${FIXDEPS} "${OBJECTDIR}/_ext/754508808/update.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/754508808/update.o.d" -o ${OBJECTDIR}/_ext/754508808/update.o ../update/update.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> Stashed changes
 	
 ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
+<<<<<<< Updated upstream
 	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -DPK3OBPlatformTool=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
+	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> Stashed changes
 	
 else
 ${OBJECTDIR}/_ext/470364171/actuators.o: ../actuators/actuators.c  nbproject/Makefile-${CND_CONF}.mk
@@ -280,12 +354,15 @@ ${OBJECTDIR}/_ext/219456723/schedules.o: ../schedules/schedules.c  nbproject/Mak
 	@${RM} ${OBJECTDIR}/_ext/219456723/schedules.o.d 
 	@${RM} ${OBJECTDIR}/_ext/219456723/schedules.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/219456723/schedules.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/219456723/schedules.o.d" -o ${OBJECTDIR}/_ext/219456723/schedules.o ../schedules/schedules.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+<<<<<<< Updated upstream
 	
 ${OBJECTDIR}/_ext/219456723/get_schedule_message.o: ../schedules/get_schedule_message.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/219456723" 
 	@${RM} ${OBJECTDIR}/_ext/219456723/get_schedule_message.o.d 
 	@${RM} ${OBJECTDIR}/_ext/219456723/get_schedule_message.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/219456723/get_schedule_message.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/219456723/get_schedule_message.o.d" -o ${OBJECTDIR}/_ext/219456723/get_schedule_message.o ../schedules/get_schedule_message.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
+>>>>>>> Stashed changes
 	
 ${OBJECTDIR}/_ext/299869866/adc_init.o: ../sensors/adc_init.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/299869866" 
@@ -323,6 +400,7 @@ ${OBJECTDIR}/_ext/299869866/temp_digital.o: ../sensors/temp_digital.c  nbproject
 	@${RM} ${OBJECTDIR}/_ext/299869866/temp_digital.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/299869866/temp_digital.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/299869866/temp_digital.o.d" -o ${OBJECTDIR}/_ext/299869866/temp_digital.o ../sensors/temp_digital.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
+<<<<<<< Updated upstream
 ${OBJECTDIR}/_ext/1295191707/statemachine_airquality_control.o: ../Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1295191707" 
 	@${RM} ${OBJECTDIR}/_ext/1295191707/statemachine_airquality_control.o.d 
@@ -346,6 +424,31 @@ ${OBJECTDIR}/_ext/502816713/statemachine_watertemp_control.o: ../Statemachines.X
 	@${RM} ${OBJECTDIR}/_ext/502816713/statemachine_watertemp_control.o.d 
 	@${RM} ${OBJECTDIR}/_ext/502816713/statemachine_watertemp_control.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/502816713/statemachine_watertemp_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/502816713/statemachine_watertemp_control.o.d" -o ${OBJECTDIR}/_ext/502816713/statemachine_watertemp_control.o ../Statemachines.X/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
+${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o: ../statemachine/statemachine_airquality_control.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1570893445" 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o.d" -o ${OBJECTDIR}/_ext/1570893445/statemachine_airquality_control.o ../statemachine/statemachine_airquality_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o: ../statemachine/statemachine_airtemp_control.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1570893445" 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o.d" -o ${OBJECTDIR}/_ext/1570893445/statemachine_airtemp_control.o ../statemachine/statemachine_airtemp_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o: ../statemachine/statemachine_light_control.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1570893445" 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o.d" -o ${OBJECTDIR}/_ext/1570893445/statemachine_light_control.o ../statemachine/statemachine_light_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o: ../statemachine/statemachine_watertemp_control.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1570893445" 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o.d" -o ${OBJECTDIR}/_ext/1570893445/statemachine_watertemp_control.o ../statemachine/statemachine_watertemp_control.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> Stashed changes
 	
 ${OBJECTDIR}/_ext/754508808/update.o: ../update/update.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/754508808" 

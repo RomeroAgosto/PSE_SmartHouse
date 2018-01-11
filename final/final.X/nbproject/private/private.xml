@@ -2,6 +2,7 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< Updated upstream
         <group>
             <file>file:/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/final.X/main.c</file>
             <file>file:/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/message/send_receive_messages.c</file>
@@ -9,5 +10,8 @@
             <file>file:/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/schedules/get_schedule_message.c</file>
             <file>file:/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/schedules/desiredValues.c</file>
         </group>
+=======
+        <group/>
+>>>>>>> Stashed changes
     </open-files>
 </project-private>
