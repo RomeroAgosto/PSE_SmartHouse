@@ -8,10 +8,14 @@
 *
 * \date 03-11-2017
 */
-#include "hallClock.h"
 #include <stdio.h>
 #include <string.h>
-#include "timer_libs.h"
+#include <time.h>
+#include <p32xxxx.h>
+
+
+#define TPS_256 7 // TCKPS code for xx pre-scaler
+#define PBUSCLK 40000000L // Peripheral bus clock
 
 static int dayMonMax[12]={31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; /*!<Array with last day of each month */
 static struct tm time_hall; /*!<Clock all variable*/
@@ -21,9 +25,25 @@ static void (*longside_func)()=NULL; /*!<Buffur for function that will work alon
 void setup_clockHall(void (*func)(void))
 {
     longside_func=func;
-    tmr_config(2,2);
-    tmr_intrpt_config(2,2,&inc_clock);
-    tmr_OnOff(2,1);
+    // Interrupt-related stuff
+    void __attribute__( (interrupt(IPL2AUTO), vector(_TIMER_3_VECTOR))) tmr3_isr(void);
+    IFS0bits.T3IF=0; // Reset interrupt flag
+    IPC3bits.T3IP=2; //set interrupt priority (1..7) *** Make sure it matches iplx in isr declaration above ***
+    //IPC3bits.IC3IS
+    
+    IEC0bits.T3IE = 1; // Enable T2 interrupts
+   
+    // Timer period configuration
+    T2CONbits.TCKPS = TPS_256; //Select pre-scaler
+    T2CONbits.T32 = 1; // 16 bit timer operation
+    
+    PR2=(float)(PBUSCLK/(1*256))-1; // Compute PR value  ;
+    TMR2=0;
+    TMR3=0;
+    T2CONbits.TON=1; // Start the timer
+    T3CONbits.TON=1; // Start the timer
+  // Setup to use the external interrupt controller
+    INTEnableSystemMultiVectoredInt();
 }
 
 // copy the time_hall to time
@@ -47,21 +67,11 @@ int update_time(struct tm time_temp)
     return 0;
 }
 
-static int count=0;
 
-// will put clock runs every secnd
-void inc_clock(void)
-{
-    if(count%2==0)
-    {
-        increment_time();
-        longside_func();
-    }
-    count++;
-}
+
 
 // will runs every second
-void increment_time(void)
+void increment_time()
 {
     
     time_hall.tm_sec=(time_hall.tm_sec+1)%60;   // increment sec
@@ -107,11 +117,17 @@ void increment_time(void)
             }
         }
     }
-    //printf("seconds:%d \n",time_hall.tm_sec);
+    printf("seconds:%d \n",time_hall.tm_sec);
 }
 
 
-
+// will put clock runs every secnd
+void tmr3_isr(void)
+{
+    increment_time();
+    longside_func();
+    IFS0bits.T3IF=0; // Reset interrupt flag
+}
 /* *****************************************************************************
  End of File
  */

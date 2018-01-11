@@ -70,9 +70,7 @@ typedef union {
     function array_function[3];
 
 }house;
-
-house home; /*in the end, this definition should be in get_schedules.c*/
-
+extern house home;
 int get_schedule_message(char *to_send);
 
 
