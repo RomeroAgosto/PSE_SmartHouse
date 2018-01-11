@@ -8,9 +8,9 @@
 #include <plib.h>
 #endif
 
-static int message_flag;
+static int message_flag=1;
 #if RUN ==1
-static char message[5000];
+static char message[5000]="#+0000080101000200*";
 static int message_counter;
 #endif
 
@@ -104,8 +104,6 @@ long int check_received_message(char *message){
 #if RUN == 0
 char message[]="#+27300122002200*";
 #endif
-char message[]="#+0000080100000100*";
-message_flag=1;
 
 int message_handle() {
     if (message_flag==TRUE){
