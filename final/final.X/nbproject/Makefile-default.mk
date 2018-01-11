@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../actuators/actuators.c ../CKCommon/UART/uart.c ../message/create_normal_message.c ../message/send_receive_messages.c ../schedules/desiredValues.c ../schedules/schedules.c ../schedules/get_schedule_message.c ../sensors/adc_init.c ../sensors/air_quality_level.c ../sensors/i2c.c ../sensors/motion_detection.c ../sensors/temp_analog.c ../sensors/temp_digital.c ../Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c ../Statemachines.X/AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c ../Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.c ../Statemachines.X/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c ../update/update.c main.c ../clock_hall/get_time.c ../clock_hall/hallClock.c
+SOURCEFILES_QUOTED_IF_SPACED=../actuators/actuators.c ../CKCommon/UART/uart.c ../clock_hall/get_time.c ../clock_hall/hallClock.c ../schedules/desiredValues.c ../schedules/schedules.c ../schedules/get_schedule_message.c ../sensors/adc_init.c ../sensors/air_quality_level.c ../sensors/i2c.c ../sensors/motion_detection.c ../sensors/temp_analog.c ../sensors/temp_digital.c ../Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c ../Statemachines.X/AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c ../Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.c ../Statemachines.X/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c ../update/update.c main.c ../../pic_programming/Communication.X/StatemachineCommunication/create_normal_message.c ../../pic_programming/Communication.X/StatemachineCommunication/send_receive_messages.c ../log/log_functions.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/470364171/actuators.o ${OBJECTDIR}/_ext/1062335525/uart.o ${OBJECTDIR}/_ext/725581128/create_normal_message.o ${OBJECTDIR}/_ext/725581128/send_receive_messages.o ${OBJECTDIR}/_ext/219456723/desiredValues.o ${OBJECTDIR}/_ext/219456723/schedules.o ${OBJECTDIR}/_ext/219456723/get_schedule_message.o ${OBJECTDIR}/_ext/299869866/adc_init.o ${OBJECTDIR}/_ext/299869866/air_quality_level.o ${OBJECTDIR}/_ext/299869866/i2c.o ${OBJECTDIR}/_ext/299869866/motion_detection.o ${OBJECTDIR}/_ext/299869866/temp_analog.o ${OBJECTDIR}/_ext/299869866/temp_digital.o ${OBJECTDIR}/_ext/1295191707/statemachine_airquality_control.o ${OBJECTDIR}/_ext/719964549/statemachine_airtemp_control.o ${OBJECTDIR}/_ext/767478478/statemachine_light_control.o ${OBJECTDIR}/_ext/502816713/statemachine_watertemp_control.o ${OBJECTDIR}/_ext/754508808/update.o ${OBJECTDIR}/main.o ${OBJECTDIR}/_ext/731469447/get_time.o ${OBJECTDIR}/_ext/731469447/hallClock.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/470364171/actuators.o.d ${OBJECTDIR}/_ext/1062335525/uart.o.d ${OBJECTDIR}/_ext/725581128/create_normal_message.o.d ${OBJECTDIR}/_ext/725581128/send_receive_messages.o.d ${OBJECTDIR}/_ext/219456723/desiredValues.o.d ${OBJECTDIR}/_ext/219456723/schedules.o.d ${OBJECTDIR}/_ext/219456723/get_schedule_message.o.d ${OBJECTDIR}/_ext/299869866/adc_init.o.d ${OBJECTDIR}/_ext/299869866/air_quality_level.o.d ${OBJECTDIR}/_ext/299869866/i2c.o.d ${OBJECTDIR}/_ext/299869866/motion_detection.o.d ${OBJECTDIR}/_ext/299869866/temp_analog.o.d ${OBJECTDIR}/_ext/299869866/temp_digital.o.d ${OBJECTDIR}/_ext/1295191707/statemachine_airquality_control.o.d ${OBJECTDIR}/_ext/719964549/statemachine_airtemp_control.o.d ${OBJECTDIR}/_ext/767478478/statemachine_light_control.o.d ${OBJECTDIR}/_ext/502816713/statemachine_watertemp_control.o.d ${OBJECTDIR}/_ext/754508808/update.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/_ext/731469447/get_time.o.d ${OBJECTDIR}/_ext/731469447/hallClock.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/470364171/actuators.o ${OBJECTDIR}/_ext/1062335525/uart.o ${OBJECTDIR}/_ext/731469447/get_time.o ${OBJECTDIR}/_ext/731469447/hallClock.o ${OBJECTDIR}/_ext/219456723/desiredValues.o ${OBJECTDIR}/_ext/219456723/schedules.o ${OBJECTDIR}/_ext/219456723/get_schedule_message.o ${OBJECTDIR}/_ext/299869866/adc_init.o ${OBJECTDIR}/_ext/299869866/air_quality_level.o ${OBJECTDIR}/_ext/299869866/i2c.o ${OBJECTDIR}/_ext/299869866/motion_detection.o ${OBJECTDIR}/_ext/299869866/temp_analog.o ${OBJECTDIR}/_ext/299869866/temp_digital.o ${OBJECTDIR}/_ext/1295191707/statemachine_airquality_control.o ${OBJECTDIR}/_ext/719964549/statemachine_airtemp_control.o ${OBJECTDIR}/_ext/767478478/statemachine_light_control.o ${OBJECTDIR}/_ext/502816713/statemachine_watertemp_control.o ${OBJECTDIR}/_ext/754508808/update.o ${OBJECTDIR}/main.o ${OBJECTDIR}/_ext/1424201914/create_normal_message.o ${OBJECTDIR}/_ext/1424201914/send_receive_messages.o ${OBJECTDIR}/_ext/1360930421/log_functions.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/470364171/actuators.o.d ${OBJECTDIR}/_ext/1062335525/uart.o.d ${OBJECTDIR}/_ext/731469447/get_time.o.d ${OBJECTDIR}/_ext/731469447/hallClock.o.d ${OBJECTDIR}/_ext/219456723/desiredValues.o.d ${OBJECTDIR}/_ext/219456723/schedules.o.d ${OBJECTDIR}/_ext/219456723/get_schedule_message.o.d ${OBJECTDIR}/_ext/299869866/adc_init.o.d ${OBJECTDIR}/_ext/299869866/air_quality_level.o.d ${OBJECTDIR}/_ext/299869866/i2c.o.d ${OBJECTDIR}/_ext/299869866/motion_detection.o.d ${OBJECTDIR}/_ext/299869866/temp_analog.o.d ${OBJECTDIR}/_ext/299869866/temp_digital.o.d ${OBJECTDIR}/_ext/1295191707/statemachine_airquality_control.o.d ${OBJECTDIR}/_ext/719964549/statemachine_airtemp_control.o.d ${OBJECTDIR}/_ext/767478478/statemachine_light_control.o.d ${OBJECTDIR}/_ext/502816713/statemachine_watertemp_control.o.d ${OBJECTDIR}/_ext/754508808/update.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/_ext/1424201914/create_normal_message.o.d ${OBJECTDIR}/_ext/1424201914/send_receive_messages.o.d ${OBJECTDIR}/_ext/1360930421/log_functions.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/470364171/actuators.o ${OBJECTDIR}/_ext/1062335525/uart.o ${OBJECTDIR}/_ext/725581128/create_normal_message.o ${OBJECTDIR}/_ext/725581128/send_receive_messages.o ${OBJECTDIR}/_ext/219456723/desiredValues.o ${OBJECTDIR}/_ext/219456723/schedules.o ${OBJECTDIR}/_ext/219456723/get_schedule_message.o ${OBJECTDIR}/_ext/299869866/adc_init.o ${OBJECTDIR}/_ext/299869866/air_quality_level.o ${OBJECTDIR}/_ext/299869866/i2c.o ${OBJECTDIR}/_ext/299869866/motion_detection.o ${OBJECTDIR}/_ext/299869866/temp_analog.o ${OBJECTDIR}/_ext/299869866/temp_digital.o ${OBJECTDIR}/_ext/1295191707/statemachine_airquality_control.o ${OBJECTDIR}/_ext/719964549/statemachine_airtemp_control.o ${OBJECTDIR}/_ext/767478478/statemachine_light_control.o ${OBJECTDIR}/_ext/502816713/statemachine_watertemp_control.o ${OBJECTDIR}/_ext/754508808/update.o ${OBJECTDIR}/main.o ${OBJECTDIR}/_ext/731469447/get_time.o ${OBJECTDIR}/_ext/731469447/hallClock.o
+OBJECTFILES=${OBJECTDIR}/_ext/470364171/actuators.o ${OBJECTDIR}/_ext/1062335525/uart.o ${OBJECTDIR}/_ext/731469447/get_time.o ${OBJECTDIR}/_ext/731469447/hallClock.o ${OBJECTDIR}/_ext/219456723/desiredValues.o ${OBJECTDIR}/_ext/219456723/schedules.o ${OBJECTDIR}/_ext/219456723/get_schedule_message.o ${OBJECTDIR}/_ext/299869866/adc_init.o ${OBJECTDIR}/_ext/299869866/air_quality_level.o ${OBJECTDIR}/_ext/299869866/i2c.o ${OBJECTDIR}/_ext/299869866/motion_detection.o ${OBJECTDIR}/_ext/299869866/temp_analog.o ${OBJECTDIR}/_ext/299869866/temp_digital.o ${OBJECTDIR}/_ext/1295191707/statemachine_airquality_control.o ${OBJECTDIR}/_ext/719964549/statemachine_airtemp_control.o ${OBJECTDIR}/_ext/767478478/statemachine_light_control.o ${OBJECTDIR}/_ext/502816713/statemachine_watertemp_control.o ${OBJECTDIR}/_ext/754508808/update.o ${OBJECTDIR}/main.o ${OBJECTDIR}/_ext/1424201914/create_normal_message.o ${OBJECTDIR}/_ext/1424201914/send_receive_messages.o ${OBJECTDIR}/_ext/1360930421/log_functions.o
 
 # Source Files
-SOURCEFILES=../actuators/actuators.c ../CKCommon/UART/uart.c ../message/create_normal_message.c ../message/send_receive_messages.c ../schedules/desiredValues.c ../schedules/schedules.c ../schedules/get_schedule_message.c ../sensors/adc_init.c ../sensors/air_quality_level.c ../sensors/i2c.c ../sensors/motion_detection.c ../sensors/temp_analog.c ../sensors/temp_digital.c ../Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c ../Statemachines.X/AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c ../Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.c ../Statemachines.X/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c ../update/update.c main.c ../clock_hall/get_time.c ../clock_hall/hallClock.c
+SOURCEFILES=../actuators/actuators.c ../CKCommon/UART/uart.c ../clock_hall/get_time.c ../clock_hall/hallClock.c ../schedules/desiredValues.c ../schedules/schedules.c ../schedules/get_schedule_message.c ../sensors/adc_init.c ../sensors/air_quality_level.c ../sensors/i2c.c ../sensors/motion_detection.c ../sensors/temp_analog.c ../sensors/temp_digital.c ../Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c ../Statemachines.X/AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c ../Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.c ../Statemachines.X/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c ../update/update.c main.c ../../pic_programming/Communication.X/StatemachineCommunication/create_normal_message.c ../../pic_programming/Communication.X/StatemachineCommunication/send_receive_messages.c ../log/log_functions.c
 
 
 CFLAGS=
@@ -118,17 +118,17 @@ ${OBJECTDIR}/_ext/1062335525/uart.o: ../CKCommon/UART/uart.c  nbproject/Makefile
 	@${RM} ${OBJECTDIR}/_ext/1062335525/uart.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1062335525/uart.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1062335525/uart.o.d" -o ${OBJECTDIR}/_ext/1062335525/uart.o ../CKCommon/UART/uart.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/_ext/725581128/create_normal_message.o: ../message/create_normal_message.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/725581128" 
-	@${RM} ${OBJECTDIR}/_ext/725581128/create_normal_message.o.d 
-	@${RM} ${OBJECTDIR}/_ext/725581128/create_normal_message.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/725581128/create_normal_message.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/725581128/create_normal_message.o.d" -o ${OBJECTDIR}/_ext/725581128/create_normal_message.o ../message/create_normal_message.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/731469447/get_time.o: ../clock_hall/get_time.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/731469447" 
+	@${RM} ${OBJECTDIR}/_ext/731469447/get_time.o.d 
+	@${RM} ${OBJECTDIR}/_ext/731469447/get_time.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/731469447/get_time.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/731469447/get_time.o.d" -o ${OBJECTDIR}/_ext/731469447/get_time.o ../clock_hall/get_time.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/_ext/725581128/send_receive_messages.o: ../message/send_receive_messages.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/725581128" 
-	@${RM} ${OBJECTDIR}/_ext/725581128/send_receive_messages.o.d 
-	@${RM} ${OBJECTDIR}/_ext/725581128/send_receive_messages.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/725581128/send_receive_messages.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/725581128/send_receive_messages.o.d" -o ${OBJECTDIR}/_ext/725581128/send_receive_messages.o ../message/send_receive_messages.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/731469447/hallClock.o: ../clock_hall/hallClock.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/731469447" 
+	@${RM} ${OBJECTDIR}/_ext/731469447/hallClock.o.d 
+	@${RM} ${OBJECTDIR}/_ext/731469447/hallClock.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/731469447/hallClock.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/731469447/hallClock.o.d" -o ${OBJECTDIR}/_ext/731469447/hallClock.o ../clock_hall/hallClock.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 ${OBJECTDIR}/_ext/219456723/desiredValues.o: ../schedules/desiredValues.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/219456723" 
@@ -220,17 +220,23 @@ ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/main.o 
 	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/_ext/731469447/get_time.o: ../clock_hall/get_time.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/731469447" 
-	@${RM} ${OBJECTDIR}/_ext/731469447/get_time.o.d 
-	@${RM} ${OBJECTDIR}/_ext/731469447/get_time.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/731469447/get_time.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/731469447/get_time.o.d" -o ${OBJECTDIR}/_ext/731469447/get_time.o ../clock_hall/get_time.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/1424201914/create_normal_message.o: ../../pic_programming/Communication.X/StatemachineCommunication/create_normal_message.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1424201914" 
+	@${RM} ${OBJECTDIR}/_ext/1424201914/create_normal_message.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1424201914/create_normal_message.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1424201914/create_normal_message.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1424201914/create_normal_message.o.d" -o ${OBJECTDIR}/_ext/1424201914/create_normal_message.o ../../pic_programming/Communication.X/StatemachineCommunication/create_normal_message.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/_ext/731469447/hallClock.o: ../clock_hall/hallClock.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/731469447" 
-	@${RM} ${OBJECTDIR}/_ext/731469447/hallClock.o.d 
-	@${RM} ${OBJECTDIR}/_ext/731469447/hallClock.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/731469447/hallClock.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/731469447/hallClock.o.d" -o ${OBJECTDIR}/_ext/731469447/hallClock.o ../clock_hall/hallClock.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/1424201914/send_receive_messages.o: ../../pic_programming/Communication.X/StatemachineCommunication/send_receive_messages.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1424201914" 
+	@${RM} ${OBJECTDIR}/_ext/1424201914/send_receive_messages.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1424201914/send_receive_messages.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1424201914/send_receive_messages.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1424201914/send_receive_messages.o.d" -o ${OBJECTDIR}/_ext/1424201914/send_receive_messages.o ../../pic_programming/Communication.X/StatemachineCommunication/send_receive_messages.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/1360930421/log_functions.o: ../log/log_functions.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1360930421" 
+	@${RM} ${OBJECTDIR}/_ext/1360930421/log_functions.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1360930421/log_functions.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1360930421/log_functions.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1360930421/log_functions.o.d" -o ${OBJECTDIR}/_ext/1360930421/log_functions.o ../log/log_functions.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 else
 ${OBJECTDIR}/_ext/470364171/actuators.o: ../actuators/actuators.c  nbproject/Makefile-${CND_CONF}.mk
@@ -245,17 +251,17 @@ ${OBJECTDIR}/_ext/1062335525/uart.o: ../CKCommon/UART/uart.c  nbproject/Makefile
 	@${RM} ${OBJECTDIR}/_ext/1062335525/uart.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1062335525/uart.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1062335525/uart.o.d" -o ${OBJECTDIR}/_ext/1062335525/uart.o ../CKCommon/UART/uart.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/_ext/725581128/create_normal_message.o: ../message/create_normal_message.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/725581128" 
-	@${RM} ${OBJECTDIR}/_ext/725581128/create_normal_message.o.d 
-	@${RM} ${OBJECTDIR}/_ext/725581128/create_normal_message.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/725581128/create_normal_message.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/725581128/create_normal_message.o.d" -o ${OBJECTDIR}/_ext/725581128/create_normal_message.o ../message/create_normal_message.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/731469447/get_time.o: ../clock_hall/get_time.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/731469447" 
+	@${RM} ${OBJECTDIR}/_ext/731469447/get_time.o.d 
+	@${RM} ${OBJECTDIR}/_ext/731469447/get_time.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/731469447/get_time.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/731469447/get_time.o.d" -o ${OBJECTDIR}/_ext/731469447/get_time.o ../clock_hall/get_time.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/_ext/725581128/send_receive_messages.o: ../message/send_receive_messages.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/725581128" 
-	@${RM} ${OBJECTDIR}/_ext/725581128/send_receive_messages.o.d 
-	@${RM} ${OBJECTDIR}/_ext/725581128/send_receive_messages.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/725581128/send_receive_messages.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/725581128/send_receive_messages.o.d" -o ${OBJECTDIR}/_ext/725581128/send_receive_messages.o ../message/send_receive_messages.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/731469447/hallClock.o: ../clock_hall/hallClock.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/731469447" 
+	@${RM} ${OBJECTDIR}/_ext/731469447/hallClock.o.d 
+	@${RM} ${OBJECTDIR}/_ext/731469447/hallClock.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/731469447/hallClock.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/731469447/hallClock.o.d" -o ${OBJECTDIR}/_ext/731469447/hallClock.o ../clock_hall/hallClock.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 ${OBJECTDIR}/_ext/219456723/desiredValues.o: ../schedules/desiredValues.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/219456723" 
@@ -347,17 +353,23 @@ ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/main.o 
 	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/_ext/731469447/get_time.o: ../clock_hall/get_time.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/731469447" 
-	@${RM} ${OBJECTDIR}/_ext/731469447/get_time.o.d 
-	@${RM} ${OBJECTDIR}/_ext/731469447/get_time.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/731469447/get_time.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/731469447/get_time.o.d" -o ${OBJECTDIR}/_ext/731469447/get_time.o ../clock_hall/get_time.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/1424201914/create_normal_message.o: ../../pic_programming/Communication.X/StatemachineCommunication/create_normal_message.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1424201914" 
+	@${RM} ${OBJECTDIR}/_ext/1424201914/create_normal_message.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1424201914/create_normal_message.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1424201914/create_normal_message.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1424201914/create_normal_message.o.d" -o ${OBJECTDIR}/_ext/1424201914/create_normal_message.o ../../pic_programming/Communication.X/StatemachineCommunication/create_normal_message.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/_ext/731469447/hallClock.o: ../clock_hall/hallClock.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/731469447" 
-	@${RM} ${OBJECTDIR}/_ext/731469447/hallClock.o.d 
-	@${RM} ${OBJECTDIR}/_ext/731469447/hallClock.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/731469447/hallClock.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/731469447/hallClock.o.d" -o ${OBJECTDIR}/_ext/731469447/hallClock.o ../clock_hall/hallClock.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+${OBJECTDIR}/_ext/1424201914/send_receive_messages.o: ../../pic_programming/Communication.X/StatemachineCommunication/send_receive_messages.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1424201914" 
+	@${RM} ${OBJECTDIR}/_ext/1424201914/send_receive_messages.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1424201914/send_receive_messages.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1424201914/send_receive_messages.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1424201914/send_receive_messages.o.d" -o ${OBJECTDIR}/_ext/1424201914/send_receive_messages.o ../../pic_programming/Communication.X/StatemachineCommunication/send_receive_messages.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/_ext/1360930421/log_functions.o: ../log/log_functions.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1360930421" 
+	@${RM} ${OBJECTDIR}/_ext/1360930421/log_functions.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1360930421/log_functions.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1360930421/log_functions.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/1360930421/log_functions.o.d" -o ${OBJECTDIR}/_ext/1360930421/log_functions.o ../log/log_functions.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 endif
 

@@ -18,8 +18,19 @@
       <logicalFolder name="clock_hall" displayName="clock_hall" projectFiles="true">
         <itemPath>../clock_hall/hallClock.h</itemPath>
       </logicalFolder>
-      <logicalFolder name="message" displayName="message" projectFiles="true">
-        <itemPath>../message/send_receive_messages.h</itemPath>
+      <logicalFolder name="Communication.X"
+                     displayName="Communication.X"
+                     projectFiles="true">
+        <logicalFolder name="StatemachineCommunication"
+                       displayName="StatemachineCommunication"
+                       projectFiles="true">
+          <itemPath>../../pic_programming/Communication.X/StatemachineCommunication/create_normal_message.h</itemPath>
+          <itemPath>../../pic_programming/Communication.X/StatemachineCommunication/send_receive_messages.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="log" displayName="log" projectFiles="true">
+        <itemPath>../log/log_functions.h</itemPath>
+        <itemPath>../log/log_stru.h</itemPath>
       </logicalFolder>
       <logicalFolder name="schedules" displayName="schedules" projectFiles="true">
         <itemPath>../schedules/desiredValues.h</itemPath>
@@ -107,9 +118,18 @@
         <itemPath>../clock_hall/get_time.c</itemPath>
         <itemPath>../clock_hall/hallClock.c</itemPath>
       </logicalFolder>
-      <logicalFolder name="message" displayName="message" projectFiles="true">
-        <itemPath>../message/create_normal_message.c</itemPath>
-        <itemPath>../message/send_receive_messages.c</itemPath>
+      <logicalFolder name="Communication.X"
+                     displayName="Communication.X"
+                     projectFiles="true">
+        <logicalFolder name="StatemachineCommunication"
+                       displayName="StatemachineCommunication"
+                       projectFiles="true">
+          <itemPath>../../pic_programming/Communication.X/StatemachineCommunication/create_normal_message.c</itemPath>
+          <itemPath>../../pic_programming/Communication.X/StatemachineCommunication/send_receive_messages.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="log" displayName="log" projectFiles="true">
+        <itemPath>../log/log_functions.c</itemPath>
       </logicalFolder>
       <logicalFolder name="schedules" displayName="schedules" projectFiles="true">
         <itemPath>../schedules/desiredValues.c</itemPath>
@@ -190,6 +210,7 @@
     <Elem>../Statemachines.X </Elem>
     <Elem>../log</Elem>
     <Elem>../../schedule</Elem>
+    <Elem>../../pic_programming/Communication.X</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

@@ -42,11 +42,11 @@ int desiredWaterTemperature()
     for(i=0;i<4;i++)        /* Used 4 because theres's 4 schedule per day of the week */
     {      
       
-    printf("id %d\n\r",getEnable(0,0,tclock.tm_wday,0));
+    /*printf("id %d\n\r",getEnable(0,0,tclock.tm_wday,0));
     printf("value %d\n\r",getValue(0,0,tclock.tm_wday,0));
     printf("enable %d\n\r",getEnable(0,0,tclock.tm_wday,0));
     printf("start %d\n\r",getStartTime(0,0,tclock.tm_wday,0));
-    printf("end %d\n\r",getStopTime(0,0,tclock.tm_wday,0));
+    printf("end %d\n\r",getStopTime(0,0,tclock.tm_wday,0));*/ /*just for test*/
         
         if(getEnable(0,0,tclock.tm_wday,i)==1)
         {
