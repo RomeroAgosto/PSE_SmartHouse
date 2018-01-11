@@ -70,9 +70,28 @@ typedef union {
     function array_function[3];
 
 }house;
-extern house home;
+
 int get_schedule_message(char *to_send);
 
+int setId(int arrayFunction, int arrayRoom, int arraySchedule, int schedule, int id);
+
+int setValue(int arrayFunction, int arrayRoom, int arraySchedule, int schedule, int value);
+
+int setEnable(int arrayFunction, int arrayRoom, int arraySchedule, int schedule, int enable);
+
+int setStartTime(int arrayFunction, int arrayRoom, int arraySchedule, int schedule, int time);
+
+int setStopTime(int arrayFunction, int arrayRoom, int arraySchedule, int schedule, int time);
+
+int getId(int arrayFunction, int arrayRoom, int arraySchedule, int schedule);
+
+int getValue(int arrayFunction, int arrayRoom, int arraySchedule, int schedule);
+
+int getEnable(int arrayFunction, int arrayRoom, int arraySchedule, int schedule);
+
+int getStartTime(int arrayFunction, int arrayRoom, int arraySchedule, int schedule);
+
+int getStopTime(int arrayFunction, int arrayRoom, int arraySchedule, int schedule);
 
 #endif	/* SCHEDULES_H */
 

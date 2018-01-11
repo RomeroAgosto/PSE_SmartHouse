@@ -52,15 +52,14 @@ int main(int argc, char** argv) {
 //##-------- 
     struct tm str_time;
     str_time.tm_year = 2000-1900;
-    str_time.tm_mon = 1;
-    str_time.tm_mday = 28;
-    str_time.tm_hour = 23;
+    str_time.tm_mon = 0;
+    str_time.tm_mday = 0;
+    str_time.tm_hour = 0;
     str_time.tm_min = 59;
-    str_time.tm_sec = 40;
-    str_time.tm_isdst = 0;
+    str_time.tm_sec = 0;
+    str_time.tm_wday = 0;
     
     update_time(str_time);
-    struct tm time;
 
     
     TRISE=TRISE && 0xf000;
