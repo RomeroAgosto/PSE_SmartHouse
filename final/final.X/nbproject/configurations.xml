@@ -196,16 +196,16 @@
   <sourceRootList>
     <Elem>.</Elem>
     <Elem>../clock_hall</Elem>
+    <Elem>../CKCommon/ConfigBits</Elem>
+    <Elem>../CKCommon/UART</Elem>
     <Elem>../statemachine</Elem>
+    <Elem>../../pic_programming/Statemachines.X</Elem>
     <Elem>../CKCommon</Elem>
     <Elem>../sensors</Elem>
     <Elem>../actuators</Elem>
     <Elem>../schedules</Elem>
     <Elem>../message</Elem>
     <Elem>../update</Elem>
-    <Elem>../CKCommon/ConfigBits</Elem>
-    <Elem>../CKCommon/UART</Elem>
-    <Elem>../../pic_programming/Statemachines.X</Elem>
     <Elem>../Statemachines.X</Elem>
     <Elem>../Statemachines.X </Elem>
     <Elem>../log</Elem>
