@@ -104,6 +104,9 @@ long int check_received_message(char *message){
 #if RUN == 0
 char message[]="#+27300122002200*";
 #endif
+char message[]="#+0000080100000100*";
+message_flag=1;
+
 int message_handle() {
     if (message_flag==TRUE){
         int error_flag=0;
