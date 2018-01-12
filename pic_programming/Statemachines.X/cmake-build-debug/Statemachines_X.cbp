@@ -84,16 +84,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/LightControl/StatemachineLightControl/main.c">
+		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/Technician/Structure/main.c">
 			<Option target="Statemachines_X"/>
 		</Unit>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.c">
+		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/Technician/Structure/technician_structure.c">
 			<Option target="Statemachines_X"/>
 		</Unit>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.h">
-			<Option target="Statemachines_X"/>
-		</Unit>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/statemachines.h">
+		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/Technician/Structure/technician_structure.h">
 			<Option target="Statemachines_X"/>
 		</Unit>
 		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/CMakeLists.txt">

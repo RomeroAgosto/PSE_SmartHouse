@@ -1,6 +1,6 @@
 #include "statemachine_watertemp_control.h"
 int water_threshold=5;
-static int water_temp_state;
+int water_temp_state;
 int upper_threshold_water=65; /*just to provide initial values*/
 int lower_threshold_water=55;
 
@@ -15,9 +15,6 @@ int heater_state;
 #include <stdio.h>
 int reset_state_water_temp(){
     water_temp_state=0;
-}
-int set_water_temp(int temp){
-    water_temp=temp;
 }
 int GetWaterTemperature(){
     return water_temp;
