@@ -17,8 +17,8 @@
 #define FALSE 0
 
 #if UNITTEST==0
-#include "../../final/final.X/desiredValues.h"
-#include "../../final/final.X/update.h"
+#include "../../final/schedules/desiredValues.h"
+#include "../../final/update/update.h"
 #endif
 
 

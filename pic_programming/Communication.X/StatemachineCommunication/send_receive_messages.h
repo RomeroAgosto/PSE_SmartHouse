@@ -23,6 +23,8 @@ void SetMessageFlag(int flag);
 void SetMessage(char *mess);
 int Statemachine_Communication(int *message);
 #else
+#include "create_normal_message.h"
+#include "../../../final/log/log_functions.h"
 void _UART1Handler(void);
 int Statemachine_Communication(void);
 

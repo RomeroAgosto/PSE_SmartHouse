@@ -10,7 +10,7 @@
 #include "../CKCommon/UART/uart.h"
 #include "../clock_hall/hallClock.h"
 
-#include "../message/send_receive_messages.h"
+#include "../../pic_programming/Communication.X/StatemachineCommunication/send_receive_messages.h"
 #include "../sensors/sr.h"
 #include "../update/update.h"
 #include "../log/log_functions.h"
@@ -92,7 +92,7 @@ int main(int argc, char** argv) {
             Statemachine_AirControl(i);
         }      
         
-        message_handle();
+        Statemachine_Communication();
         
     }
     return 0;

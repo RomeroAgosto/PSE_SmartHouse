@@ -1,5 +1,6 @@
 #include "schedules.h"
 #include "desiredValues.h"
+#include <stdio.h>
 
  
 int  get_schedule_message(char *to_send)

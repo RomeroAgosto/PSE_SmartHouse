@@ -1,6 +1,6 @@
 #include "send_receive_messages.h"
 #include <string.h>
-#include "../schedules/schedules.h"
+#include "../../final/schedules/schedules.h"
 #include <stdio.h>
 
 #if RUN==1
