@@ -11,7 +11,7 @@
 #include <string.h>
 
 /* if UNITTEST is 1 a unittest can be performed -> dummyfunction for the sensor/desired value generation are introduced*/
-#define UNITTEST 0
+#define UNITTEST 1
 
 #define TRUE 1
 #define FALSE 0
