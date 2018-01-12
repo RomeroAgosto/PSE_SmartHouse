@@ -129,7 +129,6 @@ int GetLightState(int n_ligth) {
 /*## WATER TEMPERATURE ##*/
 int GetWaterTemperature()
 {
-    
     return current_values.water_temperature.temp;
 }
 

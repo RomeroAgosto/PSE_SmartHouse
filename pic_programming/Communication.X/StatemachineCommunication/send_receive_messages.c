@@ -3,7 +3,7 @@
 #include "../../Schedules.X/schedules.h"
 #include <stdio.h>
 static int message_flag=1;
-static char message [5000];
+static char message [10000];
 int sent_message=0;
 int message_counter;
 #if UNITTEST==0
@@ -147,19 +147,29 @@ int  Statemachine_Communication(int *test) {
 
         switch (message[p + 1]) {
             case '?':
+                printf("MAKE-?\n\r");
                 create_normal_message(message);
                 //printf("%s\n",message);
                 //send_message(message);
                 break;
 
             case ('+'):
+                printf("MAKE-+\n\r");
                 get_schedule_message(message);
                 break;
             case ('!'):
+                printf("MAKE-!\n\r");
                 log_create_msg(message);
+                printf("%s",message);
+                //send_message(message);
+                break;
+            case('@'):
+                printf("MAKE-@\n\r");
+                get_time(message);
                 break;
             default:
                 error_flag = 1;
+                printf("MAKE-default\n\r");
                 break;
         }
         message_flag = 0;
@@ -210,7 +220,7 @@ void __ISR(_UART_1_VECTOR,IPL4AUTO) _UART1Handler(void){
 
         message_flag=TRUE;
         message_counter=0;
-        printf("message is: %s\n",message);
+       // printf("message is: %s\n",message);
     }
     
     IFS0bits.U1RXIF=0;

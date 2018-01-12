@@ -28,7 +28,9 @@ void setup_clockHall(void (*func)(void));
 * \date 03-11-2017  
 */
 void get_timeHall(struct tm *);
-int update_time(struct tm );
+int update_time(struct tm time);
+int setup_halfanHour(void (*half_clock)(void));
+
 int get_time(char *to_send);
 
 

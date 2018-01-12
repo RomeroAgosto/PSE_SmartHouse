@@ -34,7 +34,8 @@ int get_time(char *to_send)
     time.tm_hour=hour_value;
     time.tm_min=minute_value;
     time.tm_sec=second_value;
-
-    update_time(&time);
+    
+    printf("A-Hour: %d, Min: %d\n\r", time.tm_hour, time.tm_min);
+    update_time(time);
     return 0;
 }

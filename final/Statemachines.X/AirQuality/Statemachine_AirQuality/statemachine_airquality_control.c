@@ -24,7 +24,7 @@ int SetHysteresis(int stage, int sensor, int value){
  *
  * ==============================================
  */
-int SetAirThreshold(int room,int warning_level, int threshold_for_sensor, double value){
+int SetAirThreshold(int room,int warning_level, int threshold_for_sensor, int value){
     //printf("threshold %d of warining level %d of room %d was  set to %f\n",threshold_for_sensor,warning_level,room,value);
         thresholds[room][warning_level][threshold_for_sensor]=value;
 };
@@ -112,38 +112,36 @@ void Statemachine_AirQuality(int room) {
     int air_quality;
     GetAirQuality(room,sensor_values); /*!< in air_quality the current value will be saved -> getter function from the global struct */
 
-    int j;
+    int j,green_count=0,yellow_count=0;
 
     /* states are stored in the states variables. so higher function can easily access the current states*/
     switch (air_quality_state[room]) {
-
         case GREEN:
             setVentilatorBuzzer(GREEN);
             SetVentilatorState(room,FALSE);/* it is just possible to turn off the ventilation when the Air quality is good!*/
             /* check Yellow first, RED can overwrite YELLOW -> when one Value exceeds the preset limit -> react*/
             for (j = 0; j <5 ; j++) {
-                if (sensor_values[j] > thresholds[room][0][j]+bounds_sensorvalues[0][j]){air_quality_state[room]=YELLOW;};
+                if (sensor_values[j] > thresholds[room][0][j]+bounds_sensorvalues[0][j]){air_quality_state[room]=YELLOW;}
             }
             for (j = 0; j <5 ; j++) {
                 if (sensor_values[j] > thresholds[room][1][j] + bounds_sensorvalues[1][j]) {
-                    air_quality_state[room] = RED;
-                }
+                    air_quality_state[room] = RED;}
             }
             break;
 
         case YELLOW:
-
             setVentilatorBuzzer(YELLOW);
             SetVentilatorState(room,TRUE);
             for (j = 0; j <5 ; j++) {
-                if (sensor_values[j] < thresholds[room][0][j]-bounds_sensorvalues[0][j]){air_quality_state[room]=GREEN;};
+                if (sensor_values[j] < thresholds[room][0][j]-bounds_sensorvalues[0][j]){green_count++;}
             }
+            if(green_count==5) {air_quality_state[room]=GREEN;}
+            
             for (j = 0; j <5 ; j++) {
 
               //  printf("sensorvalue: %f threshold + bound %f\n",sensor_values[j],thresholds[room][1][j]+bounds_sensorvalues[1][j]);
                 if (sensor_values[j] > (thresholds[room][1][j] + bounds_sensorvalues[1][j]) ){
-                    air_quality_state[room] = RED;
-                };
+                    air_quality_state[room] = RED;};
             }
             break;
 
@@ -153,18 +151,13 @@ void Statemachine_AirQuality(int room) {
             SetWarning();/*something that declares that something went wrong*/
             /* Green overwrites Yellow -> first check if yellow condition fullfilled, if even a Green is, change to Green */
             for (j = 0; j <5 ; j++) {
-                if (sensor_values[j] < thresholds[room][1][j] - bounds_sensorvalues[1][j]) {
-                    air_quality_state[room] = YELLOW;
-                }
+                if (sensor_values[j] < thresholds[room][1][j] - bounds_sensorvalues[1][j]) {yellow_count++;}
             }
+            if(yellow_count==5){air_quality_state[room]=YELLOW;}
             for (j = 0; j <5 ; j++) {
-                if (sensor_values[j] < thresholds[room][0][j]-bounds_sensorvalues[0][j]){air_quality_state[room]=GREEN;};
+                if (sensor_values[j] < thresholds[room][0][j]-bounds_sensorvalues[0][j]){green_count++;};
             }
-            for (j = 0; j <5 ; j++) {
-                if (sensor_values[j] > thresholds[room][1][j] + bounds_sensorvalues[1][j]) {
-                    air_quality_state[room] = RED;
-                }
-            }
+            if(green_count==4){air_quality_state[room]=GREEN;}
             break;
 
         default:

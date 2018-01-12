@@ -12,7 +12,7 @@
 #define FALSE 0
 
 
-int SetAirThreshold(int room,int warning_level,int threshold_for_sensor, double value);
+int SetAirThreshold(int room,int warning_level,int threshold_for_sensor, int value);
 int GetAirQualityState(int room);
 int SetHysteresis(int stage, int sensor, int value);
 int SetWarning(void);

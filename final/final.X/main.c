@@ -39,7 +39,7 @@ int main(int argc, char** argv) {
     mOSCSetPBDIV(OSC_PB_DIV_2); // This is necessary since SYSTEMConfigPerformance defaults FPBDIV to DIV_1
 
     setup_clockHall(&run_alonsideWClock);
-    
+    setup_halfanHour(&setLogFlag);
     // Init UART and redirect tdin/stdot/stderr to UART
     
     adc_init();
@@ -79,7 +79,7 @@ int main(int argc, char** argv) {
         int i;
         
         updateSensors();
-        Statemachine_AirQuality();
+        Statemachine_AirQuality(0);
         //printf("air Quality done\n");
         
         for(i=0;i<4;i++){
@@ -94,6 +94,7 @@ int main(int argc, char** argv) {
         
         Statemachine_Communication();
         
+        log_data_saving();
     }
     return 0;
 }
