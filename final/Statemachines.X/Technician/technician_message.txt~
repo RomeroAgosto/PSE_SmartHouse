@@ -1,0 +1,18 @@
+/* defining a technician message */
+
+//hysteresis air                                            
+
+02 20 02 05 01 02 20 02 02 02 
+
+//thresholds air 
+0020 0600 0025 0100 0050 0065 5000 0200 0200 0100
+
+//hysteresis air temp
+1 2 3 4 5 6 7 8        
+
+// hysteresis water temp
+1 						
+//light cycles
+20 21 22 23
+
+#~022002050220020202002006000025010000500065500002000200010012345678120212223*

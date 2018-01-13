@@ -121,10 +121,10 @@ void Statemachine_AirQuality(int room) {
             SetVentilatorState(room,FALSE);/* it is just possible to turn off the ventilation when the Air quality is good!*/
             /* check Yellow first, RED can overwrite YELLOW -> when one Value exceeds the preset limit -> react*/
             for (j = 0; j <5 ; j++) {
-                if (sensor_values[j] > get_air_quality_threshold(room,0,j)+get_air_quality_hysteresis(0,j)){air_quality_state[room]=YELLOW;}
+                if (sensor_values[j] > get_air_quality_threshold(0,j)+get_air_quality_hysteresis(0,j)){air_quality_state[room]=YELLOW;}
             }
             for (j = 0; j <5 ; j++) {
-                if (sensor_values[j] > get_air_quality_threshold(room,1,j) +get_air_quality_hysteresis(1,j)) {
+                if (sensor_values[j] > get_air_quality_threshold(1,j) +get_air_quality_hysteresis(1,j)) {
                     air_quality_state[room] = RED;}
             }
             break;
@@ -135,13 +135,13 @@ void Statemachine_AirQuality(int room) {
             for (j = 0; j <5 ; j++) {
                // printf("sensorvalue: %d threshold + bound %d\n",sensor_values[j],get_air_quality_threshold(room,0,j)-get_air_quality_hysteresis(0,j));
 
-                if (sensor_values[j] < get_air_quality_threshold(room,0,j)-get_air_quality_hysteresis(0,j)){green_count++;}
+                if (sensor_values[j] < get_air_quality_threshold(0,j)-get_air_quality_hysteresis(0,j)){green_count++;}
             }
                         if(green_count==5) {air_quality_state[room]=GREEN;}
             
             for (j = 0; j <5 ; j++) {
 
-                if (sensor_values[j] > (get_air_quality_threshold(room,1,j) + get_air_quality_hysteresis(1,j)) ){
+                if (sensor_values[j] > (get_air_quality_threshold(1,j) + get_air_quality_hysteresis(1,j)) ){
                     air_quality_state[room] = RED;};
             }
             break;
@@ -152,11 +152,11 @@ void Statemachine_AirQuality(int room) {
             SetWarning();/*something that declares that something went wrong*/
             /* Green overwrites Yellow -> first check if yellow condition fullfilled, if even a Green is, change to Green */
             for (j = 0; j <5 ; j++) {
-                if (sensor_values[j] < get_air_quality_threshold(room,1,j) - get_air_quality_hysteresis(1,j)) {yellow_count++;}
+                if (sensor_values[j] < get_air_quality_threshold(1,j) - get_air_quality_hysteresis(1,j)) {yellow_count++;}
             }
             if(yellow_count==5){air_quality_state[room]=YELLOW;}
             for (j = 0; j <5 ; j++) {
-                if (sensor_values[j] < get_air_quality_threshold(room,0,j)-get_air_quality_hysteresis(0,j)){green_count++;};
+                if (sensor_values[j] < get_air_quality_threshold(0,j)-get_air_quality_hysteresis(0,j)){green_count++;};
             }
             if(green_count==5){air_quality_state[room]=GREEN;}
             break;

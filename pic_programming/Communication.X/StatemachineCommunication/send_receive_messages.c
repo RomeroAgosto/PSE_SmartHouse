@@ -175,7 +175,7 @@ int  Statemachine_Communication(int *test) {
                 get_time(message);
                 break;
             case ('~'):
-                set_new_thresholds(message);
+                set_new_thresholds(message,p);
             default:
                 error_flag = 1;
                 //printf("MAKE-default\n\r");
@@ -230,7 +230,7 @@ void __ISR(_UART_1_VECTOR,IPL4AUTO) _UART1Handler(void){
 
         message_flag=TRUE;
         message_counter=0;
-       // printf("message is: %s\n",message);
+        printf("message is: %s\n",message);
     }
     
     IFS0bits.U1RXIF=0;

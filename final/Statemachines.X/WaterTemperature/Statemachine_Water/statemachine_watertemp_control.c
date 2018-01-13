@@ -41,9 +41,9 @@ int get_water_hysteresis(){
 #endif
     int water_temperature=GetWaterTemperature();
     int desired_temperature= desiredWaterTemperature();
-    //printf("desired temperature in the state machine: %d\n", desired_temperature);
     upper_threshold_water=desired_temperature+get_water_hysteresis(); /*trigger band is 10 degrees!*/
     lower_threshold_water=desired_temperature-get_water_hysteresis();
+    printf("upper threshold: %d,lower threshold: %d water temperature: %d\n", upper_threshold_water,lower_threshold_water, water_temperature);
     /* states are stored in the states variables. so higher function can easily access the current states*/
     switch (water_temp_state) {
 

@@ -4,7 +4,7 @@
 
  
 int  get_schedule_message(char *to_send)
-{
+{  
     int i,start,stop,value;
     char n_start[4];
     char n_stop[4];
