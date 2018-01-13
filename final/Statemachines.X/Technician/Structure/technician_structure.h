@@ -15,6 +15,8 @@ typedef union {
     }settings;
 }technician;
 
+int set_new_thresholds(char *message);
+
 int set_light_cycles(int light_number, int cycle_time);
 int get_light_cycles(int light_number);
 

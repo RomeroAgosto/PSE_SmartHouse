@@ -123,59 +123,59 @@ Statemachines_X/fast:
 	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/build
 .PHONY : Statemachines_X/fast
 
-LightControl/StatemachineLightControl/main.o: LightControl/StatemachineLightControl/main.c.o
+Technician/Structure/main.o: Technician/Structure/main.c.o
 
-.PHONY : LightControl/StatemachineLightControl/main.o
-
-# target to build an object file
-LightControl/StatemachineLightControl/main.c.o:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.o
-.PHONY : LightControl/StatemachineLightControl/main.c.o
-
-LightControl/StatemachineLightControl/main.i: LightControl/StatemachineLightControl/main.c.i
-
-.PHONY : LightControl/StatemachineLightControl/main.i
-
-# target to preprocess a source file
-LightControl/StatemachineLightControl/main.c.i:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.i
-.PHONY : LightControl/StatemachineLightControl/main.c.i
-
-LightControl/StatemachineLightControl/main.s: LightControl/StatemachineLightControl/main.c.s
-
-.PHONY : LightControl/StatemachineLightControl/main.s
-
-# target to generate assembly for a file
-LightControl/StatemachineLightControl/main.c.s:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.s
-.PHONY : LightControl/StatemachineLightControl/main.c.s
-
-LightControl/StatemachineLightControl/statemachine_light_control.o: LightControl/StatemachineLightControl/statemachine_light_control.c.o
-
-.PHONY : LightControl/StatemachineLightControl/statemachine_light_control.o
+.PHONY : Technician/Structure/main.o
 
 # target to build an object file
-LightControl/StatemachineLightControl/statemachine_light_control.c.o:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.o
-.PHONY : LightControl/StatemachineLightControl/statemachine_light_control.c.o
+Technician/Structure/main.c.o:
+	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/Technician/Structure/main.c.o
+.PHONY : Technician/Structure/main.c.o
 
-LightControl/StatemachineLightControl/statemachine_light_control.i: LightControl/StatemachineLightControl/statemachine_light_control.c.i
+Technician/Structure/main.i: Technician/Structure/main.c.i
 
-.PHONY : LightControl/StatemachineLightControl/statemachine_light_control.i
+.PHONY : Technician/Structure/main.i
 
 # target to preprocess a source file
-LightControl/StatemachineLightControl/statemachine_light_control.c.i:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.i
-.PHONY : LightControl/StatemachineLightControl/statemachine_light_control.c.i
+Technician/Structure/main.c.i:
+	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/Technician/Structure/main.c.i
+.PHONY : Technician/Structure/main.c.i
 
-LightControl/StatemachineLightControl/statemachine_light_control.s: LightControl/StatemachineLightControl/statemachine_light_control.c.s
+Technician/Structure/main.s: Technician/Structure/main.c.s
 
-.PHONY : LightControl/StatemachineLightControl/statemachine_light_control.s
+.PHONY : Technician/Structure/main.s
 
 # target to generate assembly for a file
-LightControl/StatemachineLightControl/statemachine_light_control.c.s:
-	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.s
-.PHONY : LightControl/StatemachineLightControl/statemachine_light_control.c.s
+Technician/Structure/main.c.s:
+	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/Technician/Structure/main.c.s
+.PHONY : Technician/Structure/main.c.s
+
+Technician/Structure/technician_structure.o: Technician/Structure/technician_structure.c.o
+
+.PHONY : Technician/Structure/technician_structure.o
+
+# target to build an object file
+Technician/Structure/technician_structure.c.o:
+	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/Technician/Structure/technician_structure.c.o
+.PHONY : Technician/Structure/technician_structure.c.o
+
+Technician/Structure/technician_structure.i: Technician/Structure/technician_structure.c.i
+
+.PHONY : Technician/Structure/technician_structure.i
+
+# target to preprocess a source file
+Technician/Structure/technician_structure.c.i:
+	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/Technician/Structure/technician_structure.c.i
+.PHONY : Technician/Structure/technician_structure.c.i
+
+Technician/Structure/technician_structure.s: Technician/Structure/technician_structure.c.s
+
+.PHONY : Technician/Structure/technician_structure.s
+
+# target to generate assembly for a file
+Technician/Structure/technician_structure.c.s:
+	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/Technician/Structure/technician_structure.c.s
+.PHONY : Technician/Structure/technician_structure.c.s
 
 # Help Target
 help:
@@ -186,12 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Statemachines_X"
-	@echo "... LightControl/StatemachineLightControl/main.o"
-	@echo "... LightControl/StatemachineLightControl/main.i"
-	@echo "... LightControl/StatemachineLightControl/main.s"
-	@echo "... LightControl/StatemachineLightControl/statemachine_light_control.o"
-	@echo "... LightControl/StatemachineLightControl/statemachine_light_control.i"
-	@echo "... LightControl/StatemachineLightControl/statemachine_light_control.s"
+	@echo "... Technician/Structure/main.o"
+	@echo "... Technician/Structure/main.i"
+	@echo "... Technician/Structure/main.s"
+	@echo "... Technician/Structure/technician_structure.o"
+	@echo "... Technician/Structure/technician_structure.i"
+	@echo "... Technician/Structure/technician_structure.s"
 .PHONY : help
 
 

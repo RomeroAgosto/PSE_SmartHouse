@@ -25,7 +25,7 @@
       <file leaf-file-name="statemachines.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/statemachines.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
+            <state relative-caret-position="0">
               <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
               <folding>
                 <element signature="e#49#133#0" expanded="true" />
@@ -34,12 +34,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="technician_structure.c" pinned="false" current-in-tab="false">
+      <file leaf-file-name="technician_structure.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Technician/Structure/technician_structure.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+            <state relative-caret-position="5">
+              <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Technician/Structure/main.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,58 +69,8 @@
       <file leaf-file-name="technician_structure.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Technician/Structure/technician_structure.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="statemachine_light_control.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LightControl/StatemachineLightControl/statemachine_light_control.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainTester.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LightControl/UnitTest_Tester/mainTester.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testRunner.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/LightControl/UnitTest_Tester/testRunner.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="132" column="29" lean-forward="false" selection-start-line="132" selection-start-column="29" selection-end-line="132" selection-end-column="29" />
-              <folding>
-                <element signature="e#458#1330#0" expanded="false" />
-                <element signature="e#1440#2787#0" expanded="false" />
-                <element signature="e#2921#4542#0" expanded="false" />
-                <element signature="e#4677#5962#0" expanded="false" />
-                <element signature="e#6098#6171#1" expanded="false" />
-                <element signature="e#6269#7203#0" expanded="false" />
-                <element signature="e#7328#8901#0" expanded="false" />
-                <element signature="e#9050#10859#0" expanded="false" />
-                <element signature="e#10998#12430#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="statemachine_light_control.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LightControl/StatemachineLightControl/statemachine_light_control.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="55" lean-forward="false" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+            <state relative-caret-position="158">
+              <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -131,6 +103,7 @@
       <find>TEST_AIR_QUALITY_GREEN_TO_RED_TO_YELLOW_THROUGH_SENSOR_CHANGE_WITH_THRESHOLD_CHECK</find>
       <find>setLight</find>
       <find>air_temperature_hysteresi</find>
+      <find>]</find>
     </findStrings>
     <replaceStrings>
       <replace>setVentolatorBuzzer</replace>
@@ -177,7 +150,6 @@
         <option value="$PROJECT_DIR$/Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.c" />
         <option value="$PROJECT_DIR$/Statemachine_Water/Statemachine_Water/statemachine_watertemp_control.h" />
         <option value="$PROJECT_DIR$/Statemachine_Water/UnitTest_Tester/testRunner.cpp" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/LightControl/StatemachineLightControl/main.c" />
         <option value="$PROJECT_DIR$/LightControl/StatemachineLightControl/Makefile" />
         <option value="$PROJECT_DIR$/Readme.txt" />
@@ -190,9 +162,13 @@
         <option value="$PROJECT_DIR$/AirQuality/UnitTest_Tester/testRunner.cpp" />
         <option value="$PROJECT_DIR$/statemachines.h" />
         <option value="$PROJECT_DIR$/AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.c" />
-        <option value="$PROJECT_DIR$/LightControl/StatemachineLightControl/statemachine_light_control.h" />
         <option value="$PROJECT_DIR$/LightControl/StatemachineLightControl/statemachine_light_control.c" />
         <option value="$PROJECT_DIR$/LightControl/UnitTest_Tester/testRunner.cpp" />
+        <option value="$PROJECT_DIR$/Technician/Structure/technician_structure.h" />
+        <option value="$PROJECT_DIR$/Technician/Structure/main.c" />
+        <option value="$PROJECT_DIR$/LightControl/StatemachineLightControl/statemachine_light_control.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/Technician/Structure/technician_structure.c" />
       </list>
     </option>
   </component>
@@ -251,19 +227,13 @@
             <path>
               <item name="Statemachines_X" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="Statemachines.X" type="462c0819:PsiDirectoryNode" />
-              <item name="LightControl" type="462c0819:PsiDirectoryNode" />
+              <item name="Technician" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Statemachines_X" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="Statemachines.X" type="462c0819:PsiDirectoryNode" />
-              <item name="LightControl" type="462c0819:PsiDirectoryNode" />
-              <item name="StatemachineLightControl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Statemachines_X" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="Statemachines.X" type="462c0819:PsiDirectoryNode" />
-              <item name="LightControl" type="462c0819:PsiDirectoryNode" />
-              <item name="UnitTest_Tester" type="462c0819:PsiDirectoryNode" />
+              <item name="Technician" type="462c0819:PsiDirectoryNode" />
+              <item name="Structure" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -273,7 +243,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../pic_programming/Communication.X" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -353,12 +323,13 @@
       <workItem from="1515265849437" duration="92000" />
       <workItem from="1515798828574" duration="22000" />
       <workItem from="1515798869819" duration="25000" />
-      <workItem from="1515803025773" duration="9090000" />
+      <workItem from="1515803025773" duration="9204000" />
+      <workItem from="1515813124555" duration="2340000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88101000" />
+    <option name="totallyTimeSpent" value="90555000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -373,11 +344,11 @@
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.116639026" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11774461" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31866953" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.50193477" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36051503" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -386,11 +357,11 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31866953" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -423,18 +394,31 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="39" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Technician/Structure/main.c</url>
+          <line>24</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Technician/Structure/technician_structure.c</url>
+          <line>5</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="43" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="bounds_sensorvalues" language="ObjectiveC" />
-        <watch expression="air_quality_state" language="ObjectiveC" />
-        <watch expression="test" language="ObjectiveC" />
+        <watch expression="technician1.settings.cycles_light" language="ObjectiveC" />
+        <watch expression="technician1.settings.hysteresis_air_quality" language="ObjectiveC" />
+        <watch expression="technician1.settings.hysteresis_air_temp" language="ObjectiveC" />
+        <watch expression="technician1.settings.hysteresis_water_temp" language="ObjectiveC" />
+        <watch expression="technician1.settings.threshold_air_quality" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/desiredValues.c" />
     <entry file="file://$PROJECT_DIR$/schedules.h" />
     <entry file="file://$PROJECT_DIR$/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c">
       <provider selected="true" editor-type-id="text-editor">
@@ -540,24 +524,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LightControl/StatemachineLightControl/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LightControl/StatemachineLightControl/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -586,13 +556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="395">
           <caret line="196" column="24" lean-forward="false" selection-start-line="196" selection-start-column="24" selection-end-line="196" selection-end-column="24" />
-          <folding>
-            <element signature="e#342#897#0" expanded="false" />
-            <element signature="e#1014#1939#0" expanded="false" />
-            <element signature="e#2061#3065#0" expanded="false" />
-            <element signature="e#3165#3572#0" expanded="false" />
-            <element signature="e#3643#4419#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -608,7 +571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
           <caret line="43" column="6" lean-forward="false" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -616,7 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="29" column="26" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -648,7 +609,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/statemachines.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
+        <state relative-caret-position="0">
           <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
           <folding>
             <element signature="e#49#133#0" expanded="true" />
@@ -660,7 +621,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1809">
           <caret line="191" column="0" lean-forward="true" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -668,7 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -676,7 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
           <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -688,35 +646,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Technician/Structure/technician_structure.h">
+    <entry file="file://$PROJECT_DIR$/LightControl/UnitTest_Tester/testRunner.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Technician/Structure/technician_structure.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LightControl/StatemachineLightControl/statemachine_light_control.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="55" lean-forward="false" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LightControl/StatemachineLightControl/statemachine_light_control.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="432">
+          <caret line="132" column="29" lean-forward="false" selection-start-line="132" selection-start-column="29" selection-end-line="132" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -724,25 +657,66 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LightControl/StatemachineLightControl/statemachine_light_control.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LightControl/UnitTest_Tester/testRunner.cpp">
+    <entry file="file://$PROJECT_DIR$/LightControl/StatemachineLightControl/statemachine_light_control.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="132" column="29" lean-forward="false" selection-start-line="132" selection-start-column="29" selection-end-line="132" selection-end-column="29" />
+        <state relative-caret-position="198">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
           <folding>
-            <element signature="e#458#1330#0" expanded="false" />
-            <element signature="e#1440#2787#0" expanded="false" />
-            <element signature="e#2921#4542#0" expanded="false" />
-            <element signature="e#4677#5962#0" expanded="false" />
-            <element signature="e#6098#6171#1" expanded="false" />
-            <element signature="e#6269#7203#0" expanded="false" />
-            <element signature="e#7328#8901#0" expanded="false" />
-            <element signature="e#9050#10859#0" expanded="false" />
-            <element signature="e#10998#12430#0" expanded="false" />
+            <element signature="e#660#702#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Technician/Structure/technician_structure.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LightControl/StatemachineLightControl/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Technician/Structure/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Technician/Structure/technician_structure.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>

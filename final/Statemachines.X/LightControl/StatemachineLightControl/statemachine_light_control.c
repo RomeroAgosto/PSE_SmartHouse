@@ -138,8 +138,10 @@ void Statemachine_LightControl(int light) {
             case TURNED_ON:
                 SetLightState(light, TRUE );
                 setLight(light,TRUE);
+                if (movement==TRUE)counter[light]=0;
                 if(counter[light]>=CYCLES[light]){
                     light_state[light] = TURNED_OFF;
+                    
                 }
                 break;
             default:
@@ -151,6 +153,7 @@ void Statemachine_LightControl(int light) {
     else{
         SetLightState(light,FALSE );
         light_state[light] = TURNED_OFF; /* default state is turn off!*/
+        setLight(light,FALSE);
     }
 #if UNITTEST ==1
     test[2]=ActivatedLights[light];

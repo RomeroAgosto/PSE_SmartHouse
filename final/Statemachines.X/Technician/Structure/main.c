@@ -22,5 +22,8 @@ int main() {
     set_light_cycles(3,40);
     bound=get_light_cycles(3);
     printf("%d bound \n",bound);
+
+    char message[]="#~123456789012345678901234567890123456789012345678901*";
+    set_new_thresholds(message);
 }
 
