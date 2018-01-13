@@ -3,7 +3,7 @@
 #include "../clock_hall/hallClock.h"
 #include <stdio.h>
 extern house home;
-#define disable -100
+#define disable -77
 
 static struct tm tclock;
 static int conv_clock=0;
@@ -115,7 +115,7 @@ int desiredLight(int n_ligth)
         {
             if(compareHour(getStartTime(2,n_ligth,tclock.tm_wday,i),getStopTime(2,n_ligth,tclock.tm_wday,i)))
             {
-                desired_ligth[n_ligth][i]=getValue(2,n_ligth,tclock.tm_wday,i);
+                desired_ligth[n_ligth][i]=1;
             }
             else
             {

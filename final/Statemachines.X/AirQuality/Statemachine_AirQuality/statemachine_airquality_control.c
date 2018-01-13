@@ -157,7 +157,7 @@ void Statemachine_AirQuality(int room) {
             for (j = 0; j <5 ; j++) {
                 if (sensor_values[j] < thresholds[room][0][j]-bounds_sensorvalues[0][j]){green_count++;};
             }
-            if(green_count==4){air_quality_state[room]=GREEN;}
+            if(green_count==5){air_quality_state[room]=GREEN;}
             break;
 
         default:

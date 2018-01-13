@@ -70,13 +70,14 @@ int updateSensors()
     return 0;
     
 }
- 
+
 void print() {
     int i;
     for(i=0;i<8;i++){
         printf("%d\n\r",current_values.air_temperature_sensor[i].temp);
     }
 }
+
 int GetHeatingAirState(int n_air){
     return current_values.air_temperature_sensor[n_air].heater;
 }

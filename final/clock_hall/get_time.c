@@ -29,13 +29,12 @@ int get_time(char *to_send)
 
     time.tm_year=year_value-1900;
     time.tm_mon=month_value-1;      /*! jan=1/dez=12 */
-    time.tm_wday=weekday_value-'1'; /*! Monday=1/sunday=7 */
+    time.tm_wday=weekday_value-'0'; /*! Monday=1/sunday=7 */
     time.tm_mday=day_value;
     time.tm_hour=hour_value;
     time.tm_min=minute_value;
     time.tm_sec=second_value;
     
-    printf("A-Hour: %d, Min: %d\n\r", time.tm_hour, time.tm_min);
     update_time(time);
     return 0;
 }

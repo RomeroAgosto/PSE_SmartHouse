@@ -116,8 +116,9 @@ void Statemachine_LightControl(int light,int *test) {
 void Statemachine_LightControl(int light) {
     int turned_on= desiredLight(light);/*!< saved if the light should be turned on */
 #endif
-    turned_on=TRUE;
+    //turned_on=TRUE; /*just for debuging*/
     int movement= GetLightControl(light);/*!< saves the movement */
+            
     if(turned_on==TRUE){
         /* states are stored in the states variables. so higher function can easily access the current states*/
         switch (light_state[light]) {
@@ -145,6 +146,7 @@ void Statemachine_LightControl(int light) {
     else{
         SetLightState(light,FALSE );
         light_state[light] = TURNED_OFF; /* default state is turn off!*/
+        setLight(light,FALSE);
     }
 #if UNITTEST ==1
     test[2]=ActivatedLights[light];

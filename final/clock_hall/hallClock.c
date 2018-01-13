@@ -56,8 +56,6 @@ void get_timeHall(struct tm *time)
 // save new time in time_hall
 int update_time(struct tm time_temp)
 {
-    printf("B-Hour: %d, Min: %d\n\r", time_temp.tm_hour, time_temp.tm_min);
-    
     time_hall=time_temp;
     if(time_hall.tm_year%4==0 && (time_hall.tm_year%100!=0 || (time_hall.tm_year+1900)%400==0))
     {
@@ -94,7 +92,6 @@ void setup_halfanHour(void (*func)(void))
     TMR5=0;
     T4CONbits.TON=1; // Start the timer
     T5CONbits.TON=1; // Start the timer
-    printf("feito B\n\r");
 }
 
 /*PRIVATE FUNCTION*/
@@ -145,7 +142,6 @@ void increment_time()
             }
         }
     }
-    printf("hour:%d minutes:%d seconds:%d \n\r",time_hall.tm_hour, time_hall.tm_min, time_hall.tm_sec);
 }
 
 
@@ -160,7 +156,6 @@ void tmr3_isr(void)
 
 void tmr5_isr(void)
 {
-    printf("Feito-A\n\r");
     halfan_hour();
     IFS0bits.T5IF=0; // Reset interrupt flag
 }

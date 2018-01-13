@@ -147,29 +147,29 @@ int  Statemachine_Communication(int *test) {
 
         switch (message[p + 1]) {
             case '?':
-                printf("MAKE-?\n\r");
+                //printf("MAKE-?\n\r");
                 create_normal_message(message);
-                //printf("%s\n",message);
+                printf("%s\n",message);
                 //send_message(message);
                 break;
 
             case ('+'):
-                printf("MAKE-+\n\r");
+                //printf("MAKE-+\n\r");
                 get_schedule_message(message);
                 break;
             case ('!'):
-                printf("MAKE-!\n\r");
+                //printf("MAKE-!\n\r");
                 log_create_msg(message);
                 printf("%s",message);
                 //send_message(message);
                 break;
             case('@'):
-                printf("MAKE-@\n\r");
+                //printf("MAKE-@\n\r");
                 get_time(message);
                 break;
             default:
                 error_flag = 1;
-                printf("MAKE-default\n\r");
+                //printf("MAKE-default\n\r");
                 break;
         }
         message_flag = 0;
