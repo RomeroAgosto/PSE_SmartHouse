@@ -1,18 +1,22 @@
 #include "statemachine_watertemp_control.h"
-int water_threshold=5;
+int water_hysteresis=5;
 int water_temp_state;
-int upper_threshold_water=65; /*just to provide initial values*/
-int lower_threshold_water=55;
-
-int set_water_threshold(int threshold){
-    water_threshold=threshold;
-}
 
 #if UNITTEST == 1
 int desired_test;
 int water_temp;
 int heater_state;
 #include <stdio.h>
+int set_water_hysteresis(int hysteresis){
+    water_hysteresis=hysteresis;
+}
+
+int get_water_hysteresis(){
+    return water_hysteresis;
+}
+int set_water_temp(int temp){
+    water_temp=temp;
+}
 int reset_state_water_temp(){
     water_temp_state=0;
 }
@@ -40,9 +44,9 @@ int SetWaterHeaterSate(int set){
 #endif
     int water_temperature=GetWaterTemperature();
     int desired_temperature= desiredWaterTemperature();
-
-    upper_threshold_water=desired_temperature+water_threshold;
-    lower_threshold_water=desired_temperature-water_threshold;
+        water_hysteresis=get_water_hysteresis();
+    int upper_threshold_water=desired_temperature+water_hysteresis;
+    int lower_threshold_water=desired_temperature-water_hysteresis;
     /* states are stored in the states variables. so higher function can easily access the current states*/
     switch (water_temp_state) {
 

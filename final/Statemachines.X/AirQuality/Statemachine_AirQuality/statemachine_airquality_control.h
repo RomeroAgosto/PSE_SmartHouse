@@ -12,7 +12,6 @@
 #define FALSE 0
 
 
-int SetAirThreshold(int room,int warning_level,int threshold_for_sensor, double value);
 int GetAirQualityState(int room);
 int SetHysteresis(int stage, int sensor, int value);
 int SetWarning(void);
@@ -25,6 +24,10 @@ void SetAirQuality(int room, int *input_values);
 void SetLightQuality(int room, int color);
 void SetVentilatorState(int room,int on);
 void ResetAirQualityState();
+int set_air_quality_hysteresis(int risk_level,int sensor, int value);
+int get_air_quality_hysteresis(int risk_level,int sensor);
+int set_air_quality_threshold(int room,int risk_level, int threshold, int value);
+int get_air_quality_threshold(int room,int risk_level, int threshold);
 
 #else
 void Statemachine_AirQuality(int room);

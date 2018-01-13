@@ -129,5 +129,77 @@ TEST(WaterControl,TEST_WaterControl_STAY_DECREASE_TEMPERATURE){
 	}
 
 }
+
+TEST(WaterControl,TEST_WaterControl_TURN_ON_THROUGH_THRESHOLD_CHANGE) {
+	int reset_state_water_temp();
+	int desired_temp = 50;
+	int water_temp = 46;
+	int length = 9;
+	int ResultExpected[] = {0,0,0, 0,0,1, 1,1,1};
+	int Result[3], ResultComplete[length];
+	set_desired_temperature(desired_temp);
+	set_water_temp(water_temp);
+	int i;
+	set_water_hysteresis(10);
+	Statemachine_WaterControl(Result);
+
+	for (i = 0; i < 3; i++) {
+		ResultComplete[i] = Result[i];
+	}
+	set_water_hysteresis(2);
+	Statemachine_WaterControl(Result);
+	for (i = 3; i < 6; i++) {
+		ResultComplete[i] = Result[i-3];
+	}
+	Statemachine_WaterControl(Result);
+	for (i = 6; i < 9; i++) {
+		ResultComplete[i] = Result[i-6];
+	}
+	for (i = 0; i < length; i++) {
+		//printf("I compare %d %d\n", ResultExpected[i], ResultComplete[i]);
+		CHECK_EQUAL(ResultExpected[i], ResultComplete[i]);
+	}
+}
+
+TEST(WaterControl,TEST_WaterControl_TURN_OFF_THROUGH_THRESHOLD_CHANGE) {
+	int reset_state_water_temp();
+	int desired_temp = 50;
+	int water_temp = 30;
+	int length = 15;
+	int ResultExpected[] = {0,0,1, 1,1,1, 1,1,1 ,1,1,0 ,0,0,0};
+	int Result[3], ResultComplete[length];
+	set_desired_temperature(desired_temp);
+	set_water_temp(water_temp);
+	set_water_hysteresis(5);
+	int i;
+	Statemachine_WaterControl(Result);
+
+	for (i = 0; i < 3; i++) {
+		ResultComplete[i] = Result[i];
+	}
+	Statemachine_WaterControl(Result);
+	for (i = 3; i < 6; i++) {
+		ResultComplete[i] = Result[i-3];
+	}
+	water_temp = 55;
+	set_water_temp(water_temp);
+	Statemachine_WaterControl(Result);
+	for (i = 6; i < 9; i++) {
+		ResultComplete[i] = Result[i-6];
+	}
+	set_water_hysteresis(2);
+	Statemachine_WaterControl(Result);
+	for (i = 9; i < 12; i++) {
+		ResultComplete[i] = Result[i-9];
+	}
+	Statemachine_WaterControl(Result);
+	for (i = 12; i < 15; i++) {
+		ResultComplete[i] = Result[i-12];
+	}
+	for (i = 0; i < length; i++) {
+		//printf("I compare %d %d\n", ResultExpected[i], ResultComplete[i]);
+		CHECK_EQUAL(ResultExpected[i], ResultComplete[i]);
+	}
+}
 }
 

@@ -53,7 +53,7 @@ TEST(TEST_LIGHT_CONTROL_SINGLE, TEST_LIGHT_CONTROL_TURN_ON_AND_OFF) {
     SetDesiredLight(0, TRUE);
     SetLightSensorValues(0, TRUE);
     /*Cycle standard of 20*/
-    SetNewCycle(0,20); /*important because another test would overwrite the static int -> test fails */
+    set_light_cycles(0,20); /*important because another test would overwrite the static int -> test fails */
     int i;
     for (i = 0; i < 2; i++) {
         Statemachine_LightControl(0, Result);
@@ -92,7 +92,7 @@ TEST(TEST_LIGHT_CONTROL_SINGLE, TEST_LIGHT_CONTROL_TURN_ON_AND_OFF_CHANGED_CYCLE
     SetLightSensorValues(0, TRUE);
 
     /*Change Cycle time */
-    SetNewCycle(0,50);
+    set_light_cycles(0,50);
     int i;
     for (i = 0; i < 2; i++) {
         Statemachine_LightControl(0, Result);
@@ -218,7 +218,7 @@ TEST(TEST_LIGHT_CONTROL_ALL_LIGHTS, TEST_LIGHT_CONTROL_TURN_ON_AND_OFF_ALL_LIGHT
         SetDesiredLight(k, TRUE);
         SetLightSensorValues(k, TRUE);
         /*Cycle standard of 20*/
-        SetNewCycle(k, 20); /*important because another test would overwrite the static int -> test fails */
+        set_light_cycles(k, 20); /*important because another test would overwrite the static int -> test fails */
         int i;
         for (i = 0; i < 2; i++) {
             Statemachine_LightControl(k, Result);
@@ -261,7 +261,7 @@ TEST(TEST_LIGHT_CONTROL_ALL_LIGHTS, TEST_LIGHT_CONTROL_TURN_ON_AND_OFF_CHANGED_C
         SetLightSensorValues(k, TRUE);
 
         /*Change Cycle time */
-        SetNewCycle(k,50);
+        set_light_cycles(k,50);
         int i;
         for (i = 0; i < 2; i++) {
             Statemachine_LightControl(k, Result);

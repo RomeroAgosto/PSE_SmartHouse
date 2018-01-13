@@ -12,6 +12,7 @@ void SetLightQuality(int room, int color);
 void SetVentilatorState(int room, int on);
 void ResetAirQualityState();
 /*--------------------------    TEST THE GREEN-------------------------------------------------*/
+
 TEST_GROUP(AirQuality_GREEN) {
     void setup() // setup
     {
@@ -36,17 +37,17 @@ TEST(AirQuality_GREEN, TEST_AIR_QUALITY_GREEN_THRESHOLD_BOUND_LOW) {
     SetAirQuality(0,sensor_values);
     /*set thresholds*/
     /* set yellow thresholds */
-    SetAirThreshold(0,0,0,20);
-    SetAirThreshold(0,0,1,600);
-    SetAirThreshold(0,0,2,25);
-    SetAirThreshold(0,0,3,100);
-    SetAirThreshold(0,0,4,2);
+    set_air_quality_threshold(0,0,0,20);
+    set_air_quality_threshold(0,0,1,600);
+    set_air_quality_threshold(0,0,2,25);
+    set_air_quality_threshold(0,0,3,100);
+    set_air_quality_threshold(0,0,4,2);
     /* set red thresholds*/
-    SetAirThreshold(0,1,0,65);
-    SetAirThreshold(0,1,1,5000);
-    SetAirThreshold(0,1,2,200);
-    SetAirThreshold(0,1,3,200);
-    SetAirThreshold(0,1,4,2);
+    set_air_quality_threshold(0,1,0,65);
+    set_air_quality_threshold(0,1,1,5000);
+    set_air_quality_threshold(0,1,2,200);
+    set_air_quality_threshold(0,1,3,200);
+    set_air_quality_threshold(0,1,4,2);
     int i;
     for (i = 0; i < 2; i++) {
         Statemachine_AirQuality(0, Result);
@@ -57,11 +58,11 @@ TEST(AirQuality_GREEN, TEST_AIR_QUALITY_GREEN_THRESHOLD_BOUND_LOW) {
         //printf("result[]= %d\n",Result_complete[i*3]);
     }
     /* 0.01 would be in the bound!*/
-    SetAirThreshold(0,0,0,19);
-    SetAirThreshold(0,0,1,590);
-    SetAirThreshold(0,0,2,24);
-    SetAirThreshold(0,0,3,98);
-    SetAirThreshold(0,0,4,1);
+    set_air_quality_threshold(0,0,0,19);
+    set_air_quality_threshold(0,0,1,590);
+    set_air_quality_threshold(0,0,2,24);
+    set_air_quality_threshold(0,0,3,98);
+    set_air_quality_threshold(0,0,4,1);
     for (i ; i < 4; i++) {
         Statemachine_AirQuality(0, Result);
         Result_complete[i * 4 + 0] = Result[0];
@@ -88,17 +89,17 @@ TEST(AirQuality_GREEN, TEST_AIR_QUALITY_GREEN_RED_HIGH_VALUE) {
     int sensor_values[5]={68,5021,203,203,10};
     SetAirQuality(0,sensor_values);
     /*set thresholds*/
-    SetAirThreshold(0,0,0,20);
-    SetAirThreshold(0,0,1,600);
-    SetAirThreshold(0,0,2,25);
-    SetAirThreshold(0,0,3,100);
-    SetAirThreshold(0,0,4,2);
+    set_air_quality_threshold(0,0,0,20);
+    set_air_quality_threshold(0,0,1,600);
+    set_air_quality_threshold(0,0,2,25);
+    set_air_quality_threshold(0,0,3,100);
+    set_air_quality_threshold(0,0,4,2);
     /* set red thresholds*/
-    SetAirThreshold(0,1,0,65);
-    SetAirThreshold(0,1,1,5000);
-    SetAirThreshold(0,1,2,200);
-    SetAirThreshold(0,1,3,200);
-    SetAirThreshold(0,1,4,2);
+    set_air_quality_threshold(0,1,0,65);
+    set_air_quality_threshold(0,1,1,5000);
+    set_air_quality_threshold(0,1,2,200);
+    set_air_quality_threshold(0,1,3,200);
+    set_air_quality_threshold(0,1,4,2);
     int i;
     for (i = 0; i < 2; i++) {
         Statemachine_AirQuality(0, Result);
@@ -127,17 +128,17 @@ TEST(AirQuality_GREEN, TEST_AIR_QUALITY_GREEN_RED_THRESHOLD) {
     /*set thresholds*/
     /* set yellow thresholds */
     /*set thresholds*/
-    SetAirThreshold(0,0,0,20);
-    SetAirThreshold(0,0,1,600);
-    SetAirThreshold(0,0,2,25);
-    SetAirThreshold(0,0,3,100);
-    SetAirThreshold(0,0,4,2);
+    set_air_quality_threshold(0,0,0,20);
+    set_air_quality_threshold(0,0,1,600);
+    set_air_quality_threshold(0,0,2,25);
+    set_air_quality_threshold(0,0,3,100);
+    set_air_quality_threshold(0,0,4,2);
     /* set red thresholds*/
-    SetAirThreshold(0,1,0,65);
-    SetAirThreshold(0,1,1,5000);
-    SetAirThreshold(0,1,2,200);
-    SetAirThreshold(0,1,3,200);
-    SetAirThreshold(0,1,4,2);
+    set_air_quality_threshold(0,1,0,65);
+    set_air_quality_threshold(0,1,1,5000);
+    set_air_quality_threshold(0,1,2,200);
+    set_air_quality_threshold(0,1,3,200);
+    set_air_quality_threshold(0,1,4,2);
     int i;
     for (i = 0; i < 2; i++) {
         Statemachine_AirQuality(0, Result);
@@ -149,11 +150,11 @@ TEST(AirQuality_GREEN, TEST_AIR_QUALITY_GREEN_RED_THRESHOLD) {
     }
     /* 0.01 would be in the bound!*/
     /* set red thresholds*/
-    SetAirThreshold(0,1,0,15);
-    SetAirThreshold(0,1,1,500);
-    SetAirThreshold(0,1,2,15);
-    SetAirThreshold(0,1,3,50);
-    SetAirThreshold(0,1,4,0);
+    set_air_quality_threshold(0,1,0,15);
+    set_air_quality_threshold(0,1,1,500);
+    set_air_quality_threshold(0,1,2,15);
+    set_air_quality_threshold(0,1,3,50);
+    set_air_quality_threshold(0,1,4,0);
     for (i ; i < 4; i++) {
         Statemachine_AirQuality(0, Result);
         Result_complete[i * 4 + 0] = Result[0];
@@ -182,17 +183,17 @@ TEST(AirQuality_GREEN, TEST_AIR_QUALITY_GREEN_YELLOW_HIGH_VALUE) {
     /* set yellow thresholds */
     /* set yellow thresholds */
     /*set thresholds*/
-    SetAirThreshold(0,0,0,20);
-    SetAirThreshold(0,0,1,600);
-    SetAirThreshold(0,0,2,25);
-    SetAirThreshold(0,0,3,100);
-    SetAirThreshold(0,0,4,2);
+    set_air_quality_threshold(0,0,0,20);
+    set_air_quality_threshold(0,0,1,600);
+    set_air_quality_threshold(0,0,2,25);
+    set_air_quality_threshold(0,0,3,100);
+    set_air_quality_threshold(0,0,4,2);
     /* set red thresholds*/
-    SetAirThreshold(0,1,0,65);
-    SetAirThreshold(0,1,1,5000);
-    SetAirThreshold(0,1,2,200);
-    SetAirThreshold(0,1,3,200);
-    SetAirThreshold(0,1,4,2);
+    set_air_quality_threshold(0,1,0,65);
+    set_air_quality_threshold(0,1,1,5000);
+    set_air_quality_threshold(0,1,2,200);
+    set_air_quality_threshold(0,1,3,200);
+    set_air_quality_threshold(0,1,4,2);
     int i;
     for (i = 0; i < 2; i++) {
         Statemachine_AirQuality(0, Result);
@@ -220,17 +221,17 @@ TEST(AirQuality_GREEN, TEST_AIR_QUALITY_GREEN_YELLOW_THRESHOLD) {
     SetAirQuality(0,sensor_values);
     /*set thresholds*/
     /* set yellow thresholds */
-    SetAirThreshold(0,0,0,20);
-    SetAirThreshold(0,0,1,600);
-    SetAirThreshold(0,0,2,25);
-    SetAirThreshold(0,0,3,100);
-    SetAirThreshold(0,0,4,2);
+    set_air_quality_threshold(0,0,0,20);
+    set_air_quality_threshold(0,0,1,600);
+    set_air_quality_threshold(0,0,2,25);
+    set_air_quality_threshold(0,0,3,100);
+    set_air_quality_threshold(0,0,4,2);
     /* set red thresholds*/
-    SetAirThreshold(0,1,0,65);
-    SetAirThreshold(0,1,1,5000);
-    SetAirThreshold(0,1,2,200);
-    SetAirThreshold(0,1,3,200);
-    SetAirThreshold(0,1,4,2);
+    set_air_quality_threshold(0,1,0,65);
+    set_air_quality_threshold(0,1,1,5000);
+    set_air_quality_threshold(0,1,2,200);
+    set_air_quality_threshold(0,1,3,200);
+    set_air_quality_threshold(0,1,4,2);
     int i;
     for (i = 0; i < 2; i++) {
         Statemachine_AirQuality(0, Result);
@@ -241,11 +242,11 @@ TEST(AirQuality_GREEN, TEST_AIR_QUALITY_GREEN_YELLOW_THRESHOLD) {
         //printf("result[]= %d\n",Result_complete[i*3]);
     }
     /* 0.01 would be in the bound!*/
-    SetAirThreshold(0,0,0,19);
-    SetAirThreshold(0,0,1,570);
-    SetAirThreshold(0,0,2,20);
-    SetAirThreshold(0,0,3,90);
-    SetAirThreshold(0,0,4,0);
+    set_air_quality_threshold(0,0,0,19);
+    set_air_quality_threshold(0,0,1,570);
+    set_air_quality_threshold(0,0,2,20);
+    set_air_quality_threshold(0,0,3,90);
+    set_air_quality_threshold(0,0,4,0);
     for (i ; i < 4; i++) {
         Statemachine_AirQuality(0, Result);
         Result_complete[i * 4 + 0] = Result[0];
@@ -286,17 +287,17 @@ TEST(AirQuality_YELLOW, TEST_AIR_QUALITY_YELLOW_SENSOR_CHANGE_CHECK_LOW) {
     SetAirQuality(0,sensor_values);
     /*set thresholds*/
     /* set yellow thresholds */
-    SetAirThreshold(0,0,0,20);
-    SetAirThreshold(0,0,1,600);
-    SetAirThreshold(0,0,2,25);
-    SetAirThreshold(0,0,3,100);
-    SetAirThreshold(0,0,4,2);
+    set_air_quality_threshold(0,0,0,20);
+    set_air_quality_threshold(0,0,1,600);
+    set_air_quality_threshold(0,0,2,25);
+    set_air_quality_threshold(0,0,3,100);
+    set_air_quality_threshold(0,0,4,2);
     /* set red thresholds*/
-    SetAirThreshold(0,1,0,65);
-    SetAirThreshold(0,1,1,5000);
-    SetAirThreshold(0,1,2,200);
-    SetAirThreshold(0,1,3,200);
-    SetAirThreshold(0,1,4,10);
+    set_air_quality_threshold(0,1,0,65);
+    set_air_quality_threshold(0,1,1,5000);
+    set_air_quality_threshold(0,1,2,200);
+    set_air_quality_threshold(0,1,3,200);
+    set_air_quality_threshold(0,1,4,10);
     int i;
     for (i = 0; i < 2; i++) {
         Statemachine_AirQuality(0, Result);
@@ -328,7 +329,7 @@ TEST(AirQuality_YELLOW, TEST_AIR_QUALITY_YELLOW_SENSOR_CHANGE_CHECK_LOW) {
 TEST(AirQuality_YELLOW, TEST_AIR_QUALITY_YELLOW_TO_GREEN_SENSOR_CHANGE_CHECK_LOW) {
     ResetAirQualityState();
     /*first set temperature to 60 degree*/
-    int length = 16;
+    int length = 12;
     /* state before, setVentilation setLight state after*/
     int ResultExpected[16] = {0, 0, 0, 1,     1, 1,1, 1,   1,1,1,0, 0,0,0,0};
     int Result[4], Result_complete[length];
@@ -337,17 +338,17 @@ TEST(AirQuality_YELLOW, TEST_AIR_QUALITY_YELLOW_TO_GREEN_SENSOR_CHANGE_CHECK_LOW
     SetAirQuality(0,sensor_values);
     /*set thresholds*/
     /* set yellow thresholds */
-    SetAirThreshold(0,0,0,20);
-    SetAirThreshold(0,0,1,600);
-    SetAirThreshold(0,0,2,25);
-    SetAirThreshold(0,0,3,100);
-    SetAirThreshold(0,0,4,2);
+    set_air_quality_threshold(0,0,0,20);
+    set_air_quality_threshold(0,0,1,600);
+    set_air_quality_threshold(0,0,2,25);
+    set_air_quality_threshold(0,0,3,100);
+    set_air_quality_threshold(0,0,4,2);
     /* set red thresholds*/
-    SetAirThreshold(0,1,0,65);
-    SetAirThreshold(0,1,1,5000);
-    SetAirThreshold(0,1,2,200);
-    SetAirThreshold(0,1,3,200);
-    SetAirThreshold(0,1,4,10);
+    set_air_quality_threshold(0,1,0,65);
+    set_air_quality_threshold(0,1,1,5000);
+    set_air_quality_threshold(0,1,2,200);
+    set_air_quality_threshold(0,1,3,200);
+    set_air_quality_threshold(0,1,4,10);
     int i;
     for (i = 0; i < 2; i++) {
         Statemachine_AirQuality(0, Result);
@@ -360,7 +361,7 @@ TEST(AirQuality_YELLOW, TEST_AIR_QUALITY_YELLOW_TO_GREEN_SENSOR_CHANGE_CHECK_LOW
     /** Change the sensor value, bound is in the tests 0.05 for all sensors */
     int j;
     for(j=0;j<5;j++) {
-        sensor_values[j] =sensor_values[j]-5;
+        sensor_values[j] =sensor_values[j]-43;
     }
     SetAirQuality(0,sensor_values);
     for (i ; i < 4; i++) {
@@ -372,7 +373,7 @@ TEST(AirQuality_YELLOW, TEST_AIR_QUALITY_YELLOW_TO_GREEN_SENSOR_CHANGE_CHECK_LOW
         //printf("result[]= %d\n",Result_complete[i*3]);
     }
     for (i = 0; i < length; i++) {
-       // printf("I compare [%d] the expected result %d with current result %d\n",i,ResultExpected[i],Result_complete[i]);
+        //printf("I compare [%d] the expected result %d with current result %d\n",i,ResultExpected[i],Result_complete[i]);
         CHECK_EQUAL(ResultExpected[i], Result_complete[i]);
     }
 }
@@ -391,17 +392,17 @@ TEST(AirQuality_YELLOW, TEST_AIR_QUALITY_THROUGH_SENSOR_CHANGE_WITH_YELLOW_THRES
     SetAirQuality(0,sensor_values);
     /*set thresholds*/
     /* set yellow thresholds */
-    SetAirThreshold(0,0,0,20);
-    SetAirThreshold(0,0,1,600);
-    SetAirThreshold(0,0,2,25);
-    SetAirThreshold(0,0,3,100);
-    SetAirThreshold(0,0,4,2);
+    set_air_quality_threshold(0,0,0,20);
+    set_air_quality_threshold(0,0,1,600);
+    set_air_quality_threshold(0,0,2,25);
+    set_air_quality_threshold(0,0,3,100);
+    set_air_quality_threshold(0,0,4,2);
     /* set red thresholds*/
-    SetAirThreshold(0,1,0,65);
-    SetAirThreshold(0,1,1,5000);
-    SetAirThreshold(0,1,2,200);
-    SetAirThreshold(0,1,3,200);
-    SetAirThreshold(0,1,4,10);
+    set_air_quality_threshold(0,1,0,65);
+    set_air_quality_threshold(0,1,1,5000);
+    set_air_quality_threshold(0,1,2,200);
+    set_air_quality_threshold(0,1,3,200);
+    set_air_quality_threshold(0,1,4,10);
 
     int i;
     for (i = 0; i < 2; i++) {
@@ -430,6 +431,7 @@ TEST(AirQuality_YELLOW, TEST_AIR_QUALITY_THROUGH_SENSOR_CHANGE_WITH_YELLOW_THRES
         CHECK_EQUAL(ResultExpected[i], Result_complete[i]);
     }
 }
+
 /* Switch from YELLOW to RED exceed slightly the bound */
 TEST(AirQuality_YELLOW, TEST_AIR_QUALITY_YELLOW_TO_RED_THROUGH_SENSOR_CHANGE_WITH_THRESHOLD_CHECK_UP) {
     ResetAirQualityState();
@@ -443,17 +445,17 @@ TEST(AirQuality_YELLOW, TEST_AIR_QUALITY_YELLOW_TO_RED_THROUGH_SENSOR_CHANGE_WIT
     SetAirQuality(0,sensor_values);
     /*set thresholds*/
     /* set yellow thresholds */
-    SetAirThreshold(0,0,0,20);
-    SetAirThreshold(0,0,1,600);
-    SetAirThreshold(0,0,2,25);
-    SetAirThreshold(0,0,3,100);
-    SetAirThreshold(0,0,4,2);
+    set_air_quality_threshold(0,0,0,20);
+    set_air_quality_threshold(0,0,1,600);
+    set_air_quality_threshold(0,0,2,25);
+    set_air_quality_threshold(0,0,3,100);
+    set_air_quality_threshold(0,0,4,2);
     /* set red thresholds*/
-    SetAirThreshold(0,1,0,65);
-    SetAirThreshold(0,1,1,5000);
-    SetAirThreshold(0,1,2,200);
-    SetAirThreshold(0,1,3,200);
-    SetAirThreshold(0,1,4,10);
+    set_air_quality_threshold(0,1,0,65);
+    set_air_quality_threshold(0,1,1,5000);
+    set_air_quality_threshold(0,1,2,200);
+    set_air_quality_threshold(0,1,3,200);
+    set_air_quality_threshold(0,1,4,10);
     int i;
     for (i = 0; i < 2; i++) {
         Statemachine_AirQuality(0, Result);
@@ -484,7 +486,6 @@ TEST(AirQuality_YELLOW, TEST_AIR_QUALITY_YELLOW_TO_RED_THROUGH_SENSOR_CHANGE_WIT
 }
 
 
-
 /*----------------------------TEST THE RED STAGE ------------------------------------------------*/
 TEST_GROUP(AirQuality_RED) {
     void setup() // setup
@@ -509,18 +510,29 @@ TEST(AirQuality_YELLOW, TEST_AIR_QUALITY_GREEN_TO_RED_TO_YELLOW_THROUGH_SENSOR_C
     int sensor_values_change[5]={68,5021,203,203,13};
     SetAirQuality(0,sensor_values_change);
     /*set thresholds*/
+    set_air_quality_hysteresis(1,0,2);
+    set_air_quality_hysteresis(1,1,20);
+    set_air_quality_hysteresis(1,2,2);
+    set_air_quality_hysteresis(1,3,2);
+    set_air_quality_hysteresis(1,4,2);
+    set_air_quality_hysteresis(0,0,2);
+    set_air_quality_hysteresis(0,1,20);
+    set_air_quality_hysteresis(0,2,2);
+    set_air_quality_hysteresis(0,3,5);
+    set_air_quality_hysteresis(0,4,1);
+
     /* set yellow thresholds */
-    SetAirThreshold(0,0,0,20);
-    SetAirThreshold(0,0,1,600);
-    SetAirThreshold(0,0,2,25);
-    SetAirThreshold(0,0,3,100);
-    SetAirThreshold(0,0,4,5);
+    set_air_quality_threshold(0,0,0,20);
+    set_air_quality_threshold(0,0,1,600);
+    set_air_quality_threshold(0,0,2,25);
+    set_air_quality_threshold(0,0,3,100);
+    set_air_quality_threshold(0,0,4,5);
     /* set red thresholds*/
-    SetAirThreshold(0,1,0,65);
-    SetAirThreshold(0,1,1,5000);
-    SetAirThreshold(0,1,2,200);
-    SetAirThreshold(0,1,3,200);
-    SetAirThreshold(0,1,4,10);
+    set_air_quality_threshold(0,1,0,65);
+    set_air_quality_threshold(0,1,1,5000);
+    set_air_quality_threshold(0,1,2,200);
+    set_air_quality_threshold(0,1,3,200);
+    set_air_quality_threshold(0,1,4,10);
     int i;
     for (i = 0; i < 2; i++) {
         Statemachine_AirQuality(0, Result);
@@ -531,7 +543,7 @@ TEST(AirQuality_YELLOW, TEST_AIR_QUALITY_GREEN_TO_RED_TO_YELLOW_THROUGH_SENSOR_C
         //printf("result[]= %d\n",Result_complete[i*3]);
     }
     /** Change the sensor value, bound is in the tests 0.05 for all sensors */
-    int sensor_values[5]={63,4979,197,197,5};
+    int sensor_values[5]={62,4979,197,197,5};
     SetAirQuality(0,sensor_values);
     for (i ; i < 4; i++) {
         Statemachine_AirQuality(0, Result);
@@ -542,7 +554,7 @@ TEST(AirQuality_YELLOW, TEST_AIR_QUALITY_GREEN_TO_RED_TO_YELLOW_THROUGH_SENSOR_C
         //printf("result[]= %d\n",Result_complete[i*3]);
     }
     for (i = 0; i < length; i++) {
-        //printf("I compare [%d] the expected result %d with current result %d\n",i,ResultExpected[i],Result_complete[i]);
+        printf("I compare [%d] the expected result %d with current result %d\n",i,ResultExpected[i],Result_complete[i]);
         CHECK_EQUAL(ResultExpected[i], Result_complete[i]);
     }
 }
@@ -559,17 +571,17 @@ TEST(AirQuality_YELLOW, TEST_AIR_QUALITY_GREEN_TO_RED_TO_GREEN_THROUGH_SENSOR_CH
     SetAirQuality(0,sensor_values_change);
 /*set thresholds*/
 /* set yellow thresholds */
-    SetAirThreshold(0,0,0,20);
-    SetAirThreshold(0,0,1,600);
-    SetAirThreshold(0,0,2,25);
-    SetAirThreshold(0,0,3,100);
-    SetAirThreshold(0,0,4,5);
+    set_air_quality_threshold(0,0,0,20);
+    set_air_quality_threshold(0,0,1,600);
+    set_air_quality_threshold(0,0,2,25);
+    set_air_quality_threshold(0,0,3,100);
+    set_air_quality_threshold(0,0,4,5);
 /* set red thresholds*/
-    SetAirThreshold(0,1,0,65);
-    SetAirThreshold(0,1,1,5000);
-    SetAirThreshold(0,1,2,200);
-    SetAirThreshold(0,1,3,200);
-    SetAirThreshold(0,1,4,10);
+    set_air_quality_threshold(0,1,0,65);
+    set_air_quality_threshold(0,1,1,5000);
+    set_air_quality_threshold(0,1,2,200);
+    set_air_quality_threshold(0,1,3,200);
+    set_air_quality_threshold(0,1,4,10);
     int i;
     for (i = 0; i < 2; i++) {
         Statemachine_AirQuality(0, Result);
@@ -591,7 +603,7 @@ TEST(AirQuality_YELLOW, TEST_AIR_QUALITY_GREEN_TO_RED_TO_GREEN_THROUGH_SENSOR_CH
 //printf("result[]= %d\n",Result_complete[i*3]);
     }
     for (i = 0; i < length; i++) {
-       // printf("I compare [%d] the expected result %d with current result %d\n",i,ResultExpected[i],Result_complete[i]);
+        // printf("I compare [%d] the expected result %d with current result %d\n",i,ResultExpected[i],Result_complete[i]);
         CHECK_EQUAL(ResultExpected[i], Result_complete[i]);
     }
 }
@@ -620,17 +632,17 @@ TEST(CHECK_CHANGE_BOUND, CHANGE_FROM_GREEN_TO_RED_THROUGH_BOUND_CHANGE) {
     SetAirQuality(0,sensor_values);
     /*set thresholds*/
 /* set yellow thresholds */
-    SetAirThreshold(0,0,0,20);
-    SetAirThreshold(0,0,1,600);
-    SetAirThreshold(0,0,2,25);
-    SetAirThreshold(0,0,3,100);
-    SetAirThreshold(0,0,4,5);
+    set_air_quality_threshold(0,0,0,20);
+    set_air_quality_threshold(0,0,1,600);
+    set_air_quality_threshold(0,0,2,25);
+    set_air_quality_threshold(0,0,3,100);
+    set_air_quality_threshold(0,0,4,5);
 /* set red thresholds*/
-    SetAirThreshold(0,1,0,65);
-    SetAirThreshold(0,1,1,5000);
-    SetAirThreshold(0,1,2,200);
-    SetAirThreshold(0,1,3,200);
-    SetAirThreshold(0,1,4,10);
+    set_air_quality_threshold(0,1,0,65);
+    set_air_quality_threshold(0,1,1,5000);
+    set_air_quality_threshold(0,1,2,200);
+    set_air_quality_threshold(0,1,3,200);
+    set_air_quality_threshold(0,1,4,10);
     int i=0;
     for (i = 0; i < 2; i++) {
         Statemachine_AirQuality(0, Result);
@@ -644,11 +656,11 @@ TEST(CHECK_CHANGE_BOUND, CHANGE_FROM_GREEN_TO_RED_THROUGH_BOUND_CHANGE) {
     printf("2 rounds\n");
 
     printf("set hysteresis\n");
-    SetHysteresis(1,0,1);
-    SetHysteresis(1,1,19);
-    SetHysteresis(1,2,1);
-    SetHysteresis(1,3,1);
-    SetHysteresis(1,4,1);
+    set_air_quality_hysteresis(1,0,1);
+    set_air_quality_hysteresis(1,1,19);
+    set_air_quality_hysteresis(1,2,1);
+    set_air_quality_hysteresis(1,3,1);
+    set_air_quality_hysteresis(1,4,1);
     for (i ; i < 4; i++) {
         Statemachine_AirQuality(0, Result);
         Result_complete[i * 4 + 0] = Result[0];
@@ -657,16 +669,19 @@ TEST(CHECK_CHANGE_BOUND, CHANGE_FROM_GREEN_TO_RED_THROUGH_BOUND_CHANGE) {
         Result_complete[i * 4 + 3] = Result[3];
         //printf("result[]= %d\n",Result_complete[i*3]);
     }
-    SetHysteresis(1,0,2);
-    SetHysteresis(1,1,20);
-    SetHysteresis(1,2,2);
-    SetHysteresis(1,3,2);
-    SetHysteresis(1,4,2);
+    set_air_quality_hysteresis(1,0,2);
+    set_air_quality_hysteresis(1,1,20);
+    set_air_quality_hysteresis(1,2,2);
+    set_air_quality_hysteresis(1,3,2);
+    set_air_quality_hysteresis(1,4,2);
     for (i = 0; i < length; i++) {
-       // printf("I compare [%d] the expected result %d with current result %d\n",i,ResultExpected[i],Result_complete[i]);
+        // printf("I compare [%d] the expected result %d with current result %d\n",i,ResultExpected[i],Result_complete[i]);
         CHECK_EQUAL(ResultExpected[i], Result_complete[i]);
     }
 }
+
+
+
 
 
 

@@ -8,53 +8,72 @@
 
 static log msd;
 static time_t read_time;
+static unsigned int log_save_flag=1;
+static int counter_log=0;
+
+void setLogFlag()
+{
+    log_save_flag=1;
+}
+
 int log_data_saving()
 {
+    if(log_save_flag==0)    /*!If log_save_flag is false the function doesn't save the log*/
+    {
+        return 0;
+    }
+    
     struct tm time;
 
     get_timeHall(&time);
 
-    static int i=0;
     int j;
-    if(i==49) i=0;
-    if(i>=0 && i<48)
+    if(counter_log==48)
     {
+        counter_log=0;
+        printf("Reset COunter!\n\r");
+    }
+    
         //mesure_time
-        msd.data[i].sensor_data[0]=(time.tm_year)+1900;
-        msd.data[i].sensor_data[1]=(time.tm_mon )+1;
-        msd.data[i].sensor_data[2]=time.tm_mday;
-        msd.data[i].sensor_data[3]=time.tm_hour;
-        msd.data[i].sensor_data[4]=time.tm_min;
+        msd.data[counter_log].sensor_data[0]=(time.tm_year)+1900;
+        msd.data[counter_log].sensor_data[1]=(time.tm_mon )+1;
+        msd.data[counter_log].sensor_data[2]=time.tm_mday;
+        msd.data[counter_log].sensor_data[3]=time.tm_hour;
+        msd.data[counter_log].sensor_data[4]=time.tm_min;
 
 
         //data from air temperature
 
         for(j=0;j<8;j++)
         {
-            msd.data[i].sensor_data[j+5]=GetAirTemperature(j);//sensor_values.air_temperature_sensor[j].temp;
-            msd.data[i].sensor_data[j+13]=GetHeatingAirState(j);//sensor_values.air_temperature_sensor[j].heater;
+            msd.data[counter_log].sensor_data[j+5]=GetAirTemperature(j);//sensor_values.air_temperature_sensor[j].temp;
+            msd.data[counter_log].sensor_data[j+13]=GetHeatingAirState(j);//sensor_values.air_temperature_sensor[j].heater;
         }
 
         //data from water control
-        msd.data[i].sensor_data[21]=GetWaterTemperature();//sensor_values.water_temperature.temp;
-        msd.data[i].sensor_data[22]=GetWaterHeater();//sensor_values.water_temperature.water_heater
+        msd.data[counter_log].sensor_data[21]=GetWaterTemperature();//sensor_values.water_temperature.temp;
+        msd.data[counter_log].sensor_data[22]=GetWaterHeater();//sensor_values.water_temperature.water_heater
         // data air quality
         for(j=0;j<4;j++) {
-            msd.data[i].sensor_data[j+23] =GetVentilatorState();// sensor_values.air_quality_sensor[j].ventilator;
+            msd.data[counter_log].sensor_data[j+23] =GetVentilatorState();// sensor_values.air_quality_sensor[j].ventilator;
         }
 
-        i++;
-    }
-
+    counter_log++;
+    
+    printf("SaveLog\n\r");
+    log_save_flag=0;
 }
 int log_create_msg(char *message)
 {
-    strcpy(message,"#");
     char end_indicator[3];
+    
+    strcpy(message,"#");
     strcpy(end_indicator,"]*");
-    char temp_message[3000];
+    static char temp_message[3000];
+    strcpy(temp_message,"");
     int j;
-    for(j=0;j<48;j++)
+    printf("Counter-» %d!\n\r",counter_log);
+    for(j=0;j<counter_log;j++)
     {
         sprintf(temp_message,"{\"time\":[\"%d\",\"%d\",\"%d\",\"%d\",\"%d\"\n],"
                         "      \"air_temp\":[\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\"],\n"
@@ -66,7 +85,6 @@ int log_create_msg(char *message)
                 msd.data[j].sensor_data[13],msd.data[j].sensor_data[14], msd.data[j].sensor_data[15], msd.data[j].sensor_data[16], msd.data[j].sensor_data[17],msd.data[j].sensor_data[18], msd.data[j].sensor_data[19], msd.data[j].sensor_data[20],
                 msd.data[j].sensor_data[21],msd.data[j].sensor_data[22],msd.data[j].sensor_data[23],msd.data[j].sensor_data[24],msd.data[j].sensor_data[25],msd.data[j].sensor_data[26]
         );
-
         strcat(message,temp_message);
     }
     strcat(message,end_indicator);

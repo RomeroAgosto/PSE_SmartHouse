@@ -15,9 +15,9 @@ set(SOURCE_FILES
         #AirTemperature/AirTemperature/statemachine_airtemp_control.h
         #statemachine_light_control.c
         #statemachine_light_control.h
-        #WaterTemperature/WaterTemperature/statemachine_watertemp_control.c
-        #WaterTemperature/WaterTemperature/statemachine_watertemp_control.h
-        #statemachines.h
+        WaterTemperature/Statemachine_Water/statemachine_watertemp_control.h
+        WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c
+        statemachines.h
         Technician/Structure/technician_structure.c
         Technician/Structure/technician_structure.h
         Technician/Structure/main.c)

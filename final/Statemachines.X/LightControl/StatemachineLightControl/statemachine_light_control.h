@@ -16,11 +16,13 @@
 
 
 
-int SetNewCycle(int room,int new_cycle);
+
 int SetTimer(int light);
 int GetCycle(int room);
 
 #if UNITTEST==1
+int set_light_cycles(int light_number, int cycle_time);
+int get_light_cycles(int light_number);
 int ResetLightStates();
 void Statemachine_LightControl(int light,int *test);
 void SetDesiredLight(int light, int value);

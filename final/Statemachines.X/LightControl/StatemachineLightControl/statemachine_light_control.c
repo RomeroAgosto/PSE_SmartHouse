@@ -16,9 +16,12 @@ int GetCycle(int room){
  *
  * ==============================================
  */
-int SetNewCycle(int room,int new_cycle){
-    //printf("the new cycle of room %d is %d s\n",room,new_cycle);
-    CYCLES[room]=new_cycle;
+int set_light_cycles(int light_number, int cycle_time){
+    CYCLES[light_number]=cycle_time;
+}
+int get_light_cycles(int light_number){
+    return CYCLES[light_number];
+
 }
 
 /**
@@ -44,6 +47,10 @@ int ResetLightStates(){
     light_state[2]=0;
     light_state[3]=0;
 }
+
+int setLight(int light,int a){
+    return 0;
+};
 /**
  *      @brief  returns the desired light temperature -> _debug
  *      @param  light room number
@@ -116,7 +123,6 @@ void Statemachine_LightControl(int light,int *test) {
 void Statemachine_LightControl(int light) {
     int turned_on= desiredLight(light);/*!< saved if the light should be turned on */
 #endif
-    turned_on=TRUE;
     int movement= GetLightControl(light);/*!< saves the movement */
     if(turned_on==TRUE){
         /* states are stored in the states variables. so higher function can easily access the current states*/

@@ -177,6 +177,33 @@ Technician/Structure/technician_structure.c.s:
 	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/Technician/Structure/technician_structure.c.s
 .PHONY : Technician/Structure/technician_structure.c.s
 
+WaterTemperature/Statemachine_Water/statemachine_watertemp_control.o: WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c.o
+
+.PHONY : WaterTemperature/Statemachine_Water/statemachine_watertemp_control.o
+
+# target to build an object file
+WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c.o:
+	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c.o
+.PHONY : WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c.o
+
+WaterTemperature/Statemachine_Water/statemachine_watertemp_control.i: WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c.i
+
+.PHONY : WaterTemperature/Statemachine_Water/statemachine_watertemp_control.i
+
+# target to preprocess a source file
+WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c.i:
+	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c.i
+.PHONY : WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c.i
+
+WaterTemperature/Statemachine_Water/statemachine_watertemp_control.s: WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c.s
+
+.PHONY : WaterTemperature/Statemachine_Water/statemachine_watertemp_control.s
+
+# target to generate assembly for a file
+WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c.s:
+	$(MAKE) -f CMakeFiles/Statemachines_X.dir/build.make CMakeFiles/Statemachines_X.dir/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c.s
+.PHONY : WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +219,9 @@ help:
 	@echo "... Technician/Structure/technician_structure.o"
 	@echo "... Technician/Structure/technician_structure.i"
 	@echo "... Technician/Structure/technician_structure.s"
+	@echo "... WaterTemperature/Statemachine_Water/statemachine_watertemp_control.o"
+	@echo "... WaterTemperature/Statemachine_Water/statemachine_watertemp_control.i"
+	@echo "... WaterTemperature/Statemachine_Water/statemachine_watertemp_control.s"
 .PHONY : help
 
 

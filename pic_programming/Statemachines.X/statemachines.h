@@ -19,6 +19,8 @@
 #if UNITTEST==0
 #include "../../final/schedules/desiredValues.h"
 #include "../../final/update/update.h"
+#include "Technician/Structure/technician_structure.h"
+
 #endif
 
 
