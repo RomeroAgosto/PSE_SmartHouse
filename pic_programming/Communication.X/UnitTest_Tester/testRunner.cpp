@@ -182,4 +182,25 @@ TEST(TEST_COMMUNICATION, SIMPLEMESSAGE_GET_LOG_AFTER_FLAG){
 
 
 }
+
+TEST(TEST_COMMUNICATION, SIMPLEMESSAGE_SEND_TECHNICIAN) {
+    reset_messages();
+
+    int length = 3;
+    /* state, message created -> 1= create normal message*/
+    int ResultExpected[3] = {5,5,0};
+    int Result[3], Result_complete[length];
+    /* set sensor values for test*/
+    int i;
+    char message[]="#~12345678912345678912345678901234567891234567890*";
+    SetMessage(message);
+    SetMessageFlag(1);
+    Statemachine_Communication(Result);
+    for (i = 0; i < length; i++) {
+        printf("compare [Result[%d] = %d  with ResultExpected[%d]= %d\n",i,Result[i],i,ResultExpected[i]);
+        CHECK_EQUAL(Result[i],ResultExpected[i]);
+        //CHECK_EQUAL(ResultExpected[i], Result_complete[i]);
+    }
+}
+
 }

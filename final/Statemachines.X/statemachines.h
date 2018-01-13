@@ -12,7 +12,7 @@
 #include <string.h>
 
 /* if UNITTEST is 1 a unittest can be performed -> dummyfunction for the sensor/desired value generation are introduced*/
-#define UNITTEST 0
+#define UNITTEST 1
 
 #define TRUE 1
 #define FALSE 0
@@ -21,6 +21,7 @@
 #include "../schedules/desiredValues.h"
 #include "../update/update.h"
 #include "../actuators/actuators.h"
+#include "Technician/Structure/technician_structure.h"
 #endif
 
 

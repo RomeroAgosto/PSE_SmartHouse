@@ -3,6 +3,7 @@
 static int desired_test;
 static int water_temp;
 int heater_state;
+int water_hysteresis;
 #include <stdio.h>
 int reset_state_water_temp(){
     water_temp_state=0;
@@ -22,6 +23,12 @@ int desiredWaterTemperature(){
 int SetWaterHeaterSate(int set){
     heater_state=set;
 }
+int set_water_hysteresis(int hysteresis){
+    water_hysteresis=hysteresis;
+}
+int get_water_hysteresis(){
+    return water_hysteresis;
+}
 
 #endif
 
@@ -35,8 +42,8 @@ int SetWaterHeaterSate(int set){
     int water_temperature=GetWaterTemperature();
     int desired_temperature= desiredWaterTemperature();
     //printf("desired temperature in the state machine: %d\n", desired_temperature);
-    upper_threshold_water=desired_temperature+2; /*trigger band is 10 degrees!*/
-    lower_threshold_water=desired_temperature-2;
+    upper_threshold_water=desired_temperature+get_water_hysteresis(); /*trigger band is 10 degrees!*/
+    lower_threshold_water=desired_temperature-get_water_hysteresis();
     /* states are stored in the states variables. so higher function can easily access the current states*/
     switch (water_temp_state) {
 

@@ -2,7 +2,6 @@
 
 static int desired_temp[8]; /*!< the desired_temp will be updated by the global sensor structure -> getter function, every room_inserted has its own temp*/
 static int air_temp_state[8]={0};/*!< stored the temp_state from all room_inserteds */
-
 /**
  *      @brief  Dummy function to receive the desired Air Temperature
  *      @param  room_inserted
@@ -16,9 +15,21 @@ static int air_temp_state[8]={0};/*!< stored the temp_state from all room_insert
 #if UNITTEST == 1
 int heating_state;
 int air_temperature[8]={0};
+int air_temperature_hysteresis=1;
+
+int set_air_temp_hysteresis(int room, int hysteresis){
+    air_temperature_hysteresis=hysteresis;
+}
+int get_air_temp_hysteresis(int room){
+    return air_temperature_hysteresis;
+}
 
 void reset_state_air_temp(room_inserted ){
     air_temp_state[room_inserted]=0;
+}
+
+int SetHeater(int room_inserted,int abc){
+    return 0;
 }
 
 /************** desired temperature *///////////////////
@@ -55,6 +66,7 @@ int SetHeatingAirState(int room_inserted, int on){
  * ==============================================
  */
 
+
 int SetAirTemperature(int room_inserted, int temp){
     air_temperature[room_inserted ]=temp;
     return 0;
@@ -82,8 +94,8 @@ void Statemachine_AirControl(int room_inserted){
     desired_temp[room_inserted]=desiredAirTemperature(room_inserted);
     int air_temperature=GetAirTemperature(room_inserted); /*!< in air_temperature are the current values saved -> getter function from the global struct */
     //printf("desired_temp[%d] = %d\n temp is: %d \n",room_inserted,desired_temp[room_inserted],air_temperature);
-    lower_threshold_air=desired_temp[room_inserted]-1; /*!< the lower_threshold_air is the lower band of the trigger in order to avoid shuttering*/
-    upper_threshold_air=desired_temp[room_inserted]+1;/*!< the upper_threshold_air is the upper band of the trigger in order to avoid shuttering*/
+    lower_threshold_air=desired_temp[room_inserted]-get_air_temp_hysteresis(room_inserted); /*!< the lower_threshold_air is the lower band of the trigger in order to avoid shuttering*/
+    upper_threshold_air=desired_temp[room_inserted]+get_air_temp_hysteresis(room_inserted);/*!< the upper_threshold_air is the upper band of the trigger in order to avoid shuttering*/
     switch (air_temp_state[room_inserted]) {
 
         case DESIRED_TEMPERATURE:

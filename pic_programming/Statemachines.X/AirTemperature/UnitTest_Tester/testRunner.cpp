@@ -5,30 +5,28 @@ extern "C" {
 
 #include "../Statemachine_AirTemperature/statemachine_airtemp_control.h"
 
-TEST_GROUP(AirTemp)
-{
+TEST_GROUP(AirTemp) {
     void setup() // setup
     {
 
     }
 
-    void teardown()
-    {
+    void teardown() {
 
     }
 };
 /* Increase Temperature */
-TEST(AirTemp,TEST_AIR_INCREASE_TEMPERATURE_SIMPLE) {
+TEST(AirTemp, TEST_AIR_INCREASE_TEMPERATURE_SIMPLE) {
     reset_state_air_temp(1);
     /*first set temperature to 60 degree*/
-    int length=6;
+    int length = 6;
     /* state before, setHeater state after*/
-    int ResultExpected[6] = {0, 0, 1,   1,1,1};
+    int ResultExpected[6] = {0, 0, 1, 1, 1, 1};
     int Result[3], Result_complete[length];
 
     int i;
-    setdesiredTemp(1,25);
-    SetAirTemperature(1,23);
+    setdesiredTemp(1, 25);
+    SetAirTemperature(1, 23);
     for (i = 0; i < 2; i++) {
         Statemachine_AirControl(1, Result);
         Result_complete[i * 3 + 0] = Result[0];
@@ -42,17 +40,17 @@ TEST(AirTemp,TEST_AIR_INCREASE_TEMPERATURE_SIMPLE) {
     }
 }
 /* stay on off, test limit*/
-TEST(AirTemp,TEST_AIR_KEEP_TEMPERATURE_SIMPLE_MINIMALVALUE) {
+TEST(AirTemp, TEST_AIR_KEEP_TEMPERATURE_SIMPLE_MINIMALVALUE) {
     reset_state_air_temp(1);
     /*first set temperature to 60 degree*/
-    int length=6;
+    int length = 6;
     /* state before, setHeater state after*/
-    int ResultExpected[6] = {0, 0, 0,   0,0,0};
+    int ResultExpected[6] = {0, 0, 0, 0, 0, 0};
     int Result[3], Result_complete[length];
 
     int i;
-    setdesiredTemp(1,24);
-    SetAirTemperature(1,23);
+    setdesiredTemp(1, 24);
+    SetAirTemperature(1, 23);
     for (i = 0; i < 2; i++) {
         Statemachine_AirControl(1, Result);
         Result_complete[i * 3 + 0] = Result[0];
@@ -66,55 +64,24 @@ TEST(AirTemp,TEST_AIR_KEEP_TEMPERATURE_SIMPLE_MINIMALVALUE) {
     }
 }
 /* Increase Temperature -> when in increasing state reduce desired value*/
-TEST(AirTemp,TEST_AIR_INCREASE_TEMPERATURE_CHANGE_DESIRED_VALUE) {
-	reset_state_air_temp(1);
-	/*first set temperature to 60 degree*/
-    int length=12;
-	/* state before, setHeater state after*/
-	int ResultExpected[12] = {0, 0, 1,   1,1,1,  1,1,0,   0,0,0};
-	int Result[3], Result_complete[length];
-
-	int i;
-    setdesiredTemp(1,25);
-    SetAirTemperature(1,23);
-	for (i = 0; i < 2; i++) {
-        Statemachine_AirControl(1, Result);
-		Result_complete[i * 3 + 0] = Result[0];
-		Result_complete[i * 3 + 1] = Result[1];
-		Result_complete[i * 3 + 2] = Result[2];
-	}
-    setdesiredTemp(1,20);
-    for (i; i < 4; i++) {
-        Statemachine_AirControl(1, Result);
-        Result_complete[i * 3 + 0] = Result[0];
-        Result_complete[i * 3 + 1] = Result[1];
-        Result_complete[i * 3 + 2] = Result[2];
-    }
-	for (i = 0; i < length; i++) {
-		//printf("I compare[%d] %d %d\n",i,ResultExpected[i],Result_complete[i]);
-		CHECK_EQUAL(ResultExpected[i], Result_complete[i]);
-	}
-}
-
-/* Increase Temperature -> when in increasing state reduce desired value*/
-TEST(AirTemp,TEST_AIR_INCREASE_TEMPERATURE_CHANGE_TEMPERATURE) {
+TEST(AirTemp, TEST_AIR_INCREASE_TEMPERATURE_CHANGE_DESIRED_VALUE) {
     reset_state_air_temp(1);
     /*first set temperature to 60 degree*/
-    int length=12;
+    int length = 12;
     /* state before, setHeater state after*/
-    int ResultExpected[12] = {0, 0, 1,   1,1,1,  1,1,0,   0,0,0};
+    int ResultExpected[12] = {0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0};
     int Result[3], Result_complete[length];
 
     int i;
-    setdesiredTemp(1,25);
-    SetAirTemperature(1,23);
+    setdesiredTemp(1, 25);
+    SetAirTemperature(1, 23);
     for (i = 0; i < 2; i++) {
         Statemachine_AirControl(1, Result);
         Result_complete[i * 3 + 0] = Result[0];
         Result_complete[i * 3 + 1] = Result[1];
         Result_complete[i * 3 + 2] = Result[2];
     }
-    SetAirTemperature(1,27);
+    setdesiredTemp(1, 20);
     for (i; i < 4; i++) {
         Statemachine_AirControl(1, Result);
         Result_complete[i * 3 + 0] = Result[0];
@@ -126,39 +93,68 @@ TEST(AirTemp,TEST_AIR_INCREASE_TEMPERATURE_CHANGE_TEMPERATURE) {
         CHECK_EQUAL(ResultExpected[i], Result_complete[i]);
     }
 }
-
 /* Increase Temperature -> when in increasing state reduce desired value*/
-TEST(AirTemp,TEST_AIR_INCREASE_TEMPERATURE_CHANGE_TEMPERATURE_CHECK_ALL_ROOMS) {
+TEST(AirTemp, TEST_AIR_INCREASE_TEMPERATURE_CHANGE_TEMPERATURE) {
+    reset_state_air_temp(1);
+    /*first set temperature to 60 degree*/
+    int length = 12;
+    /* state before, setHeater state after*/
+    int ResultExpected[12] = {0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0};
+    int Result[3], Result_complete[length];
+
+    int i;
+    setdesiredTemp(1, 25);
+    SetAirTemperature(1, 23);
+    for (i = 0; i < 2; i++) {
+        Statemachine_AirControl(1, Result);
+        Result_complete[i * 3 + 0] = Result[0];
+        Result_complete[i * 3 + 1] = Result[1];
+        Result_complete[i * 3 + 2] = Result[2];
+    }
+    SetAirTemperature(1, 27);
+    for (i; i < 4; i++) {
+        Statemachine_AirControl(1, Result);
+        Result_complete[i * 3 + 0] = Result[0];
+        Result_complete[i * 3 + 1] = Result[1];
+        Result_complete[i * 3 + 2] = Result[2];
+    }
+    for (i = 0; i < length; i++) {
+        //printf("I compare[%d] %d %d\n",i,ResultExpected[i],Result_complete[i]);
+        CHECK_EQUAL(ResultExpected[i], Result_complete[i]);
+    }
+}
+/* Increase Temperature -> when in increasing state reduce desired value*/
+TEST(AirTemp, TEST_AIR_INCREASE_TEMPERATURE_CHANGE_TEMPERATURE_CHECK_ALL_ROOMS) {
     int j;
-    for (j = 0; j <8 ; j++) {
+    for (j = 0; j < 8; j++) {
         reset_state_air_temp(j);
     }
 
-    int room=0;
+    int room = 0;
 
     /*first set temperature to 60 degree*/
-    int length=12;
+    int length = 12;
     /* state before, setHeater state after*/
     int ResultExpected[8][12];
-    for (j = 0; j<8;j++) {
-        ResultExpected[j][0]=0;
-        ResultExpected[j][1]=0;
-        ResultExpected[j][2]=1;
+    for (j = 0; j < 8; j++) {
+        ResultExpected[j][0] = 0;
+        ResultExpected[j][1] = 0;
+        ResultExpected[j][2] = 1;
 
-        ResultExpected[j][3]=1;
-        ResultExpected[j][4]=1;
-        ResultExpected[j][5]=1;
+        ResultExpected[j][3] = 1;
+        ResultExpected[j][4] = 1;
+        ResultExpected[j][5] = 1;
 
-        ResultExpected[j][6]=1;
-        ResultExpected[j][7]=1;
-        ResultExpected[j][8]=0;
+        ResultExpected[j][6] = 1;
+        ResultExpected[j][7] = 1;
+        ResultExpected[j][8] = 0;
 
-        ResultExpected[j][9]=0;
-        ResultExpected[j][10]=0;
-        ResultExpected[j][11]=0;
+        ResultExpected[j][9] = 0;
+        ResultExpected[j][10] = 0;
+        ResultExpected[j][11] = 0;
     }
-    int Result[3], Result_complete[8][length],i;
-    for(j=0;j<8;j++) {
+    int Result[3], Result_complete[8][length], i;
+    for (j = 0; j < 8; j++) {
 
         setdesiredTemp(j, 25);
         SetAirTemperature(j, 23);
@@ -182,39 +178,38 @@ TEST(AirTemp,TEST_AIR_INCREASE_TEMPERATURE_CHANGE_TEMPERATURE_CHECK_ALL_ROOMS) {
     }
 
 }
-
 /* Increase Temperature -> when in increasing state reduce desired value*/
-TEST(AirTemp,TEST_AIR_INCREASE_TEMPERATURE_CHANGE_DESIRED_VALUE_CHECK_ALL_ROOMS) {
+TEST(AirTemp, TEST_AIR_INCREASE_TEMPERATURE_CHANGE_DESIRED_VALUE_CHECK_ALL_ROOMS) {
     int j;
-    for (j = 0; j <8 ; j++) {
+    for (j = 0; j < 8; j++) {
         reset_state_air_temp(j);
     }
 
-    int room=0;
+    int room = 0;
 
     /*first set temperature to 60 degree*/
-    int length=12;
+    int length = 12;
     /* state before, setHeater state after*/
     int ResultExpected[8][12];
-    for (j = 0; j<8;j++) {
-        ResultExpected[j][0]=0;
-        ResultExpected[j][1]=0;
-        ResultExpected[j][2]=1;
+    for (j = 0; j < 8; j++) {
+        ResultExpected[j][0] = 0;
+        ResultExpected[j][1] = 0;
+        ResultExpected[j][2] = 1;
 
-        ResultExpected[j][3]=1;
-        ResultExpected[j][4]=1;
-        ResultExpected[j][5]=1;
+        ResultExpected[j][3] = 1;
+        ResultExpected[j][4] = 1;
+        ResultExpected[j][5] = 1;
 
-        ResultExpected[j][6]=1;
-        ResultExpected[j][7]=1;
-        ResultExpected[j][8]=0;
+        ResultExpected[j][6] = 1;
+        ResultExpected[j][7] = 1;
+        ResultExpected[j][8] = 0;
 
-        ResultExpected[j][9]=0;
-        ResultExpected[j][10]=0;
-        ResultExpected[j][11]=0;
+        ResultExpected[j][9] = 0;
+        ResultExpected[j][10] = 0;
+        ResultExpected[j][11] = 0;
     }
-    int Result[3], Result_complete[8][length],i;
-    for(j=0;j<8;j++) {
+    int Result[3], Result_complete[8][length], i;
+    for (j = 0; j < 8; j++) {
 
         setdesiredTemp(j, 25);
         SetAirTemperature(j, 23);
@@ -238,4 +233,71 @@ TEST(AirTemp,TEST_AIR_INCREASE_TEMPERATURE_CHANGE_DESIRED_VALUE_CHECK_ALL_ROOMS)
     }
 
 }
+/* Increase Temperature */
+TEST(AirTemp, TEST_AIR_CHANGE_TEMPERATURE_CHECK_THROUGH_THRESHOLD_FROM_HEATING_TO_DESIRED) {
+    reset_state_air_temp(1);
+    /*first set temperature to 60 degree*/
+    int length = 12;
+    /* state before, setHeater state after*/
+    int ResultExpected[] = {0,0,1, 1,1,1, 1,1,0, 0,0,0};
+    int Result[3], Result_complete[length];
+
+    int i;
+    setdesiredTemp(1, 25);
+    SetAirTemperature(1, 23);
+    for (i = 0; i < 2; i++) {
+        Statemachine_AirControl(1, Result);
+        Result_complete[i * 3 + 0] = Result[0];
+        Result_complete[i * 3 + 1] = Result[1];
+        Result_complete[i * 3 + 2] = Result[2];
+        //printf("result[]= %d\n",Result_complete[i*3]);
+    }
+    set_threshold_air(1, 3);
+    for (i; i < 4; i++) {
+        Statemachine_AirControl(1, Result);
+        Result_complete[i * 3 + 0] = Result[0];
+        Result_complete[i * 3 + 1] = Result[1];
+        Result_complete[i * 3 + 2] = Result[2];
+        //printf("result[]= %d\n",Result_complete[i*3]);
+    }
+    for (i = 0; i < length; i++) {
+        //printf("I compare[%d] %d %d\n",i,ResultExpected[i],Result_complete[i]);
+        CHECK_EQUAL(ResultExpected[i], Result_complete[i]);
+    }
+}
+
+TEST(AirTemp, TEST_AIR_CHANGE_TEMPERATURE_CHECK_THROUGH_THRESHOLD_FROM_DESIRED_TO_HEATING) {
+    reset_state_air_temp(1);
+    /*first set temperature to 60 degree*/
+    int length = 12;
+    /* state before, setHeater state after*/
+    int ResultExpected[] = {0,0,0, 0,0,0, 0,0,1, 1,1,1};
+    int Result[3], Result_complete[length];
+
+    int i;
+    setdesiredTemp(1, 25);
+    SetAirTemperature(1, 24);
+    for (i = 0; i < 2; i++) {
+        Statemachine_AirControl(1, Result);
+        Result_complete[i * 3 + 0] = Result[0];
+        Result_complete[i * 3 + 1] = Result[1];
+        Result_complete[i * 3 + 2] = Result[2];
+        //printf("result[]= %d\n",Result_complete[i*3]);
+    }
+    set_threshold_air(1, 0);
+    for (i; i < 4; i++) {
+        Statemachine_AirControl(1, Result);
+        Result_complete[i * 3 + 0] = Result[0];
+        Result_complete[i * 3 + 1] = Result[1];
+        Result_complete[i * 3 + 2] = Result[2];
+        //printf("result[]= %d\n",Result_complete[i*3]);
+    }
+    for (i = 0; i < length; i++) {
+        //printf("I compare[%d] %d %d\n",i,ResultExpected[i],Result_complete[i]);
+        CHECK_EQUAL(ResultExpected[i], Result_complete[i]);
+    }
+}
+
+
+
 }

@@ -4,9 +4,9 @@ project(Statemachines_X)
 set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
-        LightControl/StatemachineLightControl/main.c
-        LightControl/StatemachineLightControl/statemachine_light_control.h
-        LightControl/StatemachineLightControl/statemachine_light_control.c
+        #LightControl/StatemachineLightControl/main.c
+        #LightControl/StatemachineLightControl/statemachine_light_control.h
+        #LightControl/StatemachineLightControl/statemachine_light_control.c
         #main.c
         #AirQuality/Statemachine_AirQuality/main.c
         #AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c
@@ -15,9 +15,11 @@ set(SOURCE_FILES
         #AirTemperature/AirTemperature/statemachine_airtemp_control.h
         #statemachine_light_control.c
         #statemachine_light_control.h
-        #WaterTemperature/WaterTemperature/statemachine_watertemp_control.c
-        #WaterTemperature/WaterTemperature/statemachine_watertemp_control.h
+        WaterTemperature/Statemachine_Water/statemachine_watertemp_control.h
+        WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c
         statemachines.h
-        )
+        Technician/Structure/technician_structure.c
+        Technician/Structure/technician_structure.h
+        Technician/Structure/main.c)
 
 add_executable(Statemachines_X ${SOURCE_FILES})

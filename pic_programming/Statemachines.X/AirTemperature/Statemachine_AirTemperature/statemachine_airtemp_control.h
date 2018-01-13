@@ -9,9 +9,7 @@
 #define FALSE 0
 #define TRUE 1
 
-static int upper_threshold_air; /*!< the upper_threshold_air is the upper band of the trigger in order to avoid shuttering*/
-static int lower_threshold_air; /*!< the lower_threshold_air is the lower band of the trigger in order to avoid shuttering*/
-
+int set_threshold_air(int room, int threshold);
 
 #if UNITTEST == 1
 int desiredAirTemperature(int room);

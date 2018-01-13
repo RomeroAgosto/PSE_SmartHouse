@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/main.c.o"
-  "CMakeFiles/Statemachines_X.dir/LightControl/StatemachineLightControl/statemachine_light_control.c.o"
+  "CMakeFiles/Statemachines_X.dir/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.c.o"
+  "CMakeFiles/Statemachines_X.dir/Technician/Structure/technician_structure.c.o"
+  "CMakeFiles/Statemachines_X.dir/Technician/Structure/main.c.o"
   "Statemachines_X.pdb"
   "Statemachines_X"
 )

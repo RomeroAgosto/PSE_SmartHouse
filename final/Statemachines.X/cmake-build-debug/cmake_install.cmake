@@ -1,4 +1,4 @@
-# Install script for directory: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X
+# Install script for directory: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

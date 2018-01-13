@@ -67,6 +67,20 @@ int SetWarning(){
 
 #if UNITTEST == TRUE
 static int sensor_values_test[4][5];
+
+
+int set_air_quality_threshold(int room,int risk_level, int threshold, int value){
+    threshold[room][risk_level][threshold]=value;
+}
+int get_air_quality_threshold(int room,int risk_level, int threshold){
+    return threshold[room][risk_level][threshold];
+}
+int set_air_quality_hysteresis(int risk_level,int sensor, int value){
+    bounds_sensorvalues[risk_level][sensor]=value;
+}
+int get_air_quality_hysteresis(int risk_level,int sensor){
+    return bounds_sensorvalues[risk_level][sensor];
+}
 /********** AirQualitySensors ********************/
 void SetAirQuality(int room, int *input_values){
     sensor_values_test[room][0]=input_values[0];
@@ -107,7 +121,6 @@ void Statemachine_AirQuality(int room,int *test) {
 void Statemachine_AirQuality(int room) {
 #endif
 	int sensor_values[5]; /*!< the getter function will return an array pointer with all defined values */
-    int air_quality;
     GetAirQuality(room,sensor_values); /*!< in air_quality the current value will be saved -> getter function from the global struct */
 
     int j;
@@ -120,10 +133,10 @@ void Statemachine_AirQuality(int room) {
             SetVentilationState(room,FALSE);/* it is just possible to turn off the ventilation when the Air quality is good!*/
             /* check Yellow first, RED can overwrite YELLOW -> when one Value exceeds the preset limit -> react*/
             for (j = 0; j <5 ; j++) {
-                if (sensor_values[j] > thresholds[room][0][j]+bounds_sensorvalues[0][j]){air_quality_state[room]=YELLOW;};
+                if (sensor_values[j] >get_air_quality_threshold(room,0,j)+get_air_quality_hysteresis(0,j)){air_quality_state[room]=YELLOW;};
             }
             for (j = 0; j <5 ; j++) {
-                if (sensor_values[j] > thresholds[room][1][j] + bounds_sensorvalues[1][j]) {
+                if (sensor_values[j] > get_air_quality_threshold(room,1,j)+ get_air_quality_hysteresis(1,j) ) {
                     air_quality_state[room] = RED;
                 }
             }

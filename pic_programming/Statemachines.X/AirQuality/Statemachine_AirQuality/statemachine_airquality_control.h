@@ -11,6 +11,11 @@
 #define TRUE 1
 #define FALSE 0
 
+int set_air_quality_hysteresis(int risk_level,int sensor, int value);
+int get_air_quality_hysteresis(int risk_level,int sensor);
+
+int set_air_quality_threshold(int room,int risk_level, int threshold, int value);
+int get_air_quality_threshold(int room,int risk_level, int threshold);
 
 int SetAirThreshold(int room,int warning_level,int threshold_for_sensor, double value);
 int GetAirQualityState(int room);

@@ -140,13 +140,13 @@ TEST(WaterControl,TEST_WaterControl_TURN_ON_THROUGH_THRESHOLD_CHANGE) {
 	set_desired_temperature(desired_temp);
 	set_water_temp(water_temp);
 	int i;
-	set_water_threshold(10);
+	set_water_hysteresis(10);
 	Statemachine_WaterControl(Result);
 
 	for (i = 0; i < 3; i++) {
 		ResultComplete[i] = Result[i];
 	}
-	set_water_threshold(2);
+	set_water_hysteresis(2);
 	Statemachine_WaterControl(Result);
 	for (i = 3; i < 6; i++) {
 		ResultComplete[i] = Result[i-3];
@@ -186,7 +186,7 @@ TEST(WaterControl,TEST_WaterControl_TURN_OFF_THROUGH_THRESHOLD_CHANGE) {
 	for (i = 6; i < 9; i++) {
 		ResultComplete[i] = Result[i-6];
 	}
-	set_water_threshold(2);
+	set_water_hysteresis(2);
 	Statemachine_WaterControl(Result);
 	for (i = 9; i < 12; i++) {
 		ResultComplete[i] = Result[i-9];

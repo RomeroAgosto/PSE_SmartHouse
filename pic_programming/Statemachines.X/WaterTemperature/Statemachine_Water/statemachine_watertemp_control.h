@@ -5,14 +5,17 @@
 #include "../../statemachines.h"
 
 
+
 #define DESIRED_TEMPERATURE 0
 #define INCREASE_WATER_TEMPERATURE 1
 #define FALSE 0
 #define TRUE 1
 
 #if UNITTEST==1
-int set_water_threshold(int threshold);
+
 int GetWaterTemperature();
+int set_water_hysteresis(int limit);
+int get_water_hysteresis(void);
 int set_water_temp(int temp);
 int set_desired_temperature(int temp);
 int desiredWaterTemperature();

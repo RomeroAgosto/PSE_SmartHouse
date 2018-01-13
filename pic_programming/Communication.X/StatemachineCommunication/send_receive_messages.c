@@ -1,6 +1,7 @@
 #include "send_receive_messages.h"
 #include <string.h>
 #include "../../Schedules.X/schedules.h"
+#include "../../../final/Statemachines.X/Technician/Structure/technician_structure.h"
 #include <stdio.h>
 static int message_flag=1;
 static char message [10000];
@@ -29,6 +30,9 @@ int create_normal_message(char *message){
 }
 int get_schedule_message(char *message) {
     sent_message=2;
+}
+int set_new_thresholds(char *message) {
+    sent_message=5;
 }
 int reset_messages() {
     message_flag=0;
@@ -127,8 +131,11 @@ long int check_received_message(char *message){
     return 1;
 
     }
+void get_time(char *message) {
+}
 
 #if UNITTEST == 1
+#define TRUE 1
 int  Statemachine_Communication(int *test) {
 #else
     int  Statemachine_Communication(){
@@ -167,6 +174,8 @@ int  Statemachine_Communication(int *test) {
                 //printf("MAKE-@\n\r");
                 get_time(message);
                 break;
+            case ('~'):
+                set_new_thresholds(message);
             default:
                 error_flag = 1;
                 //printf("MAKE-default\n\r");
@@ -178,6 +187,7 @@ int  Statemachine_Communication(int *test) {
         if (message[p+1]=='?') {test[0] = 1; }
         else if (message[p+1]=='+') { test[0] = 2;}
         else if (message[p+1]=='!') test[0]=3;
+        else if (message[p+1]=='~') test[0]=5;
         test[2]=p;
     }
     else {
