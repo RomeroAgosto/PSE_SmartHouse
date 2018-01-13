@@ -12,4 +12,5 @@ build/default/production/_ext/719964549/statemachine_airtemp_control.o:  \
  ../Statemachines.X/AirTemperature/Statemachine_AirTemperature/../../../schedules/desiredValues.h  \
  ../Statemachines.X/AirTemperature/Statemachine_AirTemperature/../../../update/update.h  \
  ../Statemachines.X/AirTemperature/Statemachine_AirTemperature/../../../update/struct_lib.h  \
- ../Statemachines.X/AirTemperature/Statemachine_AirTemperature/../../../actuators/actuators.h 
+ ../Statemachines.X/AirTemperature/Statemachine_AirTemperature/../../../actuators/actuators.h  \
+ ../Statemachines.X/AirTemperature/Statemachine_AirTemperature/../../Technician/Structure/technician_structure.h 

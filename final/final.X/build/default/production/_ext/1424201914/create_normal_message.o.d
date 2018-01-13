@@ -15,4 +15,5 @@ build/default/production/_ext/1424201914/create_normal_message.o:  \
  ../../pic_programming/Communication.X/StatemachineCommunication/../../Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.h  \
  ../../pic_programming/Communication.X/StatemachineCommunication/../../Statemachines.X/LightControl/StatemachineLightControl/../../statemachines.h  \
  ../../pic_programming/Communication.X/StatemachineCommunication/../../Statemachines.X/../../final/schedules/desiredValues.h  \
- ../../pic_programming/Communication.X/StatemachineCommunication/../../Statemachines.X/../../final/update/update.h 
+ ../../pic_programming/Communication.X/StatemachineCommunication/../../Statemachines.X/../../final/update/update.h  \
+ ../../pic_programming/Communication.X/StatemachineCommunication/../../Statemachines.X/Technician/Structure/technician_structure.h 

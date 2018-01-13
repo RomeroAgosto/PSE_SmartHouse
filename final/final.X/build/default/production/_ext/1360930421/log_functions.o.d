@@ -15,4 +15,5 @@ build/default/production/_ext/1360930421/log_functions.o:  \
  ../log/../Statemachines.X/AirQuality/Statemachine_AirQuality/../../LightControl/StatemachineLightControl/../../statemachines.h  \
  ../log/../Statemachines.X/AirQuality/Statemachine_AirQuality/../../../schedules/desiredValues.h  \
  ../log/../Statemachines.X/AirQuality/Statemachine_AirQuality/../../../update/update.h  \
- ../log/../Statemachines.X/AirQuality/Statemachine_AirQuality/../../../actuators/actuators.h 
+ ../log/../Statemachines.X/AirQuality/Statemachine_AirQuality/../../../actuators/actuators.h  \
+ ../log/../Statemachines.X/AirQuality/Statemachine_AirQuality/../../Technician/Structure/technician_structure.h 

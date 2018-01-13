@@ -77,6 +77,11 @@
                          projectFiles="true">
           </logicalFolder>
         </logicalFolder>
+        <logicalFolder name="Technician" displayName="Technician" projectFiles="true">
+          <logicalFolder name="Structure" displayName="Structure" projectFiles="true">
+            <itemPath>../Statemachines.X/Technician/Structure/technician_structure.h</itemPath>
+          </logicalFolder>
+        </logicalFolder>
         <logicalFolder name="WaterTemperature"
                        displayName="WaterTemperature"
                        projectFiles="true">
@@ -170,6 +175,11 @@
                          displayName="StatemachineLightControl"
                          projectFiles="true">
             <itemPath>../Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="Technician" displayName="Technician" projectFiles="true">
+          <logicalFolder name="Structure" displayName="Structure" projectFiles="true">
+            <itemPath>../Statemachines.X/Technician/Structure/technician_structure.c</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="WaterTemperature"

@@ -12,4 +12,5 @@ build/default/production/_ext/1295191707/statemachine_airquality_control.o:  \
  ../Statemachines.X/AirQuality/Statemachine_AirQuality/../../../schedules/desiredValues.h  \
  ../Statemachines.X/AirQuality/Statemachine_AirQuality/../../../update/update.h  \
  ../Statemachines.X/AirQuality/Statemachine_AirQuality/../../../update/struct_lib.h  \
- ../Statemachines.X/AirQuality/Statemachine_AirQuality/../../../actuators/actuators.h 
+ ../Statemachines.X/AirQuality/Statemachine_AirQuality/../../../actuators/actuators.h  \
+ ../Statemachines.X/AirQuality/Statemachine_AirQuality/../../Technician/Structure/technician_structure.h 

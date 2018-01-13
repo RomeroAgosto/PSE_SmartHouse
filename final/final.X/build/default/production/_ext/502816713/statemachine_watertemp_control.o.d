@@ -12,4 +12,5 @@ build/default/production/_ext/502816713/statemachine_watertemp_control.o:  \
  ../Statemachines.X/WaterTemperature/Statemachine_Water/../../../schedules/desiredValues.h  \
  ../Statemachines.X/WaterTemperature/Statemachine_Water/../../../update/update.h  \
  ../Statemachines.X/WaterTemperature/Statemachine_Water/../../../update/struct_lib.h  \
- ../Statemachines.X/WaterTemperature/Statemachine_Water/../../../actuators/actuators.h 
+ ../Statemachines.X/WaterTemperature/Statemachine_Water/../../../actuators/actuators.h  \
+ ../Statemachines.X/WaterTemperature/Statemachine_Water/../../Technician/Structure/technician_structure.h 

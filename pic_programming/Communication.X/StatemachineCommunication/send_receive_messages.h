@@ -13,7 +13,7 @@
 #define RECEIVE_SCHEDULES 3
 #define SEND_DATALOG 4
 
-#define  UNITTEST 1
+#define  UNITTEST 0
 
 #if UNITTEST==1
 #define TRUE 1
