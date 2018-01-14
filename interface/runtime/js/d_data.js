@@ -8,7 +8,13 @@ function updateTime() {
 }
 
 function updateDataFromPIC() {
-	if(nextmsg_willbe!=null && !sending_schedules) return;
+	if(nextmsg_willbe!=null || sending_schedules) return;
 	nextmsg_willbe="status";
 	if(connected) socket.send("#?*");
+}
+
+function requestLog() {
+	if(nextmsg_willbe!=null || sending_schedules) return;
+	nextmsg_willbe="log";
+	if(connected) socket.send("#!*");
 }

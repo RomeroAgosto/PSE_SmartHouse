@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<script src="runtime/plugins/jquery/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<p><h2>Technician Page</h2></p>
+		<p>Please stop the interface before sending any message to the system!</p>
+		<p>
+			<table style="font-size:18px">
+				<tr><td>Access Code:</td><td><input type="password" id="password_input" style="width:250px; font-size:inherit; margin-left: 10px;"></td></tr>
+				<tr><td>Custom Msg: </td><td><input type="text" id="message_input" style="width:250px; font-size:inherit; margin-left: 10px;"></td></tr>
+				<tr><td></td><td><input type="button" id="send_btn" value="Send" style="width:250px; font-size:inherit; margin-left: 10px; margin-top: 5px;"></td></tr>
+			</table>
+		</p>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#send_btn').click(function() {
+					$.post("submit_msg.php", {'accesscode': $('#password_input').val() ,'message': $('#message_input').val()}, function(response) {
+						eval(response);
+						alert('Message Successfully sent!');
+					}).fail(function() {alert("Error!");});
+				});
+			});
+		</script>
+	</body>
+<html>

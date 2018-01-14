@@ -15,5 +15,6 @@ $(document).ready(function() {
 	setInterval(updateTime, 50000)
 	setInterval(lockScreen_Timeout, 1000)
 	setInterval(updateDataFromPIC, 3000)
-	setInterval(sendAllDirtySchedules, 10000)
+	setInterval(sendAllDirtySchedules, 5000)
+	setInterval(requestLog, 60000000)
 });

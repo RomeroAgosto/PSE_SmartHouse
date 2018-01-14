@@ -10,6 +10,7 @@ function loadScreen(screen_name, parameters) {
 			current_screen.has_unsaved_data=0;
 			menu1_lockflag1 = false;
 			$('#unlocked-icon').hide();
+			$('#airquality-icon').hide();
 			break;
 		case 'home':
 			$('.screens').hide();

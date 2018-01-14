@@ -136,6 +136,7 @@
 	<div class="row row-2">
 		<div class="col-md-4 col1"><span style="display: inline-block; margin-top: 10px; width: 100%;"></span></div>
 		<div class="col-md-4 col2">
+			<span id="airquality-icon"><i style="font-size:28px; margin-top: 10px;" class="fa fa-exclamation-triangle"></i></span>
 			<span id="unlocked-icon"><i style="font-size:28px; margin-top: 10px;" class="fa fa-unlock"></i></span>
 		</div>
 		<div class="col-md-4 col3"><span style="display: inline-block; margin-top: 10px; width: 100%;"></span></div>
@@ -226,12 +227,12 @@
 				<span class="status">16 ºC</span><br />
 			</div>
 			<div class="col3-weekdays col3-weekdays-heating-1" data-field='heating'>
-				<span class="weekday weekday-1">M</span>
-				<span class="weekday weekday-2">T</span>
-				<span class="weekday weekday-3">W</span>
-				<span class="weekday weekday-4">T</span>
-				<span class="weekday weekday-5">F</span>
-				<span class="weekday weekday-6">S</span>
+				<span class="weekday weekday-1">S</span>
+				<span class="weekday weekday-2">M</span>
+				<span class="weekday weekday-3">T</span>
+				<span class="weekday weekday-4">W</span>
+				<span class="weekday weekday-5">T</span>
+				<span class="weekday weekday-6">F</span>
 				<span class="weekday weekday-7">S</span>
 			</div>
 			<div class="col3-up col3-up-heating-2" data-field='heating'>

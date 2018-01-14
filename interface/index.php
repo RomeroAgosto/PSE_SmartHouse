@@ -36,6 +36,7 @@
 		</div>
 		<script type="text/javascript" src="runtime/js/a_environment.js"></script>
 		<script type="text/javascript" src="runtime/js/a_loadscreen.js"></script>
+		<script type="text/javascript" src="runtime/js/b_time.js"></script>
 		<script type="text/javascript" src="runtime/js/c_connect.js"></script>
 		<script type="text/javascript" src="runtime/js/d_data.js"></script>
 		<script type="text/javascript" src="runtime/js/j_periodic.js"></script>
