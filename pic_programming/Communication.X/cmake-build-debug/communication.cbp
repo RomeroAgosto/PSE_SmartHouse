@@ -84,12 +84,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/StatemachineCommunication/create_normal_message.c">
-			<Option target="communication"/>
-		</Unit>
-		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/StatemachineCommunication/create_normal_message.h">
-			<Option target="communication"/>
-		</Unit>
 		<Unit filename="/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/StatemachineCommunication/main.c">
 			<Option target="communication"/>
 		</Unit>

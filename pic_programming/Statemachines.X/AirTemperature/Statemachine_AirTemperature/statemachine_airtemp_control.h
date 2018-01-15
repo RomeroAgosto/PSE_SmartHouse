@@ -6,8 +6,6 @@
 #define DESIRED_TEMPERATURE 0  /*!< Represents a state*/
 #define INCREASE_AIR_TEMPERATURE 1 /*!< Represents a state*/
 
-#define FALSE 0
-#define TRUE 1
 
 int set_threshold_air(int room, int threshold);
 

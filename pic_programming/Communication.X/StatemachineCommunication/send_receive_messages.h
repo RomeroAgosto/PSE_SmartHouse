@@ -16,13 +16,17 @@
 #define  UNITTEST 0
 
 #if UNITTEST==1
+
 #define TRUE 1
+void GetMessage(char *mess);
 int reset_messages();
 int create_normal_message(char *message);
 void SetMessageFlag(int flag);
 void SetMessage(char *mess);
 int Statemachine_Communication(int *message);
 #else
+#include "../../../final/update/update.h"
+#include "../../Statemachines.X/statemachines.h"
 #include "create_normal_message.h"
 #include "../../../final/log/log_functions.h"
 void _UART1Handler(void);
@@ -36,7 +40,7 @@ int get_digits(int score_int, char *score_char);
 int send_message(char *message);
 
 /*receive messages*/
-long int check_received_message(char *message);
+long int check_received_message(char *message, int p);
 long int get_int(char* received_checksum,int length);
 double power(double a, double b);
 

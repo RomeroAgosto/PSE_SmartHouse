@@ -7,6 +7,8 @@ set(SOURCE_FILES
         StatemachineCommunication/main.c
         StatemachineCommunication/send_receive_messages.c
         StatemachineCommunication/send_receive_messages.h
-        StatemachineCommunication/create_normal_message.c StatemachineCommunication/create_normal_message.h)
+        #StatemachineCommunication/create_normal_message.c
+        #StatemachineCommunication/create_normal_message.h
+        )
 
 add_executable(communication ${SOURCE_FILES})

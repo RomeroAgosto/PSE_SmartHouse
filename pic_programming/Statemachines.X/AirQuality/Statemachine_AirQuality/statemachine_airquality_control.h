@@ -8,8 +8,6 @@
 #define RED 2
 
 
-#define TRUE 1
-#define FALSE 0
 
 int set_air_quality_hysteresis(int risk_level,int sensor, int value);
 int get_air_quality_hysteresis(int risk_level,int sensor);

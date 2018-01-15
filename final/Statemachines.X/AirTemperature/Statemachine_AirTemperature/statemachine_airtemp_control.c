@@ -92,7 +92,6 @@ void Statemachine_AirControl(int room_inserted,int *test) {
 void Statemachine_AirControl(int room_inserted){
 #endif
     desired_temp[room_inserted]=desiredAirTemperature(room_inserted);
-    desired_temp[room_inserted]=35;
     int air_temperature=GetAirTemperature(room_inserted); /*!< in air_temperature are the current values saved -> getter function from the global struct */
     //printf("desired_temp[%d] = %d\n temp is: %d \n",room_inserted,desired_temp[room_inserted],air_temperature);
     lower_threshold_air=desired_temp[room_inserted]-get_air_temp_hysteresis(room_inserted); /*!< the lower_threshold_air is the lower band of the trigger in order to avoid shuttering*/

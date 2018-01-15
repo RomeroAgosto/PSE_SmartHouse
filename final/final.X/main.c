@@ -41,6 +41,8 @@ int main(int argc, char** argv) {
     setup_clockHall(&run_alonsideWClock);
     setup_halfanHour(&setLogFlag);
     // Init UART and redirect tdin/stdot/stderr to UART
+   
+    int i;
     
     adc_init();
     if(UartInit(PBCLOCK, 115200) != UART_SUCCESS) {
@@ -76,24 +78,16 @@ int main(int argc, char** argv) {
     TRISAbits.TRISA7=0;
     // Loop
     while (1) {
-        int i;
-        
         updateSensors();
         Statemachine_AirQuality(0);
-        //printf("air Quality done\n");
-        
         for(i=0;i<4;i++){
             Statemachine_LightControl(i);
         }
-               // printf("light done\n");
         Statemachine_WaterControl();
-                       // printf("water done\n");
         for(i=0;i<4;i++){
             Statemachine_AirControl(i);
-        }      
-        
-        Statemachine_Communication();
-        
+        }       
+        Statemachine_Communication();  
         log_data_saving();
     }
     return 0;

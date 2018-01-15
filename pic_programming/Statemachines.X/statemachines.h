@@ -13,14 +13,14 @@
 /* if UNITTEST is 1 a unittest can be performed -> dummyfunction for the sensor/desired value generation are introduced*/
 #define UNITTEST 0
 
-#define TRUE 1
-#define FALSE 0
 
 #if UNITTEST==0
 #include "../../final/schedules/desiredValues.h"
 #include "../../final/update/update.h"
 #include "Technician/Structure/technician_structure.h"
-
+#else
+#define TRUE 1
+#define FALSE 0
 #endif
 
 

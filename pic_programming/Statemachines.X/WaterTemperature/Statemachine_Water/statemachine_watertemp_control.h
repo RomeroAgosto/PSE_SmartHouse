@@ -8,10 +8,10 @@
 
 #define DESIRED_TEMPERATURE 0
 #define INCREASE_WATER_TEMPERATURE 1
-#define FALSE 0
-#define TRUE 1
 
 #if UNITTEST==1
+#define FALSE 0
+#define TRUE 1
 
 int GetWaterTemperature();
 int set_water_hysteresis(int limit);

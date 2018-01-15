@@ -79,13 +79,27 @@ void __ISR(_UART_1_VECTOR,IPL4AUTO) _UART1Handler(void){
 
 int main(int argc, char** argv) {
 
+    char message[10000]="#+20001100000500*";
+    send_message(message);
+    printf("message is: %s\n",message);
+
+
+#if 0
     // Variable declarations;
-    char message[]="#?*";
+    char message[]="#@02200205010220020202002006000025010000500065500002000200010012345678120212223*";
 	int a[2];
     SetMessage(message);
     SetMessageFlag(1);
     int i=0;
     Statemachine_Communication(a);
+    char message_check[10000];
+    GetMessage(message_check);
+    send_message(message_check);
+    printf("message is %s\n",message_check);
+    //message_check[56]=8+'0';
+    check_received_message(message_check,0);
+#endif
+
     return (EXIT_SUCCESS);
 }
 

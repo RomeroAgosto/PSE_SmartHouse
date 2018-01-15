@@ -123,33 +123,6 @@ communication/fast:
 	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/build
 .PHONY : communication/fast
 
-StatemachineCommunication/create_normal_message.o: StatemachineCommunication/create_normal_message.c.o
-
-.PHONY : StatemachineCommunication/create_normal_message.o
-
-# target to build an object file
-StatemachineCommunication/create_normal_message.c.o:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.o
-.PHONY : StatemachineCommunication/create_normal_message.c.o
-
-StatemachineCommunication/create_normal_message.i: StatemachineCommunication/create_normal_message.c.i
-
-.PHONY : StatemachineCommunication/create_normal_message.i
-
-# target to preprocess a source file
-StatemachineCommunication/create_normal_message.c.i:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.i
-.PHONY : StatemachineCommunication/create_normal_message.c.i
-
-StatemachineCommunication/create_normal_message.s: StatemachineCommunication/create_normal_message.c.s
-
-.PHONY : StatemachineCommunication/create_normal_message.s
-
-# target to generate assembly for a file
-StatemachineCommunication/create_normal_message.c.s:
-	$(MAKE) -f CMakeFiles/communication.dir/build.make CMakeFiles/communication.dir/StatemachineCommunication/create_normal_message.c.s
-.PHONY : StatemachineCommunication/create_normal_message.c.s
-
 StatemachineCommunication/main.o: StatemachineCommunication/main.c.o
 
 .PHONY : StatemachineCommunication/main.o
@@ -213,9 +186,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... communication"
-	@echo "... StatemachineCommunication/create_normal_message.o"
-	@echo "... StatemachineCommunication/create_normal_message.i"
-	@echo "... StatemachineCommunication/create_normal_message.s"
 	@echo "... StatemachineCommunication/main.o"
 	@echo "... StatemachineCommunication/main.i"
 	@echo "... StatemachineCommunication/main.s"

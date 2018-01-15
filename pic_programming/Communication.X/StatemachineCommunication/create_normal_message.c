@@ -1,6 +1,4 @@
-#include "send_receive_messages.h"
-#include "../../../final/update/update.h"
-#include "../../Statemachines.X/statemachines.h"
+#include "create_normal_message.h"
 
 int create_normal_message(char *message){
     sprintf(message,"#"
