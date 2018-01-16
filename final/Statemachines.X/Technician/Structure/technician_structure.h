@@ -5,14 +5,12 @@
 #ifndef STATEMACHINES_X_TECHNICIAN_STRUCTURE_H
 #define STATEMACHINES_X_TECHNICIAN_STRUCTURE_H
 
-typedef union {
-    struct {
-        int threshold_air_quality[2][5];
-        int hysteresis_air_quality[2][5];
-        int hysteresis_air_temp[8];
-        int hysteresis_water_temp;
-        int cycles_light[4];
-    }settings;
+typedef struct {
+    int threshold_air_quality[2][5];
+    int hysteresis_air_quality[2][5];
+    int hysteresis_air_temp[8];
+    int hysteresis_water_temp;
+    int cycles_light[4];
 }technician;
 
 int set_new_thresholds(char *message,int first_position);
