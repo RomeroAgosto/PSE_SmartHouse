@@ -1,1 +1,1 @@
-CMakeLists.txt not found in C:\Users\samue\OneDrive - Universidade de Aveiro\PSE\code_ua\pse_42594_17-18_g1\pic_programming\Statemachines.X\AirQuality
+CMakeLists.txt not found in /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/AirQuality

@@ -12,7 +12,7 @@
 #include <string.h>
 
 /* if UNITTEST is 1 a unittest can be performed -> dummyfunction for the sensor/desired value generation are introduced*/
-#define UNITTEST 0
+#define UNITTEST 1
 
 #if UNITTEST==0
 #define _SUPPRESS_PLIB_WARNING 1
