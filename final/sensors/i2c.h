@@ -44,7 +44,7 @@ void i2c1_init(void);
  *  
  * \date 18/12/2017
  */
-int i2c1_set_clock(unsigned int clock_freq);
+int i2c1_setClock(unsigned int clock_freq);
 
 /** \brief Starts up the I2C module.
  *         
