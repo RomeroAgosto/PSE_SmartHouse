@@ -1,3 +1,7 @@
+ /**@file  statemachine_airtemp_control.h
+ *      @author Deep Impact
+ *      @date 15 Dez 2017
+*/
 #ifndef STATEMACHINE_STATEMACHINE_AIRTEMP_CONTROL_H
 #define STATEMACHINE_STATEMACHINE_AIRTEMP_CONTROL_H
 
@@ -21,6 +25,11 @@ int set_desired_temp(int room,int temp);
 int set_air_temperature(int room, int temp);
 void reset_state_air_temp(int room);
 #else
+/**
+ *      @brief  This state machine implements the air temperature control: all decison regarding the heating is made here
+ *      @input  The input is simply the room_inserted number
+ *      @states The states used to describe the behavior are the DESIRED TEMPERATURE and INCREASE TEMPERATURE 
+ */
 void statemachine_air_control(int room);
 
 #endif
