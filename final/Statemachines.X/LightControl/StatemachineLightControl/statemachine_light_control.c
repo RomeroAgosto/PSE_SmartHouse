@@ -20,6 +20,14 @@ int set_timer(int light)
 }
 
 #if UNITTEST==1
+int cycles[4]={20,20,20,20};
+void set_light_cycles(int light, int value){
+    cycles[light]=value;
+}
+
+int get_light_cycles(int light){
+    return cycles[light];
+}
 int reset_light_states(){
     light_state[0]=0;
     light_state[1]=0;

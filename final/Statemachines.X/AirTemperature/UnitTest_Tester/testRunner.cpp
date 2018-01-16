@@ -27,10 +27,10 @@ TEST(AirTemp,TEST_AIR_INCREASE_TEMPERATURE_SIMPLE) {
     int Result[3], Result_complete[length];
 
     int i;
-    setdesiredTemp(1,25);
-    SetAirTemperature(1,23);
+    set_desired_temp(1,25);
+    set_air_temperature(1,23);
     for (i = 0; i < 2; i++) {
-        Statemachine_AirControl(1, Result);
+        statemachine_air_control(1, Result);
         Result_complete[i * 3 + 0] = Result[0];
         Result_complete[i * 3 + 1] = Result[1];
         Result_complete[i * 3 + 2] = Result[2];
@@ -51,10 +51,10 @@ TEST(AirTemp,TEST_AIR_KEEP_TEMPERATURE_SIMPLE_MINIMALVALUE) {
     int Result[3], Result_complete[length];
 
     int i;
-    setdesiredTemp(1,24);
-    SetAirTemperature(1,23);
+    set_desired_temp(1,24);
+    set_air_temperature(1,23);
     for (i = 0; i < 2; i++) {
-        Statemachine_AirControl(1, Result);
+        statemachine_air_control(1, Result);
         Result_complete[i * 3 + 0] = Result[0];
         Result_complete[i * 3 + 1] = Result[1];
         Result_complete[i * 3 + 2] = Result[2];
@@ -75,17 +75,17 @@ TEST(AirTemp,TEST_AIR_INCREASE_TEMPERATURE_CHANGE_DESIRED_VALUE) {
 	int Result[3], Result_complete[length];
 
 	int i;
-    setdesiredTemp(1,25);
-    SetAirTemperature(1,23);
+    set_desired_temp(1,25);
+    set_air_temperature(1,23);
 	for (i = 0; i < 2; i++) {
-        Statemachine_AirControl(1, Result);
+        statemachine_air_control(1, Result);
 		Result_complete[i * 3 + 0] = Result[0];
 		Result_complete[i * 3 + 1] = Result[1];
 		Result_complete[i * 3 + 2] = Result[2];
 	}
-    setdesiredTemp(1,20);
+    set_desired_temp(1,20);
     for (i; i < 4; i++) {
-        Statemachine_AirControl(1, Result);
+        statemachine_air_control(1, Result);
         Result_complete[i * 3 + 0] = Result[0];
         Result_complete[i * 3 + 1] = Result[1];
         Result_complete[i * 3 + 2] = Result[2];
@@ -106,17 +106,17 @@ TEST(AirTemp,TEST_AIR_INCREASE_TEMPERATURE_CHANGE_TEMPERATURE) {
     int Result[3], Result_complete[length];
 
     int i;
-    setdesiredTemp(1,25);
-    SetAirTemperature(1,23);
+    set_desired_temp(1,25);
+    set_air_temperature(1,23);
     for (i = 0; i < 2; i++) {
-        Statemachine_AirControl(1, Result);
+        statemachine_air_control(1, Result);
         Result_complete[i * 3 + 0] = Result[0];
         Result_complete[i * 3 + 1] = Result[1];
         Result_complete[i * 3 + 2] = Result[2];
     }
-    SetAirTemperature(1,27);
+    set_air_temperature(1,27);
     for (i; i < 4; i++) {
-        Statemachine_AirControl(1, Result);
+        statemachine_air_control(1, Result);
         Result_complete[i * 3 + 0] = Result[0];
         Result_complete[i * 3 + 1] = Result[1];
         Result_complete[i * 3 + 2] = Result[2];
@@ -160,17 +160,17 @@ TEST(AirTemp,TEST_AIR_INCREASE_TEMPERATURE_CHANGE_TEMPERATURE_CHECK_ALL_ROOMS) {
     int Result[3], Result_complete[8][length],i;
     for(j=0;j<8;j++) {
 
-        setdesiredTemp(j, 25);
-        SetAirTemperature(j, 23);
+        set_desired_temp(j, 25);
+        set_air_temperature(j, 23);
         for (i = 0; i < 2; i++) {
-            Statemachine_AirControl(j, Result);
+            statemachine_air_control(j, Result);
             Result_complete[j][i * 3 + 0] = Result[0];
             Result_complete[j][i * 3 + 1] = Result[1];
             Result_complete[j][i * 3 + 2] = Result[2];
         }
-        SetAirTemperature(j, 27);
+        set_air_temperature(j, 27);
         for (i; i < 4; i++) {
-            Statemachine_AirControl(j, Result);
+            statemachine_air_control(j, Result);
             Result_complete[j][i * 3 + 0] = Result[0];
             Result_complete[j][i * 3 + 1] = Result[1];
             Result_complete[j][i * 3 + 2] = Result[2];
@@ -216,17 +216,17 @@ TEST(AirTemp,TEST_AIR_INCREASE_TEMPERATURE_CHANGE_DESIRED_VALUE_CHECK_ALL_ROOMS)
     int Result[3], Result_complete[8][length],i;
     for(j=0;j<8;j++) {
 
-        setdesiredTemp(j, 25);
-        SetAirTemperature(j, 23);
+        set_desired_temp(j, 25);
+        set_air_temperature(j, 23);
         for (i = 0; i < 2; i++) {
-            Statemachine_AirControl(j, Result);
+            statemachine_air_control(j, Result);
             Result_complete[j][i * 3 + 0] = Result[0];
             Result_complete[j][i * 3 + 1] = Result[1];
             Result_complete[j][i * 3 + 2] = Result[2];
         }
-        setdesiredTemp(j, 20);
+        set_desired_temp(j, 20);
         for (i; i < 4; i++) {
-            Statemachine_AirControl(j, Result);
+            statemachine_air_control(j, Result);
             Result_complete[j][i * 3 + 0] = Result[0];
             Result_complete[j][i * 3 + 1] = Result[1];
             Result_complete[j][i * 3 + 2] = Result[2];

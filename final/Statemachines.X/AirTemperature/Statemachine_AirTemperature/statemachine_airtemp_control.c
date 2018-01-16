@@ -33,7 +33,7 @@ int set_heater(int room_inserted,int abc){
 }
 
 /************** desired temperature *///////////////////
-int setdesiredTemp(int room_inserted,int temp){
+int set_desired_temp(int room_inserted,int temp){
     desired_temp[room_inserted]=temp;
 }
 int desired_air_temperature(int room_inserted){
@@ -50,7 +50,7 @@ int desired_air_temperature(int room_inserted){
  * ==============================================
  */
 
-int statemachine_air_quality(int room_inserted, int on){
+int state_air_quality(int room_inserted, int on){
     heating_state=on;
     return 1; /*we should introduce a check, if this procedure was successful */
 }
