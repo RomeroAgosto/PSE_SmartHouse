@@ -87,7 +87,7 @@ void setup_half_a_hour(void (*func)(void))
     T4CONbits.T32 = 1; // 16 bit timer operation
     
     //PR4=(float)(PBUSCLK*1800/(256))-1; // Compute PR value 1/1800Hz=30min  ;
-    PR4=(float)(PBUSCLK*20/(256))-1;
+    PR4=(float)(PBUSCLK/256*1800)-1;
     TMR4=0;
     TMR5=0;
     T4CONbits.TON=1; // Start the timer

@@ -19,7 +19,7 @@
 * \author Samuel Simoes
 * \date 03-11-2017  
 */
-void setup_clock_Hall(void (*func)(void));
+void setup_clock_hall(void (*func)(void));
 
 /** 
 * \brief This func will save the struct values of clock_hall inside of the pointer
