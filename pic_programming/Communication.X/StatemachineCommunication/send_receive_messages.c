@@ -3,8 +3,8 @@
 #include "../../Schedules.X/schedules.h"
 #include "../../../final/Statemachines.X/Technician/Structure/technician_structure.h"
 #include <stdio.h>
-static int message_flag=0;
-static char message [10000];
+static int message_flag=1;
+static char message [10000]="#~02200205010220020202002006000025010000500065500002000200010022222222120212223*(4)3833^"; 
 int sent_message=0;
 volatile int message_counter=0;
 #if UNITTEST==0
@@ -195,6 +195,7 @@ int  Statemachine_Communication(int *test) {
                 set_new_thresholds(message,p);
             case('/'):
                 error_flag=1;
+                printf("error in checksum");
                 break;
             default:
                 error_flag = 1;
@@ -250,7 +251,7 @@ void __ISR(_UART_1_VECTOR,IPL4AUTO) _UART1Handler(void){
 
         message_flag=TRUE;
         message_counter=0;
-        printf("message is: %s\n",message);
+        //printf("message is: %s\n",message);
     }
 
     
