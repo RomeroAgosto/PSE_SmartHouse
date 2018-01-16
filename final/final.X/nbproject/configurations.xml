@@ -24,8 +24,8 @@
         <logicalFolder name="StatemachineCommunication"
                        displayName="StatemachineCommunication"
                        projectFiles="true">
-          <itemPath>../../pic_programming/Communication.X/StatemachineCommunication/create_normal_message.h</itemPath>
-          <itemPath>../../pic_programming/Communication.X/StatemachineCommunication/send_receive_messages.h</itemPath>
+          <itemPath>../Communication.X/StatemachineCommunication/create_normal_message.h</itemPath>
+          <itemPath>../Communication.X/StatemachineCommunication/send_receive_messages.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="log" displayName="log" projectFiles="true">
@@ -129,8 +129,8 @@
         <logicalFolder name="StatemachineCommunication"
                        displayName="StatemachineCommunication"
                        projectFiles="true">
-          <itemPath>../../pic_programming/Communication.X/StatemachineCommunication/create_normal_message.c</itemPath>
-          <itemPath>../../pic_programming/Communication.X/StatemachineCommunication/send_receive_messages.c</itemPath>
+          <itemPath>../Communication.X/StatemachineCommunication/send_receive_messages.c</itemPath>
+          <itemPath>../Communication.X/StatemachineCommunication/create_normal_message.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="log" displayName="log" projectFiles="true">

@@ -1,18 +1,12 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <string.h>
-#include "../update/update.h"
 #include "log_functions.h"
 #include "log_stru.h"
-#include "../Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.h"
 
 static log msd;
 static time_t read_time;
 static unsigned int log_save_flag=1;
 static int counter_log=0;
 
-void setLogFlag()
+void set_log_flag()
 {
     log_save_flag=1;
 }
@@ -43,16 +37,16 @@ int log_data_saving()
 
         for(j=0;j<8;j++)
         {
-            msd.data[counter_log].sensor_data[j+5]=GetAirTemperature(j);//sensor_values.air_temperature_sensor[j].temp;
-            msd.data[counter_log].sensor_data[j+13]=GetHeatingAirState(j);//sensor_values.air_temperature_sensor[j].heater;
+            msd.data[counter_log].sensor_data[j+5]=get_air_temperature(j);//sensor_values.air_temperature_sensor[j].temp;
+            msd.data[counter_log].sensor_data[j+13]=get_heating_air_state(j);//sensor_values.air_temperature_sensor[j].heater;
         }
 
         //data from water control
-        msd.data[counter_log].sensor_data[21]=GetWaterTemperature();//sensor_values.water_temperature.temp;
-        msd.data[counter_log].sensor_data[22]=GetWaterHeater();//sensor_values.water_temperature.water_heater
+        msd.data[counter_log].sensor_data[21]=get_water_temperature();//sensor_values.water_temperature.temp;
+        msd.data[counter_log].sensor_data[22]=get_water_heater();//sensor_values.water_temperature.water_heater
         // data air quality
         for(j=0;j<4;j++) {
-            msd.data[counter_log].sensor_data[j+23] =GetAirQualityState(j);// sensor_values.air_quality_sensor[j].ventilator;
+            msd.data[counter_log].sensor_data[j+23] =get_air_quality_state(j);// sensor_values.air_quality_sensor[j].ventilator;
         }
 
     counter_log++;

@@ -11,7 +11,7 @@ static int air_quality_state[4];/*!< statemachine states are in general protecte
  *
  * ==============================================
  */
-int GetAirQualityState(int room){
+int get_air_quality_state(int room){
     return air_quality_state[room];
 }
 
@@ -25,7 +25,7 @@ int GetAirQualityState(int room){
  * ==============================================
  */
 
-int SetWarning(){
+int set_warning(){
     //printf("dummy for message warning");
 }
 
@@ -103,14 +103,14 @@ void ResetAirQualityState(){
 }
 
 
-void Statemachine_AirQuality(int room,int *test) {
+void statemachine_air_quality(int room,int *test) {
     test[0]=air_quality_state[room];
 #else
-void Statemachine_AirQuality(int room) {
+void statemachine_air_quality(int room) {
 #endif
 	int sensor_values[5]; /*!< the getter function will return an array pointer with all defined values */
     int air_quality;
-    GetAirQuality(room,sensor_values); /*!< in air_quality the current value will be saved -> getter function from the global struct */
+    get_air_quality(room,sensor_values); /*!< in air_quality the current value will be saved -> getter function from the global struct */
 
     int j,green_count=0,yellow_count=0;
 
@@ -118,7 +118,7 @@ void Statemachine_AirQuality(int room) {
     switch (air_quality_state[room]) {
         case GREEN:
             set_ventilator_buzzer(GREEN);
-            SetVentilatorState(room,FALSE);/* it is just possible to turn off the ventilation when the Air quality is good!*/
+            set_ventilator_state(room,FALSE);/* it is just possible to turn off the ventilation when the Air quality is good!*/
             /* check Yellow first, RED can overwrite YELLOW -> when one Value exceeds the preset limit -> react*/
             for (j = 0; j <5 ; j++) {
                 if (sensor_values[j] > get_air_quality_threshold(0,j)+get_air_quality_hysteresis(0,j)){air_quality_state[room]=YELLOW;}
@@ -131,7 +131,7 @@ void Statemachine_AirQuality(int room) {
 
         case YELLOW:
             set_ventilator_buzzer(YELLOW);
-            SetVentilatorState(room,TRUE);
+            set_ventilator_state(room,TRUE);
             for (j = 0; j <5 ; j++) {
                // printf("sensorvalue: %d threshold + bound %d\n",sensor_values[j],get_air_quality_threshold(room,0,j)-get_air_quality_hysteresis(0,j));
 
@@ -148,8 +148,8 @@ void Statemachine_AirQuality(int room) {
 
         case RED:
             set_ventilator_buzzer(RED);
-            SetVentilatorState(room, TRUE);/* it is just possible to turn off the ventilation when the Air quality is good!*/
-            SetWarning();/*something that declares that something went wrong*/
+            set_ventilator_state(room, TRUE);/* it is just possible to turn off the ventilation when the Air quality is good!*/
+            set_warning();/*something that declares that something went wrong*/
             /* Green overwrites Yellow -> first check if yellow condition fullfilled, if even a Green is, change to Green */
             for (j = 0; j <5 ; j++) {
                 if (sensor_values[j] < get_air_quality_threshold(1,j) - get_air_quality_hysteresis(1,j)) {yellow_count++;}
@@ -163,9 +163,9 @@ void Statemachine_AirQuality(int room) {
 
         default:
             set_ventilator_buzzer(RED);
-            SetVentilatorState(room,TRUE);
+            set_ventilator_state(room,TRUE);
 
-            SetWarning();/*something that declares that something went wrong*/
+            set_warning();/*something that declares that something went wrong*/
             break;
     }
 #if UNITTEST == 1

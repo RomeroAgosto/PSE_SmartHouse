@@ -11,16 +11,16 @@ int reset_state_water_temp(){
 int set_water_temp(int temp){
     water_temp=temp;
 }
-int GetWaterTemperature(){
+int get_water_temperature(){
     return water_temp; /* dummy which returns a temperature to check the behaviour of the state machine*/
 }
 int set_desired_temperature(int temp){
     desired_test=temp;
 }
-int desiredWaterTemperature(){
+int desired_water_temperature(){
     return desired_test;
 }
-int SetWaterHeaterSate(int set){
+int set_water_heater_state(int set){
     heater_state=set;
 }
 int set_water_hysteresis(int hysteresis){
@@ -33,14 +33,14 @@ int get_water_hysteresis(){
 #endif
 
 #if UNITTEST==1
-    int Statemachine_WaterControl(int *test){
+    int statemachine_water_control(int *test){
     test[0]=water_temp_state;
 
 #else
-    void Statemachine_WaterControl(){
+    void statemachine_water_control(){
 #endif
-    int water_temperature=GetWaterTemperature();
-    int desired_temperature= desiredWaterTemperature();
+    int water_temperature=get_water_temperature();
+    int desired_temperature= desired_water_temperature();
     upper_threshold_water=desired_temperature+get_water_hysteresis(); /*trigger band is 10 degrees!*/
     lower_threshold_water=desired_temperature-get_water_hysteresis();
    // printf("upper threshold: %d,lower threshold: %d water temperature: %d\n", upper_threshold_water,lower_threshold_water, water_temperature);
@@ -48,16 +48,16 @@ int get_water_hysteresis(){
     switch (water_temp_state) {
 
         case DESIRED_TEMPERATURE:
-            SetWaterHeaterSate(FALSE);
+            set_water_heater_state(FALSE);
             if (water_temperature<lower_threshold_water){water_temp_state=INCREASE_WATER_TEMPERATURE;} /*Implementation of Schmitt -Trigger misses here*/
             break;
 
         case INCREASE_WATER_TEMPERATURE:
-            SetWaterHeaterSate(TRUE);
+            set_water_heater_state(TRUE);
             if (water_temperature>upper_threshold_water){water_temp_state=DESIRED_TEMPERATURE;}
             break;
         default:
-            SetWaterHeaterSate(FALSE);
+            set_water_heater_state(FALSE);
 
             break;
     }

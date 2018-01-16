@@ -36,7 +36,7 @@ int set_heater(int room_inserted,int abc){
 int setdesiredTemp(int room_inserted,int temp){
     desired_temp[room_inserted]=temp;
 }
-int desiredAirTemperature(int room_inserted){
+int desired_air_temperature(int room_inserted){
     return desired_temp[room_inserted];
 }
 /**
@@ -50,7 +50,7 @@ int desiredAirTemperature(int room_inserted){
  * ==============================================
  */
 
-int SetHeatingAirState(int room_inserted, int on){
+int statemachine_air_quality(int room_inserted, int on){
     heating_state=on;
     return 1; /*we should introduce a check, if this procedure was successful */
 }
@@ -67,11 +67,11 @@ int SetHeatingAirState(int room_inserted, int on){
  */
 
 
-int SetAirTemperature(int room_inserted, int temp){
+int set_air_temperature(int room_inserted, int temp){
     air_temperature[room_inserted ]=temp;
     return 0;
 }
-int GetAirTemperature(int room_inserted){
+int get_air_temperature(int room_inserted){
     return air_temperature[room_inserted]; /* dummy which returns a temperature to check the behaviour of the state machine*/
 }
 
@@ -85,14 +85,14 @@ int GetAirTemperature(int room_inserted){
  *
  * ==============================================
  */
-void Statemachine_AirControl(int room_inserted,int *test) {
+void statemachine_air_control(int room_inserted,int *test) {
     test[0]=air_temp_state[room_inserted];
 
 #else
-void Statemachine_AirControl(int room_inserted){
+void statemachine_air_control(int room_inserted){
 #endif
-    desired_temp[room_inserted]=desiredAirTemperature(room_inserted);
-    int air_temperature=GetAirTemperature(room_inserted); /*!< in air_temperature are the current values saved -> getter function from the global struct */
+    desired_temp[room_inserted]=desired_air_temperature(room_inserted);
+    int air_temperature=get_air_temperature(room_inserted); /*!< in air_temperature are the current values saved -> getter function from the global struct */
     if ((air_temperature>70)||(air_temperature<-50)){
         air_temp_state[room_inserted]=-1;
     }
@@ -103,22 +103,22 @@ void Statemachine_AirControl(int room_inserted){
     switch (air_temp_state[room_inserted]) {
 
         case DESIRED_TEMPERATURE:
-            SetHeatingAirState(room_inserted,FALSE);
+            state_air_quality(room_inserted,FALSE);
             set_heater(room_inserted,FALSE);
             /*set next state*/
             if (air_temperature<lower_threshold_air){air_temp_state[room_inserted]=INCREASE_AIR_TEMPERATURE;} /*If the values drops below the lower threshold increase! -> Avoid shutter*/
             break;
 
         case INCREASE_AIR_TEMPERATURE:
-            SetHeatingAirState(room_inserted,TRUE);
+            state_air_quality(room_inserted,TRUE);
             set_heater(room_inserted,TRUE);
             /*set next state*/
             if(air_temperature>lower_threshold_air){air_temp_state[room_inserted]=DESIRED_TEMPERATURE;} /* If the value exceeds the threshold, turn off -> avoid shutter*/
             break;
 
         default:
-            SetHeatingAirState(room_inserted,0);
-            /*SetWarning();something that declares that something went wrong*/
+            state_air_quality(room_inserted,0);
+            /*set_warning();something that declares that something went wrong*/
             break;
     }
    // printf("air temp state[1] %d\n",air_temp_state[1]);

@@ -19,11 +19,11 @@
 #define SYSCLK  80000000L // System clock frequency, in Hz
 #define PBCLOCK 40000000L // Peripheral Bus Clock frequency, in Hz
 
-void run_alonsideWClock(void){
-    SetTimer(0);
-    SetTimer(1);
-    SetTimer(2);
-    SetTimer(3);
+void run_alonside_wclock(void){
+    set_timer(0);
+    set_timer(1);
+    set_timer(2);
+    set_timer(3);
 }
 
 #if 0
@@ -39,8 +39,8 @@ int main(int argc, char** argv) {
     SYSTEMConfigPerformance(SYSCLK);
     mOSCSetPBDIV(OSC_PB_DIV_2); // This is necessary since SYSTEMConfigPerformance defaults FPBDIV to DIV_1
 
-    setup_clock_hall(&run_alonsideWClock);
-    setup_half_a_hour(&setLogFlag);
+    setup_clock_hall(&run_alonside_wclock);
+    setup_half_a_hour(&set_log_flag);
     // Init UART and redirect tdin/stdot/stderr to UART
    
     int i;
@@ -73,16 +73,16 @@ int main(int argc, char** argv) {
     PORTA=0x0000;
     // Loop
     while (1) {
-        updateSensors();
-        Statemachine_AirQuality(0);
+        update_sensors();
+        statemachine_air_quality(0);
         for(i=0;i<4;i++){
-            Statemachine_LightControl(i);
+            statemachine_light_control(i);
         }
-        Statemachine_WaterControl();
+        statemachine_water_control();
         for(i=0;i<8;i++){
-            Statemachine_AirControl(i);
+            statemachine_air_control(i);
         }       
-        Statemachine_Communication();  
+        statemachine_communication();  
         log_data_saving();
     }
     return 0;

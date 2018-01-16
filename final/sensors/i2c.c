@@ -6,7 +6,7 @@ void i2c1_init(void){
     I2C1CONbits.ON=1; // Enable I2C1 module.
     return;
 }
-int i2c1_setClock(unsigned int clock_freq){
+int i2c1_set_clock(unsigned int clock_freq){
 
     if(clock_freq == 100000) { // Condition to verify if slave clock is defined as 100 KHz.
         I2C1BRG=0x0C6;         // Baudrate generator for I2C1 (assuming PBCLOCK=40 MHz).
@@ -52,8 +52,8 @@ int i2c1_s7(){
     setbuf(stdin, NULL); //no input buffer (for scanf)
     setbuf(stdout, NULL); //no output buffer (for printf)
     i2c1_init();
-    if(i2c1_setClock(TC74_CLK_FREQ)) {
-       // printf("Error in i2c1_setClock()\n\r");
+    if(i2c1_set_clock(TC74_CLK_FREQ)) {
+       // printf("Error in i2c1_set_clock()\n\r");
         while(1);
     }
     i2c1_start(); // Send Start event
@@ -86,8 +86,8 @@ int i2c1_s8(int *humi_temp){
     setbuf(stdin, NULL); //no input buffer (for scanf)
     setbuf(stdout, NULL); //no output buffer (for printf)
     i2c1_init();
-    if(i2c1_setClock(HIH8120_CLK_FREQ)) {
-        //printf("Error in i2c1_setClock()\n\r");
+    if(i2c1_set_clock(HIH8120_CLK_FREQ)) {
+        //printf("Error in i2c1_set_clock()\n\r");
         while(1);
     }
     i2c1_start(); // Send Start event

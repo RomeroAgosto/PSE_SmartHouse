@@ -8,7 +8,12 @@
 *
 * \date 15-12-2017
 */
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+#include "../update/update.h"
+#include "../Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.h"
 
 /** 
 * \brief this function saves the sensor information and saves it
@@ -34,4 +39,4 @@ int log_create_msg(char *message);
  * \author Samuel Simoes 
 * \date 10-01-2018  
 */
-void setLogFlag();
+void set_log_flag();

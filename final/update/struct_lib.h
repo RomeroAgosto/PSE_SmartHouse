@@ -58,7 +58,6 @@ typedef struct {
    air_temperature air_temperature_sensor;
 }sensorvalues;
 
-static sensorvalues current_values;
 /*
  //How to use:
  air_quality air_q; // this create a variable that use the array struct

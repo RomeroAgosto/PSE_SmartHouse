@@ -7,7 +7,7 @@ volatile int message_counter=0;
 #if UNITTEST==0
 #include "create_normal_message.h"
 #else
-void GetMessage(char *mess) {
+void get_message(char *mess) {
     int i;
     for (i=0;i<10000;i++) {
         mess[i] = message[i];
@@ -15,7 +15,7 @@ void GetMessage(char *mess) {
 }
 
 
-void SetMessage(char *mess){
+void set_message(char *mess){
     int j=0;
     while(mess[j]!='*'){
         message[j]=mess[j];
@@ -24,7 +24,7 @@ void SetMessage(char *mess){
     message[j]='*';
     message_counter=j;
 }
-void SetMessageFlag(int flag){
+void set_messageFlag(int flag){
     message_flag=flag;
 }
 int create_normal_message(char *message){
@@ -144,14 +144,14 @@ long int check_received_message(char *message,int p){
     return 1;
 
     }
-void get_time(char *message) {
-}
+//void get_time(char *message) {
+//}
 
 #if UNITTEST == 1
 #define TRUE 1
-int  Statemachine_Communication(int *test) {
+int  statemachine_communication(int *test) {
 #else
-    int  Statemachine_Communication(){
+    int  statemachine_communication(){
 #endif
     if (message_flag==TRUE) {
 

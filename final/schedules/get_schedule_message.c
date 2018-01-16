@@ -33,14 +33,14 @@ int  get_schedule_message(char *to_send)
     sscanf(n_stop,"%4d",&stop);// convert 4 char's to a int
     sscanf(n_value,"%2d",&value);// convert 2 char's to a int
  
-    setId(to_send[2]-'0',to_send[3]-'0',to_send[4]-'0',to_send[5]-'0',to_send[6]-'0');
-    setValue(to_send[2]-'0',to_send[3]-'0',to_send[4]-'0',to_send[5]-'0',value);
-    setEnable(to_send[2]-'0',to_send[3]-'0',to_send[4]-'0',to_send[5]-'0',to_send[9]-'0');
-    setStartTime(to_send[2]-'0',to_send[3]-'0',to_send[4]-'0',to_send[5]-'0',start);
-    setStopTime(to_send[2]-'0',to_send[3]-'0',to_send[4]-'0',to_send[5]-'0',stop);
+    set_id(to_send[2]-'0',to_send[3]-'0',to_send[4]-'0',to_send[5]-'0',to_send[6]-'0');
+    set_value(to_send[2]-'0',to_send[3]-'0',to_send[4]-'0',to_send[5]-'0',value);
+    set_enable(to_send[2]-'0',to_send[3]-'0',to_send[4]-'0',to_send[5]-'0',to_send[9]-'0');
+    set_start_time(to_send[2]-'0',to_send[3]-'0',to_send[4]-'0',to_send[5]-'0',start);
+    set_stop_time(to_send[2]-'0',to_send[3]-'0',to_send[4]-'0',to_send[5]-'0',stop);
     
     /*
-    printf("start day %d\n",getStartTime(0,0,0,i));
+    printf("start day %d\n",get_start_time(0,0,0,i));
     printf("#function[%d], room[%d],day[%d],schedules[%d], id = %d \n",to_send[2]-'0',to_send[3]-'0',to_send[4]-'0',to_send[5]-'0',to_send[6]-'0'); 
     printf("#function[%d], room[%d],day[%d],schedules[%d], vale = %d\n",to_send[2]-'0',to_send[3]-'0',to_send[4]-'0',to_send[5]-'0',value); 
     printf("#function[%d], room[%d],day[%d],schedules[%d], enable = %d\n",to_send[2]-'0',to_send[3]-'0',to_send[4]-'0',to_send[5]-'0',to_send[9]-'0'); 

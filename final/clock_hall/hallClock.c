@@ -75,7 +75,7 @@ void setup_half_a_hour(void (*func)(void))
     T5CONbits.TON=0; // Start the timer
     halfan_hour=func;
     // Interrupt-related stuff
-    void __attribute__( (interrupt(IPL2AUTO), vector(_TIMER_5_VECTOR))) tmr5_isr(void);
+    void __attribute__( (interrupt(IPL1AUTO), vector(_TIMER_5_VECTOR))) tmr5_isr(void);
     IFS0bits.T5IF=0; // Reset interrupt flag
     IPC5bits.T5IP=1; //set interrupt priority (1..7) *** Make sure it matches iplx in isr declaration above ***
     //IPC3bits.IC3IS

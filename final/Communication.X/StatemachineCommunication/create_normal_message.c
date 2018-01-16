@@ -30,16 +30,16 @@ int create_normal_message(char *message){
                     "            {\"air_temp\":\"%d\",\"air_heater\":\"%d\"},\n"                                   //43 44
                     "            {\"air_temp\":\"%d\",\"air_heater\":\"%d\"},\n"                                   //45 46
                     "            {\"air_temp\":\"%d\",\"air_heater\":\"%d\"}]}*\n"                                 //47 48
-            ,GetWaterTemperature(),desiredWaterTemperature(),GetWaterHeater(),  //1 2 3
-            GetLightControl(0),GetLightState(0),GetCycle(0), //4 5 6
-            GetLightControl(1),GetLightState(1),GetCycle(1), //7 8 9
-            GetLightControl(2),GetLightState(2),GetCycle(2), // 10 11 12
-            GetLightControl(3),GetLightState(3),GetCycle(3), // 13 14 15
+            ,get_water_temperature(),desired_water_temperature(),get_water_heater(),  //1 2 3
+            get_light_control(0),get_light_state(0),get_light_cycles(0), //4 5 6
+            get_light_control(1),get_light_state(1),get_light_cycles(1), //7 8 9
+            get_light_control(2),get_light_state(2),get_light_cycles(2), // 10 11 12
+            get_light_control(3),get_light_state(3),get_light_cycles(3), // 13 14 15
             0,0,0,0,0,0,0,0,0,0,0,0, // 16 -27
-            GetAirQualityState(0),GetAirQualityState(1),GetAirQualityState(2),GetAirQualityState(3), GetVentilatorState(),// 28 29 30 31 32
-            GetAirTemperature(0),GetHeatingAirState(0),GetAirTemperature(1),GetHeatingAirState(1), //33 34 35 36
-            GetAirTemperature(2),GetHeatingAirState(2),GetAirTemperature(3),GetHeatingAirState(3),// 37 38 39 40
-            GetAirTemperature(4),GetHeatingAirState(4),GetAirTemperature(5),GetHeatingAirState(5),//41 42 43 44
-            GetAirTemperature(6),GetHeatingAirState(6),GetAirTemperature(7),GetHeatingAirState(7));//45 46 47 48
+            get_air_quality_state(0),get_air_quality_state(1),get_air_quality_state(2),get_air_quality_state(3), get_ventilator_state(),// 28 29 30 31 32
+            get_air_temperature(0),get_heating_air_state(0),get_air_temperature(1),get_heating_air_state(1), //33 34 35 36
+            get_air_temperature(2),get_heating_air_state(2),get_air_temperature(3),get_heating_air_state(3),// 37 38 39 40
+            get_air_temperature(4),get_heating_air_state(4),get_air_temperature(5),get_heating_air_state(5),//41 42 43 44
+            get_air_temperature(6),get_heating_air_state(6),get_air_temperature(7),get_heating_air_state(7));//45 46 47 48
     //printf("%s",message);
 }

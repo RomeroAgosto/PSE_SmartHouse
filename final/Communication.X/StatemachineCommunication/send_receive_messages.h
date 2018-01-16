@@ -23,19 +23,19 @@
 #if UNITTEST==1
 
 #define TRUE 1
-void GetMessage(char *mess);
+void get_message(char *mess);
 int reset_messages();
 int create_normal_message(char *message);
-void SetMessageFlag(int flag);
-void SetMessage(char *mess);
-int Statemachine_Communication(int *message);
+void set_message_flag(int flag);
+void set_message(char *mess);
+int statemachine_communication(int *message);
 #else
 #include "../../../final/update/update.h"
 #include "../../Statemachines.X/statemachines.h"
 #include "create_normal_message.h"
 #include "../../log/log_functions.h"
 void _UART1Handler(void);
-int Statemachine_Communication(void);
+int statemachine_communication(void);
 
 #endif
 

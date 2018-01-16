@@ -10,6 +10,8 @@ build/default/production/_ext/1295191707/statemachine_airquality_control.o:  \
  ../Statemachines.X/AirQuality/Statemachine_AirQuality/../../LightControl/StatemachineLightControl/statemachine_light_control.h  \
  ../Statemachines.X/AirQuality/Statemachine_AirQuality/../../LightControl/StatemachineLightControl/../../statemachines.h  \
  ../Statemachines.X/AirQuality/Statemachine_AirQuality/../../../schedules/desiredValues.h  \
+ ../Statemachines.X/AirQuality/Statemachine_AirQuality/../../../schedules/schedules.h  \
+ ../Statemachines.X/AirQuality/Statemachine_AirQuality/../../../schedules/../clock_hall/hallClock.h  \
  ../Statemachines.X/AirQuality/Statemachine_AirQuality/../../../update/update.h  \
  ../Statemachines.X/AirQuality/Statemachine_AirQuality/../../../update/struct_lib.h  \
  ../Statemachines.X/AirQuality/Statemachine_AirQuality/../../../actuators/actuators.h  \

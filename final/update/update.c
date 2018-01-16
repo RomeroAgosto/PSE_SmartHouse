@@ -4,10 +4,10 @@
 #include "../sensors/sr.h"
 #include <p32xxxx.h>
 
-
+static sensorvalues current_values;
 /** 
   @Function
-    int GetAirQuality(int n_air,struct air_quality_data *air_quality) 
+    int get_air_quality(int n_air,struct air_quality_data *air_quality) 
  
   @Summary
     Save in a given pointer the corrent values of air quality 
@@ -25,7 +25,7 @@
     </ul>
  */
  
-int updateSensors() 
+int update_sensors() 
 {
     static int p[20];
     static int i, j;
@@ -71,18 +71,11 @@ int updateSensors()
     
 }
 
-void print() {
-    int i;
-    for(i=0;i<8;i++){
-        printf("%d\n\r",current_values.air_temperature_sensor[i].temp);
-    }
-}
-
-int GetHeatingAirState(int n_air){
+int get_heating_air_state(int n_air){
     return current_values.air_temperature_sensor[n_air].heater;
 }
 /*## AIR QUALITY ##*/
-int GetAirQuality(int n_air, int *p){
+int get_air_quality(int n_air, int *p){
     (p[0])=current_values.air_quality_sensor[n_air].p10;
     (p[1])=current_values.air_quality_sensor[n_air].co;
     (p[2])=current_values.air_quality_sensor[n_air].co2;
@@ -92,55 +85,55 @@ int GetAirQuality(int n_air, int *p){
 }
 
 
-int SetVentilatorState(int room_id, int state)
+int set_ventilator_state(int room_id, int state)
 {
     current_values.air_quality_sensor[room_id].ventilator=state;   
     return 0;
 }
 /*## AIR TEMPERATURE ##*/
-int GetAirTemperature(int n_air)
+int get_air_temperature(int n_air)
 {
     return current_values.air_temperature_sensor[n_air].temp;
 }
  
-int SetHeatingAirState(int n_air,int state){
+int state_air_quality(int n_air,int state){
     current_values.air_temperature_sensor[n_air].heater=state;
     return 0; /*we should introduce a check, if this procedure was successful */
 }
-int GetVentilatorState() {
+int get_ventilator_state() {
     return current_values.air_quality_sensor[0].ventilator;
 }
 /*## Ligth ##*/
-int GetLightControl(int n_ligth)
+int get_light_control(int n_ligth)
 {
     return current_values.light_sensors[n_ligth].movement_sensor;
    
 }
  
-int SetLightState(int n_ligth,int state)
+int set_light_state(int n_ligth,int state)
 {
     current_values.light_sensors[n_ligth].ligth_state=state;
     return 0; /*we should introduce a check, if this procedure was successful */
 }
  
-int GetLightState(int n_ligth) {
+int get_light_state(int n_ligth) {
     return current_values.light_sensors[n_ligth].ligth_state;
 }
  
 /*## WATER TEMPERATURE ##*/
-int GetWaterTemperature()
+int get_water_temperature()
 {
     return current_values.water_temperature.temp;
 }
 
-int SetWaterHeaterSate(int state)
+int set_water_heater_state(int state)
 {
     PORTEbits.RE8=state;
     current_values.water_temperature.water_heater=state;
     return 0; /*we should introduce a check, if this procedure was successful */
 }
 
-int GetWaterHeater() {
+int get_water_heater() {
     return current_values.water_temperature.water_heater;
 }
  

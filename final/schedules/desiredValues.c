@@ -1,9 +1,5 @@
-#include "schedules.h"
-#include <time.h>
-#include "../clock_hall/hallClock.h"
-#include <stdio.h>
-extern house home;
-#define disable -77
+#include "desiredValues.h"
+
 
 static struct tm tclock;
 static int conv_clock=0;
@@ -12,7 +8,7 @@ static int desired_AirTemp[8][4];
 static int desired_water[4];
 static int desired_ligth[4][4];
 
-int compareHour(int time1, int time2)
+int compare_hour(int time1, int time2)
 {
     
     
@@ -34,33 +30,33 @@ int  updateTimeDesiredValue()
     return 0;
 }
 
-int desiredWaterTemperature()
+int desired_water_temperature()
 {
     updateTimeDesiredValue();
     int i, maximum;
-    maximum=disable;
+    maximum=DISABLE;
     for(i=0;i<4;i++)        /* Used 4 because theres's 4 schedule per day of the week */
     {      
       
-    /*printf("id %d\n\r",getEnable(0,0,tclock.tm_wday,0));
-    printf("value %d\n\r",getValue(0,0,tclock.tm_wday,0));
-    printf("enable %d\n\r",getEnable(0,0,tclock.tm_wday,0));
-    printf("start %d\n\r",getStartTime(0,0,tclock.tm_wday,0));
-    printf("end %d\n\r",getStopTime(0,0,tclock.tm_wday,0));*/ /*just for test*/
+    /*printf("id %d\n\r",get_enable(0,0,tclock.tm_wday,0));
+    printf("value %d\n\r",get_value(0,0,tclock.tm_wday,0));
+    printf("enable %d\n\r",get_enable(0,0,tclock.tm_wday,0));
+    printf("start %d\n\r",get_start_time(0,0,tclock.tm_wday,0));
+    printf("end %d\n\r",get_stop_time(0,0,tclock.tm_wday,0));*/ /*just for test*/
         
-        if(getEnable(0,0,tclock.tm_wday,i)==1)
+        if(get_enable(0,0,tclock.tm_wday,i)==1)
         {
-            if(compareHour(getStartTime(0,0,tclock.tm_wday,i),getStopTime(0,0,tclock.tm_wday,i)))
+            if(compare_hour(get_start_time(0,0,tclock.tm_wday,i),get_stop_time(0,0,tclock.tm_wday,i)))
             {
-                desired_water[i]=getValue(0,0,tclock.tm_wday,i);
+                desired_water[i]=get_value(0,0,tclock.tm_wday,i);
             }
             else
             {
-                desired_water[i]=disable;
+                desired_water[i]=DISABLE;
             }
         }
         else {
-            desired_water[i]=disable;
+            desired_water[i]=DISABLE;
         }
     }
     for (i = 0; i < 4; i++)
@@ -73,26 +69,26 @@ int desiredWaterTemperature()
     return maximum;
 }
 
-int desiredAirTemperature(int n_air)
+int desired_air_temperature(int n_air)
 {
     updateTimeDesiredValue();
     int i, maximum;
-    maximum=disable;
+    maximum=DISABLE;
     for(i=0;i<4;i++)        /* Used 4 because theres's 4 schedule per day of the week */
     {
-        if(getEnable(1,n_air,tclock.tm_wday,i)==1)
+        if(get_enable(1,n_air,tclock.tm_wday,i)==1)
         {
-            if(compareHour(getStartTime(1,n_air,tclock.tm_wday,i),getStopTime(1,n_air,tclock.tm_wday,i)))
+            if(compare_hour(get_start_time(1,n_air,tclock.tm_wday,i),get_stop_time(1,n_air,tclock.tm_wday,i)))
             {
-                desired_AirTemp[n_air][i]=getValue(1,n_air,tclock.tm_wday,i);
+                desired_AirTemp[n_air][i]=get_value(1,n_air,tclock.tm_wday,i);
             }
             else
             {
-                desired_AirTemp[n_air][i]=disable;
+                desired_AirTemp[n_air][i]=DISABLE;
             }
         }
         else {
-            desired_AirTemp[n_air][i]=disable;
+            desired_AirTemp[n_air][i]=DISABLE;
         }
     }
     for (i = 0; i < 4; i++)
@@ -105,26 +101,26 @@ int desiredAirTemperature(int n_air)
     return maximum;
 }
 
-int desiredLight(int n_ligth)
+int desired_light(int n_ligth)
 {
     updateTimeDesiredValue();
     int i;
     for(i=0;i<4;i++)        /* Used 4 because theres's 4 schedule per day of the week */
     {
-        if(getEnable(2,n_ligth,tclock.tm_wday,i)==1)
+        if(get_enable(2,n_ligth,tclock.tm_wday,i)==1)
         {
-            if(compareHour(getStartTime(2,n_ligth,tclock.tm_wday,i),getStopTime(2,n_ligth,tclock.tm_wday,i)))
+            if(compare_hour(get_start_time(2,n_ligth,tclock.tm_wday,i),get_stop_time(2,n_ligth,tclock.tm_wday,i)))
             {
                 desired_ligth[n_ligth][i]=1;
             }
             else
             {
-                desired_ligth[n_ligth][i]=disable;
+                desired_ligth[n_ligth][i]=DISABLE;
 
             }
         }
         else {
-            desired_ligth[n_ligth][i]=disable;
+            desired_ligth[n_ligth][i]=DISABLE;
         }
     }
     for (i = 0; i < 4; i++)
