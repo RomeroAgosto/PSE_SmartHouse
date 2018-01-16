@@ -15,7 +15,7 @@ int main(int argc, char** argv)
     
     // Variable declarations;
     int i=0;
-    ResetAirQualityState();
+    reset_air_quality_state();
     /*first set temperature to 60 degree*/
     int length = 6;
     /* state before, setHeater state after*/

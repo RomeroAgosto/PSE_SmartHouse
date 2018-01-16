@@ -1,18 +1,15 @@
 #include "statemachine_watertemp_control.h"
 #if UNITTEST == 1
-static int desired_test;
-static int water_temp;
-int heater_state;
-int water_hysteresis;
-#include <stdio.h>
-int reset_state_water_temp(){
-    water_temp_state=0;
-}
+int desired_test,water_temp,heater_state,water_hysteresis;
 int set_water_temp(int temp){
     water_temp=temp;
 }
 int get_water_temperature(){
     return water_temp; /* dummy which returns a temperature to check the behaviour of the state machine*/
+}
+
+int reset_state_water_temp(){
+    water_temp_state=0;
 }
 int set_desired_temperature(int temp){
     desired_test=temp;

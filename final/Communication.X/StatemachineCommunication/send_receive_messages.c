@@ -24,6 +24,14 @@ int send_message(char *message) {
     strcat(message,check_sum);/*appends the checksum itself*/
     strcat(message,delimiter_overall);/*appends the overall delimiter for our messages *  */
     int k=0;
+    do{
+        PutChar(message[k]);
+        k++;
+        if(k>10000){break;};
+    }while(message[k]!='\0');
+    return 1;
+    
+}
 int get_digits(int score_int, char *score_char) {
     int i=0, div;
     char dummy[100]; /*modulo has the value in the wrong order*/
@@ -92,18 +100,10 @@ long int check_received_message(char *message,int p){
         checksum=get_int(received_checksum,checksum_length);
         //printf("the send sum is: %ld, the calculated sum is: %ld",checksum,checksum_calculated);
         if (checksum!=checksum_calculated){return -1;};
-
-    return 1;
-
-    }
-    do{
-        PutChar(message[k]);
-        k++;
-        if(k>10000){break;};
-    }while(message[k]!='\0');
-    return 1;
-
+        int k=0;
+        return 1;
 }
+
 #else
 int get_time(char *message) {
     sent_message=3;
