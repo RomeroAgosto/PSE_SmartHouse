@@ -1,11 +1,14 @@
 #ifndef COMMUNICATION_SEND_MESSAGES_C_H
 #define COMMUNICATION_SEND_MESSAGES_C_H
 
-
 #include <stdio.h>
+#include <stdlib.h>
+
+
+
 #include <string.h>
-#include <stdlib.h>
-#include <stdlib.h>
+#include "../../schedules/schedules.h"
+#include "../../Statemachines.X/Technician/Structure/technician_structure.h"
 
 #define SEND_NO_MESSAGE 0
 #define SEND_NEW_STATUS 1
@@ -14,6 +17,8 @@
 #define SEND_DATALOG 4
 
 #define  UNITTEST 0
+
+
 
 #if UNITTEST==1
 
@@ -28,7 +33,7 @@ int Statemachine_Communication(int *message);
 #include "../../../final/update/update.h"
 #include "../../Statemachines.X/statemachines.h"
 #include "create_normal_message.h"
-#include "../../../final/log/log_functions.h"
+#include "../../log/log_functions.h"
 void _UART1Handler(void);
 int Statemachine_Communication(void);
 

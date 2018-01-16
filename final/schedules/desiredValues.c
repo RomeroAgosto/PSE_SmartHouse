@@ -29,7 +29,7 @@ int compareHour(int time1, int time2)
 
 int  updateTimeDesiredValue()
 {
-    get_timeHall(&tclock);
+    get_time_hall(&tclock);
     conv_clock=tclock.tm_hour*100+tclock.tm_min;
     return 0;
 }

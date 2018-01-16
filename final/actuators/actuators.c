@@ -1,8 +1,7 @@
 
 #include "actuators.h"
-#include <p32xxxx.h>
-#include <stdio.h>
-int setLight(int n_light, int state) 
+
+int set_light(int n_light, int state) 
 {
     if(n_light==0){  
         PORTEbits.RE4=state;
@@ -19,7 +18,7 @@ int setLight(int n_light, int state)
     return 0;
 }
 
-int setVentilatorBuzzer(int state) {
+int set_ventilator_buzzer(int state) {
     if(state==GREEN){
         PORTE=PORTE & 0xff9f;
     }
@@ -32,7 +31,7 @@ int setVentilatorBuzzer(int state) {
     }
 }
 
-int SetHeater(int room, int state){
+int set_heater(int room, int state){
     //printf("room %d turned %d\n",room,state);
     if (room==0){
         PORTAbits.RA9=state;

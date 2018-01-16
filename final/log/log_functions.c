@@ -26,7 +26,7 @@ int log_data_saving()
     
     struct tm time;
 
-    get_timeHall(&time);
+    get_time_hall(&time);
 
     int j;
     if(counter_log==48) {counter_log=0;} /*!Reset Counter*/

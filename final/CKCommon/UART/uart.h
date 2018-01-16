@@ -31,7 +31,6 @@ int GetChar(UINT8 *byte);
 void PutChar(UINT8 txChar);
 int _mon_getc(int canblock);
 void _mon_putc(char c);
-int send_message(char *message);
 
 
 #endif

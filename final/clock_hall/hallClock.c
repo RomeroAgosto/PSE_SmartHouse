@@ -23,7 +23,7 @@ static struct tm time_hall; /*!<Clock all variable*/
 static void (*longside_func)()=NULL; /*!<Buffur for function that will work alongside with clock all*/
 static void (*halfan_hour)()=NULL;
 // Stetup Hall clock and can put a func run alonside clock
-void setup_clockHall(void (*func)(void))
+void setup_clock_hall(void (*func)(void))
 {
     T2CONbits.TON=0; // Start the timer
     T3CONbits.TON=0; // Start the timer
@@ -49,7 +49,7 @@ void setup_clockHall(void (*func)(void))
     INTEnableSystemMultiVectoredInt();
 }
 // copy the time_hall to time
-void get_timeHall(struct tm *time)
+void get_time_hall(struct tm *time)
 {
     *time=time_hall;
 }
@@ -69,7 +69,7 @@ int update_time(struct tm time_temp)
 }
 
 
-void setup_halfanHour(void (*func)(void))
+void setup_half_a_hour(void (*func)(void))
 {
     T4CONbits.TON=0; // Start the timer
     T5CONbits.TON=0; // Start the timer

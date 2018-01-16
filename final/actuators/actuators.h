@@ -8,18 +8,17 @@
 #ifndef ACTUATORS_H
 #define	ACTUATORS_H
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
+#include <p32xxxx.h>
+#include <stdio.h>
 
 #define GREEN 0
 #define YELLOW 1
 #define RED 2
     
     
-int setLight(int n_light, int state);
-int SetHeater(int room, int state);
-
+int set_light(int n_light, int state);
+int set_heater(int room, int state);
+int set_ventilator_buzzer(int room);
 
 
 #ifdef	__cplusplus

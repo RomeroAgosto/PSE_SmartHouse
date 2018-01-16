@@ -26,20 +26,21 @@ void run_alonsideWClock(void){
     SetTimer(3);
 }
 
-
+#if 0
 void delay(unsigned int dms){
     unsigned int t;
     t=ReadCoreTimer()+40000*dms;
     while(ReadCoreTimer() < t);
 }
+#endif
 
 int main(int argc, char** argv) {
     // Performance optimization (flash access time, enable instruct and data cache,... and PBClock setup
     SYSTEMConfigPerformance(SYSCLK);
     mOSCSetPBDIV(OSC_PB_DIV_2); // This is necessary since SYSTEMConfigPerformance defaults FPBDIV to DIV_1
 
-    setup_clockHall(&run_alonsideWClock);
-    setup_halfanHour(&setLogFlag);
+    setup_clock_hall(&run_alonsideWClock);
+    setup_half_a_hour(&setLogFlag);
     // Init UART and redirect tdin/stdot/stderr to UART
    
     int i;

@@ -28,7 +28,7 @@ void reset_state_air_temp(room_inserted ){
     air_temp_state[room_inserted]=0;
 }
 
-int SetHeater(int room_inserted,int abc){
+int set_heater(int room_inserted,int abc){
     return 0;
 }
 
@@ -104,14 +104,14 @@ void Statemachine_AirControl(int room_inserted){
 
         case DESIRED_TEMPERATURE:
             SetHeatingAirState(room_inserted,FALSE);
-            SetHeater(room_inserted,FALSE);
+            set_heater(room_inserted,FALSE);
             /*set next state*/
             if (air_temperature<lower_threshold_air){air_temp_state[room_inserted]=INCREASE_AIR_TEMPERATURE;} /*If the values drops below the lower threshold increase! -> Avoid shutter*/
             break;
 
         case INCREASE_AIR_TEMPERATURE:
             SetHeatingAirState(room_inserted,TRUE);
-            SetHeater(room_inserted,TRUE);
+            set_heater(room_inserted,TRUE);
             /*set next state*/
             if(air_temperature>lower_threshold_air){air_temp_state[room_inserted]=DESIRED_TEMPERATURE;} /* If the value exceeds the threshold, turn off -> avoid shutter*/
             break;

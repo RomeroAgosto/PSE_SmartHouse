@@ -1,14 +1,10 @@
 #include "send_receive_messages.h"
-#include "../../schedules/schedules.h"
-#include "../../../final/Statemachines.X/Technician/Structure/technician_structure.h"
 
 static int message_flag=1;
 static char message [10000]="#~02200205010220020202002006000025010000500065500002000200010022222222120212223*(4)3833^"; 
 int sent_message=0;
 volatile int message_counter=0;
 #if UNITTEST==0
-#define _SUPPRESS_PLIB_WARNING 1
-#include <plib.h>
 #include "create_normal_message.h"
 #else
 void GetMessage(char *mess) {
@@ -85,6 +81,13 @@ int send_message(char *message) {
     strcat(message,delimiter_checksum_end); /*enddelimiter for the checksum*/
     strcat(message,check_sum);/*appends the checksum itself*/
     strcat(message,delimiter_overall);/*appends the overall delimiter for our messages *  */
+    int k=0;
+    
+    do{
+        PutChar(message[k]);
+        k++;
+        if(k>10000){break;};
+    }while(message[k]!='\0');
     return 1;
 
 }

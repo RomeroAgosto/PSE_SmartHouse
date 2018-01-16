@@ -117,7 +117,7 @@ void Statemachine_AirQuality(int room) {
     /* states are stored in the states variables. so higher function can easily access the current states*/
     switch (air_quality_state[room]) {
         case GREEN:
-            setVentilatorBuzzer(GREEN);
+            set_ventilator_buzzer(GREEN);
             SetVentilatorState(room,FALSE);/* it is just possible to turn off the ventilation when the Air quality is good!*/
             /* check Yellow first, RED can overwrite YELLOW -> when one Value exceeds the preset limit -> react*/
             for (j = 0; j <5 ; j++) {
@@ -130,7 +130,7 @@ void Statemachine_AirQuality(int room) {
             break;
 
         case YELLOW:
-            setVentilatorBuzzer(YELLOW);
+            set_ventilator_buzzer(YELLOW);
             SetVentilatorState(room,TRUE);
             for (j = 0; j <5 ; j++) {
                // printf("sensorvalue: %d threshold + bound %d\n",sensor_values[j],get_air_quality_threshold(room,0,j)-get_air_quality_hysteresis(0,j));
@@ -147,7 +147,7 @@ void Statemachine_AirQuality(int room) {
             break;
 
         case RED:
-            setVentilatorBuzzer(RED);
+            set_ventilator_buzzer(RED);
             SetVentilatorState(room, TRUE);/* it is just possible to turn off the ventilation when the Air quality is good!*/
             SetWarning();/*something that declares that something went wrong*/
             /* Green overwrites Yellow -> first check if yellow condition fullfilled, if even a Green is, change to Green */
@@ -162,7 +162,7 @@ void Statemachine_AirQuality(int room) {
             break;
 
         default:
-            setVentilatorBuzzer(RED);
+            set_ventilator_buzzer(RED);
             SetVentilatorState(room,TRUE);
 
             SetWarning();/*something that declares that something went wrong*/

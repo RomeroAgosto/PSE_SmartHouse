@@ -1,6 +1,8 @@
 build/default/production/_ext/562349566/send_receive_messages.o:  \
  ../Communication.X/StatemachineCommunication/send_receive_messages.c  \
  ../Communication.X/StatemachineCommunication/send_receive_messages.h  \
+ ../Communication.X/StatemachineCommunication/../../schedules/schedules.h  \
+ ../Communication.X/StatemachineCommunication/../../Statemachines.X/Technician/Structure/technician_structure.h  \
  ../Communication.X/StatemachineCommunication/../../../final/update/update.h  \
  ../Communication.X/StatemachineCommunication/../../../final/update/struct_lib.h  \
  ../Communication.X/StatemachineCommunication/../../Statemachines.X/statemachines.h  \
@@ -17,6 +19,4 @@ build/default/production/_ext/562349566/send_receive_messages.o:  \
  ../Communication.X/StatemachineCommunication/../../Statemachines.X/../actuators/actuators.h  \
  ../Communication.X/StatemachineCommunication/../../Statemachines.X/Technician/Structure/technician_structure.h  \
  ../Communication.X/StatemachineCommunication/create_normal_message.h  \
- ../Communication.X/StatemachineCommunication/../../../final/log/log_functions.h  \
- ../Communication.X/StatemachineCommunication/../../schedules/schedules.h  \
- ../Communication.X/StatemachineCommunication/../../../final/Statemachines.X/Technician/Structure/technician_structure.h 
+ ../Communication.X/StatemachineCommunication/../../log/log_functions.h 

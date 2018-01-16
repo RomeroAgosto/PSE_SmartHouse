@@ -4,6 +4,8 @@ main.c  \
 ../CKCommon/UART/uart.h  \
  ../clock_hall/hallClock.h  \
  ../Communication.X/StatemachineCommunication/send_receive_messages.h  \
+ ../Communication.X/StatemachineCommunication/../../schedules/schedules.h  \
+ ../Communication.X/StatemachineCommunication/../../Statemachines.X/Technician/Structure/technician_structure.h  \
  ../Communication.X/StatemachineCommunication/../../../final/update/update.h  \
  ../Communication.X/StatemachineCommunication/../../../final/update/struct_lib.h  \
  ../Communication.X/StatemachineCommunication/../../Statemachines.X/statemachines.h  \
@@ -21,7 +23,7 @@ main.c  \
  ../Communication.X/StatemachineCommunication/../../Statemachines.X/Technician/Structure/technician_structure.h  \
  ../Communication.X/StatemachineCommunication/create_normal_message.h  \
  ../Communication.X/StatemachineCommunication/send_receive_messages.h  \
- ../Communication.X/StatemachineCommunication/../../../final/log/log_functions.h  \
+ ../Communication.X/StatemachineCommunication/../../log/log_functions.h  \
  ../sensors/sr.h  \
 ../update/update.h  \
 ../log/log_functions.h 

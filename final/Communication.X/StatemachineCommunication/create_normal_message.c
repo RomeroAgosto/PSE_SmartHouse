@@ -41,5 +41,5 @@ int create_normal_message(char *message){
             GetAirTemperature(2),GetHeatingAirState(2),GetAirTemperature(3),GetHeatingAirState(3),// 37 38 39 40
             GetAirTemperature(4),GetHeatingAirState(4),GetAirTemperature(5),GetHeatingAirState(5),//41 42 43 44
             GetAirTemperature(6),GetHeatingAirState(6),GetAirTemperature(7),GetHeatingAirState(7));//45 46 47 48
-    printf("%s",message);
+    //printf("%s",message);
 }

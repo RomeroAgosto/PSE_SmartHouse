@@ -48,7 +48,7 @@ int ResetLightStates(){
     light_state[3]=0;
 }
 
-int setLight(int light,int a){
+int set_light(int light,int a){
     return 0;
 };
 /**
@@ -132,13 +132,13 @@ void Statemachine_LightControl(int light) {
                 counter[light]=0;
                 light_state[light]= TURNED_OFF;
                 SetLightState(light, FALSE );
-                setLight(light,FALSE);
+                set_light(light,FALSE);
                 if(movement==TRUE ) {light_state[light] = TURNED_ON;}
                 break;
 
             case TURNED_ON:
                 SetLightState(light, TRUE );
-                setLight(light,TRUE);
+                set_light(light,TRUE);
                 if (movement==TRUE)counter[light]=0;
                 if(counter[light]>=CYCLES[light]){
                     light_state[light] = TURNED_OFF;
@@ -154,7 +154,7 @@ void Statemachine_LightControl(int light) {
     else{
         SetLightState(light,FALSE );
         light_state[light] = TURNED_OFF; /* default state is turn off!*/
-        setLight(light,FALSE);
+        set_light(light,FALSE);
     }
 #if UNITTEST ==1
     test[2]=ActivatedLights[light];
