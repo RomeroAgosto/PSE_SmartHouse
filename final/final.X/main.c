@@ -68,14 +68,8 @@ int main(int argc, char** argv) {
     TRISG=TRISG && 0xfff0;
     TRISGbits.TRISG2=0;
     PORTG=PORTG || 0x000f;
-    TRISAbits.TRISA0=0;
-    TRISAbits.TRISA1=0;
-    TRISAbits.TRISA2=0;
-    TRISAbits.TRISA3=0;
-    TRISAbits.TRISA4=0;
-    TRISAbits.TRISA5=0;
-    TRISAbits.TRISA6=0;
-    TRISAbits.TRISA7=0;
+    TRISA=0x0000;
+    PORTA=0x0000;
     // Loop
     while (1) {
         updateSensors();
@@ -84,7 +78,7 @@ int main(int argc, char** argv) {
             Statemachine_LightControl(i);
         }
         Statemachine_WaterControl();
-        for(i=0;i<4;i++){
+        for(i=0;i<8;i++){
             Statemachine_AirControl(i);
         }       
         Statemachine_Communication();  

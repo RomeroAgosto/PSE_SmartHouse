@@ -33,32 +33,29 @@ int setVentilatorBuzzer(int state) {
 }
 
 int SetHeater(int room, int state){
+    //printf("room %d turned %d\n",room,state);
     if (room==0){
-        LATAbits.LATA0=state;
-        PORTAbits.RA0=state;
+        PORTAbits.RA9=state;
     }
     else if (room == 1){
-        LATAbits.LATA1=state;
-        PORTAbits.RA1=state;
+        PORTAbits.RA10=state;
     }
     else if (room == 2){
-        LATAbits.LATA2=state;
         PORTAbits.RA2=state;
     }
     else if (room == 3){
-        LATAbits.LATA3=state;
         PORTAbits.RA3=state;
     }
     else if (room == 4){
-        LATAbits.LATA4=state;
+        PORTAbits.RA4=state;
     }
     else if (room == 5){
-        LATAbits.LATA5=state;
+        PORTAbits.RA5=state;
     }
     else if (room == 6){
-        PORTAbits.RA5=state;
+        PORTAbits.RA6=state;
     }
     else if (room == 7){
-        PORTAbits.RA5=state;
+        PORTAbits.RA7=state;
     }    
 }

@@ -221,6 +221,7 @@
     <Elem>../log</Elem>
     <Elem>../../schedule</Elem>
     <Elem>../../pic_programming/Communication.X</Elem>
+    <Elem>../Communication.X</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
