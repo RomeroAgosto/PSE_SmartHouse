@@ -19,25 +19,18 @@
 * \author Samuel Simoes
 * \date 03-11-2017  
 */
-void setup_clockHall(void (*func)(void));
+void setup_clock_hall(void (*func)(void));
 
-/** 
-* \brief This func will run the clock at 1Hz in a timer at 2Hz
-* 
-* \author Samuel Simoes
-* \date 03-11-2017  
-*/
-void inc_clock(void);
 /** 
 * \brief This func will save the struct values of clock_hall inside of the pointer
 * 
 * \author Samuel Simoes
 * \date 03-11-2017  
 */
-void get_timeHall(struct tm *);
-int update_time(struct tm );
-void increment_time(void);
-
+void get_time_hall(struct tm *);
+int update_time(struct tm time);
+int setup_half_a_hour(void (*half_clock)(void));
+int get_time(char *to_send);
 
 
 #endif /*CLOCK_HALL_H*/
