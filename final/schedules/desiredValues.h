@@ -1,8 +1,14 @@
-/* 
- * File:   desiredValues.h
- * Author: Ricardo
- *
- * Created on 17 December 2017, 23:59
+/**
+ * @file schedules.h
+ * @author Deep Impact
+ * @date 15 Dez 2017
+ * @brief This file creates a structure to save all the schedules and all the information about each one, such as the id of the associated room, the desired value of temperature when applicable, if it's \
+ * enabled or not, the start and stop time.
+ * 
+ * 
+ * Company  Deep Impact
+ * 
+ * ==============================================
  */
 
 #ifndef DESIREDVALUES_H
