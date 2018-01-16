@@ -43,10 +43,7 @@ int set_warning(){
 
 #if UNITTEST == 1
 static int sensor_values_test[4][5];
-static int thresholds[4][2][5]={ {{20,600,25,100,2},{65,5000,200,200,100}},\
-                                 {{20,600,25,100,2},{65,5000,200,200,100}},\
-                                 {{20,600,25,100,2},{65,5000,200,200,100}},\
-                                 {{20,600,25,100,2},{65,5000,200,200,100}}};  /*!< Thresholds for the specific air quality parameter -> can be adapted by a setter function*/
+static int thresholds[2][5]={{20,600,25,100,2},{65,5000,200,200,100}};  /*!< Thresholds for the specific air quality parameter -> can be adapted by a setter function*/
 
 static int bounds_sensorvalues[2][5]={{2, 20, 2,5,1},{2, 20, 2, 2,2}};/*!<Hysteresis for the air quality [2] indicates the stage (red yellow), [5] indicates the sensorvalue*/
 
@@ -60,14 +57,14 @@ int get_air_quality_hysteresis(int risk_level,int sensor){
     return bounds_sensorvalues[risk_level][sensor];
 }
 
-int set_air_quality_threshold(int room,int risk_level, int threshold, int value){
-    thresholds[room][risk_level][threshold]=value;
+int set_air_quality_threshold(int risk_level, int threshold, int value){
+    thresholds[risk_level][threshold]=value;
 }
-int get_air_quality_threshold(int room,int risk_level, int threshold){
-    return thresholds[room][risk_level][threshold];
+int get_air_quality_threshold(int risk_level, int threshold){
+    return thresholds[risk_level][threshold];
 }
 /********** AirQualitySensors ********************/
-void SetAirQuality(int room, int *input_values){
+void set_air_quality(int room, int *input_values){
     sensor_values_test[room][0]=input_values[0];
     sensor_values_test[room][1]=input_values[1];
     sensor_values_test[room][2]=input_values[2];
@@ -75,7 +72,7 @@ void SetAirQuality(int room, int *input_values){
     sensor_values_test[room][4]=input_values[4];
     //printf("sensor values are: %d %d %d %d %d\n",sensor_values_test[room][0],sensor_values_test[room][1],sensor_values_test[room][2],sensor_values_test[room][3],sensor_values_test[room][4]);
 }
-void GetAirQuality(int room, int *sensor_values){
+void get_air_quality(int room, int *sensor_values){
     sensor_values[0]=sensor_values_test[room][0];
     sensor_values[1]=sensor_values_test[room][1];
     sensor_values[2]=sensor_values_test[room][2];
@@ -86,16 +83,16 @@ void GetAirQuality(int room, int *sensor_values){
 
 /********** SetLightQuality **********************/
 static int room_color;
-void setVentilatorBuzzer( int color){
+void set_ventilator_buzzer( int color){
     room_color=color;
 }
 /********** SetVentilation State**********/
 static int Ventilation_state [4];
-void SetVentilatorState(int room, int on){
+void set_ventilator_state(int room, int on){
     Ventilation_state[room]=on;
 }
 /******** reset ventilation state *******/
-void ResetAirQualityState(){
+void reset_air_quality_state(){
     air_quality_state[0]=0;
     air_quality_state[1]=0;
     air_quality_state[2]=0;

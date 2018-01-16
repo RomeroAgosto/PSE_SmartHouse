@@ -1,50 +1,29 @@
 #include "send_receive_messages.h"
 
-static int message_flag=1;
-static char message [10000]="#~02200205010220020202002006000025010000500065500002000200010022222222120212223*(4)3833^"; 
+static int message_flag=1; /*!< set the flag to 1 in order to send the initialization message in the beginning*/
+static char message [10000]="#~02200205010220020202002006000025010000500065500002000200010022222222120212223*(4)3833^"; /*!<message buffer, initialized with the technician message*/
 int sent_message=0;
 volatile int message_counter=0;
 #if UNITTEST==0
 #include "create_normal_message.h"
-#else
-void get_message(char *mess) {
-    int i;
-    for (i=0;i<10000;i++) {
-        mess[i] = message[i];
-    }
-}
+int send_message(char *message) {
+    long int checksum=0;
+    int i=2;
+    do{
+        //printf("message[%d] = %c\n",i,message[i]);
+        checksum=checksum+message[i]; /*adds all characters to a sum*/
+        i++;
 
-
-void set_message(char *mess){
-    int j=0;
-    while(mess[j]!='*'){
-        message[j]=mess[j];
-        j++;
-    }
-    message[j]='*';
-    message_counter=j;
-}
-void set_messageFlag(int flag){
-    message_flag=flag;
-}
-int create_normal_message(char *message){
-    sent_message=1;
-}
-int get_schedule_message(char *message) {
-    sent_message=2;
-}
-int set_new_thresholds(char *message, int p) {
-    sent_message=5;
-}
-int reset_messages() {
-    message_flag=0;
-    sent_message=0;
-}
-void log_create_msg(char *message) {
-    sent_message=3;
-}
-#endif
-
+    }while(message[i]!='\0');
+    char check_sum[100], delimiter_checksum_start[]="(",delimiter_checksum_end[]=")", length_checksum[2], delimiter_overall[]="^";
+    length_checksum[0]=get_digits(checksum,check_sum) +'0'; /*returns the length of the checksum*/
+    length_checksum[1]='\0';
+    strcat(message,delimiter_checksum_start); /*appends start delimiter for the checksum*/
+    strcat(message,length_checksum); /*appends the length*/
+    strcat(message,delimiter_checksum_end); /*enddelimiter for the checksum*/
+    strcat(message,check_sum);/*appends the checksum itself*/
+    strcat(message,delimiter_overall);/*appends the overall delimiter for our messages *  */
+    int k=0;
 int get_digits(int score_int, char *score_char) {
     int i=0, div;
     char dummy[100]; /*modulo has the value in the wrong order*/
@@ -64,33 +43,6 @@ int get_digits(int score_int, char *score_char) {
     return j;
 }
 
-int send_message(char *message) {
-    long int checksum=0;
-    int i=2;
-    do{
-        //printf("message[%d] = %c\n",i,message[i]);
-        checksum=checksum+message[i]; /*adds all characters to a sum*/
-        i++;
-        
-    }while(message[i]!='\0');
-    char check_sum[100], delimiter_checksum_start[]="(",delimiter_checksum_end[]=")", length_checksum[2], delimiter_overall[]="^";
-    length_checksum[0]=get_digits(checksum,check_sum) +'0'; /*returns the length of the checksum*/
-    length_checksum[1]='\0';
-    strcat(message,delimiter_checksum_start); /*appends start delimiter for the checksum*/
-    strcat(message,length_checksum); /*appends the length*/
-    strcat(message,delimiter_checksum_end); /*enddelimiter for the checksum*/
-    strcat(message,check_sum);/*appends the checksum itself*/
-    strcat(message,delimiter_overall);/*appends the overall delimiter for our messages *  */
-    int k=0;
-    
-    do{
-        PutChar(message[k]);
-        k++;
-        if(k>10000){break;};
-    }while(message[k]!='\0');
-    return 1;
-
-}
 
 double power(double a, double b){
         int i;
@@ -136,7 +88,7 @@ long int check_received_message(char *message,int p){
             received_checksum[i-j]=message[i];
             i++;
         }while(message[i]!='^');
-      
+
         checksum=get_int(received_checksum,checksum_length);
         //printf("the send sum is: %ld, the calculated sum is: %ld",checksum,checksum_calculated);
         if (checksum!=checksum_calculated){return -1;};
@@ -144,6 +96,63 @@ long int check_received_message(char *message,int p){
     return 1;
 
     }
+    do{
+        PutChar(message[k]);
+        k++;
+        if(k>10000){break;};
+    }while(message[k]!='\0');
+    return 1;
+
+}
+#else
+int get_time(char *message) {
+    sent_message=3;
+}
+int PutChar(char c) {
+    printf("%c",c);
+}
+void get_message(char *mess) {
+    int i;
+    for (i=0;i<10000;i++) {
+        mess[i] = message[i];
+    }
+}
+void set_message(char *mess){
+    int j=0;
+    while(mess[j]!='*'){
+        message[j]=mess[j];
+        j++;
+    }
+    message[j]='*';
+    message_counter=j;
+}
+void send_message(char *send) {
+    printf("%s\n",send);
+}
+void set_message_flag(int flag){
+    message_flag=flag;
+}
+int create_normal_message(char *message){
+    sent_message=1;
+}
+int get_schedule_message(char *message) {
+    sent_message=2;
+}
+int set_new_thresholds(char *message, int p) {
+    sent_message=5;
+}
+int reset_messages() {
+    message_flag=0;
+    sent_message=0;
+}
+void log_create_msg(char *message) {
+    sent_message=3;
+}
+int check_received_message(char *message,int p) {
+    return 1;
+}
+#endif
+
 //void get_time(char *message) {
 //}
 

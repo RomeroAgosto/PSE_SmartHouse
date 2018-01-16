@@ -25,11 +25,11 @@ int main(int argc, char** argv)
     /*set thresholds*/
     /* set yellow thresholds */
     while(1){
-        Statemachine_AirQuality(0,Result);
+        statemachine_air_quality(0,Result);
         int j;
         for(j=0;j<5;j++) {
         }
-        printf("the state is: %d\n", GetAirQualityState(0));
+        printf("the state is: %d\n", get_air_quality_state(0));
 
     }
     return (EXIT_SUCCESS);

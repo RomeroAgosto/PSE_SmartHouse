@@ -43,10 +43,10 @@ RM = /home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X
+CMAKE_SOURCE_DIR = /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Communication.X
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug
+CMAKE_BINARY_DIR = /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Communication.X/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/communication.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/communication.dir/flags.make
 
 CMakeFiles/communication.dir/StatemachineCommunication/main.c.o: CMakeFiles/communication.dir/flags.make
 CMakeFiles/communication.dir/StatemachineCommunication/main.c.o: ../StatemachineCommunication/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/communication.dir/StatemachineCommunication/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/communication.dir/StatemachineCommunication/main.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/StatemachineCommunication/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Communication.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/communication.dir/StatemachineCommunication/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/communication.dir/StatemachineCommunication/main.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Communication.X/StatemachineCommunication/main.c
 
 CMakeFiles/communication.dir/StatemachineCommunication/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/communication.dir/StatemachineCommunication/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/StatemachineCommunication/main.c > CMakeFiles/communication.dir/StatemachineCommunication/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Communication.X/StatemachineCommunication/main.c > CMakeFiles/communication.dir/StatemachineCommunication/main.c.i
 
 CMakeFiles/communication.dir/StatemachineCommunication/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/communication.dir/StatemachineCommunication/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/StatemachineCommunication/main.c -o CMakeFiles/communication.dir/StatemachineCommunication/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Communication.X/StatemachineCommunication/main.c -o CMakeFiles/communication.dir/StatemachineCommunication/main.c.s
 
 CMakeFiles/communication.dir/StatemachineCommunication/main.c.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/communication.dir/StatemachineCommunication/main.c.o.provides.build: 
 
 CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o: CMakeFiles/communication.dir/flags.make
 CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o: ../StatemachineCommunication/send_receive_messages.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/StatemachineCommunication/send_receive_messages.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Communication.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Communication.X/StatemachineCommunication/send_receive_messages.c
 
 CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/StatemachineCommunication/send_receive_messages.c > CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Communication.X/StatemachineCommunication/send_receive_messages.c > CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.i
 
 CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/StatemachineCommunication/send_receive_messages.c -o CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Communication.X/StatemachineCommunication/send_receive_messages.c -o CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.s
 
 CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o.requires:
 
@@ -117,7 +117,7 @@ communication: CMakeFiles/communication.dir/StatemachineCommunication/main.c.o
 communication: CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o
 communication: CMakeFiles/communication.dir/build.make
 communication: CMakeFiles/communication.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable communication"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Communication.X/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable communication"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/communication.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -135,6 +135,6 @@ CMakeFiles/communication.dir/clean:
 .PHONY : CMakeFiles/communication.dir/clean
 
 CMakeFiles/communication.dir/depend:
-	cd /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug/CMakeFiles/communication.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Communication.X/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Communication.X /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Communication.X /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Communication.X/cmake-build-debug /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Communication.X/cmake-build-debug /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Communication.X/cmake-build-debug/CMakeFiles/communication.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/communication.dir/depend
 

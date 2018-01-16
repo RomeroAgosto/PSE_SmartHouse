@@ -14,10 +14,10 @@ static int lower_threshold_air; /*!< the lower_threshold_air is the lower band o
 
 #if UNITTEST == 1
 int desired_air_temperature(int room);
-int statemachine_air_quality(int room, int on);
+int state_air_quality(int room, int on);
 int get_air_temperature(int room);
 void statemachine_air_control(int room, int *test);
-int setdesiredTemp(int room,int temp);
+int set_desired_temp(int room,int temp);
 int set_air_temperature(int room, int temp);
 void reset_state_air_temp(int room);
 #else

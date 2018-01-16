@@ -29,7 +29,7 @@ TEST(WaterControl,SWITCH_TO_INCREASE_WATER_TEMPERATURE){
 	set_water_temp(water_temp);
 	int i;
 	for (i = 0; i <2 ; i++) {
-		Statemachine_WaterControl(Result);
+		statemachine_water_control(Result);
 		Result_complete[i*3+0]=Result[0];
 		Result_complete[i*3+1]=Result[1];
 		Result_complete[i*3+2]=Result[2];
@@ -53,7 +53,7 @@ TEST(WaterControl,INCREASE_WATER_TEMPERATURE_TEMPERATUE_CHANGE){
 	set_water_temp(water_temp);
 	int i;
 	for (i = 0; i <2 ; i++) {
-		Statemachine_WaterControl(Result);
+		statemachine_water_control(Result);
 		Result_complete[i*3+0]=Result[0];
 		Result_complete[i*3+1]=Result[1];
 		Result_complete[i*3+2]=Result[2];
@@ -61,7 +61,7 @@ TEST(WaterControl,INCREASE_WATER_TEMPERATURE_TEMPERATUE_CHANGE){
 	/*after the set, change temperature*/
 	set_water_temp(77);
 	for (i ; i <4 ; i++) {
-		Statemachine_WaterControl(Result);
+		statemachine_water_control(Result);
 		Result_complete[i*3+0]=Result[0];
 		Result_complete[i*3+1]=Result[1];
 		Result_complete[i*3+2]=Result[2];
@@ -88,7 +88,7 @@ TEST(WaterControl,INCREASE_WATER_TEMPERATURE_CHANGE_DESIRED_VALUE){
 	int i;
 	/* go into increse and set the heater*/
 	for (i = 0; i <2 ; i++) {
-		Statemachine_WaterControl(Result);
+		statemachine_water_control(Result);
 		Result_complete[i*3+0]=Result[0];
 		Result_complete[i*3+1]=Result[1];
 		Result_complete[i*3+2]=Result[2];
@@ -96,7 +96,7 @@ TEST(WaterControl,INCREASE_WATER_TEMPERATURE_CHANGE_DESIRED_VALUE){
 	/*after the set, change desired value*/
 	set_desired_temperature(50);
 	for (i ; i <4 ; i++) {
-		Statemachine_WaterControl(Result);
+		statemachine_water_control(Result);
 		Result_complete[i*3+0]=Result[0];
 		Result_complete[i*3+1]=Result[1];
 		Result_complete[i*3+2]=Result[2];
@@ -121,7 +121,7 @@ TEST(WaterControl,TEST_WaterControl_STAY_DECREASE_TEMPERATURE){
 	set_water_temp(water_temp);
 	int i;
 	for (i = 0; i <2 ; i++) {
-		Statemachine_WaterControl(Result);
+		statemachine_water_control(Result);
 	}
 	for (i = 0; i < 3;i++) {
 		//printf("I compare %d %d\n",ResultExpected[i],Result[i]);
@@ -141,17 +141,17 @@ TEST(WaterControl,TEST_WaterControl_TURN_ON_THROUGH_THRESHOLD_CHANGE) {
 	set_water_temp(water_temp);
 	int i;
 	set_water_hysteresis(10);
-	Statemachine_WaterControl(Result);
+	statemachine_water_control(Result);
 
 	for (i = 0; i < 3; i++) {
 		ResultComplete[i] = Result[i];
 	}
 	set_water_hysteresis(2);
-	Statemachine_WaterControl(Result);
+	statemachine_water_control(Result);
 	for (i = 3; i < 6; i++) {
 		ResultComplete[i] = Result[i-3];
 	}
-	Statemachine_WaterControl(Result);
+	statemachine_water_control(Result);
 	for (i = 6; i < 9; i++) {
 		ResultComplete[i] = Result[i-6];
 	}
@@ -172,27 +172,27 @@ TEST(WaterControl,TEST_WaterControl_TURN_OFF_THROUGH_THRESHOLD_CHANGE) {
 	set_water_temp(water_temp);
 	set_water_hysteresis(5);
 	int i;
-	Statemachine_WaterControl(Result);
+	statemachine_water_control(Result);
 
 	for (i = 0; i < 3; i++) {
 		ResultComplete[i] = Result[i];
 	}
-	Statemachine_WaterControl(Result);
+	statemachine_water_control(Result);
 	for (i = 3; i < 6; i++) {
 		ResultComplete[i] = Result[i-3];
 	}
 	water_temp = 55;
 	set_water_temp(water_temp);
-	Statemachine_WaterControl(Result);
+	statemachine_water_control(Result);
 	for (i = 6; i < 9; i++) {
 		ResultComplete[i] = Result[i-6];
 	}
 	set_water_hysteresis(2);
-	Statemachine_WaterControl(Result);
+	statemachine_water_control(Result);
 	for (i = 9; i < 12; i++) {
 		ResultComplete[i] = Result[i-9];
 	}
-	Statemachine_WaterControl(Result);
+	statemachine_water_control(Result);
 	for (i = 12; i < 15; i++) {
 		ResultComplete[i] = Result[i-12];
 	}

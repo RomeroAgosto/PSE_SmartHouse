@@ -21,7 +21,7 @@ int set_timer(int light);
 int get_cycle(int room);
 
 #if UNITTEST==1
-int set_light_cycles(int light_number, int cycle_time);
+void set_light_cycles(int light_number, int cycle_time);
 int get_light_cycles(int light_number);
 int reset_light_states();
 void statemachine_light_control(int light,int *test);

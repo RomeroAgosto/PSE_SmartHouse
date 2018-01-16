@@ -20,11 +20,11 @@ void get_air_quality(int room, int *sensor_values);
 void set_air_quality(int room, int *input_values);
 void set_light_quality(int room, int color);
 void set_ventilator_state(int room,int on);
-void reset_air_quality_state();
+void reset_air_quality_state(void);
 int set_air_quality_hysteresis(int risk_level,int sensor, int value);
 int get_air_quality_hysteresis(int risk_level,int sensor);
-int set_air_quality_threshold(int room,int risk_level, int threshold, int value);
-int get_air_quality_threshold(int room,int risk_level, int threshold);
+int set_air_quality_threshold(int risk_level, int threshold, int value);
+int get_air_quality_threshold(int risk_level, int threshold);
 
 #else
 void statemachine_air_quality(int room);

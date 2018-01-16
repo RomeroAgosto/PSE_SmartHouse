@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/StatemachineCommunication/main.c" "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug/CMakeFiles/communication.dir/StatemachineCommunication/main.c.o"
-  "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/StatemachineCommunication/send_receive_messages.c" "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Communication.X/cmake-build-debug/CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o"
+  "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Communication.X/StatemachineCommunication/main.c" "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Communication.X/cmake-build-debug/CMakeFiles/communication.dir/StatemachineCommunication/main.c.o"
+  "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Communication.X/StatemachineCommunication/send_receive_messages.c" "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Communication.X/cmake-build-debug/CMakeFiles/communication.dir/StatemachineCommunication/send_receive_messages.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
