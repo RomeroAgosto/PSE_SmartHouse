@@ -1,3 +1,7 @@
+ /**@file  create_normal_message.h
+ *      @author Deep Impact
+ *      @date 15 Dez 2017
+*/
 #ifndef COMMUNICATION_SEND_MESSAGES_C_H
 #define COMMUNICATION_SEND_MESSAGES_C_H
 
@@ -37,16 +41,35 @@ int check_received_message(char *message, int p);
 #include "../../Statemachines.X/statemachines.h"
 #include "create_normal_message.h"
 #include "../../log/log_functions.h"
-
+/**
+ *      @brief  create a message to send to pc to uptade the data
+ *       @param  messege place where the address will be allocated
+ */
+int create_normal_message(char *message);
 /*send messages*/
 /*receive messages*/
+/**
+ *      @brief  check receve message if right
+ *       @param  messege place where the address will be allocated
+ *      @param  p position of the cardinal
+ */
 long int check_received_message(char *message, int p);
+
 long int get_int(char* received_checksum,int length);
 double power(double a, double b);
 
 int get_digits(int score_int, char *score_char);
+/**
+ *      @brief  send the messege
+ *       @param  messege place where the address will be allocated
+ *     
+ */
 int send_message(char *message);
 void _UART1Handler(void);
+/**
+ *      @brief  This state machine implements the communication control, inside of this function, the decisions are made
+ *    
+ */
 int statemachine_communication(void);
 
 #endif
