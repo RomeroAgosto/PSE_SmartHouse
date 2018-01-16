@@ -33,6 +33,17 @@
 #define RED 2
  
 /**
+ * @brief set_water_heater,this funtion will turn ON/OFF the water_heater
+ * 
+ * -> In the water heater, if is state=1 will turn ON the heater, if state=0 will turn off the heater.
+ * @param state ON/OFF-> Set the state
+ * @return 0
+ * ==============================================
+ */
+
+int set_water_heater(int state);
+
+/**
  * @brief set_ligth,this funtion will turn ON/OFF the lights
  * 
  * -> In the n_ligth, if is state=1 will turn ON the light, if state=0 will turn off the light.

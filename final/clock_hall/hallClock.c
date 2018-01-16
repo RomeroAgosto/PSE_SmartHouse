@@ -85,8 +85,8 @@ void setup_half_a_hour(void (*func)(void))
     // Timer period configuration
     T4CONbits.TCKPS = TPS_256; //Select pre-scaler
     T4CONbits.T32 = 1; // 16 bit timer operation
-    
-    PR4=(float)(PBUSCLK/256*1800)-1;
+    PR4=(float)(PBUSCLK*20/256)-1; /*Set clock with 20sec*/
+    //PR4=(float)(PBUSCLK/256*1800)-1; /*Set clock with 30min*/
     TMR4=0;
     TMR5=0;
     T4CONbits.TON=1; // Start the timer

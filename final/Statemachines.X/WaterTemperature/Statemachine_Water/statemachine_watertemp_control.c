@@ -46,15 +46,18 @@ int get_water_hysteresis(){
 
         case DESIRED_TEMPERATURE:
             set_water_heater_state(FALSE);
+            set_water_heater(FALSE);
             if (water_temperature<lower_threshold_water){water_temp_state=INCREASE_WATER_TEMPERATURE;} /*Implementation of Schmitt -Trigger misses here*/
             break;
 
         case INCREASE_WATER_TEMPERATURE:
             set_water_heater_state(TRUE);
+            set_water_heater(TRUE);
             if (water_temperature>upper_threshold_water){water_temp_state=DESIRED_TEMPERATURE;}
             break;
         default:
             set_water_heater_state(FALSE);
+            set_water_heater(FALSE);
 
             break;
     }

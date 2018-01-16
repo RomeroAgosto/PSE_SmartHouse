@@ -50,7 +50,7 @@ int desired_air_temperature(int room_inserted){
  * ==============================================
  */
 
-int state_air_quality(int room_inserted, int on){
+int set_air_heater(int room_inserted, int on){
     heating_state=on;
     return 1; /*we should introduce a check, if this procedure was successful */
 }
@@ -103,21 +103,21 @@ void statemachine_air_control(int room_inserted){
     switch (air_temp_state[room_inserted]) {
 
         case DESIRED_TEMPERATURE:
-            state_air_quality(room_inserted,FALSE);
+            set_air_heater(room_inserted,FALSE);
             set_heater(room_inserted,FALSE);
             /*set next state*/
             if (air_temperature<lower_threshold_air){air_temp_state[room_inserted]=INCREASE_AIR_TEMPERATURE;} /*If the values drops below the lower threshold increase! -> Avoid shutter*/
             break;
 
         case INCREASE_AIR_TEMPERATURE:
-            state_air_quality(room_inserted,TRUE);
+            set_air_heater(room_inserted,TRUE);
             set_heater(room_inserted,TRUE);
             /*set next state*/
             if(air_temperature>lower_threshold_air){air_temp_state[room_inserted]=DESIRED_TEMPERATURE;} /* If the value exceeds the threshold, turn off -> avoid shutter*/
             break;
 
         default:
-            state_air_quality(room_inserted,0);
+            set_air_heater(room_inserted,0);
             /*set_warning();something that declares that something went wrong*/
             break;
     }

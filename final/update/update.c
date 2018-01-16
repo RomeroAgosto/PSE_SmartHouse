@@ -96,7 +96,7 @@ int get_air_temperature(int n_air)
     return current_values.air_temperature_sensor[n_air].temp;
 }
  
-int state_air_quality(int n_air,int state){
+int set_air_heater(int n_air,int state){
     current_values.air_temperature_sensor[n_air].heater=state;
     return 0; /*we should introduce a check, if this procedure was successful */
 }
@@ -128,7 +128,6 @@ int get_water_temperature()
 
 int set_water_heater_state(int state)
 {
-    PORTEbits.RE8=state;
     current_values.water_temperature.water_heater=state;
     return 0; /*we should introduce a check, if this procedure was successful */
 }

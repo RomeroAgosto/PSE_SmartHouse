@@ -1,6 +1,11 @@
 
 #include "actuators.h"
 
+int set_water_heater(int state) {
+    PORTEbits.RE8=state;
+    return 0;
+}
+
 int set_light(int n_light, int state) 
 {
     if(n_light==0){  
