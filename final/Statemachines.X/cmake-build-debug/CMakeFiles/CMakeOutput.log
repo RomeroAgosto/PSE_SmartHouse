@@ -1,4 +1,4 @@
-The system is: Linux - 4.4.0-104-generic - x86_64
+The system is: Linux - 4.4.0-109-generic - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /usr/bin/cc 
 Build flags: 
@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,33 +23,33 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5fc4d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5fc4d.dir/build.make CMakeFiles/cmTC_5fc4d.dir/build
-make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5fc4d.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_5fc4d.dir/testCCompiler.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_5fc4d
-/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5fc4d.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_5fc4d.dir/testCCompiler.c.o  -o cmTC_5fc4d 
-make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_df442/fast"
+/usr/bin/make -f CMakeFiles/cmTC_df442.dir/build.make CMakeFiles/cmTC_df442.dir/build
+make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_df442.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_df442.dir/testCCompiler.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_df442
+/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_df442.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_df442.dir/testCCompiler.c.o  -o cmTC_df442 
+make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0416e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_0416e.dir/build.make CMakeFiles/cmTC_0416e.dir/build
-make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_0416e.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_0416e.dir/CMakeCCompilerABI.c.o   -c /home/sascha/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_0416e
-/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0416e.dir/link.txt --verbose=1
-/usr/bin/cc     -v CMakeFiles/cmTC_0416e.dir/CMakeCCompilerABI.c.o  -o cmTC_0416e 
+Run Build Command:"/usr/bin/make" "cmTC_55075/fast"
+/usr/bin/make -f CMakeFiles/cmTC_55075.dir/build.make CMakeFiles/cmTC_55075.dir/build
+make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_55075.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_55075.dir/CMakeCCompilerABI.c.o   -c /home/sascha/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_55075
+/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55075.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTC_55075.dir/CMakeCCompilerABI.c.o  -o cmTC_55075 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper
@@ -59,23 +59,23 @@ Thread model: posix
 gcc version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04.3) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0416e' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_0416e /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTC_0416e.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
-make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_55075' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_55075 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTC_55075.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_0416e/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_0416e.dir/build.make CMakeFiles/cmTC_0416e.dir/build]
-  ignore line: [make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_0416e.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_0416e.dir/CMakeCCompilerABI.c.o   -c /home/sascha/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_0416e]
-  ignore line: [/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0416e.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_0416e.dir/CMakeCCompilerABI.c.o  -o cmTC_0416e ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_55075/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_55075.dir/build.make CMakeFiles/cmTC_55075.dir/build]
+  ignore line: [make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_55075.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_55075.dir/CMakeCCompilerABI.c.o   -c /home/sascha/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_55075]
+  ignore line: [/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55075.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_55075.dir/CMakeCCompilerABI.c.o  -o cmTC_55075 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper]
@@ -85,8 +85,8 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04.3) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0416e' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_0416e /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTC_0416e.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_55075' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_55075 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTC_55075.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/collect2] ==> ignore
     arg [--sysroot=/] ==> ignore
     arg [--build-id] ==> ignore
@@ -99,7 +99,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_0416e] ==> ignore
+    arg [cmTC_55075] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o] ==> ignore
@@ -111,7 +111,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..]
-    arg [CMakeFiles/cmTC_0416e.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_55075.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -143,17 +143,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0ba7e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_0ba7e.dir/build.make CMakeFiles/cmTC_0ba7e.dir/build
-make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_0ba7e.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_0ba7e.dir/feature_tests.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_0ba7e
-/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ba7e.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_0ba7e.dir/feature_tests.c.o  -o cmTC_0ba7e 
-make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_38e85/fast"
+/usr/bin/make -f CMakeFiles/cmTC_38e85.dir/build.make CMakeFiles/cmTC_38e85.dir/build
+make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_38e85.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_38e85.dir/feature_tests.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_38e85
+/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_38e85.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_38e85.dir/feature_tests.c.o  -o cmTC_38e85 
+make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -163,17 +163,17 @@ make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_87cef/fast"
-/usr/bin/make -f CMakeFiles/cmTC_87cef.dir/build.make CMakeFiles/cmTC_87cef.dir/build
-make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_87cef.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_87cef.dir/feature_tests.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_87cef
-/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_87cef.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_87cef.dir/feature_tests.c.o  -o cmTC_87cef 
-make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_d44cc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d44cc.dir/build.make CMakeFiles/cmTC_d44cc.dir/build
+make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d44cc.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_d44cc.dir/feature_tests.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_d44cc
+/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d44cc.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_d44cc.dir/feature_tests.c.o  -o cmTC_d44cc 
+make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -183,17 +183,17 @@ make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c2c02/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c2c02.dir/build.make CMakeFiles/cmTC_c2c02.dir/build
-make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c2c02.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_c2c02.dir/feature_tests.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_c2c02
-/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c2c02.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_c2c02.dir/feature_tests.c.o  -o cmTC_c2c02 
-make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_96594/fast"
+/usr/bin/make -f CMakeFiles/cmTC_96594.dir/build.make CMakeFiles/cmTC_96594.dir/build
+make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_96594.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_96594.dir/feature_tests.c.o   -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_96594
+/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96594.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_96594.dir/feature_tests.c.o  -o cmTC_96594 
+make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -201,30 +201,30 @@ make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f3599/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f3599.dir/build.make CMakeFiles/cmTC_f3599.dir/build
-make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f3599.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_f3599.dir/testCXXCompiler.cxx.o -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_f3599
-/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f3599.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_f3599.dir/testCXXCompiler.cxx.o  -o cmTC_f3599 
-make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_3ff0e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3ff0e.dir/build.make CMakeFiles/cmTC_3ff0e.dir/build
+make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3ff0e.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_3ff0e.dir/testCXXCompiler.cxx.o -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_3ff0e
+/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ff0e.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_3ff0e.dir/testCXXCompiler.cxx.o  -o cmTC_3ff0e 
+make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d8180/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d8180.dir/build.make CMakeFiles/cmTC_d8180.dir/build
-make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d8180.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_d8180.dir/CMakeCXXCompilerABI.cpp.o -c /home/sascha/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_d8180
-/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d8180.dir/link.txt --verbose=1
-/usr/bin/c++      -v CMakeFiles/cmTC_d8180.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_d8180 
+Run Build Command:"/usr/bin/make" "cmTC_fe756/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fe756.dir/build.make CMakeFiles/cmTC_fe756.dir/build
+make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_fe756.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_fe756.dir/CMakeCXXCompilerABI.cpp.o -c /home/sascha/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_fe756
+/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fe756.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTC_fe756.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_fe756 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper
@@ -234,23 +234,23 @@ Thread model: posix
 gcc version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04.3) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d8180' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_d8180 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTC_d8180.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
-make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fe756' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_fe756 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTC_fe756.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_d8180/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_d8180.dir/build.make CMakeFiles/cmTC_d8180.dir/build]
-  ignore line: [make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_d8180.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_d8180.dir/CMakeCXXCompilerABI.cpp.o -c /home/sascha/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_d8180]
-  ignore line: [/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d8180.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_d8180.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_d8180 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_fe756/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_fe756.dir/build.make CMakeFiles/cmTC_fe756.dir/build]
+  ignore line: [make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_fe756.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_fe756.dir/CMakeCXXCompilerABI.cpp.o -c /home/sascha/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_fe756]
+  ignore line: [/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fe756.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_fe756.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_fe756 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper]
@@ -260,8 +260,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04.3) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d8180' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_d8180 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTC_d8180.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fe756' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_fe756 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTC_fe756.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/collect2] ==> ignore
     arg [--sysroot=/] ==> ignore
     arg [--build-id] ==> ignore
@@ -274,7 +274,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_d8180] ==> ignore
+    arg [cmTC_fe756] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o] ==> ignore
@@ -286,7 +286,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..]
-    arg [CMakeFiles/cmTC_d8180.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_fe756.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -316,17 +316,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1y] compiler features compiled with the following output:
-Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_40d0c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_40d0c.dir/build.make CMakeFiles/cmTC_40d0c.dir/build
-make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_40d0c.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1y -o CMakeFiles/cmTC_40d0c.dir/feature_tests.cxx.o -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_40d0c
-/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40d0c.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_40d0c.dir/feature_tests.cxx.o  -o cmTC_40d0c 
-make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_06f5d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_06f5d.dir/build.make CMakeFiles/cmTC_06f5d.dir/build
+make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_06f5d.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1y -o CMakeFiles/cmTC_06f5d.dir/feature_tests.cxx.o -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_06f5d
+/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_06f5d.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_06f5d.dir/feature_tests.cxx.o  -o cmTC_06f5d 
+make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -389,17 +389,17 @@ make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_61784/fast"
-/usr/bin/make -f CMakeFiles/cmTC_61784.dir/build.make CMakeFiles/cmTC_61784.dir/build
-make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_61784.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_61784.dir/feature_tests.cxx.o -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_61784
-/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_61784.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_61784.dir/feature_tests.cxx.o  -o cmTC_61784 
-make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_6f902/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6f902.dir/build.make CMakeFiles/cmTC_6f902.dir/build
+make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6f902.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_6f902.dir/feature_tests.cxx.o -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_6f902
+/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6f902.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_6f902.dir/feature_tests.cxx.o  -o cmTC_6f902 
+make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -462,17 +462,17 @@ make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_7e4d7/fast"
-/usr/bin/make -f CMakeFiles/cmTC_7e4d7.dir/build.make CMakeFiles/cmTC_7e4d7.dir/build
-make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_7e4d7.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_7e4d7.dir/feature_tests.cxx.o -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_7e4d7
-/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7e4d7.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_7e4d7.dir/feature_tests.cxx.o  -o cmTC_7e4d7 
-make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_c6c2a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c6c2a.dir/build.make CMakeFiles/cmTC_c6c2a.dir/build
+make[1]: Entering directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c6c2a.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_c6c2a.dir/feature_tests.cxx.o -c /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_c6c2a
+/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c6c2a.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_c6c2a.dir/feature_tests.cxx.o  -o cmTC_c6c2a 
+make[1]: Leaving directory `/home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers

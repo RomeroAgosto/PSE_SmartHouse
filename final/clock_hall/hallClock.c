@@ -21,9 +21,12 @@ static int dayMonMax[12]={31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; /*!<A
 static struct tm time_hall; /*!<Clock all variable*/
 
 static void (*longside_func)()=NULL; /*!<Buffur for function that will work alongside with clock all*/
+static void (*halfan_hour)()=NULL;
 // Stetup Hall clock and can put a func run alonside clock
-void setup_clockHall(void (*func)(void))
+void setup_clock_hall(void (*func)(void))
 {
+    T2CONbits.TON=0; // Start the timer
+    T3CONbits.TON=0; // Start the timer
     longside_func=func;
     // Interrupt-related stuff
     void __attribute__( (interrupt(IPL2AUTO), vector(_TIMER_3_VECTOR))) tmr3_isr(void);
@@ -45,13 +48,11 @@ void setup_clockHall(void (*func)(void))
   // Setup to use the external interrupt controller
     INTEnableSystemMultiVectoredInt();
 }
-
 // copy the time_hall to time
-void get_timeHall(struct tm *time)
+void get_time_hall(struct tm *time)
 {
     *time=time_hall;
 }
-
 // save new time in time_hall
 int update_time(struct tm time_temp)
 {
@@ -68,8 +69,32 @@ int update_time(struct tm time_temp)
 }
 
 
+void setup_half_a_hour(void (*func)(void))
+{
+    T4CONbits.TON=0; // Start the timer
+    T5CONbits.TON=0; // Start the timer
+    halfan_hour=func;
+    // Interrupt-related stuff
+    void __attribute__( (interrupt(IPL1AUTO), vector(_TIMER_5_VECTOR))) tmr5_isr(void);
+    IFS0bits.T5IF=0; // Reset interrupt flag
+    IPC5bits.T5IP=1; //set interrupt priority (1..7) *** Make sure it matches iplx in isr declaration above ***
+    //IPC3bits.IC3IS
+    
+    IEC0bits.T5IE = 1; // Enable T2 interrupts
+   
+    // Timer period configuration
+    T4CONbits.TCKPS = TPS_256; //Select pre-scaler
+    T4CONbits.T32 = 1; // 16 bit timer operation
+    
+    //PR4=(float)(PBUSCLK*1800/(256))-1; // Compute PR value 1/1800Hz=30min  ;
+    PR4=(float)(PBUSCLK/256*1800)-1;
+    TMR4=0;
+    TMR5=0;
+    T4CONbits.TON=1; // Start the timer
+    T5CONbits.TON=1; // Start the timer
+}
 
-
+/*PRIVATE FUNCTION*/
 // will runs every second
 void increment_time()
 {
@@ -117,16 +142,22 @@ void increment_time()
             }
         }
     }
-    printf("hour:%d minutes:%d seconds:%d \n\r",time_hall.tm_hour, time_hall.tm_min, time_hall.tm_sec);
 }
 
 
-// will put clock runs every secnd
+// timer for clock runs every secnd
 void tmr3_isr(void)
 {
     increment_time();
     longside_func();
+    
     IFS0bits.T3IF=0; // Reset interrupt flag
+}
+
+void tmr5_isr(void)
+{
+    halfan_hour();
+    IFS0bits.T5IF=0; // Reset interrupt flag
 }
 /* *****************************************************************************
  End of File

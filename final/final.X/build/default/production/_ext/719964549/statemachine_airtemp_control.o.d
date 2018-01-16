@@ -10,6 +10,9 @@ build/default/production/_ext/719964549/statemachine_airtemp_control.o:  \
  ../Statemachines.X/AirTemperature/Statemachine_AirTemperature/../../LightControl/StatemachineLightControl/statemachine_light_control.h  \
  ../Statemachines.X/AirTemperature/Statemachine_AirTemperature/../../LightControl/StatemachineLightControl/../../statemachines.h  \
  ../Statemachines.X/AirTemperature/Statemachine_AirTemperature/../../../schedules/desiredValues.h  \
+ ../Statemachines.X/AirTemperature/Statemachine_AirTemperature/../../../schedules/schedules.h  \
+ ../Statemachines.X/AirTemperature/Statemachine_AirTemperature/../../../schedules/../clock_hall/hallClock.h  \
  ../Statemachines.X/AirTemperature/Statemachine_AirTemperature/../../../update/update.h  \
  ../Statemachines.X/AirTemperature/Statemachine_AirTemperature/../../../update/struct_lib.h  \
- ../Statemachines.X/AirTemperature/Statemachine_AirTemperature/../../../actuators/actuators.h 
+ ../Statemachines.X/AirTemperature/Statemachine_AirTemperature/../../../actuators/actuators.h  \
+ ../Statemachines.X/AirTemperature/Statemachine_AirTemperature/../../Technician/Structure/technician_structure.h 

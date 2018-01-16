@@ -17,7 +17,7 @@ int main(int argc, char** argv) {
     int i=0;
     while(1) {
         /*water temperature control*/
-        Statemachine_WaterControl(a);
+        statemachine_water_control(a);
     }
     return (EXIT_SUCCESS);
 }

@@ -8,21 +8,22 @@
 #ifndef DESIREDVALUES_H
 #define	DESIREDVALUES_H
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
+#include "schedules.h"
+#include <time.h>
+#include "../clock_hall/hallClock.h"
+#include <stdio.h>
 
-int compareHour(int time1, int time2);
 
-int desiredWaterTemperature();
+#define DISABLE -77
 
-int desiredAirTemperature(int n_air);
+int compare_hour(int time1, int time2);
 
-int desiredLight(int n_ligth);
+int desired_water_temperature();
 
-#ifdef	__cplusplus
-}
-#endif
+int desired_air_temperature(int n_air);
+
+int desired_light(int n_ligth);
+
 
 #endif	/* DESIREDVALUES_H */
 

@@ -6,42 +6,44 @@
 #include <plib.h>
 #include <p32xxxx.h>
 #include <time.h>
-#include "../clock_hall/hallClock.h"
-#include "../clock_hall/timer_libs.h"
 #include "../CKCommon/ConfigBits/config_bits.h"
 #include "../CKCommon/UART/uart.h"
+#include "../clock_hall/hallClock.h"
 
-#include "../message/send_receive_messages.h"
+#include "../Communication.X/StatemachineCommunication/send_receive_messages.h"
 #include "../sensors/sr.h"
-#include "../update/struct_lib.h"
 #include "../update/update.h"
+#include "../log/log_functions.h"
 
 
 #define SYSCLK  80000000L // System clock frequency, in Hz
 #define PBCLOCK 40000000L // Peripheral Bus Clock frequency, in Hz
 
-void run_alonsideWClock(void){
-    SetTimer(0);
-    SetTimer(1);
-    SetTimer(2);
-    SetTimer(3);
+void run_alonside_wclock(void){
+    set_timer(0);
+    set_timer(1);
+    set_timer(2);
+    set_timer(3);
 }
 
-
+#if 0
 void delay(unsigned int dms){
     unsigned int t;
     t=ReadCoreTimer()+40000*dms;
     while(ReadCoreTimer() < t);
 }
+#endif
 
 int main(int argc, char** argv) {
     // Performance optimization (flash access time, enable instruct and data cache,... and PBClock setup
     SYSTEMConfigPerformance(SYSCLK);
     mOSCSetPBDIV(OSC_PB_DIV_2); // This is necessary since SYSTEMConfigPerformance defaults FPBDIV to DIV_1
 
-    setup_clockHall(&run_alonsideWClock);
-    
+    setup_clock_hall(&run_alonside_wclock);
+    setup_half_a_hour(&set_log_flag);
     // Init UART and redirect tdin/stdot/stderr to UART
+   
+    int i;
     
     adc_init();
     if(UartInit(PBCLOCK, 115200) != UART_SUCCESS) {
@@ -67,34 +69,21 @@ int main(int argc, char** argv) {
     TRISG=TRISG && 0xfff0;
     TRISGbits.TRISG2=0;
     PORTG=PORTG || 0x000f;
-    TRISAbits.TRISA0=0;
-    TRISAbits.TRISA1=0;
-    TRISAbits.TRISA2=0;
-    TRISAbits.TRISA3=0;
-    TRISAbits.TRISA4=0;
-    TRISAbits.TRISA5=0;
-    TRISAbits.TRISA6=0;
-    TRISAbits.TRISA7=0;
+    TRISA=0x0000;
+    PORTA=0x0000;
     // Loop
     while (1) {
-        int i;
-        
-        updateSensors();
-        Statemachine_AirQuality();
-        //printf("air Quality done\n");
-        
+        update_sensors();
+        statemachine_air_quality(0);
         for(i=0;i<4;i++){
-            Statemachine_LightControl(i);
+            statemachine_light_control(i);
         }
-               // printf("light done\n");
-        Statemachine_WaterControl();
-                       // printf("water done\n");
-        for(i=0;i<4;i++){
-            Statemachine_AirControl(i);
-        }      
-        
-        message_handle();
-        
+        statemachine_water_control();
+        for(i=0;i<8;i++){
+            statemachine_air_control(i);
+        }       
+        statemachine_communication();  
+        log_data_saving();
     }
     return 0;
 }

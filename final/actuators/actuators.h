@@ -1,32 +1,73 @@
-/* 
- * File:   actuators.h
- * Author: Ricardo
- *
- * Created on 18 December 2017, 06:33
+ 
+/**
+ * @file actuators.h
+ * @author Deep Impact
+ * @date 15 Dez 2017
+ * @brief This file is use to turn ON/OFF ligths, heaters, ventilator and buzzer
+ * 
+ * This system will have:
+ * 1 water heater; 
+ * 4 ligth, that are using by the movement sensors; 
+ * 8 air heaters; 
+ * 1 ventilator; 
+ * 1 buzzer.
+ * 
+ * Company  Deep Impact
+ * 
+ * ==============================================
  */
-
+ 
 #ifndef ACTUATORS_H
-#define	ACTUATORS_H
-
-#ifdef	__cplusplus
-extern "C" {
-#endif
-
+#define  ACTUATORS_H
+ 
+#include <p32xxxx.h>
+#include <stdio.h>
+ 
+/**@def GREEN
+* State GREEN=0
+*/
 #define GREEN 0
+/**@def YELLOW
+* State YELLOW=1
+*/
 #define YELLOW 1
+/**@def RED
+* State RED=2
+*/
 #define RED 2
-    
-#define FALSE 0
-#define TRUE 1
-    
-int setLight(int n_light, int state);
-int SetHeater(int room, int state);
-
-
-
-#ifdef	__cplusplus
-}
-#endif
-
-#endif	/* ACTUATORS_H */
-
+ 
+/**
+ * @brief set_ligth,this funtion will turn ON/OFF the lights
+ * 
+* -> In the n_ligth, if is state=1 will turn ON the light, if state=0 will turn off the light.
+ * @param n_light 0..3-> Number of the light
+ * @param state ON/OFF-> Set the state
+ * @return 0
+ * ==============================================
+ */    
+int set_light(int n_light, int state);
+ 
+/**
+ * @brief set_heater,this funtion will turn ON/OFF the air heaters
+ * 
+ * -> Inside of room, if state=1 will turn ON the Air-Heater, if state=0 will turn off the Air-Heater.
+ * @param room 0..7-> Number of room that have the heater
+ * @param state ON/OFF -> Set the state
+ * @return 0
+ * ==============================================
+ */ 
+int set_heater(int room, int state);
+ /**
+ * @brief set_ventilator_buzzer,this funtion will turn ON/OFF the ventilator and buzzer
+ * 
+ * Will have just one ventilator and buzzer for all;
+ * ->If the state=GREEN will turn OFF the Buzzer and the Ventilator, 
+ * if state=YELLOW will turn OFF the buzzer and turn ON the Ventilator and
+ * if state=RED will turn ON the Buzzer and the Ventilator
+ * @param state GREEN/YELLOW/RED-> Set the state
+ * @return 0
+ * ==============================================
+ */ 
+int set_ventilator_buzzer(int state);
+ 
+#endif  /* ACTUATORS_H */

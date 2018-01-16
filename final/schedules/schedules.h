@@ -73,25 +73,25 @@ typedef union {
 
 int get_schedule_message(char *to_send);
 
-int setId(int arrayFunction, int arrayRoom, int arraySchedule, int schedule, int id);
+int set_id(int arrayFunction, int arrayRoom, int arraySchedule, int schedule, int id);
 
-int setValue(int arrayFunction, int arrayRoom, int arraySchedule, int schedule, int value);
+int set_value(int arrayFunction, int arrayRoom, int arraySchedule, int schedule, int value);
 
-int setEnable(int arrayFunction, int arrayRoom, int arraySchedule, int schedule, int enable);
+int set_enable(int arrayFunction, int arrayRoom, int arraySchedule, int schedule, int enable);
 
-int setStartTime(int arrayFunction, int arrayRoom, int arraySchedule, int schedule, int time);
+int set_start_time(int arrayFunction, int arrayRoom, int arraySchedule, int schedule, int time);
 
-int setStopTime(int arrayFunction, int arrayRoom, int arraySchedule, int schedule, int time);
+int set_stop_time(int arrayFunction, int arrayRoom, int arraySchedule, int schedule, int time);
 
-int getId(int arrayFunction, int arrayRoom, int arraySchedule, int schedule);
+int get_id(int arrayFunction, int arrayRoom, int arraySchedule, int schedule);
 
-int getValue(int arrayFunction, int arrayRoom, int arraySchedule, int schedule);
+int get_value(int arrayFunction, int arrayRoom, int arraySchedule, int schedule);
 
-int getEnable(int arrayFunction, int arrayRoom, int arraySchedule, int schedule);
+int get_enable(int arrayFunction, int arrayRoom, int arraySchedule, int schedule);
 
-int getStartTime(int arrayFunction, int arrayRoom, int arraySchedule, int schedule);
+int get_start_time(int arrayFunction, int arrayRoom, int arraySchedule, int schedule);
 
-int getStopTime(int arrayFunction, int arrayRoom, int arraySchedule, int schedule);
+int get_stop_time(int arrayFunction, int arrayRoom, int arraySchedule, int schedule);
 
 #endif	/* SCHEDULES_H */
 

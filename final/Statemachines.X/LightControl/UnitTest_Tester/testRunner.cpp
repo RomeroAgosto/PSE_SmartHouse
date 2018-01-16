@@ -20,17 +20,17 @@ TEST_GROUP(TEST_LIGHT_CONTROL_SINGLE) {
 
 /* Simple turn on*/
 TEST(TEST_LIGHT_CONTROL_SINGLE, TEST_LIGHT_CONTROL_TURN_ON) {
-    ResetLightStates();
+    reset_light_states();
     int length = 8;
     /* state before, setVentilation setLight state after*/
     int ResultExpected[8] = {1, 0, 0, 1, 1, 1, 1, 1};
     int Result[4], Result_complete[length];
     /* set sensor values for test*/
-    SetDesiredLight(0, TRUE);
-    SetLightSensorValues(0, TRUE);
+    set_desired_light(0, TRUE);
+    set_light_sensor_values(0, TRUE);
     int i;
     for (i = 0; i < 2; i++) {
-        Statemachine_LightControl(0, Result);
+        statemachine_light_control(0, Result);
         Result_complete[i * 4 + 0] = Result[0];
         Result_complete[i * 4 + 1] = Result[1];
         Result_complete[i * 4 + 2] = Result[2];
@@ -44,32 +44,32 @@ TEST(TEST_LIGHT_CONTROL_SINGLE, TEST_LIGHT_CONTROL_TURN_ON) {
 }
 /* Turn on and turn off after 20 Cycles*/
 TEST(TEST_LIGHT_CONTROL_SINGLE, TEST_LIGHT_CONTROL_TURN_ON_AND_OFF) {
-    ResetLightStates();
+    reset_light_states();
     int length = 12;
     /* state before, setVentilation setLight state after*/
     int ResultExpected[12] = {1, 0, 0, 1,  1, 1, 1, 1,  1,1,1,0};
     int Result[4], Result_complete[length];
     /* set sensor values for test*/
-    SetDesiredLight(0, TRUE);
-    SetLightSensorValues(0, TRUE);
+    set_desired_light(0, TRUE);
+    set_light_sensor_values(0, TRUE);
     /*Cycle standard of 20*/
-    SetNewCycle(0,20); /*important because another test would overwrite the static int -> test fails */
+    set_light_cycles(0,20); /*important because another test would overwrite the static int -> test fails */
     int i;
     for (i = 0; i < 2; i++) {
-        Statemachine_LightControl(0, Result);
+        statemachine_light_control(0, Result);
         Result_complete[i * 4 + 0] = Result[0];
         Result_complete[i * 4 + 1] = Result[1];
         Result_complete[i * 4 + 2] = Result[2];
         Result_complete[i * 4 + 3] = Result[3];
         //printf("result[]= %d\n",Result_complete[i*3]);
     }
-    SetLightSensorValues(0, FALSE);
+    set_light_sensor_values(0, FALSE);
     int j;
     for (j = 0; j<20 ; j++) {
-        SetTimer(0);
+        set_timer(0);
     }
 
-    Statemachine_LightControl(0, Result);
+    statemachine_light_control(0, Result);
     Result_complete[i * 4 + 0] = Result[0];
     Result_complete[i * 4 + 1] = Result[1];
     Result_complete[i * 4 + 2] = Result[2];
@@ -82,34 +82,34 @@ TEST(TEST_LIGHT_CONTROL_SINGLE, TEST_LIGHT_CONTROL_TURN_ON_AND_OFF) {
 }
 /* Change Cycle Time and Turn off after X Cycles*/
 TEST(TEST_LIGHT_CONTROL_SINGLE, TEST_LIGHT_CONTROL_TURN_ON_AND_OFF_CHANGED_CYCLES) {
-    ResetLightStates();
+    reset_light_states();
     int length = 16;
     /* light general turned on, state before, setLight, state after*/
     int ResultExpected[16] = {1, 0, 0, 1,  1, 1, 1, 1,  1,1,1,1, 1,1,1,0};
     int Result[4], Result_complete[length];
     /* set sensor values for test*/
-    SetDesiredLight(0, TRUE);
-    SetLightSensorValues(0, TRUE);
+    set_desired_light(0, TRUE);
+    set_light_sensor_values(0, TRUE);
 
     /*Change Cycle time */
-    SetNewCycle(0,50);
+    set_light_cycles(0,50);
     int i;
     for (i = 0; i < 2; i++) {
-        Statemachine_LightControl(0, Result);
+        statemachine_light_control(0, Result);
         Result_complete[i * 4 + 0] = Result[0];
         Result_complete[i * 4 + 1] = Result[1];
         Result_complete[i * 4 + 2] = Result[2];
         Result_complete[i * 4 + 3] = Result[3];
         //printf("result[]= %d\n",Result_complete[i*3]);
     }
-    SetLightSensorValues(0, FALSE);
+    set_light_sensor_values(0, FALSE);
     int j;
     /*go to one before timer limit exceeds */
     for (j = 0; j<49 ; j++) {
-        SetTimer(0);
+        set_timer(0);
     }
 
-    Statemachine_LightControl(0, Result);
+    statemachine_light_control(0, Result);
     Result_complete[i * 4 + 0] = Result[0];
     Result_complete[i * 4 + 1] = Result[1];
     Result_complete[i * 4 + 2] = Result[2];
@@ -117,10 +117,10 @@ TEST(TEST_LIGHT_CONTROL_SINGLE, TEST_LIGHT_CONTROL_TURN_ON_AND_OFF_CHANGED_CYCLE
     i++;
 
     /*exceed timer limit */
-    SetTimer(0);
-    SetTimer(0);
+    set_timer(0);
+    set_timer(0);
 
-    Statemachine_LightControl(0, Result);
+    statemachine_light_control(0, Result);
     Result_complete[i * 4 + 0] = Result[0];
     Result_complete[i * 4 + 1] = Result[1];
     Result_complete[i * 4 + 2] = Result[2];
@@ -132,18 +132,18 @@ TEST(TEST_LIGHT_CONTROL_SINGLE, TEST_LIGHT_CONTROL_TURN_ON_AND_OFF_CHANGED_CYCLE
 }
 /* After turning on set schedule off*/
 TEST(TEST_LIGHT_CONTROL_SINGLE, TEST_LIGHT_CONTROL_TURN_ON_AND_OFF_SETTING_DESIRED_VALUE_FALSE) {
-    ResetLightStates();
+    reset_light_states();
     int length = 16;
     /* light general turned on, state before, setLight, state after*/
     int ResultExpected[16] = {1, 0, 0, 1,  1, 1, 1, 1,  0,1,0,0,  0,0,0,0};
     int Result[4], Result_complete[length];
     /* set sensor values for test*/
-    SetDesiredLight(0, TRUE);
-    SetLightSensorValues(0, TRUE);
+    set_desired_light(0, TRUE);
+    set_light_sensor_values(0, TRUE);
 
     int i;
     for (i = 0; i < 2; i++) {
-        Statemachine_LightControl(0, Result);
+        statemachine_light_control(0, Result);
         Result_complete[i * 4 + 0] = Result[0];
         Result_complete[i * 4 + 1] = Result[1];
         Result_complete[i * 4 + 2] = Result[2];
@@ -151,9 +151,9 @@ TEST(TEST_LIGHT_CONTROL_SINGLE, TEST_LIGHT_CONTROL_TURN_ON_AND_OFF_SETTING_DESIR
         //printf("result[]= %d\n",Result_complete[i*3]);
     }
     /*set desired value to false -> sensor still active -> should turn off*/
-    SetDesiredLight(0, FALSE);
+    set_desired_light(0, FALSE);
     for (i;  i<4 ; i++) {
-        Statemachine_LightControl(0, Result);
+        statemachine_light_control(0, Result);
         Result_complete[i * 4 + 0] = Result[0];
         Result_complete[i * 4 + 1] = Result[1];
         Result_complete[i * 4 + 2] = Result[2];
@@ -180,7 +180,7 @@ TEST_GROUP(TEST_LIGHT_CONTROL_ALL_LIGHTS) {
 
 /* Simple turn on*/
 TEST(TEST_LIGHT_CONTROL_ALL_LIGHTS, TEST_LIGHT_CONTROL_TURN_ON_ALL_LIGHTS) {
-    ResetLightStates();
+    reset_light_states();
     int length = 8;
     /* state before, setVentilation setLight state after*/
     int ResultExpected[8] = {1, 0, 0, 1, 1, 1, 1, 1};
@@ -189,11 +189,11 @@ TEST(TEST_LIGHT_CONTROL_ALL_LIGHTS, TEST_LIGHT_CONTROL_TURN_ON_ALL_LIGHTS) {
     int k;
     for (k = 0; k < 4; k++) {
 
-        SetDesiredLight(k, TRUE);
-        SetLightSensorValues(k, TRUE);
+        set_desired_light(k, TRUE);
+        set_light_sensor_values(k, TRUE);
         int i;
         for (i = 0; i < 2; i++) {
-            Statemachine_LightControl(k, Result);
+            statemachine_light_control(k, Result);
             Result_complete[i * 4 + 0] = Result[0];
             Result_complete[i * 4 + 1] = Result[1];
             Result_complete[i * 4 + 2] = Result[2];
@@ -207,7 +207,7 @@ TEST(TEST_LIGHT_CONTROL_ALL_LIGHTS, TEST_LIGHT_CONTROL_TURN_ON_ALL_LIGHTS) {
 }
 /* Turn on and turn off after 20 Cycles*/
 TEST(TEST_LIGHT_CONTROL_ALL_LIGHTS, TEST_LIGHT_CONTROL_TURN_ON_AND_OFF_ALL_LIGHTS) {
-    ResetLightStates();
+    reset_light_states();
     int length = 12;
     /* state before, setVentilation setLight state after*/
     int ResultExpected[12] = {1, 0, 0, 1,  1, 1, 1, 1,  1,1,1,0};
@@ -215,13 +215,13 @@ TEST(TEST_LIGHT_CONTROL_ALL_LIGHTS, TEST_LIGHT_CONTROL_TURN_ON_AND_OFF_ALL_LIGHT
     int k;
     for(k=0;k++;k<4) {
         /* set sensor values for test*/
-        SetDesiredLight(k, TRUE);
-        SetLightSensorValues(k, TRUE);
+        set_desired_light(k, TRUE);
+        set_light_sensor_values(k, TRUE);
         /*Cycle standard of 20*/
-        SetNewCycle(k, 20); /*important because another test would overwrite the static int -> test fails */
+        set_light_cycles(k, 20); /*important because another test would overwrite the static int -> test fails */
         int i;
         for (i = 0; i < 2; i++) {
-            Statemachine_LightControl(k, Result);
+            statemachine_light_control(k, Result);
             Result_complete[i * 4 + 0] = Result[0];
             Result_complete[i * 4 + 1] = Result[1];
             Result_complete[i * 4 + 2] = Result[2];
@@ -229,13 +229,13 @@ TEST(TEST_LIGHT_CONTROL_ALL_LIGHTS, TEST_LIGHT_CONTROL_TURN_ON_AND_OFF_ALL_LIGHT
             //printf("result[]= %d\n",Result_complete[i*3]);
         }
         /*turn off, because otherwise the the state turns to on again*/
-        SetLightSensorValues(k, FALSE);
+        set_light_sensor_values(k, FALSE);
         int j;
         for (j = 0; j < 20; j++) {
-            SetTimer(0);
+            set_timer(0);
         }
 
-        Statemachine_LightControl(k, Result);
+        statemachine_light_control(k, Result);
         Result_complete[i * 4 + 0] = Result[0];
         Result_complete[i * 4 + 1] = Result[1];
         Result_complete[i * 4 + 2] = Result[2];
@@ -249,7 +249,7 @@ TEST(TEST_LIGHT_CONTROL_ALL_LIGHTS, TEST_LIGHT_CONTROL_TURN_ON_AND_OFF_ALL_LIGHT
 }
 /* Change Cycle Time and Turn off after X Cycles*/
 TEST(TEST_LIGHT_CONTROL_ALL_LIGHTS, TEST_LIGHT_CONTROL_TURN_ON_AND_OFF_CHANGED_CYCLES_ALL_LIGHTS) {
-    ResetLightStates();
+    reset_light_states();
     int length = 16;
     /* light general turned on, state before, setLight, state after*/
     int ResultExpected[16] = {1, 0, 0, 1,  1, 1, 1, 1,  1,1,1,1, 1,1,1,0};
@@ -257,28 +257,28 @@ TEST(TEST_LIGHT_CONTROL_ALL_LIGHTS, TEST_LIGHT_CONTROL_TURN_ON_AND_OFF_CHANGED_C
     /* set sensor values for test*/
     int k;
     for(k=0;k<4;k++){
-        SetDesiredLight(k, TRUE);
-        SetLightSensorValues(k, TRUE);
+        set_desired_light(k, TRUE);
+        set_light_sensor_values(k, TRUE);
 
         /*Change Cycle time */
-        SetNewCycle(k,50);
+        set_light_cycles(k,50);
         int i;
         for (i = 0; i < 2; i++) {
-            Statemachine_LightControl(k, Result);
+            statemachine_light_control(k, Result);
             Result_complete[i * 4 + 0] = Result[0];
             Result_complete[i * 4 + 1] = Result[1];
             Result_complete[i * 4 + 2] = Result[2];
             Result_complete[i * 4 + 3] = Result[3];
             //printf("result[]= %d\n",Result_complete[i*3]);
         }
-        SetLightSensorValues(k, FALSE);
+        set_light_sensor_values(k, FALSE);
         int j;
         /*go to one before timer limit exceeds */
         for (j = 0; j<49 ; j++) {
-            SetTimer(k);
+            set_timer(k);
         }
 
-        Statemachine_LightControl(k, Result);
+        statemachine_light_control(k, Result);
         Result_complete[i * 4 + 0] = Result[0];
         Result_complete[i * 4 + 1] = Result[1];
         Result_complete[i * 4 + 2] = Result[2];
@@ -286,10 +286,10 @@ TEST(TEST_LIGHT_CONTROL_ALL_LIGHTS, TEST_LIGHT_CONTROL_TURN_ON_AND_OFF_CHANGED_C
         i++;
 
         /*exceed timer limit */
-        SetTimer(k);
-        SetTimer(k);
+        set_timer(k);
+        set_timer(k);
 
-        Statemachine_LightControl(k, Result);
+        statemachine_light_control(k, Result);
         Result_complete[i * 4 + 0] = Result[0];
         Result_complete[i * 4 + 1] = Result[1];
         Result_complete[i * 4 + 2] = Result[2];
@@ -302,7 +302,7 @@ TEST(TEST_LIGHT_CONTROL_ALL_LIGHTS, TEST_LIGHT_CONTROL_TURN_ON_AND_OFF_CHANGED_C
 }
 /* After turning on set schedule off*/
 TEST(TEST_LIGHT_CONTROL_ALL_LIGHTS, TEST_LIGHT_CONTROL_TURN_ON_AND_OFF_SETTING_DESIRED_VALUE_FALSE) {
-    ResetLightStates();
+    reset_light_states();
     int length = 16;
     /* light general turned on, state before, setLight, state after*/
     int ResultExpected[16] = {1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0};
@@ -310,12 +310,12 @@ TEST(TEST_LIGHT_CONTROL_ALL_LIGHTS, TEST_LIGHT_CONTROL_TURN_ON_AND_OFF_SETTING_D
     /* set sensor values for test*/
     int k;
     for (k = 0; k < 4; k++) {
-        SetDesiredLight(k, TRUE);
-        SetLightSensorValues(k, TRUE);
+        set_desired_light(k, TRUE);
+        set_light_sensor_values(k, TRUE);
 
         int i;
         for (i = 0; i < 2; i++) {
-            Statemachine_LightControl(k, Result);
+            statemachine_light_control(k, Result);
             Result_complete[i * 4 + 0] = Result[0];
             Result_complete[i * 4 + 1] = Result[1];
             Result_complete[i * 4 + 2] = Result[2];
@@ -323,9 +323,9 @@ TEST(TEST_LIGHT_CONTROL_ALL_LIGHTS, TEST_LIGHT_CONTROL_TURN_ON_AND_OFF_SETTING_D
             //printf("result[]= %d\n",Result_complete[i*3]);
         }
         /*set desired value to false -> sensor still active -> should turn off*/
-        SetDesiredLight(k, FALSE);
+        set_desired_light(k, FALSE);
         for (i; i < 4; i++) {
-            Statemachine_LightControl(k, Result);
+            statemachine_light_control(k, Result);
             Result_complete[i * 4 + 0] = Result[0];
             Result_complete[i * 4 + 1] = Result[1];
             Result_complete[i * 4 + 2] = Result[2];

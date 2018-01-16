@@ -1,4 +1,4 @@
-/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X
+/home/sascha/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/pic_programming/Statemachines.X/cmake-build-debug
+-- Build files have been written to: /home/sascha/Embedded_Systems/Home_Automation/pse_42594_17-18_g1/final/Statemachines.X/cmake-build-debug

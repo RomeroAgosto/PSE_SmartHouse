@@ -6,23 +6,22 @@
 #define DESIRED_TEMPERATURE 0  /*!< Represents a state*/
 #define INCREASE_AIR_TEMPERATURE 1 /*!< Represents a state*/
 
-#define FALSE 0
-#define TRUE 1
+
 
 static int upper_threshold_air; /*!< the upper_threshold_air is the upper band of the trigger in order to avoid shuttering*/
 static int lower_threshold_air; /*!< the lower_threshold_air is the lower band of the trigger in order to avoid shuttering*/
 
 
 #if UNITTEST == 1
-int desiredAirTemperature(int room);
-int SetHeatingAirState(int room, int on);
-int GetAirTemperature(int room);
-void Statemachine_AirControl(int room, int *test);
-int setdesiredTemp(int room,int temp);
-int SetAirTemperature(int room, int temp);
+int desired_air_temperature(int room);
+int state_air_quality(int room, int on);
+int get_air_temperature(int room);
+void statemachine_air_control(int room, int *test);
+int set_desired_temp(int room,int temp);
+int set_air_temperature(int room, int temp);
 void reset_state_air_temp(int room);
 #else
-void Statemachine_AirControl(int room);
+void statemachine_air_control(int room);
 
 #endif
 

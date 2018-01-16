@@ -17,10 +17,20 @@
       </logicalFolder>
       <logicalFolder name="clock_hall" displayName="clock_hall" projectFiles="true">
         <itemPath>../clock_hall/hallClock.h</itemPath>
-        <itemPath>../clock_hall/timer_libs.h</itemPath>
       </logicalFolder>
-      <logicalFolder name="message" displayName="message" projectFiles="true">
-        <itemPath>../message/send_receive_messages.h</itemPath>
+      <logicalFolder name="Communication.X"
+                     displayName="Communication.X"
+                     projectFiles="true">
+        <logicalFolder name="StatemachineCommunication"
+                       displayName="StatemachineCommunication"
+                       projectFiles="true">
+          <itemPath>../Communication.X/StatemachineCommunication/create_normal_message.h</itemPath>
+          <itemPath>../Communication.X/StatemachineCommunication/send_receive_messages.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="log" displayName="log" projectFiles="true">
+        <itemPath>../log/log_functions.h</itemPath>
+        <itemPath>../log/log_stru.h</itemPath>
       </logicalFolder>
       <logicalFolder name="schedules" displayName="schedules" projectFiles="true">
         <itemPath>../schedules/desiredValues.h</itemPath>
@@ -67,6 +77,11 @@
                          projectFiles="true">
           </logicalFolder>
         </logicalFolder>
+        <logicalFolder name="Technician" displayName="Technician" projectFiles="true">
+          <logicalFolder name="Structure" displayName="Structure" projectFiles="true">
+            <itemPath>../Statemachines.X/Technician/Structure/technician_structure.h</itemPath>
+          </logicalFolder>
+        </logicalFolder>
         <logicalFolder name="WaterTemperature"
                        displayName="WaterTemperature"
                        projectFiles="true">
@@ -105,12 +120,21 @@
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="clock_hall" displayName="clock_hall" projectFiles="true">
+        <itemPath>../clock_hall/get_time.c</itemPath>
         <itemPath>../clock_hall/hallClock.c</itemPath>
-        <itemPath>../clock_hall/timer_libs.c</itemPath>
       </logicalFolder>
-      <logicalFolder name="message" displayName="message" projectFiles="true">
-        <itemPath>../message/create_normal_message.c</itemPath>
-        <itemPath>../message/send_receive_messages.c</itemPath>
+      <logicalFolder name="Communication.X"
+                     displayName="Communication.X"
+                     projectFiles="true">
+        <logicalFolder name="StatemachineCommunication"
+                       displayName="StatemachineCommunication"
+                       projectFiles="true">
+          <itemPath>../Communication.X/StatemachineCommunication/send_receive_messages.c</itemPath>
+          <itemPath>../Communication.X/StatemachineCommunication/create_normal_message.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="log" displayName="log" projectFiles="true">
+        <itemPath>../log/log_functions.c</itemPath>
       </logicalFolder>
       <logicalFolder name="schedules" displayName="schedules" projectFiles="true">
         <itemPath>../schedules/desiredValues.c</itemPath>
@@ -153,6 +177,11 @@
             <itemPath>../Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.c</itemPath>
           </logicalFolder>
         </logicalFolder>
+        <logicalFolder name="Technician" displayName="Technician" projectFiles="true">
+          <logicalFolder name="Structure" displayName="Structure" projectFiles="true">
+            <itemPath>../Statemachines.X/Technician/Structure/technician_structure.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
         <logicalFolder name="WaterTemperature"
                        displayName="WaterTemperature"
                        projectFiles="true">
@@ -177,18 +206,22 @@
   <sourceRootList>
     <Elem>.</Elem>
     <Elem>../clock_hall</Elem>
-    <Elem>../CKCommon/ConfigBits</Elem>
-    <Elem>../CKCommon/UART</Elem>
     <Elem>../statemachine</Elem>
-    <Elem>../../pic_programming/Statemachines.X</Elem>
     <Elem>../CKCommon</Elem>
     <Elem>../sensors</Elem>
     <Elem>../actuators</Elem>
     <Elem>../schedules</Elem>
     <Elem>../message</Elem>
     <Elem>../update</Elem>
+    <Elem>../CKCommon/ConfigBits</Elem>
+    <Elem>../CKCommon/UART</Elem>
+    <Elem>../../pic_programming/Statemachines.X</Elem>
     <Elem>../Statemachines.X</Elem>
     <Elem>../Statemachines.X </Elem>
+    <Elem>../log</Elem>
+    <Elem>../../schedule</Elem>
+    <Elem>../../pic_programming/Communication.X</Elem>
+    <Elem>../Communication.X</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -201,7 +234,7 @@
         <platformTool>PK3OBPlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>1.44</languageToolchainVersion>
-        <platform>3</platform>
+        <platform>2</platform>
       </toolsSet>
       <compileType>
         <linkerTool>

@@ -1,17 +1,27 @@
 #include "statemachine_watertemp_control.h"
+int water_hysteresis=5;
+int water_temp_state;
+
 #if UNITTEST == 1
-static int desired_test;
-static int water_temp;
+int desired_test;
+int water_temp;
 int heater_state;
 #include <stdio.h>
-int reset_state_water_temp(){
-    water_temp_state=0;
+int set_water_hysteresis(int hysteresis){
+    water_hysteresis=hysteresis;
+}
+
+int get_water_hysteresis(){
+    return water_hysteresis;
 }
 int set_water_temp(int temp){
     water_temp=temp;
 }
+int reset_state_water_temp(){
+    water_temp_state=0;
+}
 int GetWaterTemperature(){
-    return water_temp; /* dummy which returns a temperature to check the behaviour of the state machine*/
+    return water_temp;
 }
 int set_desired_temperature(int temp){
     desired_test=temp;
@@ -34,15 +44,17 @@ int SetWaterHeaterSate(int set){
 #endif
     int water_temperature=GetWaterTemperature();
     int desired_temperature= desiredWaterTemperature();
-
-    upper_threshold_water=desired_temperature+5; /*trigger band is 10 degrees!*/
-    lower_threshold_water=desired_temperature-5;
+        water_hysteresis=get_water_hysteresis();
+    int upper_threshold_water=desired_temperature+water_hysteresis;
+    int lower_threshold_water=desired_temperature-water_hysteresis;
     /* states are stored in the states variables. so higher function can easily access the current states*/
     switch (water_temp_state) {
 
         case DESIRED_TEMPERATURE:
             SetWaterHeaterSate(FALSE);
-            if (water_temperature<lower_threshold_water){water_temp_state=INCREASE_WATER_TEMPERATURE;} /*Implementation of Schmitt -Trigger misses here*/
+            if (water_temperature<lower_threshold_water){
+                water_temp_state=INCREASE_WATER_TEMPERATURE;
+            } /*Implementation of Schmitt -Trigger misses here*/
             break;
 
         case INCREASE_WATER_TEMPERATURE:
