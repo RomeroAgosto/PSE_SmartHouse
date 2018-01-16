@@ -1,7 +1,7 @@
 #include "technician_structure.h"
 #include <stdio.h>
 
-technician technician1;
+technician technician_settings;
 
 int message_counter_technician=2;
 
@@ -41,42 +41,42 @@ int set_new_thresholds(char *message,int p) {
 }
 int set_light_cycles(int light_number, int cycle_time){
     message_counter_technician=message_counter_technician+2;
-    technician1.settings.cycles_light[light_number]=cycle_time;
+    technician_settings.cycles_light[light_number]=cycle_time;
 }
 int get_light_cycles(int light_number){
-    return technician1.settings.cycles_light[light_number];
+    return technician_settings.cycles_light[light_number];
 }
 
 int set_air_temp_hysteresis(int room, int hysteresis){
     message_counter_technician++;
-    technician1.settings.hysteresis_air_temp[room]=hysteresis;
+    technician_settings.hysteresis_air_temp[room]=hysteresis;
 }
 int get_air_temp_hysteresis(int room){
-    return technician1.settings.hysteresis_air_temp[room];
+    return technician_settings.hysteresis_air_temp[room];
 }
 
 int set_air_quality_hysteresis(int risk_level,int sensor, int value){
-    technician1.settings.hysteresis_air_quality[risk_level][sensor]=value;
+    technician_settings.hysteresis_air_quality[risk_level][sensor]=value;
     message_counter_technician=message_counter_technician+2;
 
 }
 int get_air_quality_hysteresis(int risk_level,int sensor){
-    return technician1.settings.hysteresis_air_quality[risk_level][sensor];
+    return technician_settings.hysteresis_air_quality[risk_level][sensor];
 }
 
 int set_air_quality_threshold(int risk_level, int threshold, int value){
-    technician1.settings.threshold_air_quality[risk_level][threshold]=value;
+    technician_settings.threshold_air_quality[risk_level][threshold]=value;
     message_counter_technician=message_counter_technician+4;
 }
 int get_air_quality_threshold(int risk_level, int threshold){
-    return technician1.settings.threshold_air_quality[risk_level][threshold];
+    return technician_settings.threshold_air_quality[risk_level][threshold];
 }
 
 int set_water_hysteresis(int hysteresis){
-    technician1.settings.hysteresis_water_temp=hysteresis;
+    technician_settings.hysteresis_water_temp=hysteresis;
     message_counter_technician++;
 }
 
 int get_water_hysteresis(){
-    return technician1.settings.hysteresis_water_temp;
+    return technician_settings.hysteresis_water_temp;
 }

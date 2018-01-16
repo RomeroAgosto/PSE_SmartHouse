@@ -2,6 +2,26 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/samue/OneDrive%20-%20Universidade%20de%20Aveiro/PSE/code_ua/pse_42594_17-18_g1/final/update/update.c</file>
+            <file>file:/C:/Users/samue/OneDrive%20-%20Universidade%20de%20Aveiro/PSE/code_ua/pse_42594_17-18_g1/final/Statemachines.X/Technician/Structure/technician_structure.c</file>
+            <file>file:/C:/Users/samue/OneDrive%20-%20Universidade%20de%20Aveiro/PSE/code_ua/pse_42594_17-18_g1/final/actuators/actuators.h</file>
+            <file>file:/C:/Users/samue/OneDrive%20-%20Universidade%20de%20Aveiro/PSE/code_ua/pse_42594_17-18_g1/final/clock_hall/hallClock.c</file>
+            <file>file:/C:/Users/samue/OneDrive%20-%20Universidade%20de%20Aveiro/PSE/code_ua/pse_42594_17-18_g1/final/log/log_functions.h</file>
+            <file>file:/C:/Users/samue/OneDrive%20-%20Universidade%20de%20Aveiro/PSE/code_ua/pse_42594_17-18_g1/final/schedules/get_schedule_message.c</file>
+            <file>file:/C:/Users/samue/OneDrive%20-%20Universidade%20de%20Aveiro/PSE/code_ua/pse_42594_17-18_g1/final/log/log_functions.c</file>
+            <file>file:/C:/Users/samue/OneDrive%20-%20Universidade%20de%20Aveiro/PSE/code_ua/pse_42594_17-18_g1/final/Statemachines.X/Technician/Structure/technician_structure.h</file>
+            <file>file:/C:/Users/samue/OneDrive%20-%20Universidade%20de%20Aveiro/PSE/code_ua/pse_42594_17-18_g1/final/schedules/schedules.h</file>
+            <file>file:/C:/Users/samue/OneDrive%20-%20Universidade%20de%20Aveiro/PSE/code_ua/pse_42594_17-18_g1/final/log/log_stru.h</file>
+            <file>file:/C:/Users/samue/OneDrive%20-%20Universidade%20de%20Aveiro/PSE/code_ua/pse_42594_17-18_g1/final/Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.c</file>
+            <file>file:/C:/Users/samue/OneDrive%20-%20Universidade%20de%20Aveiro/PSE/code_ua/pse_42594_17-18_g1/final/schedules/desiredValues.h</file>
+            <file>file:/C:/Users/samue/OneDrive%20-%20Universidade%20de%20Aveiro/PSE/code_ua/pse_42594_17-18_g1/final/Communication.X/StatemachineCommunication/send_receive_messages.h</file>
+            <file>file:/C:/Users/samue/OneDrive%20-%20Universidade%20de%20Aveiro/PSE/code_ua/pse_42594_17-18_g1/final/Communication.X/StatemachineCommunication/create_normal_message.h</file>
+            <file>file:/C:/Users/samue/OneDrive%20-%20Universidade%20de%20Aveiro/PSE/code_ua/pse_42594_17-18_g1/final/clock_hall/hallClock.h</file>
+            <file>file:/C:/Users/samue/OneDrive%20-%20Universidade%20de%20Aveiro/PSE/code_ua/pse_42594_17-18_g1/final/sensors/adc_init.h</file>
+            <file>file:/C:/Users/samue/OneDrive%20-%20Universidade%20de%20Aveiro/PSE/code_ua/pse_42594_17-18_g1/final/update/struct_lib.h</file>
+            <file>file:/C:/Users/samue/OneDrive%20-%20Universidade%20de%20Aveiro/PSE/code_ua/pse_42594_17-18_g1/final/Communication.X/StatemachineCommunication/create_normal_message.c</file>
+            <file>file:/C:/Users/samue/OneDrive%20-%20Universidade%20de%20Aveiro/PSE/code_ua/pse_42594_17-18_g1/final/schedules/desiredValues.c</file>
+        </group>
     </open-files>
 </project-private>

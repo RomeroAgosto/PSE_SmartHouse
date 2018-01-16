@@ -37,7 +37,7 @@ int check_received_message(char *message, int p);
 #include "../../Statemachines.X/statemachines.h"
 #include "create_normal_message.h"
 #include "../../log/log_functions.h"
-int create_normal_message(char *message);
+
 /*send messages*/
 /*receive messages*/
 long int check_received_message(char *message, int p);
