@@ -10,7 +10,7 @@
 #include "../CKCommon/UART/uart.h"
 #include "../clock_hall/hallClock.h"
 
-#include "../../pic_programming/Communication.X/StatemachineCommunication/send_receive_messages.h"
+#include "../Communication.X/StatemachineCommunication/send_receive_messages.h"
 #include "../sensors/sr.h"
 #include "../update/update.h"
 #include "../log/log_functions.h"

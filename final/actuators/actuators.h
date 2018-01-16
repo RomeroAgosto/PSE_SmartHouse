@@ -16,8 +16,6 @@ extern "C" {
 #define YELLOW 1
 #define RED 2
     
-#define FALSE 0
-#define TRUE 1
     
 int setLight(int n_light, int state);
 int SetHeater(int room, int state);

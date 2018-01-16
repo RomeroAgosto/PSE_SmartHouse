@@ -7,8 +7,7 @@
 
 #define DESIRED_TEMPERATURE 0
 #define INCREASE_WATER_TEMPERATURE 1
-#define FALSE 0
-#define TRUE 1
+
 
 static int water_temp_state=0;
 

@@ -3,24 +3,25 @@ main.c  \
  ../CKCommon/ConfigBits/config_bits.h  \
 ../CKCommon/UART/uart.h  \
  ../clock_hall/hallClock.h  \
- ../../pic_programming/Communication.X/StatemachineCommunication/send_receive_messages.h  \
- ../../pic_programming/Communication.X/StatemachineCommunication/../../../final/update/update.h  \
- ../../pic_programming/Communication.X/StatemachineCommunication/../../../final/update/struct_lib.h  \
- ../../pic_programming/Communication.X/StatemachineCommunication/../../Statemachines.X/statemachines.h  \
- ../../pic_programming/Communication.X/StatemachineCommunication/../../Statemachines.X/AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.h  \
- ../../pic_programming/Communication.X/StatemachineCommunication/../../Statemachines.X/AirTemperature/Statemachine_AirTemperature/../../statemachines.h  \
- ../../pic_programming/Communication.X/StatemachineCommunication/../../Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.h  \
- ../../pic_programming/Communication.X/StatemachineCommunication/../../Statemachines.X/AirQuality/Statemachine_AirQuality/../../statemachines.h  \
- ../../pic_programming/Communication.X/StatemachineCommunication/../../Statemachines.X/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.h  \
- ../../pic_programming/Communication.X/StatemachineCommunication/../../Statemachines.X/WaterTemperature/Statemachine_Water/../../statemachines.h  \
- ../../pic_programming/Communication.X/StatemachineCommunication/../../Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.h  \
- ../../pic_programming/Communication.X/StatemachineCommunication/../../Statemachines.X/LightControl/StatemachineLightControl/../../statemachines.h  \
- ../../pic_programming/Communication.X/StatemachineCommunication/../../Statemachines.X/../../final/schedules/desiredValues.h  \
- ../../pic_programming/Communication.X/StatemachineCommunication/../../Statemachines.X/../../final/update/update.h  \
- ../../pic_programming/Communication.X/StatemachineCommunication/../../Statemachines.X/Technician/Structure/technician_structure.h  \
- ../../pic_programming/Communication.X/StatemachineCommunication/create_normal_message.h  \
- ../../pic_programming/Communication.X/StatemachineCommunication/send_receive_messages.h  \
- ../../pic_programming/Communication.X/StatemachineCommunication/../../../final/log/log_functions.h  \
+ ../Communication.X/StatemachineCommunication/send_receive_messages.h  \
+ ../Communication.X/StatemachineCommunication/../../../final/update/update.h  \
+ ../Communication.X/StatemachineCommunication/../../../final/update/struct_lib.h  \
+ ../Communication.X/StatemachineCommunication/../../Statemachines.X/statemachines.h  \
+ ../Communication.X/StatemachineCommunication/../../Statemachines.X/AirTemperature/Statemachine_AirTemperature/statemachine_airtemp_control.h  \
+ ../Communication.X/StatemachineCommunication/../../Statemachines.X/AirTemperature/Statemachine_AirTemperature/../../statemachines.h  \
+ ../Communication.X/StatemachineCommunication/../../Statemachines.X/AirQuality/Statemachine_AirQuality/statemachine_airquality_control.h  \
+ ../Communication.X/StatemachineCommunication/../../Statemachines.X/AirQuality/Statemachine_AirQuality/../../statemachines.h  \
+ ../Communication.X/StatemachineCommunication/../../Statemachines.X/WaterTemperature/Statemachine_Water/statemachine_watertemp_control.h  \
+ ../Communication.X/StatemachineCommunication/../../Statemachines.X/WaterTemperature/Statemachine_Water/../../statemachines.h  \
+ ../Communication.X/StatemachineCommunication/../../Statemachines.X/LightControl/StatemachineLightControl/statemachine_light_control.h  \
+ ../Communication.X/StatemachineCommunication/../../Statemachines.X/LightControl/StatemachineLightControl/../../statemachines.h  \
+ ../Communication.X/StatemachineCommunication/../../Statemachines.X/../schedules/desiredValues.h  \
+ ../Communication.X/StatemachineCommunication/../../Statemachines.X/../update/update.h  \
+ ../Communication.X/StatemachineCommunication/../../Statemachines.X/../actuators/actuators.h  \
+ ../Communication.X/StatemachineCommunication/../../Statemachines.X/Technician/Structure/technician_structure.h  \
+ ../Communication.X/StatemachineCommunication/create_normal_message.h  \
+ ../Communication.X/StatemachineCommunication/send_receive_messages.h  \
+ ../Communication.X/StatemachineCommunication/../../../final/log/log_functions.h  \
  ../sensors/sr.h  \
 ../update/update.h  \
 ../log/log_functions.h 

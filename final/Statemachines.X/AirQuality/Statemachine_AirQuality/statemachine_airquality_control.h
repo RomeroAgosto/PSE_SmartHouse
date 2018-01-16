@@ -8,8 +8,6 @@
 #define RED 2
 
 
-#define TRUE 1
-#define FALSE 0
 
 
 int GetAirQualityState(int room);
@@ -19,10 +17,10 @@ int SetWarning(void);
 #if UNITTEST == 1
 void Statemachine_AirQuality(int room,int *test);
 void setVentilatorBuzzer( int color);
-void GetAirQuality(int room, int *sensor_values);
+//void GetAirQuality(int room, int *sensor_values);
 void SetAirQuality(int room, int *input_values);
 void SetLightQuality(int room, int color);
-void SetVentilatorState(int room,int on);
+//void SetVentilatorState(int room,int on);
 void ResetAirQualityState();
 int set_air_quality_hysteresis(int risk_level,int sensor, int value);
 int get_air_quality_hysteresis(int risk_level,int sensor);

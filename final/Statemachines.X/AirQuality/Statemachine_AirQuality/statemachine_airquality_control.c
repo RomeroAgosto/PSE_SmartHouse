@@ -41,7 +41,7 @@ int SetWarning(){
  * ==============================================
  */
 
-#if UNITTEST == TRUE
+#if UNITTEST == 1
 static int sensor_values_test[4][5];
 static int thresholds[4][2][5]={ {{20,600,25,100,2},{65,5000,200,200,100}},\
                                  {{20,600,25,100,2},{65,5000,200,200,100}},\

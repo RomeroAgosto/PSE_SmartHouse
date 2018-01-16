@@ -40,7 +40,7 @@ int SetTimer(int light)
     return 1;
 }
 
-#if UNITTEST==TRUE
+#if UNITTEST==1
 int ResetLightStates(){
     light_state[0]=0;
     light_state[1]=0;

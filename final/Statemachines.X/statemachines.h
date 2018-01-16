@@ -14,14 +14,18 @@
 /* if UNITTEST is 1 a unittest can be performed -> dummyfunction for the sensor/desired value generation are introduced*/
 #define UNITTEST 0
 
-#define TRUE 1
-#define FALSE 0
-
 #if UNITTEST==0
+#define _SUPPRESS_PLIB_WARNING 1
+#include <plib.h>
 #include "../schedules/desiredValues.h"
 #include "../update/update.h"
 #include "../actuators/actuators.h"
 #include "Technician/Structure/technician_structure.h"
+
+#else 
+
+#define TRUE 1
+#define FALSE 0
 #endif
 
 
