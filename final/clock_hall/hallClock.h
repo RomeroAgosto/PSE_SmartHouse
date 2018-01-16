@@ -20,10 +20,13 @@ void setup_clockHall(void (*func)(void));
 
 /** 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 * \brief This func will run the clock at 1Hz in a timer at 2Hz
+=======
+* @brief This func will save the struct values of clock_hall inside of the pointer
+* @param  tm  Is a pointer to a structure that will run alongside with timer
+>>>>>>> Stashed changes
 * 
-* \author Samuel Simoes
-* \date 03-11-2017  
 */
 void inc_clock(void);
 /** 
