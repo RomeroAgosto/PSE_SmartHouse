@@ -1,15 +1,13 @@
 #include <time.h>
 #include <stdio.h>
 static time_t read_time;
-int get_time(char *to_send)
-{
+int get_time(char *to_send){
     struct tm time;
 
     int i,year_value,month_value,day_value,hour_value,minute_value,second_value;
     char n_year[4], n_month[2], n_day[2],n_hour[2],n_min[2], n_sec[2],weekday_value;
     // message format #@AAAAMMWDDHHmmss
-    for(i=0;i<4;i++)
-    {
+    for(i=0;i<4;i++)    {
         n_year[i]=to_send[i+2];
     }
     for (i = 0; i < 2; i++) {

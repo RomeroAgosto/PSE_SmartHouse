@@ -7,11 +7,6 @@
 #define INCREASE_AIR_TEMPERATURE 1 /*!< Represents a state*/
 
 
-
-static int upper_threshold_air; /*!< the upper_threshold_air is the upper band of the trigger in order to avoid shuttering*/
-static int lower_threshold_air; /*!< the lower_threshold_air is the lower band of the trigger in order to avoid shuttering*/
-
-
 #if UNITTEST == 1
 int desired_air_temperature(int room);
 int set_air_heater(int room, int on);

@@ -5,28 +5,8 @@
 #include <p32xxxx.h>
 
 static sensorvalues current_values;
-/** 
-  @Function
-    int get_air_quality(int n_air,struct air_quality_data *air_quality) 
  
-  @Summary
-    Save in a given pointer the corrent values of air quality 
- 
-  @Parameters
-    @param param1 Describe the first parameter to the function.
-    
-    @param param2 Describe the second parameter to the function.
- 
-  @Returns
-    List (if feasible) and describe the return values of the function.
-    <ul>
-      <li>1   Indicates an error occurred
-      <li>0   Indicates an error did not occur
-    </ul>
- */
- 
-int update_sensors() 
-{
+int update_sensors(){
     static int p[20];
     static int i, j;
     air_temp_analog(p);
@@ -85,14 +65,12 @@ int get_air_quality(int n_air, int *p){
 }
 
 
-int set_ventilator_state(int room_id, int state)
-{
+int set_ventilator_state(int room_id, int state){
     current_values.air_quality_sensor[room_id].ventilator=state;   
     return 0;
 }
 /*## AIR TEMPERATURE ##*/
-int get_air_temperature(int n_air)
-{
+int get_air_temperature(int n_air){
     return current_values.air_temperature_sensor[n_air].temp;
 }
  
@@ -104,14 +82,12 @@ int get_ventilator_state() {
     return current_values.air_quality_sensor[0].ventilator;
 }
 /*## Ligth ##*/
-int get_light_control(int n_ligth)
-{
+int get_light_control(int n_ligth){
     return current_values.light_sensors[n_ligth].movement_sensor;
    
 }
  
-int set_light_state(int n_ligth,int state)
-{
+int set_light_state(int n_ligth,int state){
     current_values.light_sensors[n_ligth].ligth_state=state;
     return 0; /*we should introduce a check, if this procedure was successful */
 }
@@ -121,13 +97,11 @@ int get_light_state(int n_ligth) {
 }
  
 /*## WATER TEMPERATURE ##*/
-int get_water_temperature()
-{
+int get_water_temperature(){
     return current_values.water_temperature.temp;
 }
 
-int set_water_heater_state(int state)
-{
+int set_water_heater_state(int state){
     current_values.water_temperature.water_heater=state;
     return 0; /*we should introduce a check, if this procedure was successful */
 }

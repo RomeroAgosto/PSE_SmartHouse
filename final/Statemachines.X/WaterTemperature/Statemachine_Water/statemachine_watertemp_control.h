@@ -11,8 +11,6 @@
 
 static int water_temp_state=0;
 
-static int upper_threshold_water=65; /*just to provide initial values*/
-static int lower_threshold_water=55;
 
 #if UNITTEST==1
 int set_water_hysteresis(int limit);

@@ -3,16 +3,6 @@
 static int counter[4]={0,0,0,0}; /* Counter for all timer/lights */
 static int light_state[4]={0,0,0,0};//={0};
 
-/**
- *      @brief  set_timer, Counts the seconds till the Cycles [ in seconds ] is reached 1 Cycle <-> 1s, This function is called from the Clock interrupt
- *      @param  light
- *     @author  Sascha Marquardt, sascha.marquardt@ua.pt
- *     Created  20-Set-2017
- *     Company  DeepImpact
- *   Copyright  Copyright (c) 2017, Sascha Marquardt
- *
- * ==============================================
- */
 int set_timer(int light)
 {
     counter[light]++;/*increase counter by a timer overrun -> counter[] just local known -> setter function*/
@@ -38,16 +28,7 @@ int reset_light_states(){
 int set_light(int light,int a){
     return 0;
 };
-/**
- *      @brief  returns the desired light temperature -> _debug
- *      @param  light room number
- *     @author  Sascha Marquardt, sascha.marquardt@ua.pt
- *     Created  20-Set-2017
- *     Company  DeepImpact
- *   Copyright  Copyright (c) 2017, Sascha Marquardt
- *
- * ==============================================
- */
+
 static int DesiredLightValue[4];
 void set_desired_light(int light, int value){
     DesiredLightValue[light]=value;
@@ -55,16 +36,7 @@ void set_desired_light(int light, int value){
 int desired_light(int light){
 return DesiredLightValue[light];
     }
-/**
- *      @brief  Set the movement sensors
- *      @param  light number [in which aresa]
- *     @author  Sascha Marquardt, sascha.marquardt@ua.pt
- *     Created  20-Set-2017
- *     Company  DeepImpact
- *   Copyright  Copyright (c) 2017, Sascha Marquardt
- *
- * ==============================================
- */
+
 static int light_sensor_value[4];
 int set_light_sensor_values(int light, int value){
     light_sensor_value[light]=value;
@@ -74,34 +46,13 @@ int get_light_control(int light) //just for test int
 {
     return light_sensor_value[light];
 }
-/**
- *      @brief  Set the light state during _Debugging
- *      @param  light number [in which room]
- *      @param  Choose if on = TRUE or off = FALSE
- *     @author  Sascha Marquardt, sascha.marquardt@ua.pt
- *     Created  20-Set-2017
- *     Company  DeepImpact
- *   Copyright  Copyright (c) 2017, Sascha Marquardt
- *
- * ==============================================
- */
 static int ActivatedLights[4];
 int set_light_state(int light, int ON )
 {
         ActivatedLights[light]=ON;
     return 0;
 }
-/**
- *      @brief  This state machine implements the light control, inside of this function, the decisions are made
- *      @param  light number [in which room]
- *      @states turned on == TRUE and turned_off == FALSE
- *     @author  Sascha Marquardt, sascha.marquardt@ua.pt
- *     Created  20-Set-2017
- *     Company  DeepImpact
- *   Copyright  Copyright (c) 2017, Sascha Marquardt
- *
- * ==============================================
- */
+
 void statemachine_light_control(int light,int *test) {
     int turned_on= desired_light(light);/*!< saved if the light should be turned on */
     test[0]=turned_on;

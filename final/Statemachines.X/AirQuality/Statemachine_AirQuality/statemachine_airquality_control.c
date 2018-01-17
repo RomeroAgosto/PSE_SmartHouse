@@ -1,53 +1,15 @@
 #include "statemachine_airquality_control.h"
 static int air_quality_state[4];/*!< statemachine states are in general protected and just inside of the function known */
 
-
-/**
- *      @brief Since the state is protected inside of the function, other functions can get the state thorugh this function
- *      @return returns the current state of the air quality control -> RED/YELLOW/GREEN
- *     Created  20-Set-2017
- *     Company  Deep Impact
- *   Copyright  Copyright (c) 2017, Sascha Marquardt
- *
- * ==============================================
- */
 int get_air_quality_state(int room){
     return air_quality_state[room];
 }
-
-
-/**
- *      @brief  Function sets a alarm, connect to a pin, here a dummy pin
- *     Created  20-Set-2017
- *     Company  Deep Impact
- *   Copyright  Copyright (c) 2017, Sascha Marquardt
- *
- * ==============================================
- */
-
-int set_warning(){
-    //printf("dummy for message warning");
-}
-
-
-
-/**
- *      @brief  This state machine implements the air quality control, inside of this function, the decisions are made
- *      @states The states used to describe the behavior are RED GREEN and YELLOW and they represent the current air quality
- *     Created  20-Set-2017
- *     Company  Deep Impact
- *   Copyright  Copyright (c) 2017, Sascha Marquardt
- *
- * ==============================================
- */
 
 #if UNITTEST == 1
 static int sensor_values_test[4][5];
 static int thresholds[2][5]={{20,600,25,100,2},{65,5000,200,200,100}};  /*!< Thresholds for the specific air quality parameter -> can be adapted by a setter function*/
 
 static int bounds_sensorvalues[2][5]={{2, 20, 2,5,1},{2, 20, 2, 2,2}};/*!<Hysteresis for the air quality [2] indicates the stage (red yellow), [5] indicates the sensorvalue*/
-
-
 
 int set_air_quality_hysteresis(int risk_level,int sensor, int value){
     bounds_sensorvalues[risk_level][sensor]=value;
@@ -146,7 +108,6 @@ void statemachine_air_quality(int room) {
         case RED:
             set_ventilator_buzzer(RED);
             set_ventilator_state(room, TRUE);/* it is just possible to turn off the ventilation when the Air quality is good!*/
-            set_warning();/*something that declares that something went wrong*/
             /* Green overwrites Yellow -> first check if yellow condition fullfilled, if even a Green is, change to Green */
             for (j = 0; j <5 ; j++) {
                 if (sensor_values[j] < get_air_quality_threshold(1,j) - get_air_quality_hysteresis(1,j)) {yellow_count++;}
@@ -161,8 +122,6 @@ void statemachine_air_quality(int room) {
         default:
             set_ventilator_buzzer(RED);
             set_ventilator_state(room,TRUE);
-
-            set_warning();/*something that declares that something went wrong*/
             break;
     }
 #if UNITTEST == 1

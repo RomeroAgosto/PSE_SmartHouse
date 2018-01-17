@@ -3,8 +3,7 @@
 #include <stdio.h>
 
  
-int  get_schedule_message(char *to_send)
-{  
+int  get_schedule_message(char *to_send){  
     int i,start,stop,value;
     char n_start[4];
     char n_stop[4];
@@ -19,8 +18,7 @@ int  get_schedule_message(char *to_send)
     message[9]: enable valor 1
     message[10--13]:star time values 0000
     message[14-17]:stop_time values*/ //0100
-    for(i=0;i<4;i++)
-    {
+    for(i=0;i<4;i++)    {
         n_start[i]=to_send[10+i];
         n_stop[i]=to_send[14+i];
  

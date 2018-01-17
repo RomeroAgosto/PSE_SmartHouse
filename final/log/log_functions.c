@@ -6,15 +6,13 @@ static time_t read_time;
 static unsigned int log_save_flag=1;
 static int counter_log=0;
 
-void set_log_flag()
-{
+void set_log_flag(){
     log_save_flag=1;
 }
 
-int log_data_saving()
-{
-    if(log_save_flag==0)    /*!If log_save_flag is false the function doesn't save the log*/
-    {
+int log_data_saving(){
+    if(log_save_flag==0){    /*!If log_save_flag is false the function doesn't save the log*/
+    
         return 0;
     }
     
@@ -35,8 +33,7 @@ int log_data_saving()
         
         //data from air temperature
 
-        for(j=0;j<8;j++)
-        {
+        for(j=0;j<8;j++){
             data[counter_log].sensor_data[j+5]=get_air_temperature(j);//sensor_values.air_temperature_sensor[j].temp;
             data[counter_log].sensor_data[j+13]=get_heating_air_state(j);//sensor_values.air_temperature_sensor[j].heater;
         }
@@ -52,12 +49,11 @@ int log_data_saving()
     
     log_save_flag=0;
 }
-int log_create_msg(char *message)
-{
+int log_create_msg(char *message){
     static char temp_message[3000];
     
-    if(counter_log==0) /*The data log it is clean*/
-    {
+    if(counter_log==0){ /*The data log it is clean*/
+    
          strcpy(message,"#*");
          return 0;
     }
@@ -68,8 +64,7 @@ int log_create_msg(char *message)
     
     strcpy(temp_message,"");
     int j;
-    for(j=0;j<counter_log;j++)
-    {
+    for(j=0;j<counter_log;j++){
         sprintf(temp_message,"{\"time\":[\"%d\",\"%d\",\"%d\",\"%d\",\"%d\"],\n"    //1,2,3,4,5
                         "\"air_temp\":[\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\"],\n" //6,7,8,9,10,11,12,13
                         "\"air_heater\":[\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\"],\n"   //14,15,16,17,18,19,20,21
@@ -81,8 +76,7 @@ int log_create_msg(char *message)
                 data[j].sensor_data[21],data[j].sensor_data[22],
                 data[j].sensor_data[23],data[j].sensor_data[24],data[j].sensor_data[25],data[j].sensor_data[26]
         );
-        if(j != counter_log-1)
-        {
+        if(j != counter_log-1){
             strcat(temp_message,",");
         }
         strcat(message,temp_message);

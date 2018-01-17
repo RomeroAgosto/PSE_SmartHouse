@@ -20,8 +20,7 @@
 #define RECEIVE_SCHEDULES 3
 #define SEND_DATALOG 4
 
-#define  UNITTEST 0
-
+#define UNITTEST 0
 
 
 #if UNITTEST==1
@@ -46,26 +45,19 @@ int check_received_message(char *message, int p);
  *       @param  messege place where the address will be allocated
  */
 int create_normal_message(char *message);
-/*send messages*/
-/*receive messages*/
+
 /**
  *      @brief  check receve message if right
  *       @param  messege place where the address will be allocated
  *      @param  p position of the cardinal
  */
 long int check_received_message(char *message, int p);
-
-long int get_int(char* received_checksum,int length);
-double power(double a, double b);
-
-int get_digits(int score_int, char *score_char);
 /**
  *      @brief  send the messege
  *       @param  messege place where the address will be allocated
  *     
  */
 int send_message(char *message);
-void _UART1Handler(void);
 /**
  *      @brief  This state machine implements the communication control, inside of this function, the decisions are made
  *    

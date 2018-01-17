@@ -12,10 +12,7 @@ int set_new_thresholds(char *message,int p) {
     message_counter_technician=p+2;
     for (i = 0; i < 2; i++) {
         for(j = 0;j < 5; j++) {
-            //printf("air_quality_hysteresis %d\n\r ",(message[message_counter_technician] - '0') * 10 + message[message_counter_technician+1] - '0');
             set_air_quality_hysteresis(i,j,(message[message_counter_technician] - '0') * 10 + message[message_counter_technician+1] - '0'); /*hysteresis air quality*/
-            //printf("message %d,message counter %d\n",message[message_counter_technician]-'0',message_counter_technician);
-            //printf("message %d,message counter %d\n",message[message_counter_technician+1]-'0',message_counter_technician+1);
 
         }
     }

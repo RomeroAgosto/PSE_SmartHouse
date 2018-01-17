@@ -11,7 +11,6 @@
 
 
 int get_air_quality_state(int room);
-int set_warning(void);
 
 #if UNITTEST == 1
 void statemachine_air_quality(int room,int *test);
