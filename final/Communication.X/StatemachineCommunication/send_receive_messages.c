@@ -50,8 +50,6 @@ int get_digits(int score_int, char *score_char) {
     score_char[j]='\0';/*end delimiter*/
     return j;
 }
-
-
 double power(double a, double b){
         int i;
         double result= a;
@@ -61,7 +59,6 @@ double power(double a, double b){
         }
         return result;
     }
-
 long int get_int(char* received_checksum,int length){
         int i;
         long int checksum=0,long_int_value;
@@ -73,7 +70,6 @@ long int get_int(char* received_checksum,int length){
         }
         return checksum;
     }
-
 long int check_received_message(char *message,int p){
         int i=p+2;
         int checksum_length=0;
